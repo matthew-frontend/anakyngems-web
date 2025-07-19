@@ -18,7 +18,7 @@ import ProductsModal from "@/components/modals/ProductsModal";
 import React from "react";
 
 export const metadata = {
-  title: "ANAKYNGEMS - Lab Grown Diamond Jewellery | Homepage",
+  title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
   description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
   openGraph: {
     title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -26,7 +26,7 @@ export const metadata = {
     url: "https://anakyngems.com",
     images: [
       {
-        url: "/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",

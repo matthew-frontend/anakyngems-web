@@ -26,3 +26,11 @@
 .layout-sw-center {
     overflow: hidden;
 }
+
+.swiper-wrapper {
+  .swiper-slide:first-child {
+    .sld-content {
+      display: none !important;
+    }
+  }
+}

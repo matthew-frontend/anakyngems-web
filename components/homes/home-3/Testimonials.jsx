@@ -8,7 +8,7 @@ import { Navigation, Pagination } from "swiper/modules";
 
 export default function Testimonials() {
   return (
-    <section className="flat-spacing bg-dark-brown">
+    <section className="flat-spacing bg-anakyn-40">
       <div className="container">
         <div className="sect-top wow fadeInUp">
           <h2 className="s-title font-2 text-center text-white text-capitalize">

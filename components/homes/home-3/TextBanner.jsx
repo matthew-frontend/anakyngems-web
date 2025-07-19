@@ -61,7 +61,7 @@ export default function TextBanner() {
             href={`/contact-us`}
             className="tf-btn style-4 type-size-2 border-primary"
           >
-            <img src="/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg" alt="" />
+            <img src="/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-05.jpg" alt="" />
             {/* <svg
               width={151}
               height={80}
