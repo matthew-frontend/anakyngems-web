@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import CountdownTimer from "../common/Countdown";
-import CurrencySelect from "../common/CurrencySelect";
-import LanguageSelect from "../common/LanguageSelect";
 export default function TopbarBottom2() {
   return (
     <div className="topbar-botom bg-primary d-none d-xl-block">
@@ -48,19 +46,7 @@ export default function TopbarBottom2() {
               </Link>
             </div>
           </div>
-          <div className="col-3">
-            <div className="tf-dropdown-wrap justify-content-end">
-              <div className="tf-currencies">
-                <CurrencySelect topStart light />
-              </div>
-              <div className="tf-languages">
-                <LanguageSelect
-                  topStart
-                  parentClassName="tf-dropdown-select style-default color-white type-languages"
-                />
-              </div>
-            </div>
-          </div>
+          <div className="col-3"></div>
         </div>
       </div>
     </div>

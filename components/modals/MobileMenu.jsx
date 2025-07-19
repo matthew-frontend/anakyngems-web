@@ -2,8 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import MobileNav from "../headers/MobileNav";
-import CurrencySelect from "../common/CurrencySelect";
-import LanguageSelect from "../common/LanguageSelect";
 export default function MobileMenu() {
   return (
     <div className="offcanvas offcanvas-start canvas-mb" id="mobileMenu">
@@ -35,18 +33,6 @@ export default function MobileMenu() {
             </ul>
           </div>
           <div className="mb-other-content">
-            <div className="group-icon">
-              <Link href={`/wishlist`} className="site-nav-icon">
-                <i className="icon icon-hearth" />
-                Wishlist
-              </Link>
-              <p data-bs-dismiss="offcanvas">
-                <a href="#log" data-bs-toggle="modal" className="site-nav-icon">
-                  <i className="icon icon-user" />
-                  Login
-                </a>
-              </p>
-            </div>
             <div className="mb-notice">
               <Link href={`/contact-us`} className="text-need">
                 Need Help?
@@ -57,37 +43,27 @@ export default function MobileMenu() {
                 <p>
                   Address:
                   <a
-                    href="https://www.google.com/maps?q=123+Yarran+St,+Punchbowl,+NSW+2196,+Australia"
+                    href="https://maps.app.goo.gl/nurLYMZFXMC8fXXY9"
                     className="fw-medium"
                     target="_blank"
                   >
-                    123 Yarran st, Punchbowl, NSW 2196, Australia
+                    131/5-6 Nitayo Rd., Mak Khaeng, Mueang, Udon Thani 41000, Thailand
                   </a>
                 </p>
               </li>
               <li>
                 Email:
-                <a href="mailto:hello@vemus.com" className="fw-medium">
-                  hello@vemus.com
+                <a href="mailto:anakyngems@gmail.com" className="fw-medium">
+                  anakyngems@gmail.com
                 </a>
               </li>
               <li>
                 Phone:
-                <a href="tel:6483441233" className="fw-medium">
-                  (64) 8344 1233
+                <a href="tel:0885605601" className="fw-medium">
+                  088 560 5601
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
-        <div className="mb-bottom">
-          <div className="bottom-bar-language">
-            <div className="tf-currencies">
-              <CurrencySelect />
-            </div>
-            <div className="tf-languages">
-              <LanguageSelect />
-            </div>
           </div>
         </div>
       </div>

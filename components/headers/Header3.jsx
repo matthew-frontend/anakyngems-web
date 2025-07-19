@@ -33,14 +33,14 @@ export default function Header3({
               <Image
                 alt=""
                 className="logo-black"
-                src="/images/logo/logo.svg"
+                src="/images/logo/logo.png"
                 width={122}
                 height={32}
               />
               <Image
                 alt=""
                 className="logo-white"
-                src="/images/logo/logo-white.svg"
+                src="/images/logo/logo.png"
                 width={122}
                 height={31}
               />
@@ -66,14 +66,6 @@ export default function Header3({
                 >
                   <i className="icon icon-user" />
                 </a>
-              </li>
-              <li className="d-none d-md-inline-flex">
-                <Link
-                  href={`/wishlist`}
-                  className="nav-icon-item text-black link"
-                >
-                  <i className="icon icon-hearth" />
-                </Link>
               </li>
             </ul>
           </div>

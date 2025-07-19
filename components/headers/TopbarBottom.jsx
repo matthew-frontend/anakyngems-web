@@ -1,22 +1,11 @@
 import React from "react";
-import CurrencySelect from "../common/CurrencySelect";
-import LanguageSelect from "../common/LanguageSelect";
 
 export default function TopbarBottom() {
   return (
     <div className="topbar-botom bg-white d-none d-xl-block">
       <div className="container-2">
         <div className="row align-items-center">
-          <div className="col-4">
-            <div className="tf-dropdown-wrap">
-              <div className="tf-currencies">
-                <CurrencySelect topStart />
-              </div>
-              <div className="tf-languages">
-                <LanguageSelect topStart />
-              </div>
-            </div>
-          </div>
+          <div className="col-4"></div>
           <div className="col-4">
             <div className="box-suport">
               <p className="text-caption fw-medium">
@@ -24,13 +13,13 @@ export default function TopbarBottom() {
                 <span>Support 24/7</span>
                 <span>-</span>
               </p>
-              <a href="tel:85332453" className="text-caption fw-medium link">
-                (61) 8533 2453
+              <a href="tel:0885605601" className="text-caption fw-medium link">
+                088 560 5601
               </a>
             </div>
           </div>
           <div className="col-4">
-            <ul className="box-action">
+            {/* <ul className="box-action">
               <li>
                 <a
                   href="#log"
@@ -50,7 +39,7 @@ export default function TopbarBottom() {
                   Sign up
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

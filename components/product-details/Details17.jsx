@@ -2,7 +2,6 @@
 import Slider1 from "./sliders/Slider1";
 import ProgressBarComponent from "../common/Progressbar";
 
-import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 
 export default function Details17({ product }) {
@@ -72,11 +71,6 @@ export default function Details17({ product }) {
                         This item is currently unavailable
                       </a>
                       <div className="group-btn-action">
-                        <AddtoWishlist
-                          additionalClass="tf-btn-icon btn-add-wishlist"
-                          product={product}
-                          tooltipDirection="top"
-                        />
 
                         <AddtoCompare
                           tooltipDirection="top"

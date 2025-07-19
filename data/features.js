@@ -5,14 +5,14 @@ export const iconItems = [
     text: "Enjoy free shipping on all orders",
   },
   {
-    iconClass: "icon-credit-card",
-    title: "Flexible Payment",
-    text: "Pay with Multiple Credit Cards",
+    iconClass: "icon-gift",
+    title: "Exclusive Price",
+    text: "Special prices just for you",
   },
   {
-    iconClass: "icon-return",
-    title: "14 - Days Return",
-    text: "Free return/exchange within 30 days",
+    iconClass: "icon-luxury",
+    title: "After-Sales Service",
+    text: "Dedicated support for you.",
   },
   {
     iconClass: "icon-headphone",

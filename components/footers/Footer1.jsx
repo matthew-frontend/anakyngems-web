@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import CurrencySelect from "../common/CurrencySelect";
-import LanguageSelect from "../common/LanguageSelect";
 import axios from "axios";
 const menuItems = [
   "New Collection",
@@ -166,30 +164,25 @@ export default function Footer1() {
                   <div className="tf-collapse-content">
                     <ul className="footer-menu-list mb-24">
                       <li>
-                        <p className="text-main-4">
-                          Find a location nearest you.
-                        </p>
-                      </li>
-                      <li>
                         <a
-                          href="https://www.google.com/maps?q=123+Yarran+st,Punchbowl,NSW+202196,Australia"
+                          href="https://maps.app.goo.gl/nurLYMZFXMC8fXXY9"
+                          className="fw-medium"
                           target="_blank"
-                          className="text-main-4 link text-decoration-underline"
                         >
-                          See Our Stores
+                          131/5-6 Nitayo Rd., Mak Khaeng,<br/>Mueang, Udon Thani 41000, Thailand
                         </a>
                       </li>
                       <li>
-                        <a href="tel:6483441233" className="text-main-4 link">
-                          (64) 8344 1233
+                        <a href="tel:0885605601" className="text-main-4 link">
+                          088 560 5601
                         </a>
                       </li>
                       <li>
                         <a
-                          href="mailto:hello@vemus.com"
+                          href="mailto:anakyngems@gmail.com"
                           className="text-main-4 link"
                         >
-                          hello@vemus.com
+                          anakyngems@gmail.com
                         </a>
                       </li>
                     </ul>
@@ -263,11 +256,6 @@ export default function Footer1() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/wishlist`} className="text-main-4 link">
-                          My Wishlist
-                        </Link>
-                      </li>
-                      <li>
                         <Link href={`/compare`} className="text-main-4 link">
                           Compare
                         </Link>
@@ -320,117 +308,7 @@ export default function Footer1() {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-wrap">
-            <div className="footer-bar-language">
-              <div className="tf-currencies">
-                <CurrencySelect />
-              </div>
-              <div className="tf-languages">
-                <LanguageSelect />
-              </div>
-            </div>
-            <p className="text-nocopy">All Rights Reserved 2025 VEMUS.</p>
-            <ul className="paymend-method-list">
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/am-ex.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/apple-pay.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/dinner.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/discover.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={38}
-                    height={24}
-                    src="/images/payment/gg-pay.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/master-2.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/master.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/shop-pay.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/unicon-pay.svg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Image
-                    alt="Paymend Method"
-                    width={40}
-                    height={25}
-                    src="/images/payment/visa.svg"
-                  />
-                </a>
-              </li>
-            </ul>
+            <p className="text-nocopy">All Rights Reserved 2025 ANAKYNGEMS.</p>
           </div>
         </div>
       </div>

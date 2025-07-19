@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { products5 } from "@/data/products";
 import Link from "next/link";
 import Image from "next/image";
-import AddtoWishlist from "@/components/common/AddtoWishlist";
 import QuickView from "@/components/common/QuickView";
 import AddtoCompare from "@/components/common/AddtoCompare";
 export default function ProductsModal() {
@@ -100,9 +99,6 @@ export default function ProductsModal() {
                       </Link>
 
                       <ul className="list-product-btn">
-                        <li className="wishlist">
-                          <AddtoWishlist product={product} />
-                        </li>
                         <li>
                           <QuickView product={product} />
                         </li>

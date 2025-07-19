@@ -4,7 +4,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import Link from "next/link";
-import AddtoWishlist from "../common/AddtoWishlist";
 import QuickView from "../common/QuickView";
 import AddtoCompare from "../common/AddtoCompare";
 import { Navigation, Pagination } from "swiper/modules";
@@ -75,9 +74,6 @@ export default function RelatedProducts() {
                     />
                   </Link>
                   <ul className="list-product-btn">
-                    <li className="wishlist">
-                      <AddtoWishlist product={product} />
-                    </li>
                     <li>
                       <QuickView product={product} />
                     </li>

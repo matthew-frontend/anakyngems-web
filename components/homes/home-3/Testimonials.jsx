@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Navigation, Pagination } from "swiper/modules";
+
 export default function Testimonials() {
   return (
     <section className="flat-spacing bg-dark-brown">

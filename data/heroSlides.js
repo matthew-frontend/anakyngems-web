@@ -24,12 +24,12 @@ export const sliderData = [
 
 export const secondSliderData = [
   {
-    image: "/images/slider/slider-4.jpg",
+    image: "/images/slider/AW[RGB]_LOGO_ANAKYN GEMS-05.jpg",
     imageWidth: 1924,
     imageHeight: 1872,
-    titleItalic: "Timless",
-    titleRest: "Treasures",
-    buttonText: "SHOP COLLECTION",
+    // titleItalic: "Timless",
+    // titleRest: "Treasures",
+    // buttonText: "SHOP COLLECTION",
   },
   {
     image: "/images/slider/slider-5.jpg",

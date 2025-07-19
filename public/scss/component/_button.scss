@@ -282,9 +282,9 @@
         width: 100%;
         max-width: 200px;
         height: 200px;
-        padding: 30px;
+        padding: 0;
         flex-shrink: 0;
-
+        overflow: hidden;
         &:hover {
             color: var(--primary);
             border-color: var(--primary);

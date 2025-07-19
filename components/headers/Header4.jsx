@@ -86,14 +86,6 @@ export default function Header4() {
                     <i className="icon icon-user" />
                   </a>
                 </li>
-                <li className="d-none d-md-inline-flex">
-                  <Link
-                    href={`/wishlist`}
-                    className="nav-icon-item text-black link"
-                  >
-                    <i className="icon icon-hearth" />
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>

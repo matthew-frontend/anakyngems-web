@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import ColorSelect from "./ColorSelect";
 import { useContextElement } from "@/context/Context";
-import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 
 import Image from "next/image";
@@ -138,11 +137,6 @@ export default function Details6({ product }) {
                         </span>
                       </a>
                       <div className="group-btn-action">
-                        <AddtoWishlist
-                          additionalClass="tf-btn-icon btn-add-wishlist"
-                          product={product}
-                          tooltipDirection="top"
-                        />
 
                         <AddtoCompare
                           tooltipDirection="top"

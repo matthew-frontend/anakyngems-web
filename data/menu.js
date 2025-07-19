@@ -124,7 +124,6 @@ export const blogMenuLinks = [
 export const accountLinks = [
   { href: "/account-page", text: "Dashboard", isActive: true },
   { href: "/account-orders-empty", text: "My Orders", isActive: false },
-  { href: "/wishlist", text: "My Wishlist", isActive: false },
   { href: "/account-addresses", text: "Addresses", isActive: false },
   { href: "/", text: "Log Out", isActive: false },
 ];

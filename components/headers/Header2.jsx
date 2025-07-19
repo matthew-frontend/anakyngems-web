@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Nav from "./Nav";
-import CurrencySelect from "../common/CurrencySelect";
-import LanguageSelect from "../common/LanguageSelect";
 export default function Header2() {
   return (
     <header className="tf-header style-2 header-absolute">
@@ -20,14 +18,6 @@ export default function Header2() {
               </a>
             </div>
             <div className="col-xl-3 d-none d-xl-block">
-              <div className="header-right">
-                <div className="tf-currencies">
-                  <CurrencySelect topStart />
-                </div>
-                <div className="tf-languages">
-                  <LanguageSelect topStart />
-                </div>
-              </div>
             </div>
             <div className="col-xl-6 col-md-4 col-6">
               <Link
@@ -70,14 +60,6 @@ export default function Header2() {
                   >
                     <i className="icon icon-user" />
                   </a>
-                </li>
-                <li className="d-none d-md-inline-flex">
-                  <Link
-                    href={`/wishlist`}
-                    className="nav-icon-item text-black link"
-                  >
-                    <i className="icon icon-hearth" />
-                  </Link>
                 </li>
               </ul>
             </div>

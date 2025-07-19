@@ -200,14 +200,6 @@ export default function MobileNav() {
           </ul>
         </div>
       </li>
-      <li className="nav-mb-item">
-        <a
-          href="https://themeforest.net/user/themesflat"
-          className="mb-menu-link"
-        >
-          Buy Theme
-        </a>
-      </li>
     </>
   );
 }

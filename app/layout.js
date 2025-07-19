@@ -22,9 +22,49 @@ import ProductDes from "@/components/modals/ProductDes";
 import UnavailableModal from "@/components/modals/UnavailableModal";
 import OrderDetails from "@/components/modals/OrderDetails";
 
+export const metadata = {
+  title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+  description:
+    "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  keywords:
+    "lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds",
+  openGraph: {
+    title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+    description:
+      "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+    url: "https://anakyngems.com",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+    description:
+      "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+    images: ["/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         <LayoutWrapper>
           <Context>

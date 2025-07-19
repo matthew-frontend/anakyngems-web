@@ -6,7 +6,6 @@ import ColorSelect from "../product-details/ColorSelect";
 import SizePicker from "../product-details/SizeSelect";
 import { useContextElement } from "@/context/Context";
 import { allProducts } from "@/data/products";
-import AddtoWishlist from "../common/AddtoWishlist";
 import AddtoCompare from "../common/AddtoCompare";
 export default function QuickAdd() {
   const [activeColor, setActiveColor] = useState("gold");
@@ -99,11 +98,6 @@ export default function QuickAdd() {
                     </span>
                   </a>
                   <div className="group-btn-action">
-                    <AddtoWishlist
-                      additionalClass="tf-btn-icon btn-add-wishlist"
-                      product={product}
-                      tooltipDirection="top"
-                    />
 
                     <AddtoCompare
                       tooltipDirection="top"

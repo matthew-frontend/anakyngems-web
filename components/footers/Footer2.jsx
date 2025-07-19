@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import CurrencySelect from "../common/CurrencySelect";
+
 export default function Footer2() {
   useEffect(() => {
     const headings = document.querySelectorAll(".footer-heading-mobile");
@@ -253,11 +253,8 @@ export default function Footer2() {
         <div className="container">
           <div className="footer-bottom-wrap">
             <p className="text-nocopy text-white">
-              All Rights Reserved 2025 VEMUS.
+              All Rights Reserved 2025 ANAKYNGEMS.
             </p>
-            <div className="tf-currencies">
-              <CurrencySelect light />
-            </div>
             <ul className="paymend-method-list">
               <li>
                 <a href="#">
