@@ -26,7 +26,7 @@ export const metadata = {
     url: "https://anakyngems.com",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "https://anakyngems-web-mnzk.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",

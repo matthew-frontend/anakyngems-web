@@ -36,7 +36,7 @@ export const metadata = {
     siteName: "ANAKYNGEMS",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "https://anakyngems-web-mnzk.vercel.app/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
     description:
       "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-    images: ["/images/og-image.jpg"],
+    images: ["https://anakyngems-web-mnzk.vercel.app/images/og-image.jpg"],
   },
   robots: {
     index: true,
