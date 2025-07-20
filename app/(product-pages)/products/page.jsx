@@ -4,7 +4,7 @@ import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
 import Products2 from "@/components/shop/Products2";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 import ProductsPageClient from "@/components/shop/ProductsPageClient";
 export const metadata = {
   title: "Products | ANAKYNGEMS",
@@ -15,9 +15,13 @@ export default function page() {
     <>
       <Topbar1 parentClass="tf-topbar bg-dark-olive" />
       <Header1 parentClass="tf-header line-bt-2" />
-      <ProductsPageClient />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductsPageClient />
+      </Suspense>
       {/* <Categories /> */}
-      <Products2 />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Products2 />
+      </Suspense>
       <Features
         styleWhite={false}
         parentClass="flat-spacing-8 bg-anakyn-20"
