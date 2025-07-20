@@ -146,7 +146,7 @@ export default function Banner() {
             </div>
             <div className="btn-group">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products`}
                 className="tf-btn btn-fill animate-btn text-uppercase type-large"
               >
                 Shop Collection

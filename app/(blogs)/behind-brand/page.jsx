@@ -1,37 +1,43 @@
+import Blogs2 from "@/components/blogs/Blogs2";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
-import Contact from "@/components/otherPages/Contact";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "Contact Us | ANAKYNGEMS",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  title:
+    "Blog List Style 02 || Vemus - Jewelry Ecommerce React Nextjs Template",
+  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
 };
 export default function page() {
   return (
     <>
       <Topbar1 />
-      <Header1 parentClass="tf-header line-bt-2" />
+      <Header1 parentClass="tf-header" />
       <section className="flat-spacing-2 pb-0">
         <div className="container">
           <div className="page-title">
             <div className="breadcrumbs">
               <ul className="bread-wrap">
                 <li>
-                  <Link href={`/`} className="text-main-4 link">
+                  <Link href={`/`} className="text-main-4 link-secondary">
                     Home
                   </Link>
                 </li>
                 <li className="br-line w-12 bg-main" />
-                <li>Contact Us</li>
+                <li>
+                  <p>Behind the Brand</p>
+                </li>
               </ul>
-              <h1 className="heading fw-normal text-uppercase">contact us</h1>
+              <h1 className="heading fw-normal text-uppercase">
+                stories
+                <span className="number-count"> 12 </span>
+              </h1>
             </div>
           </div>
         </div>
       </section>
-      <Contact />
+      <Blogs2 />
       <Footer1 />
     </>
   );

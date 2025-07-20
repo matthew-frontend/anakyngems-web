@@ -3,6 +3,17 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const menuItems = [
+  "New Collection",
+  "All Jewelry",
+  "Charms",
+  "Bracelets",
+  "Rings",
+  "Earrings",
+  "Gifts",
+  "Collections",
+];
+
 export default function Footer2() {
   useEffect(() => {
     const headings = document.querySelectorAll(".footer-heading-mobile");
@@ -34,6 +45,25 @@ export default function Footer2() {
 
   return (
     <footer className="tf-footer style-2 bg-dark-brown">
+       <div className="footer-top">
+        <div className="container">
+          <ul className="category-list justify-content-xl-center">
+            {menuItems.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href="/products"
+                  className="tf-btn btn-line has-icon link"
+                >
+                  <span className="text h6 text-uppercase fw-normal">
+                    {item}
+                  </span>
+                  <i className="icon icon-arrow-top-right" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <div className="footer-body p-xl-0">
         <div className="container">
           <div className="footer-inner-wrap d-xl-flex flex-xl-nowrap">
@@ -115,7 +145,7 @@ export default function Footer2() {
                 <ul className="footer-menu-list">
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Bracelets
@@ -123,7 +153,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Rings
@@ -131,7 +161,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Necklaces
@@ -139,7 +169,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Earrings
@@ -147,7 +177,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Gifts
@@ -155,7 +185,7 @@ export default function Footer2() {
                   </li>
                   <li>
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="text-white link"
                     >
                       Collections
@@ -368,7 +398,8 @@ export default function Footer2() {
               alt="Logo"
               src="/images/logo/logo-very-large.svg"
               width={1422}
-              height={185}
+              height={165}
+              // style={{ opacity: .7 }}
             />
           </div>
         </div>

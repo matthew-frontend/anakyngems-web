@@ -20,7 +20,7 @@ export default function Blogs2() {
                       key={index}
                     >
                       <div className="entry_image">
-                        <Link href={`/blog-single`} className="image img-style">
+                        <Link href={`/behind-brand/${entry.id || index + 1}`} className="image img-style">
                           <Image
                             src={entry.image.src}
                             alt="Blog"
@@ -33,7 +33,7 @@ export default function Blogs2() {
                           {entry.tags.map((tag, i) => (
                             <Link
                               key={i}
-                              href={`/blog-single`}
+                              href={`/behind-brand/${entry.id || index + 1}`}
                               className="name-tag text-caption link"
                             >
                               {tag}
@@ -55,7 +55,7 @@ export default function Blogs2() {
                                 />
                               </div>
                               <Link
-                                href={`/blog-single`}
+                                href={`/behind-brand/${entry.id || index + 1}`}
                                 className="name_author text-main-4 link"
                               >
                                 {entry.author.name}
@@ -70,7 +70,7 @@ export default function Blogs2() {
                           </ul>
                           <HeadingTag>
                             <Link
-                              href={`/blog-single`}
+                              href={`/behind-brand/${entry.id || index + 1}`}
                               className="link fw-medium text-black text-uppercase"
                             >
                               {entry.title}
@@ -88,7 +88,7 @@ export default function Blogs2() {
                         </div>
                         <div className="box-btn">
                           <Link
-                            href={`/blog-single`}
+                            href={`/behind-brand/${entry.id || index + 1}`}
                             className="tf-btn-line text-uppercase lh-28 fw-normal"
                           >
                             READ MORE

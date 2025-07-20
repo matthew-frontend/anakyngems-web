@@ -3,48 +3,28 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import Drift from "drift-zoom";
-const detailImages = [
-  {
-    scroll: "gold",
-    src: "/images/products/detail/prd-detail-1.jpg",
+const createDetailImages = (product) => {
+  if (!product) return [];
+  
+  const productImages = product.images || [product.imgSrc, product.hoverImgSrc].filter(Boolean);
+  
+  return productImages.map((img, index) => ({
+    scroll: index === 0 ? "gold" : index === 1 ? "rose" : "titanium",
+    src: img,
     width: 1000,
     height: 1000,
     pswpWidth: 744,
     pswpHeight: 744,
-  },
-  {
-    scroll: "rose",
-    src: "/images/products/detail/prd-detail-4.jpg",
-    width: 1000,
-    height: 1000,
-    pswpWidth: 744,
-    pswpHeight: 744,
-  },
-  {
-    scroll: "titanium",
-    src: "/images/products/detail/prd-detail-7.jpg",
-    width: 1000,
-    height: 1000,
-    pswpWidth: 744,
-    pswpHeight: 744,
-  },
-  {
-    scroll: "titanium",
-    src: "/images/products/detail/prd-detail-8.jpg",
-    width: 1000,
-    height: 1000,
-    pswpWidth: 744,
-    pswpHeight: 744,
-  },
-];
+  }));
+};
 
 export default function Grid1({
   activeColor = "beige",
   setActiveColor = () => {},
-  firstItem = detailImages[0].src,
+  product = null,
 }) {
+  const detailImages = createDetailImages(product);
   const finalItem = [...detailImages];
-  finalItem[0].src = firstItem ?? finalItem[0].src;
   useEffect(() => {
     // Function to initialize Drift
     // Function to check window width

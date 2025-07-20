@@ -6,12 +6,9 @@ import ScrollTop from "@/components/common/ScrollTop";
 import Toolbar from "@/components/common/Toolbar";
 import Context from "@/context/Context";
 import Compare from "@/components/modals/Compare";
-import Login from "@/components/modals/Login";
 import MobileMenu from "@/components/modals/MobileMenu";
 import QuickAdd from "@/components/modals/QuickAdd";
 import QuickView from "@/components/modals/QuickView";
-import Register from "@/components/modals/Register";
-import ResetPass from "@/components/modals/ResetPass";
 import Search from "@/components/modals/Search";
 import SizeGuide from "@/components/modals/SizeGuide";
 import AskQuestion from "@/components/modals/AskQuestion";
@@ -73,13 +70,10 @@ export default function RootLayout({ children }) {
 
             <ScrollTop />
             <Compare />
-            <Login />
             <MobileMenu />
 
             <QuickAdd />
             <QuickView />
-            <Register />
-            <ResetPass />
             <Search />
             <SizeGuide />
             <AskQuestion />

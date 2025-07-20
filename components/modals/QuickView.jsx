@@ -1,41 +1,31 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useContextElement } from "@/context/Context";
 import { Navigation } from "swiper/modules";
-import ColorSelect from "../product-details/ColorSelect";
-import SizePicker from "../product-details/SizeSelect";
 const imageData = [
   { color: "gold", src: "/images/products/detail/prd-detail-1.jpg" },
   { color: "rose", src: "/images/products/detail/prd-detail-4.jpg" },
   { color: "titanium", src: "/images/products/detail/prd-detail-7.jpg" },
 ];
 export default function QuickView() {
-  const [slides, setSlides] = useState([...imageData]);
-  const [quantity, setQuantity] = useState(1); // Initial quantity is 1
-  const [activeColor, setActiveColor] = useState("gold");
 
   const {
     quickViewItem,
-    addProductToCart,
-    isAddedToCartProducts,
-    addToCompareItem,
-    isAddedtoCompareItem,
-    addToWishlist,
-    isAddedtoWishlist,
-    cartProducts,
   } = useContextElement();
-  useEffect(() => {
-    setSlides((pre) => {
-      const prevSlides = [...pre];
-      if (quickViewItem.imgSrc) {
-        prevSlides[0].src = quickViewItem.imgSrc;
-      }
-      return prevSlides;
-    });
-  }, [quickViewItem]);
+  const getProductImages = () => {
+    if (quickViewItem.images && quickViewItem.images.length > 0) {
+      return quickViewItem.images.map((img, index) => ({
+        color: index === 0 ? "gold" : index === 1 ? "rose" : "titanium",
+        src: img
+      }));
+    } else if (quickViewItem.imgSrc) {
+      return [{ color: "gold", src: quickViewItem.imgSrc }];
+    }
+    return imageData;
+  };
 
   return (
     <div className="modal modalCentered fade modal-quick-view" id="quickView">
@@ -55,7 +45,7 @@ export default function QuickView() {
               }}
               className="swiper tf-single-slide"
             >
-              {imageData.map((item, index) => (
+              {getProductImages().map((item, index) => (
                 <SwiperSlide
                   className="swiper-slide"
                   data-color={item.color}
@@ -88,7 +78,7 @@ export default function QuickView() {
             <div className="tf-product-info-inner tf-product-info-list">
               <div className="tf-product-info-heading">
                 <Link
-                  href={`/product-default/${quickViewItem.id}`}
+                  href={`/products/${quickViewItem.id}`}
                   className="product-info-name h4 fw-normal text-uppercase link"
                 >
                   {quickViewItem.title}
@@ -112,100 +102,11 @@ export default function QuickView() {
                   </div>
                 </div>
                 <p className="product-infor-sub text-main-4">
-                  Lorem ipsum dolor sit amet nec etiamconsectetur. Egestas
-                  cursus a maecenas massa facilisi adipiscing dolor iaculis. In
-                  mattis nec morbi.
+                  {quickViewItem.description || "This regulator has a rolled diaphragm and high flow rate with reduced pressure drop.It has an excellent degree of condensation."}
                 </p>
               </div>
-              <div className="tf-product-info-variant">
-                <div className="variant-picker-item variant-color">
-                  <div className="variant-picker-label h6 fw-normal">
-                    Material:
-                    <span className="variant-picker-label-value value-currentColor">
-                      {activeColor}
-                    </span>
-                  </div>
-                  <div className="variant-picker-values">
-                    <ColorSelect
-                      activeColor={activeColor}
-                      setActiveColor={setActiveColor}
-                    />
-                  </div>
-                </div>
-                <SizePicker />
-              </div>
-              <div className="tf-product-total-quantity">
-                <div className="group-btn">
-                  <a
-                    href="#shoppingCart"
-                    data-bs-toggle="offcanvas"
-                    onClick={() => {
-                      if (quickViewItem.id) {
-                        addProductToCart(quickViewItem.id);
-                      }
-                    }}
-                    className="tf-btn btn-fill-2 text-uppercase fw-medium animate-btn"
-                  >
-                    {isAddedToCartProducts(quickViewItem.id)
-                      ? "added"
-                      : "add to bag"}
-
-                    <i className="icon-minus d-none d-sm-block" />
-                    <span className="price-add d-none d-sm-block">
-                      ${(quickViewItem.price * quantity).toFixed(2)}
-                    </span>
-                  </a>
-                  <div className="group-btn-action">
-                    <a
-                      href="#"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        if (quickViewItem.id) {
-                          addToWishlist(quickViewItem.id);
-                        }
-                      }}
-                      className="tf-btn-icon hover-tooltip btn-add-wishlist"
-                    >
-                      <span
-                        className={`icon ${
-                          isAddedtoWishlist(quickViewItem.id)
-                            ? "icon-trash"
-                            : "icon-heart-2"
-                        } `}
-                      />
-                      <span className="tooltip">
-                        {isAddedtoWishlist(quickViewItem.id)
-                          ? "Remove Wishlist"
-                          : "Add to Wishlist"}
-                      </span>
-                    </a>
-                    <a
-                      className="tf-btn-icon hover-tooltip"
-                      onClick={() => {
-                        if (quickViewItem.id) {
-                          addToCompareItem(quickViewItem.id);
-                        }
-                      }}
-                    >
-                      <span className="icon icon-compare" />
-                      <span className="tooltip">
-                        {" "}
-                        {isAddedtoCompareItem(quickViewItem.id)
-                          ? "Compared"
-                          : "Compare"}
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                <Link
-                  href={`/checkout`}
-                  className="tf-btn w-100 text-uppercase fw-medium"
-                >
-                  buy it now
-                </Link>
-              </div>
               <Link
-                href={`/product-default/${quickViewItem.id}`}
+                href={`/products/${quickViewItem.id}`}
                 className="tf-btn-line"
               >
                 <span className="text-body">View full details</span>

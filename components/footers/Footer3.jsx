@@ -85,7 +85,7 @@ export default function Footer3() {
             {menuItems.map((item, index) => (
               <li key={index}>
                 <Link
-                  href="/shop-collection-list"
+                  href="/products"
                   className="tf-btn btn-line has-icon link"
                 >
                   <span className="text h6 text-uppercase fw-normal">
@@ -292,14 +292,6 @@ export default function Footer3() {
                       <li>
                         <Link href={`/contact-us`} className="text-main-4 link">
                           Contact Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href={`/account-page`}
-                          className="text-main-4 link"
-                        >
-                          Account
                         </Link>
                       </li>
                     </ul>

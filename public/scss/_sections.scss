@@ -1507,7 +1507,9 @@
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
   > * {
     width: 100%;
   }
@@ -2866,9 +2868,6 @@ section {
     text-align: center;
   }
 
-  .compare-head {
-  }
-
   .item_image {
     aspect-ratio: 1;
     position: relative;
@@ -3967,10 +3966,6 @@ section {
 
     .ic-img {
       margin-bottom: 40px;
-    }
-
-    .title {
-      // margin-bottom: 16px;
     }
 
     .sub-title {

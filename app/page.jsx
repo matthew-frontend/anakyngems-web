@@ -1,9 +1,10 @@
 import Features from "@/components/common/Features";
 import TextSlider2 from "@/components/common/TextSlider2";
 import Footer1 from "@/components/footers/Footer1";
-import Header3 from "@/components/headers/Header3";
+import Header1 from "@/components/headers/Header1";
 import Topbar2 from "@/components/headers/Topbar2";
 import TopbarBottom from "@/components/headers/TopbarBottom";
+import About from "@/components/homes/home-3/About";
 import Banner from "@/components/homes/home-3/Banner";
 import Banner2 from "@/components/homes/home-3/Banner2";
 import Blogs from "@/components/homes/home-3/Blogs";
@@ -13,7 +14,6 @@ import Products1 from "@/components/homes/home-3/Products1";
 import Products2 from "@/components/homes/home-3/Products2";
 import Products3 from "@/components/homes/home-3/Products3";
 import Testimonials from "@/components/homes/home-3/Testimonials";
-import TextBanner from "@/components/homes/home-3/TextBanner";
 import ProductsModal from "@/components/modals/ProductsModal";
 import React from "react";
 
@@ -26,7 +26,7 @@ export const metadata = {
     url: "https://anakyngems.com",
     images: [
       {
-        url: "https://anakyngems-web-mnzk.vercel.app/images/og-image.jpg",
+        url: "/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -41,9 +41,9 @@ export default function Home() {
         <Topbar2 />
         <TopbarBottom />
       </div>
-      <Header3 />
+      <Header1 />
       <Hero />
-      <TextBanner />
+      <About />
       <Collections />
       <Products1 />
       <TextSlider2 />
@@ -58,7 +58,7 @@ export default function Home() {
         parentClass="flat-spacing-8 bg-light-peach"
       />
       <Footer1 />
-      <ProductsModal />
+      {/* <ProductsModal /> */}
     </>
   );
 }

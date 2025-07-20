@@ -50,7 +50,7 @@ export default function Hero() {
                     </p>
                     <div className="fade-item fade-item-2">
                       <Link
-                        href={`/shop-collection-list`}
+                        href={`/products`}
                         className="tf-btn btn-fill-white-2"
                       >
                         {slide.buttonText}

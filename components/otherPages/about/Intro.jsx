@@ -27,7 +27,7 @@ export default function Intro() {
             </div>
           </div>
           <div className="col-md-6">
-            <h6 className="brand-intro_subtitle">we are vemus</h6>
+            <h6 className="brand-intro_subtitle">we are anakyngems</h6>
             <h2 className="brand-intro_title">
               very piece of jewelry should feel as special as the moment it
               represents.
@@ -52,7 +52,7 @@ export default function Intro() {
                 <div className="info">
                   <h5 className="name">
                     <a href="#" className="link">
-                      John Smith
+                      Kosol
                     </a>
                   </h5>
                   <span className="duty text-main-4">Founder of Vemus</span>

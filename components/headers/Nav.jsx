@@ -1,14 +1,11 @@
 "use client";
-import { products5 } from "@/data/products";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import QuickView from "../common/QuickView";
 import {
+  aboutPages,
   blogMenuLinks,
   otherPages,
-  productDetailPages,
-  shopPages,
 } from "@/data/menu";
 import { usePathname } from "next/navigation";
 
@@ -20,8 +17,8 @@ export default function Nav({ megaMarginRight = true }) {
   const isMenuParentActive = (menu) => {
     return menu.some((elm) => isMenuActive(elm));
   };
-  const isMenuParentActive2 = (menu) => {
-    return menu.some((elm) => isMenuParentActive(elm.links));
+  const isMenuParentActiveAbout = (menu) => {
+    return menu.some((elm) => elm.links.some((link) => isMenuActive(link)));
   };
   return (
     <>
@@ -32,11 +29,11 @@ export default function Nav({ megaMarginRight = true }) {
       </li>
       <li
         className={`menu-item  ${
-          isMenuParentActive2(shopPages) ? "active" : ""
+          pathname.startsWith('/products') ? "active" : ""
         }`}
       >
-        <a href="#" className="item-link">
-          Shop
+        <a href="#" className="item-link" onClick={(e) => e.preventDefault()}>
+          Products
           <i className="icon icon-arrow-angle-down" />
         </a>
         <div
@@ -46,25 +43,67 @@ export default function Nav({ megaMarginRight = true }) {
         >
           <div className="mega-menu-wrap">
             <div className="wrapper-sub-menu">
-              {shopPages.map((section, index) => (
-                <div className="mega-menu-item" key={index}>
-                  <p className="text-caption menu-heading">{section.heading}</p>
-                  <ul className="menu-list">
-                    {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
-                        <Link
-                          href={link.href2 ? link.href2 : link.href}
-                          className={`menu-link-text link ${
-                            isMenuActive(link) ? "active" : ""
-                          }`}
-                        >
-                          {link.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              <div className="mega-menu-item">
+                <p className="text-caption menu-heading">CATEGORIES</p>
+                <ul className="menu-list">
+                  <li>
+                    <Link
+                      href="/products"
+                      className="menu-link-text link"
+                    >
+                      All Products
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=ring"
+                      className="menu-link-text link"
+                    >
+                      Ring
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=bracelet"
+                      className="menu-link-text link"
+                    >
+                      Bracelet
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=earring"
+                      className="menu-link-text link"
+                    >
+                      Earring
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=necklace"
+                      className="menu-link-text link"
+                    >
+                      Necklace
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=new-in"
+                      className="menu-link-text link"
+                    >
+                      New In
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=gift-idea"
+                      className="menu-link-text link"
+                    >
+                      Gift Idea
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div className="wrapper-sub-collection">
               <div className="box_image--V01 h-100 hover-img">
@@ -85,7 +124,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </h5>
                   <div className="box-btn">
                     <Link
-                      href={`/shop-collection-list`}
+                      href="/products"
                       className="tf-btn-line style-white text-uppercase"
                     >
                       <span className="text-caption lh-28">Shop Now</span>
@@ -99,112 +138,11 @@ export default function Nav({ megaMarginRight = true }) {
         </div>
       </li>
       <li
-        className={`menu-item   ${
-          isMenuParentActive2(productDetailPages) ? "active" : ""
-        }`}
-      >
-        <a href="#" className="item-link">
-          Products
-          <i className="icon icon-arrow-angle-down" />
-        </a>
-        <div className="sub-menu mega-menu mega-menu-product">
-          <div className="container-layout-right">
-            <div className="mega-menu-wrap">
-              <div className="wrapper-sub-menu">
-                {productDetailPages.map((section, sectionIndex) => (
-                  <div className="mega-menu-item" key={sectionIndex}>
-                    <p className="text-caption menu-heading">
-                      {section.heading}
-                    </p>
-                    <ul className="menu-list">
-                      {section.links.map((link, linkIndex) => (
-                        <li key={linkIndex}>
-                          <Link
-                            href={link.href2 ? link.href2 : link.href}
-                            className={`menu-link-text link ${
-                              isMenuActive(link) ? "active" : ""
-                            }`}
-                          >
-                            <>
-                              {link.label}
-                              {link.badge && (
-                                <span
-                                  className={`demo-label ${
-                                    link.badgeType || ""
-                                  }`.trim()}
-                                >
-                                  {link.badge}
-                                </span>
-                              )}
-                            </>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              <div className="wrapper-sub-collection">
-                {products5.slice(0, 2).map((product, i) => (
-                  <div key={i} className="card_product--V01">
-                    <div className="card_product-wrapper aspect-ratio-1">
-                      <Link
-                        href={`/product-default/${product.id}`}
-                        className="product-img"
-                      >
-                        <Image
-                          src={product.imgSrc}
-                          alt="Image Product"
-                          className="lazyload img-product"
-                          width={714}
-                          height={900}
-                        />
-                        <Image
-                          src={product.hoverImgSrc}
-                          alt="Image Product"
-                          className="lazyload img-hover"
-                          width={714}
-                          height={900}
-                        />
-                      </Link>
-                      <ul className="list-product-btn center">
-                        <li>
-                          <QuickView product={product} />
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="card_product-info">
-                      <Link
-                        href={`/product-default/${product.id}`}
-                        className="name-product h5 fw-normal link text-line-clamp-2"
-                      >
-                        Engagement Ring in 18k Yellow Gold
-                      </Link>
-                      <div className="price-wrap">
-                        <span className="price-new h5">
-                          ${product.price.toFixed(2)}
-                        </span>
-                        {product.oldPrice && (
-                          <span className="price-old fw-normal">
-                            {" "}
-                            ${product.oldPrice.toFixed(2)}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
         className={`sub-menu mega-menu mega-menu-page container-layout-right${
           megaMarginRight ? "-3" : ""
         } mega-menu-style-2`}
       >
-        <a href="#" className="item-link">
+        <a href="#" className="item-link" onClick={(e) => e.preventDefault()}>
           Pages
           <i className="icon icon-arrow-angle-down" />
         </a>
@@ -244,7 +182,7 @@ export default function Nav({ megaMarginRight = true }) {
                   <h5 className="box-text fw-medium text-white">Most Gifted</h5>
                   <div className="box-btn">
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="tf-btn-line style-white text-uppercase"
                     >
                       <span className="text-caption lh-28">Shop Now</span>
@@ -271,7 +209,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </h5>
                   <div className="box-btn">
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="tf-btn-line style-white text-uppercase"
                     >
                       <span className="text-caption lh-28">Shop Now</span>
@@ -286,10 +224,39 @@ export default function Nav({ megaMarginRight = true }) {
       </li>
       <li
         className={`menu-item position-relative   ${
+          isMenuParentActiveAbout(aboutPages) ? "active" : ""
+        }`}
+      >
+        <a href="#" className="item-link" onClick={(e) => e.preventDefault()}>
+          About Us
+          <i className="icon icon-arrow-angle-down" />
+        </a>
+        <div className="sub-menu">
+          <div className="mega-menu-item">
+            <p className="text-caption menu-heading">ABOUT US</p>
+            <ul className="menu-list">
+              {aboutPages[0].links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className={`menu-link-text link ${
+                      isMenuActive(link) ? "active" : ""
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li
+        className={`menu-item position-relative   ${
           isMenuParentActive(blogMenuLinks) ? "active" : ""
         }`}
       >
-        <a href="#" className="item-link">
+        <a href="#" className="item-link" onClick={(e) => e.preventDefault()}>
           Blogs
           <i className="icon icon-arrow-angle-down" />
         </a>

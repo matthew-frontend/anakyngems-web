@@ -20,14 +20,6 @@ export default function Toolbar() {
         </a>
       </div>
       <div className="toolbar-item">
-        <Link href={`/account-page`}>
-          <span className="toolbar-icon">
-            <i className="icon icon-user-2" />
-          </span>
-          <span className="toolbar-label">Account</span>
-        </Link>
-      </div>
-      <div className="toolbar-item">
         <Link href={`/wishlist`}>
           <span className="toolbar-icon">
             <i className="icon icon-hearth-3" />

@@ -3,7 +3,6 @@ import { products15 } from "@/data/products";
 import React from "react";
 import DiscountMarquee from "../common/DiscountMarquee";
 import QuickView from "../common/QuickView";
-import AddtoCompare from "../common/AddtoCompare";
 import { initialState, reducer } from "@/reducer/filterReducer";
 import { useEffect, useReducer, useState } from "react";
 import FilterSidebar from "./FilterSidebar";
@@ -12,16 +11,15 @@ import Sidebar from "./Sidebar";
 import Pagination from "../common/Pagination";
 import Link from "next/link";
 import FilterToggle from "./FilterToggler";
+import { useSearchParams } from "next/navigation";
 export default function Products2() {
   const [activeLayout, setActiveLayout] = useState(3);
   const [state, dispatch] = useReducer(reducer, initialState);
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
   const {
     price,
-    availability,
-    color,
-    size,
     categories,
-    materials,
     filtered,
     sortingOption,
     sorted,
@@ -34,34 +32,11 @@ export default function Products2() {
     ...state,
     setPrice: (value) => dispatch({ type: "SET_PRICE", payload: value }),
 
-    setColor: (value) => {
-      const updated = [...color].includes(value)
-        ? [...color].filter((elm) => elm != value)
-        : [...color, value];
-      dispatch({ type: "SET_COLOR", payload: updated });
-    },
-    setSize: (value) => {
-      value == size
-        ? dispatch({ type: "SET_SIZE", payload: "All" })
-        : dispatch({ type: "SET_SIZE", payload: value });
-    },
-    setAvailability: (value) => {
-      value == availability
-        ? dispatch({ type: "SET_AVAILABILITY", payload: "All" })
-        : dispatch({ type: "SET_AVAILABILITY", payload: value });
-    },
-
     setCategories: (newCategory) => {
       const updated = [...categories].includes(newCategory)
         ? [...categories].filter((elm) => elm != newCategory)
         : [...categories, newCategory];
       dispatch({ type: "SET_CATEGORIES", payload: updated });
-    },
-    setMaterial: (newMaterial) => {
-      const updated = [...materials].includes(newMaterial)
-        ? [...materials].filter((elm) => elm != newMaterial)
-        : [...materials, newMaterial];
-      dispatch({ type: "SET_MATERIAL", payload: updated });
     },
     removeCategory: (newCategory) => {
       const updated = [...categories].filter(
@@ -69,18 +44,6 @@ export default function Products2() {
       );
 
       dispatch({ type: "SET_CATEGORIES", payload: updated });
-    },
-    removeMaterial: (newMaterial) => {
-      const updated = [...materials].filter(
-        (material) => material != newMaterial
-      );
-
-      dispatch({ type: "SET_MATERIAL", payload: updated });
-    },
-    removeColor: (newColor) => {
-      const updated = [...color].filter((elm) => elm != newColor);
-
-      dispatch({ type: "SET_COLOR", payload: updated });
     },
     setSortingOption: (value) =>
       dispatch({ type: "SET_SORTING_OPTION", payload: value }),
@@ -96,6 +59,13 @@ export default function Products2() {
     },
   };
 
+  // Set category from URL parameter on component mount
+  useEffect(() => {
+    if (categoryParam && !categories.includes(categoryParam)) {
+      dispatch({ type: "SET_CATEGORIES", payload: [categoryParam] });
+    }
+  }, [categoryParam]);
+
   useEffect(() => {
     let filteredArrays = [];
 
@@ -104,28 +74,6 @@ export default function Products2() {
         categories.includes(elm.category)
       );
       filteredArrays = [...filteredArrays, filteredByCategories];
-    }
-    if (materials.length) {
-      const filteredByCategories = [...products15].filter((elm) =>
-        materials.includes(elm.material)
-      );
-      filteredArrays = [...filteredArrays, filteredByCategories];
-    }
-    if (availability !== "All") {
-      const filteredByavailability = [...products15].filter(
-        (elm) => availability.toLowerCase() === elm.availability.toLowerCase()
-      );
-      filteredArrays = [...filteredArrays, filteredByavailability];
-    }
-    if (color.length) {
-      const filteredByColor = [...products15].filter((elm) =>
-        color.every((el) => elm.filterColors.includes(el))
-      );
-      filteredArrays = [...filteredArrays, filteredByColor];
-    }
-    if (size !== "All" && size !== "Free Size") {
-      const filteredBysize = [...products15].filter((elm) => elm.size == size);
-      filteredArrays = [...filteredArrays, filteredBysize];
     }
 
     if (price.includes("u-")) {
@@ -144,7 +92,7 @@ export default function Products2() {
       filteredArrays.every((array) => array.includes(item))
     );
     dispatch({ type: "SET_FILTERED", payload: commonItems });
-  }, [price, availability, color, materials, size, categories]);
+  }, [price, categories]);
 
   useEffect(() => {
     if (sortingOption === "Price Ascending") {
@@ -241,49 +189,46 @@ export default function Products2() {
                   className={`wrapper-shop tf-grid-layout tf-col-${activeLayout}`}
                   id="gridLayout"
                 >
-                  {sorted?.slice(0, 4).map((product) => (
+                  {sorted
+                    ?.slice(
+                      (currentPage - 1) * itemPerPage,
+                      currentPage * itemPerPage
+                    )
+                    .map((product) => (
                     <div
                       key={product.id}
                       className={`loadItem card_product--V01 grid ${
                         product.outOfStock ? "out-of-stock" : ""
                       }`}
-                      data-availability={product.availability}
                       data-category={product.category}
-                      data-material={product.material}
-                      data-size={product.size}
                     >
                       <div className="card_product-wrapper">
                         <Link
-                          href={`/${
-                            product.outOfStock
-                              ? "product-notify-avaiable"
-                              : "product-default"
-                          }/${product.id}`}
+                          href={`/products/${product.id}`}
                           className="product-img"
                         >
                           <img
-                            src={product.imgSrc}
+                            src={product.images ? product.images[0] : product.imgSrc}
                             alt={product.title}
                             className="lazyload img-product"
                             width={714}
                             height={900}
                           />
-                          <img
-                            src={product.hoverImgSrc}
-                            alt={product.title}
-                            className="lazyload img-hover"
-                            width={714}
-                            height={900}
-                          />
+                          {(product.images && product.images[1]) || product.hoverImgSrc ? (
+                            <img
+                              src={product.images ? product.images[1] : product.hoverImgSrc}
+                              alt={product.title}
+                              className="lazyload img-hover"
+                              width={714}
+                              height={900}
+                            />
+                          ) : null}
                         </Link>
 
                         {!product.outOfStock && (
                           <ul className="list-product-btn">
                             <li>
                               <QuickView product={product} />
-                            </li>
-                            <li className="compare">
-                              <AddtoCompare product={product} />
                             </li>
                           </ul>
                         )}
@@ -332,156 +277,7 @@ export default function Products2() {
 
                       <div className="card_product-info">
                         <Link
-                          href={`/${
-                            product.outOfStock
-                              ? "product-notify-avaiable"
-                              : "product-default"
-                          }/${product.id}`}
-                          className="name-product h5 fw-normal link text-line-clamp-2"
-                        >
-                          {product.title}
-                        </Link>
-                        <div className="price-wrap">
-                          <span className="price-new h5">
-                            ${product.price.toFixed(2)}
-                          </span>
-                          {product.oldPrice && (
-                            <span className="price-old fw-normal">
-                              ${product.oldPrice.toFixed(2)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                  {/* Product 5 */}
-                  <div className="loadItem tempo box_image--V02 hover-img">
-                    <Link
-                      href={`/shop-collection-list`}
-                      className="box_image-image img-style"
-                    >
-                      <img
-                        src="images/collections/discover-1.jpg"
-                        alt=""
-                        className="lazyload"
-                        width={714}
-                        height={1080}
-                      />
-                    </Link>
-                    <div className="box_image-content align-items-center text-center">
-                      <Link
-                        href={`/shop-collection-list`}
-                        className="title h3 fw-normal font-2 text-white link-secondary"
-                      >
-                        <span className="fst-italic">Diamond</span> For All
-                      </Link>
-                      <Link
-                        href={`/shop-collection-list`}
-                        className="tf-btn style-3 btn-fill-white animate-btn animate-dark"
-                      >
-                        <span className="fw-medium text-uppercase">
-                          discover
-                          <span className="d-none d-sm-inline">now</span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                  {sorted?.slice(4, 12).map((product) => (
-                    <div
-                      key={product.id}
-                      className={`loadItem card_product--V01 grid ${
-                        product.outOfStock ? "out-of-stock" : ""
-                      }`}
-                      data-availability={product.availability}
-                      data-category={product.category}
-                      data-material={product.material}
-                      data-size={product.size}
-                    >
-                      <div className="card_product-wrapper">
-                        <Link
-                          href={`/${
-                            product.outOfStock
-                              ? "product-notify-avaiable"
-                              : "product-default"
-                          }/${product.id}`}
-                          className="product-img"
-                        >
-                          <img
-                            src={product.imgSrc}
-                            alt={product.title}
-                            className="lazyload img-product"
-                            width={714}
-                            height={900}
-                          />
-                          <img
-                            src={product.hoverImgSrc}
-                            alt={product.title}
-                            className="lazyload img-hover"
-                            width={714}
-                            height={900}
-                          />
-                        </Link>
-
-                        {!product.outOfStock && (
-                          <ul className="list-product-btn">
-                            <li>
-                              <QuickView product={product} />
-                            </li>
-                            <li className="compare">
-                              <AddtoCompare product={product} />
-                            </li>
-                          </ul>
-                        )}
-
-                        {product.badge && (
-                          <div className="badge-box">
-                            <span className={`badge-item ${product.badgeType}`}>
-                              {product.badge}
-                            </span>
-                          </div>
-                        )}
-
-                        {product.variantText && (
-                          <div
-                            className={`variant-box ${
-                              product.variantType === "marquee"
-                                ? "bg-primary"
-                                : ""
-                            }`}
-                          >
-                            {product.variantType === "notify" ? (
-                              <a
-                                href="#unavailable"
-                                data-bs-toggle="modal"
-                                className={`variant-box stock bg-main link ${product.textColor}`}
-                              >
-                                <p className="text-center d-none d-md-block">
-                                  {product.variantText}
-                                </p>
-                                <p className="text-center d-md-none">
-                                  Notify Me
-                                </p>
-                              </a>
-                            ) : product.variantType === "text" ? (
-                              <div className="size-box bg-light-gray text-center">
-                                <p className="text-caption">
-                                  {product.variantText}
-                                </p>
-                              </div>
-                            ) : product.variantType === "marquee" ? (
-                              <DiscountMarquee parentClass="marquee-sale  infiniteSlide infiniteSlider" />
-                            ) : null}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="card_product-info">
-                        <Link
-                          href={`/${
-                            product.outOfStock
-                              ? "product-notify-avaiable"
-                              : "product-default"
-                          }/${product.id}`}
+                          href={`/products/${product.id}`}
                           className="name-product h5 fw-normal link text-line-clamp-2"
                         >
                           {product.title}
@@ -500,44 +296,17 @@ export default function Products2() {
                     </div>
                   ))}
                   {/* Product 15 16 */}
-                  <div className="loadItem tempo wd-2-cols box_image--V02 style-2 hover-img">
-                    <Link
-                      href={`/shop-collection-list`}
-                      className="box_image-image img-style"
-                    >
-                      <img
-                        src="images/collections/discover-2.jpg"
-                        alt=""
-                        className="lazyload"
-                        width={1488}
-                        height={1080}
-                      />
-                    </Link>
-                    <div className="box_image-content type-left">
-                      <div className="heading">
-                        <p className="fw-medium text-white text-uppercase">
-                          be love
-                        </p>
-                        <Link
-                          href={`/shop-collection-list`}
-                          className="title h2 fw-normal font-2 text-white link link-secondary"
-                        >
-                          Be <span className="fst-italic">Unmissable.</span>
-                        </Link>
-                      </div>
-                      <Link
-                        href={`/shop-collection-list`}
-                        className="tf-btn style-3 btn-fill-white animate-btn animate-dark"
-                      >
-                        <span className="fw-medium text-uppercase">
-                          discover more
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
                   {/* Pagination */}
                   <div className="wd-full tempo">
-                    <Pagination />
+                    <Pagination
+                      currentPage={currentPage}
+                      totalPages={Math.ceil(sorted.length / itemPerPage)}
+                      onPageChange={allProps.setCurrentPage}
+                      totalItems={sorted.length}
+                      itemPerPage={itemPerPage}
+                      startIndex={(currentPage - 1) * itemPerPage}
+                      endIndex={currentPage * itemPerPage}
+                    />
                   </div>
                 </div>
               </div>

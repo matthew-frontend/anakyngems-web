@@ -10,7 +10,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -20,7 +20,7 @@ export default function TextSlider() {
             className="text-clip text-hero"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -31,7 +31,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -41,7 +41,7 @@ export default function TextSlider() {
             className="text-clip text-hero"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -52,7 +52,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -62,7 +62,7 @@ export default function TextSlider() {
             className="text-clip text-hero"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -73,7 +73,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -83,7 +83,7 @@ export default function TextSlider() {
             className="text-clip text-hero"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32"
@@ -93,7 +93,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -103,7 +103,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -113,7 +113,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -123,7 +123,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -133,7 +133,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -143,7 +143,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -153,7 +153,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -163,7 +163,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -173,7 +173,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -183,7 +183,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -193,7 +193,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -203,7 +203,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -213,7 +213,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -223,7 +223,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -233,7 +233,7 @@ export default function TextSlider() {
             className="text-hero fw-medium text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            APPLE PAY
+            ANAKYNGEMS
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"
@@ -243,7 +243,7 @@ export default function TextSlider() {
             className="text-clip text-hero infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+            EXCLUSIVE PRICE
           </span>
           <i
             className="icon-rhombus fs-32 infiniteslide_clone"

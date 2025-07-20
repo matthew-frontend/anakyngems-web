@@ -32,7 +32,7 @@ export const secondSliderData = [
     buttonText: false,
   },
   {
-    image: "/images/slider/slider-5.jpg",
+    image: "https://vemusnextjs.vercel.app/images/slider/slider-5.jpg",
     imageWidth: 1920,
     imageHeight: 1872,
     titleItalic: "Modern",

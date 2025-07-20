@@ -382,7 +382,8 @@ header {
 }
 
 .menu-item {
-  &:hover {
+  &:hover,
+  &:hover .sub-menu:hover {
     .item-link {
       color: var(--primary);
 
@@ -410,6 +411,16 @@ header {
       -ms-transform: rotate3d(0, 0, 0, 0deg);
       transform: rotate3d(0, 0, 0, 0deg);
     }
+  }
+
+  .sub-menu:hover {
+    pointer-events: all;
+    @include visible;
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    -moz-transform: rotate3d(0, 0, 0, 0deg);
+    -o-transform: rotate3d(0, 0, 0, 0deg);
+    -ms-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
   }
 
   &.active {
@@ -466,15 +477,15 @@ header {
     &::after {
       position: absolute;
       content: "";
-      top: 50%;
+      top: 0;
       left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
       width: calc(100% + 130px);
-      height: 100%;
+      height: calc(100% + 20px);
       display: none;
     }
   }

@@ -51,16 +51,6 @@ export default function Header2() {
                     <i className="icon icon-search" />
                   </a>
                 </li>
-                <li className="br-line d-none d-xl-flex" />
-                <li className="d-none d-md-inline-flex">
-                  <a
-                    href="#log"
-                    data-bs-toggle="modal"
-                    className="nav-icon-item text-black link"
-                  >
-                    <i className="icon icon-user" />
-                  </a>
-                </li>
               </ul>
             </div>
           </div>

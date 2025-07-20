@@ -4,7 +4,6 @@ import Slider1 from "./sliders/Slider1";
 import ProgressBarComponent from "../common/Progressbar";
 
 import Link from "next/link";
-import BoughtTogther from "./BoughtTogther";
 
 import { useContextElement } from "@/context/Context";
 import AddtoCompare from "../common/AddtoCompare";
@@ -175,7 +174,6 @@ export default function Details15({ product }) {
                     </ul>
                   </div>
                 </div>
-                <BoughtTogther />
               </div>
             </div>
           </div>

@@ -54,40 +54,8 @@ export default function DescriptionSideAccordion() {
                   <td className="h6">Stone</td>
                   <td className="h6">Diamond</td>
                 </tr>
-                <tr>
-                  <td className="h6">Brand</td>
-                  <td className="h6">Vemus</td>
-                </tr>
-                <tr>
-                  <td className="h6">Size</td>
-                  <td className="h6">5, 6, 7, 8</td>
-                </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-      <div className="widget-accordion-2 style-3">
-        <div
-          className="accordion-title collapsed"
-          data-bs-target="#shipping"
-          data-bs-toggle="collapse"
-          aria-expanded="true"
-          aria-controls="shipping"
-          role="button"
-        >
-          <span>shipping</span>
-          <span className="icon ic-accordion-custom" />
-        </div>
-        <div id="shipping" className="collapse widget-shipping">
-          <div className="accordion-body">
-            <h6 className="fw-normal text-main-4">
-              Estimated delivery times:
-              <span className="fw-medium text-main">12 - 26 days</span>
-              (International),
-              <span className="fw-medium text-main">3 - 6 days</span>
-              (United States).
-            </h6>
           </div>
         </div>
       </div>

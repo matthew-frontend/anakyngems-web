@@ -19,12 +19,8 @@ export default function FilterSidebar({ allProps }) {
           <div className="apply-filter-wrap">
             <p className="title h6 fw-normal text-uppercase">Applied Filters</p>
             {!(
-              allProps.availability !== "All" ||
               allProps.categories.length > 0 ||
-              allProps.materials.length > 0 ||
-              allProps.color.length > 0 ||
-              allProps.price !== "All" ||
-              allProps.size !== "All"
+              allProps.price !== "All"
             ) && (
               <div id="product-count-grid" className="count-text text-main-4">
                 No Filter Selected
@@ -32,15 +28,6 @@ export default function FilterSidebar({ allProps }) {
             )}
             <div className="meta-filter-shop">
               <div id="applied-filters">
-                {allProps.availability !== "All" && (
-                  <span
-                    className="filter-tag remove-tag"
-                    data-filter="availability"
-                    onClick={() => allProps.setAvailability("All")}
-                  >
-                    {allProps.availability} <span className="icon icon-close" />
-                  </span>
-                )}
                 {allProps.categories.length > 0 &&
                   allProps.categories.map((category) => (
                     <span
@@ -54,37 +41,6 @@ export default function FilterSidebar({ allProps }) {
                           (word) => word.charAt(0).toUpperCase() + word.slice(1)
                         )
                         .join(" ")}{" "}
-                      <span className="icon icon-close" />
-                    </span>
-                  ))}
-                {allProps.materials.length > 0 &&
-                  allProps.materials.map((material) => (
-                    <span
-                      key={material}
-                      className="filter-tag remove-tag"
-                      data-filter="material"
-                      data-value={material}
-                      onClick={() => allProps.removeMaterial(material)}
-                    >
-                      {material
-                        .split("-")
-                        .map(
-                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
-                        )
-                        .join(" ")}{" "}
-                      <span className="icon icon-close" />
-                    </span>
-                  ))}
-                {allProps.color.length > 0 &&
-                  allProps.color.map((color) => (
-                    <span
-                      key={color}
-                      className="filter-tag remove-tag"
-                      data-filter="color"
-                      data-value={color}
-                      onClick={() => allProps.removeColor(color)}
-                    >
-                      {color.charAt(0).toUpperCase() + color.slice(1)}{" "}
                       <span className="icon icon-close" />
                     </span>
                   ))}
@@ -106,65 +62,7 @@ export default function FilterSidebar({ allProps }) {
                     <span className="icon icon-close" />
                   </span>
                 )}
-                {allProps.size !== "All" && (
-                  <span
-                    className="filter-tag remove-tag"
-                    onClick={() => allProps.setSize("All")}
-                    data-filter="size"
-                  >
-                    {allProps.size}
-                    <span className="icon icon-close" />
-                  </span>
-                )}
               </div>
-            </div>
-          </div>
-          <div className="widget-facet">
-            <div
-              className="facet-title h6 fw-normal"
-              data-bs-target="#availability"
-              role="button"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="availability"
-            >
-              <span className="h6 fw-normal text-uppercase">availability</span>
-              <span className="icon ic-accordion-custom" />
-            </div>
-            <div id="availability" className="collapse show">
-              <ul className="collapse-body filter-group-check current-scrollbar">
-                {["In Stock", "Out of Stock"].map((option) => (
-                  <li
-                    className="list-item"
-                    key={option}
-                    onClick={() => allProps.setAvailability(option)}
-                  >
-                    <input
-                      type="radio"
-                      name="availability"
-                      className="tf-check style-2"
-                      checked={allProps.availability === option}
-                      readOnly
-                    />
-                    <label>
-                      <span>{option}</span>
-                      <span className="count-wrap">
-                        [{" "}
-                        <span className="count">
-                          {
-                            products15.filter(
-                              (el) =>
-                                el.availability.toLowerCase() ==
-                                option.toLowerCase()
-                            ).length
-                          }
-                        </span>{" "}
-                        ]
-                      </span>
-                    </label>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
           <div className="widget-facet">
@@ -230,116 +128,6 @@ export default function FilterSidebar({ allProps }) {
           <div className="widget-facet">
             <div
               className="facet-title h6 fw-normal"
-              data-bs-target="#materials"
-              role="button"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="materials"
-            >
-              <span className="h6 fw-normal text-uppercase">Material</span>
-              <span className="icon ic-accordion-custom" />
-            </div>
-            <div id="materials" className="collapse show">
-              <ul className="collapse-body filter-group-check current-scrollbar">
-                {["gold", "sterling-silver", "white-gold", "pink-gold"].map(
-                  (material) => (
-                    <li
-                      className="list-item"
-                      key={material}
-                      onClick={() => allProps.setMaterial(material)}
-                    >
-                      <input
-                        type="checkbox"
-                        name="material"
-                        className="tf-check style-2"
-                        checked={allProps.materials.includes(material)}
-                        readOnly
-                      />
-                      <label className="label">
-                        <span>
-                          {material
-                            .split("-")
-                            .map(
-                              (word) =>
-                                word.charAt(0).toUpperCase() + word.slice(1)
-                            )
-                            .join(" ")}
-                        </span>
-                        <span className="count-wrap">
-                          [{" "}
-                          <span className="count">
-                            {
-                              products15.filter((el) => el.material == material)
-                                .length
-                            }
-                          </span>{" "}
-                          ]
-                        </span>
-                      </label>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
-          </div>
-          <div className="widget-facet">
-            <div
-              className="facet-title h6 fw-normal"
-              data-bs-target="#stone-color"
-              role="button"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="stone-color"
-            >
-              <span className="h6 fw-normal text-uppercase">stone colour</span>
-              <span className="icon ic-accordion-custom" />
-            </div>
-            <div id="stone-color" className="collapse show">
-              <ul className="collapse-body filter-group-check current-scrollbar">
-                {["blue", "pink", "white"].map((color) => (
-                  <li
-                    className="list-item"
-                    key={color}
-                    onClick={() => allProps.setColor(color)}
-                  >
-                    <input
-                      type="checkbox"
-                      name="color"
-                      className="tf-check style-2"
-                      checked={allProps.color.includes(color)}
-                      readOnly
-                    />
-                    <label className="label">
-                      <img
-                        alt="Colour"
-                        className="img-check"
-                        src={`images/products/material/dia-${color}.jpg`}
-                        width={150}
-                        height={150}
-                      />
-                      <span>
-                        {color.charAt(0).toUpperCase() + color.slice(1)}
-                      </span>
-                      <span className="count-wrap">
-                        [{" "}
-                        <span className="count">
-                          {
-                            products15.filter((el) =>
-                              el.filterColors.includes(color)
-                            ).length
-                          }
-                        </span>{" "}
-                        ]
-                      </span>
-                    </label>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="widget-facet">
-            <div
-              className="facet-title h6 fw-normal"
               data-bs-target="#price"
               role="button"
               data-bs-toggle="collapse"
@@ -390,41 +178,6 @@ export default function FilterSidebar({ allProps }) {
                   </li>
                 ))}
               </ul>
-            </div>
-          </div>
-          <div className="widget-facet">
-            <div
-              className="facet-title h6 fw-normal"
-              data-bs-target="#size"
-              role="button"
-              data-bs-toggle="collapse"
-              aria-expanded="true"
-              aria-controls="size"
-            >
-              <span className="h6 fw-normal text-uppercase">size</span>
-              <span className="icon ic-accordion-custom" />
-            </div>
-            <div id="size" className="collapse show">
-              <div className="collapse-body filter-size-box flat-check-list">
-                {[
-                  { value: 5, disabled: false },
-                  { value: 6, disabled: false },
-                  { value: 7, disabled: false },
-                  { value: 8, disabled: false },
-                  { value: 9, disabled: false },
-                  { value: 10, disabled: true },
-                ].map((sizeObj) => (
-                  <div
-                    key={sizeObj.value}
-                    onClick={() => allProps.setSize(sizeObj.value)}
-                    className={`check-item size-item size-check${
-                      sizeObj.disabled ? " disabled" : ""
-                    } ${allProps.size === sizeObj.value ? " active" : ""}`}
-                  >
-                    <span className="count size">{sizeObj.value}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>

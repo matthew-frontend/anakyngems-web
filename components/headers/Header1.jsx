@@ -17,12 +17,12 @@ export default function Header1({ parentClass = "tf-header line-bt-2" }) {
             </a>
           </div>
           <div className="col-xl-2 col-md-4 col-6">
-            <Link href={`/`} className="logo-site">
+            <Link href={`/`} className="logo-site py-2">
               <Image
                 alt=""
                 width={122}
                 height={32}
-                src="/images/logo/logo.svg"
+                src="/images/logo/logo.png"
               />
             </Link>
           </div>
@@ -42,16 +42,6 @@ export default function Header1({ parentClass = "tf-header line-bt-2" }) {
                   className="nav-icon-item text-black link"
                 >
                   <i className="icon icon-search" />
-                </a>
-              </li>
-              <li className="br-line d-none d-xl-flex" />
-              <li className="d-none d-md-inline-flex">
-                <a
-                  href="#log"
-                  data-bs-toggle="modal"
-                  className="nav-icon-item text-black link"
-                >
-                  <i className="icon icon-user" />
                 </a>
               </li>
             </ul>

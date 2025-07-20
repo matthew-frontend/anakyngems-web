@@ -44,7 +44,7 @@ export default function ProductsModal() {
           </span>
           <div className="modal-body">
             <h3 className="title fw-normal text-uppercase text-center">
-              flash sale will ends in:
+              recommend for you:
             </h3>
             <div className="countdown-V03">
               <div

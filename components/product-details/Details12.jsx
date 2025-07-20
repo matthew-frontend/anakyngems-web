@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import ProgressBarComponent from "../common/Progressbar";
 
 import Link from "next/link";
-import BoughtTogther from "./BoughtTogther";
 import ColorSelect from "./ColorSelect";
 import { useContextElement } from "@/context/Context";
 import AddtoCompare from "../common/AddtoCompare";
@@ -175,7 +174,6 @@ export default function Details12({ product }) {
                     </ul>
                   </div>
                 </div>
-                <BoughtTogther />
               </div>
             </div>
           </div>

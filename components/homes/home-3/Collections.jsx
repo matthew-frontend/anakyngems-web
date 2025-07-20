@@ -28,13 +28,13 @@ export default function Collections() {
                   NEW IN <span className="count">12</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=new-in`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -51,13 +51,13 @@ export default function Collections() {
                   BRACELETS <span className="count">9</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=bracelet`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -74,13 +74,13 @@ export default function Collections() {
                   EARRINGS <span className="count">16</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=earring`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -97,13 +97,13 @@ export default function Collections() {
                   RINGS <span className="count">25</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=ring`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -120,13 +120,13 @@ export default function Collections() {
                   NECKLACES <span className="count">11</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=necklace`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -143,13 +143,13 @@ export default function Collections() {
                   GIFT IDEAS <span className="count">3</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products?category=gift-idea`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -166,13 +166,13 @@ export default function Collections() {
                   PERSONALIZE <span className="count">20</span>
                 </span>
                 <Link
-                  href={`/shop-collection-list`}
+                  href={`/products`}
                   className="icon icon-arrow-top-right"
                 />
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -183,12 +183,12 @@ export default function Collections() {
           <div className="tab-content wow fadeInUp">
             <div className="tab-pane active show" id="new-in" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=new-in`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -200,12 +200,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="bracelet" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=bracelet`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -217,12 +217,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="earring" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=earring`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -234,12 +234,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="ring" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=ring`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -251,12 +251,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="necklace" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=necklace`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -268,12 +268,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="gift-idea" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products?category=gift-idea`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/banner/banner-8.jpg"
+                    src="https://www.chaichalermgold.com/images/contact.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -285,12 +285,12 @@ export default function Collections() {
             </div>
             <div className="tab-pane" id="personalize" role="tabpanel">
               <Link
-                href={`/shop-collection-list`}
+                href={`/products`}
                 className="shape-image hover-img"
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}

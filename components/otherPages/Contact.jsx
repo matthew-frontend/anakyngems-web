@@ -7,7 +7,7 @@ export default function Contact() {
       {/* Map */}
       <div className="wg-map d-flex">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7880.148272329334!2d151.20657421407668!3d-33.858885268389294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae682c546039%3A0x16da940d587922a1!2sCircular%20Quay!5e0!3m2!1sen!2s!4v1745205798630!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.318473127917!2d102.80833369999999!3d17.3964975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31237633befda425%3A0x3aa8aa6ba479be1b!2z4Lir4LmJ4Liy4LiH4LmA4Lie4LiK4Lij4LiX4Lit4LiH4LiK4Lix4Lii4LmA4LiJ4Lil4Li04LihIOC4leC4o-C4suC4lOC4suC4pw!5e0!3m2!1sth!2sth!4v1753008663249!5m2!1sth!2sth"
           width="100%"
           height={461}
           style={{ border: 0 }}
@@ -26,30 +26,29 @@ export default function Contact() {
                 <li>
                   <p className="caption">Address:</p>
                   <a
-                    href="https://www.google.com/maps?q=15+Geogre+st,Sydney,NSW+2000,Australia"
+                    href="https://maps.app.goo.gl/nurLYMZFXMC8fXXY9"
                     className="link text-main-4"
                     target="_blank"
                   >
-                    15 Geogre st, Sydney, NSW 2000, Australia
+                    131/5-6 Nitayo Road, Mak Khaeng Sub-district,<br/>Mueang District, Udon Thani 41000, Thailand
                   </a>
                 </li>
                 <li>
                   <p className="caption">Email:</p>
-                  <a href="mailto:store@vemus.com" className="link text-main-4">
-                    Store@vemus.com
+                  <a href="mailto:anakyngems@gmail.com" className="link text-main-4">
+                    anakyngems@gmail.com
                   </a>
                 </li>
                 <li>
                   <p className="caption">Phone:</p>
-                  <a href="tel:6434528540" className="link text-main-4">
-                    +64 3452 8540
+                  <a href="tel:0885605601" className="link text-main-4">
+                    088 560 5601
                   </a>
                 </li>
                 <li>
                   <p className="caption">Opening Hour:</p>
                   <p className="text-main-4">
-                    Mon - Fri: 8am to 4.30pm GST <br />
-                    Sat: 9am to 3pm GST <br />
+                    Mon - Fri: 8.30am to 5.30pm <br />
                     Sun: Close
                   </p>
                 </li>
@@ -99,7 +98,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="col-xl-5 col-lg-6">
-            <div className="right-col">
+            {/* <div className="right-col">
               <h3 className="title fw-normal">Get In Touch</h3>
               <p className="sub-title text-main-4">
                 Our one-to-one support is a big part of Vemus company. Contact
@@ -131,7 +130,7 @@ export default function Contact() {
                   SEND
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

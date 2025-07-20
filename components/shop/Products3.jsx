@@ -352,7 +352,7 @@ export default function Products3() {
                   {/* Product 5 */}
                   <div className="loadItem tempo box_image--V02 hover-img">
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="box_image-image img-style"
                     >
                       <img
@@ -365,13 +365,13 @@ export default function Products3() {
                     </Link>
                     <div className="box_image-content align-items-center text-center">
                       <Link
-                        href={`/shop-collection-list`}
+                        href={`/products`}
                         className="title h3 fw-normal font-2 text-white link-secondary"
                       >
                         <span className="fst-italic">Diamond</span> For All
                       </Link>
                       <Link
-                        href={`/shop-collection-list`}
+                        href={`/products`}
                         className="tf-btn style-3 btn-fill-white animate-btn animate-dark"
                       >
                         <span className="fw-medium text-uppercase">
@@ -497,7 +497,7 @@ export default function Products3() {
                   {/* Product 15 16 */}
                   <div className="loadItem tempo wd-2-cols box_image--V02 style-2 hover-img">
                     <Link
-                      href={`/shop-collection-list`}
+                      href={`/products`}
                       className="box_image-image img-style"
                     >
                       <img
@@ -514,14 +514,14 @@ export default function Products3() {
                           be love
                         </p>
                         <Link
-                          href={`/shop-collection-list`}
+                          href={`/products`}
                           className="title h2 fw-normal font-2 text-white link link-secondary"
                         >
                           Be <span className="fst-italic">Unmissable.</span>
                         </Link>
                       </div>
                       <Link
-                        href={`/shop-collection-list`}
+                        href={`/products`}
                         className="tf-btn style-3 btn-fill-white animate-btn animate-dark"
                       >
                         <span className="fw-medium text-uppercase">
