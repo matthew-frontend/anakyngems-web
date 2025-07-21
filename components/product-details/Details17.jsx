@@ -2,7 +2,6 @@
 import Slider1 from "./sliders/Slider1";
 import ProgressBarComponent from "../common/Progressbar";
 
-import AddtoCompare from "../common/AddtoCompare";
 
 export default function Details17({ product }) {
   return (
@@ -70,14 +69,6 @@ export default function Details17({ product }) {
                       >
                         This item is currently unavailable
                       </a>
-                      <div className="group-btn-action">
-
-                        <AddtoCompare
-                          tooltipDirection="top"
-                          product={product}
-                          additionalClass="tf-btn-icon"
-                        />
-                      </div>
                     </div>
                   </div>
                   <div className="tf-product-share">

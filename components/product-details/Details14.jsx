@@ -5,7 +5,6 @@ import Link from "next/link";
 
 import ColorSelect from "./ColorSelect";
 import { useContextElement } from "@/context/Context";
-import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 
 import Image from "next/image";
@@ -141,14 +140,6 @@ export default function Details14({ product }) {
                           {(product.price * quantity).toFixed(2)}
                         </span>
                       </a>
-                      <div className="group-btn-action">
-
-                        <AddtoCompare
-                          tooltipDirection="top"
-                          product={product}
-                          additionalClass="tf-btn-icon"
-                        />
-                      </div>
                     </div>
                     <Link
                       href={`/checkout`}

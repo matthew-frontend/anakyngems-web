@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import QuickView from "../common/QuickView";
-import AddtoCompare from "../common/AddtoCompare";
 import { Navigation, Pagination } from "swiper/modules";
 export default function RelatedProducts({ containerFull = false }) {
   return (
@@ -76,9 +75,6 @@ export default function RelatedProducts({ containerFull = false }) {
                   <ul className="list-product-btn">
                     <li>
                       <QuickView product={product} />
-                    </li>
-                    <li className="compare">
-                      <AddtoCompare product={product} />
                     </li>
                   </ul>
                 </div>

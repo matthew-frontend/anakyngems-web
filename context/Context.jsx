@@ -13,7 +13,6 @@ export const useContextElement = () => {
 export default function Context({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
   const [wishList, setWishList] = useState([1, 2, 3]);
-  const [compareItem, setCompareItem] = useState([1, 2, 3, 4]);
   const [quickViewItem, setQuickViewItem] = useState(allProducts[0]);
   const [quickAddItem, setQuickAddItem] = useState(1);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -69,24 +68,8 @@ export default function Context({ children }) {
       setWishList((pre) => [...pre.filter((elm) => elm != id)]);
     }
   };
-  const addToCompareItem = (id) => {
-    if (!compareItem.includes(id)) {
-      setCompareItem((pre) => [...pre, id]);
-    }
-  };
-  const removeFromCompareItem = (id) => {
-    if (compareItem.includes(id)) {
-      setCompareItem((pre) => [...pre.filter((elm) => elm != id)]);
-    }
-  };
   const isAddedtoWishlist = (id) => {
     if (wishList.includes(id)) {
-      return true;
-    }
-    return false;
-  };
-  const isAddedtoCompareItem = (id) => {
-    if (compareItem.includes(id)) {
       return true;
     }
     return false;
@@ -126,11 +109,6 @@ export default function Context({ children }) {
     setQuickViewItem,
     quickAddItem,
     setQuickAddItem,
-    addToCompareItem,
-    isAddedtoCompareItem,
-    removeFromCompareItem,
-    compareItem,
-    setCompareItem,
     updateQuantity,
   };
   return (

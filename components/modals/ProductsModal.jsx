@@ -7,7 +7,6 @@ import { products5 } from "@/data/products";
 import Link from "next/link";
 import Image from "next/image";
 import QuickView from "@/components/common/QuickView";
-import AddtoCompare from "@/components/common/AddtoCompare";
 export default function ProductsModal() {
   const modalElement = useRef();
   useEffect(() => {
@@ -101,9 +100,6 @@ export default function ProductsModal() {
                       <ul className="list-product-btn">
                         <li>
                           <QuickView product={product} />
-                        </li>
-                        <li className="compare">
-                          <AddtoCompare product={product} />
                         </li>
                       </ul>
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import ProductsPageClient from "@/components/shop/ProductsPageClient";
 export const metadata = {
-  title: "Products | ANAKYNGEMS",
+  title: "Products - ANAKYNGEMS",
   description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {

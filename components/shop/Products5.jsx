@@ -3,7 +3,6 @@ import { products15 } from "@/data/products";
 import React from "react";
 import DiscountMarquee from "../common/DiscountMarquee";
 import QuickView from "../common/QuickView";
-import AddtoCompare from "../common/AddtoCompare";
 import { initialState, reducer } from "@/reducer/filterReducer";
 import { useEffect, useReducer, useState } from "react";
 import FilterSidebar from "./FilterSidebar";
@@ -356,9 +355,6 @@ export default function Products5({ defaultLayout = 4 }) {
                         <li>
                           <QuickView product={product} />
                         </li>
-                        <li className="compare">
-                          <AddtoCompare product={product} />
-                        </li>
                       </ul>
                     )}
 
@@ -496,9 +492,6 @@ export default function Products5({ defaultLayout = 4 }) {
                       <ul className="list-product-btn">
                         <li>
                           <QuickView product={product} />
-                        </li>
-                        <li className="compare">
-                          <AddtoCompare product={product} />
                         </li>
                       </ul>
                     )}

@@ -6,7 +6,7 @@ import React from "react";
 import Link from "next/link";
 export const metadata = {
   title:
-    "Blog List Style 02 || Vemus - Jewelry Ecommerce React Nextjs Template",
+    "Behind the Brand - ANAKYNGEMS",
   description: "Vemus - Jewelry Ecommerce React Nextjs Template",
 };
 export default function page() {

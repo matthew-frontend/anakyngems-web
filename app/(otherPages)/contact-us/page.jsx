@@ -5,7 +5,7 @@ import Contact from "@/components/otherPages/Contact";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "Contact Us | ANAKYNGEMS",
+  title: "Contact Us - ANAKYNGEMS",
   description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {

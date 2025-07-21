@@ -6,7 +6,6 @@ import ProgressBarComponent from "../common/Progressbar";
 import Link from "next/link";
 import ColorSelect from "./ColorSelect";
 import { useContextElement } from "@/context/Context";
-import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 
 import Slider8 from "./sliders/Slider8";
@@ -126,14 +125,6 @@ export default function Details13({ product }) {
                           {(product.price * quantity).toFixed(2)}
                         </span>
                       </a>
-                      <div className="group-btn-action">
-
-                        <AddtoCompare
-                          tooltipDirection="top"
-                          product={product}
-                          additionalClass="tf-btn-icon"
-                        />
-                      </div>
                     </div>
                     <Link
                       href={`/checkout`}

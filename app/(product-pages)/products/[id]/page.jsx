@@ -9,13 +9,28 @@ import React from "react";
 import Link from "next/link";
 import { allProducts } from "@/data/products";
 import TextSlider from "@/components/common/TextSlider3";
+import { ProductSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 import Details3 from "@/components/product-details/Details3";
 
-export const metadata = {
-  title: "Product Details | ANAKYNGEMS - Lab Grown Diamond Jewellery",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-};
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  
+  // Find product by ID or slug
+  const product = allProducts.find((p) => p.id == id || p.slug == id) || allProducts[0];
+  
+  return {
+    title: `${product.title || product.name} - Lab Grown Diamond Jewelry | ANAKYNGEMS`,
+    description: product.description || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+    keywords: `${product.title}, lab grown diamond, ${product.category}, jewelry, ANAKYNGEMS, sustainable diamonds, ethical jewelry`,
+    openGraph: {
+      title: `${product.title || product.name} | ANAKYNGEMS`,
+      description: product.description,
+      images: product.images || [product.imgSrc],
+      type: 'website'
+    }
+  };
+}
 
 export default async function ProductDetailPage({ params }) {
   const { id } = await params;
@@ -23,8 +38,16 @@ export default async function ProductDetailPage({ params }) {
   // Find product by ID or slug
   const product = allProducts.find((p) => p.id == id || p.slug == id) || allProducts[0];
   
+  const breadcrumbItems = [
+    { name: "Home", url: "https://anakyngems.com" },
+    { name: "Products", url: "https://anakyngems.com/products" },
+    { name: product.title || product.name, url: `https://anakyngems.com/products/${product.id}` }
+  ];
+  
   return (
     <>
+      <ProductSchema product={product} />
+      <BreadcrumbSchema items={breadcrumbItems} />
       <Topbar1 parentClass="tf-topbar bg-dark-olive" />
       <Header1 parentClass="tf-header line-bt-2" />
       <div className="flat-spacing-16 pb-0">

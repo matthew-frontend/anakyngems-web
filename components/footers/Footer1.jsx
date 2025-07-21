@@ -300,11 +300,6 @@ export default function Footer1() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/compare`} className="text-main-4 link">
-                          Compare
-                        </Link>
-                      </li>
-                      <li>
                         <Link href={`/faq`} className="text-main-4 link">
                           FAQ’s
                         </Link>

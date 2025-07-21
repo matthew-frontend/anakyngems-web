@@ -16,15 +16,18 @@ import Products3 from "@/components/homes/home-3/Products3";
 import Testimonials from "@/components/homes/home-3/Testimonials";
 import TextBanner from "@/components/homes/home-3/TextBanner";
 import ProductsModal from "@/components/modals/ProductsModal";
+import { WebsiteSchema, OrganizationSchema } from "@/components/seo/JsonLd";
 import React from "react";
 
 export const metadata = {
-  title: "Home 03 || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรนพรีเมียม | ยั่งยืน จริยธรรม",
+  description: "ช้อปเครื่องประดับเพชรแล็บโกรนพรีเมียมที่ ANAKYNGEMS อนาคินเจม แหวนหมั้น แหวนแต่งงาน สร้อยคอ ต่างหู กำไล เพชรยั่งยืน จริยธรรม ไร้ความขัดแย้ง ส่งฟรีทั่วโลก | Shop premium lab grown diamond jewelry at ANAKYNGEMS. Sustainable, ethical, and conflict-free diamonds.",
 };
 export default function page() {
   return (
     <>
+      <WebsiteSchema />
+      <OrganizationSchema />
       <div className="tf-topbar p-0 style-2">
         <Topbar2 />
         <TopbarBottom />

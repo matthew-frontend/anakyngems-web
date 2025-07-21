@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import ColorSelect from "./ColorSelect";
 import { useContextElement } from "@/context/Context";
-import AddtoCompare from "../common/AddtoCompare";
 import SizePicker from "./SizeSelect";
 export default function Details8({ product }) {
   const [activeColor, setActiveColor] = useState("gold");
@@ -124,14 +123,6 @@ export default function Details8({ product }) {
                           {(product.price * quantity).toFixed(2)}
                         </span>
                       </a>
-                      <div className="group-btn-action">
-
-                        <AddtoCompare
-                          tooltipDirection="top"
-                          product={product}
-                          additionalClass="tf-btn-icon"
-                        />
-                      </div>
                     </div>
                     <Link
                       href={`/checkout`}

@@ -10,7 +10,7 @@ import Testimonials from "@/components/otherPages/about/Testimonials";
 import React from "react";
 
 export const metadata = {
-  title: "About Us | Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "About Us - ANAKYNGEMS",
   description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {

@@ -6,7 +6,6 @@ import ColorSelect from "../product-details/ColorSelect";
 import SizePicker from "../product-details/SizeSelect";
 import { useContextElement } from "@/context/Context";
 import { allProducts } from "@/data/products";
-import AddtoCompare from "../common/AddtoCompare";
 export default function QuickAdd() {
   const [activeColor, setActiveColor] = useState("gold");
   const [quantity, setQuantity] = useState(1);
@@ -99,11 +98,6 @@ export default function QuickAdd() {
                   </a>
                   <div className="group-btn-action">
 
-                    <AddtoCompare
-                      tooltipDirection="top"
-                      product={product}
-                      additionalClass="tf-btn-icon"
-                    />
                   </div>
                 </div>
                 <Link

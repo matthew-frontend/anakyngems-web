@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://anakyngems.com/sitemap.xml
+
+# Disallow admin or development paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /temp/
+
+# Crawl-delay for rate limiting
+Crawl-delay: 1
