@@ -46,7 +46,7 @@ export default function Home() {
       <Hero />
       <About />
       <CollectionsSlide />
-      {/* <FeaturedCollections /> */}
+      <FeaturedCollections />
       <BestSeller />
       <TextSlider2 />
       <CountdownLuxruy />
@@ -60,7 +60,7 @@ export default function Home() {
         parentClass="flat-spacing-8 bg-light-peach"
       />
       <Footer1 />
-      {/* <ProductsModal /> */}
+      <ProductsModal />
     </>
   );
 }

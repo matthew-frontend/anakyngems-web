@@ -89,8 +89,8 @@ export default async function ProductDetailPage({ params }) {
                 </li>
                 <li className="br-line w-12 bg-main" />
                 <li>
-                  <Link href={`/shop-left-sidebar`} className="text-main-4 link-secondary">
-                    Product
+                  <Link href={`/products`} className="text-main-4 link-secondary">
+                    Products
                   </Link>
                 </li>
                 <li className="br-line w-12 bg-main" />

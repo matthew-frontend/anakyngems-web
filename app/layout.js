@@ -8,14 +8,6 @@ import Context from "@/context/Context";
 import MobileMenu from "@/components/modals/MobileMenu";
 import QuickView from "@/components/modals/QuickView";
 import Search from "@/components/modals/Search";
-import SizeGuide from "@/components/modals/SizeGuide";
-import AskQuestion from "@/components/modals/AskQuestion";
-import Delivery from "@/components/modals/Delivery";
-import Engrave from "@/components/modals/Engrave";
-import Pickup from "@/components/modals/Pickup";
-import ProductDes from "@/components/modals/ProductDes";
-import UnavailableModal from "@/components/modals/UnavailableModal";
-import OrderDetails from "@/components/modals/OrderDetails";
 
 export const metadata = {
   title: {
@@ -86,14 +78,6 @@ export default function RootLayout({ children }) {
             {/* <QuickAdd /> */}
             <QuickView />
             <Search />
-            <SizeGuide />
-            <AskQuestion />
-            <Delivery />
-            <Engrave />
-            <Pickup />
-            <ProductDes />
-            <UnavailableModal />
-            <OrderDetails />
           </Context>
         </LayoutWrapper>
       </body>
