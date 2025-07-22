@@ -58,7 +58,7 @@ export default function CollectionsSlide() {
     fetchData();
   }, []);
   return (
-    <div className="flat-spacing-12 bg-anakyn-20">
+    <div className="flat-spacing-12">
       <div className="container-full-2">
         <Swiper
           dir="ltr"

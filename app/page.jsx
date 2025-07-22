@@ -46,7 +46,7 @@ export default function Home() {
       <Hero />
       <About />
       <CollectionsSlide />
-      <FeaturedCollections />
+      {/* <FeaturedCollections /> */}
       <BestSeller />
       <TextSlider2 />
       <CountdownLuxruy />
