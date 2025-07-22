@@ -26,7 +26,7 @@ export default function Products3() {
             <div className="box_image--V01 style-3 hover-img4">
               <div className="image img-style4">
                 <Image
-                  src="/images/collections/slide-1.jpg"
+                  src="https://vemusnextjs.vercel.app/images/collections/slide-1.jpg"
                   alt=""
                   className="lazyloaded"
                   width={714}

@@ -17,7 +17,7 @@ export default function page() {
       <div className="wg-coming">
         <div className="image">
           <Image
-            src="/images/section/coming-soon.jpg"
+            src="https://vemusnextjs.vercel.app/images/section/coming-soon.jpg"
             alt="Coming"
             className="lazyload"
             width={2879}

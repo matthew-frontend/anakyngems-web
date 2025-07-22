@@ -98,8 +98,16 @@ export default function Sidebar({ allProps }) {
                       [{" "}
                       <span className="count">
                         {
-                          products15.filter((el) => el.category == category)
-                            .length
+                          allProps.sanityProducts ? 
+                          allProps.sanityProducts.filter((el) => {
+                            if (category === "new-in") {
+                              return el.badgeType === "new" || el.badge === "NEW IN";
+                            } else if (category === "gift-idea") {
+                              return el.badgeType === "gift" || el.badge?.includes("Gift");
+                            }
+                            return (el.category?.title || el.category) === category;
+                          }).length :
+                          products15.filter((el) => el.category == category).length
                         }
                       </span>{" "}
                       ]
@@ -147,11 +155,11 @@ export default function Sidebar({ allProps }) {
                       [{" "}
                       <span className="count">
                         {option.id.includes("up")
-                          ? [...products15].filter(
+                          ? (allProps.sanityProducts || products15).filter(
                               (elm) =>
                                 elm.price >= Number(option.id.split("-")[1])
                             ).length
-                          : [...products15].filter(
+                          : (allProps.sanityProducts || products15).filter(
                               (elm) =>
                                 elm.price <= Number(option.id.split("-")[1])
                             ).length}

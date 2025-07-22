@@ -4,14 +4,14 @@ import Footer1 from "@/components/footers/Footer1";
 import Header3 from "@/components/headers/Header3";
 import Topbar2 from "@/components/headers/Topbar2";
 import TopbarBottom from "@/components/headers/TopbarBottom";
-import Banner from "@/components/homes/home-3/Banner";
+import Banner from "@/components/homes/home-3/CountdownLuxruy";
 import Banner2 from "@/components/homes/home-3/Banner2";
-import Blogs from "@/components/homes/home-3/Blogs";
+import Blogs from "@/components/homes/home-3/BehindBrand";
 
-import Collections from "@/components/homes/home-3/Collections";
+import Collections from "@/components/homes/home-3/FeaturedCollections";
 import Hero from "@/components/homes/home-3/Hero";
 import Products1 from "@/components/homes/home-3/Products1";
-import Products2 from "@/components/homes/home-3/Products2";
+import Products2 from "@/components/homes/home-3/HighlightProducts";
 import Products3 from "@/components/homes/home-3/Products3";
 import Testimonials from "@/components/homes/home-3/Testimonials";
 import TextBanner from "@/components/homes/home-3/TextBanner";

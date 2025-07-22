@@ -31,7 +31,7 @@ export default function BannerCountdown() {
       </div>
       <div className="bn_image">
         <Image
-          src="/images/banner/banner-1.jpg"
+          src="https://vemusnextjs.vercel.app/images/banner/banner-1.jpg"
           alt=""
           className="lazyload"
           width={1914}

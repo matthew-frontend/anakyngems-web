@@ -10,7 +10,7 @@ export default function Features() {
           <div className="values-grid tf-grid-layout md-col-2 xl-col-3">
             <div className="core-values-image">
               <Image
-                src="/images/section/core-value.jpg"
+                src="https://vemusnextjs.vercel.app/images/section/core-value.jpg"
                 alt="Core Value"
                 className="lazyload"
                 width={1012}
@@ -84,7 +84,7 @@ export default function Features() {
             <div className="col-xxl-5 col-md-6">
               <div className="visual-content mb-xl-0">
                 <Image
-                  src="/images/section/feature-visual.jpg"
+                  src="https://vemusnextjs.vercel.app/images/section/feature-visual.jpg"
                   alt=""
                   className="lazyload img-visual"
                   width={1000}
@@ -92,7 +92,7 @@ export default function Features() {
                 />
                 <div className="brand-box">
                   <Image
-                    src="/images/section/item-2.png"
+                    src="https://vemusnextjs.vercel.app/images/section/item-2.png"
                     alt=""
                     className="lazyload"
                     width={1000}

@@ -1,12 +1,35 @@
 "use client";
 import { products14 } from "@/data/products";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import QuickView from "../common/QuickView";
 import { Navigation, Pagination } from "swiper/modules";
+import { getProducts } from "@/sanity/client";
+
 export default function RecentProducts({ containerFull = false }) {
+  const [recentProducts, setRecentProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchRecentProducts() {
+      try {
+        const allProducts = await getProducts();
+        
+        // Get recent products (latest 8 products or random selection)
+        const recent = allProducts.slice(-8).reverse();
+        setRecentProducts(recent);
+      } catch (error) {
+        console.error('Error fetching recent products:', error);
+        setRecentProducts(products14.slice(0, 8)); // Fallback to static data
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchRecentProducts();
+  }, []);
   return (
     <section className="flat-spacing pt-0">
       <div className={`container${containerFull ? "-full" : ""}`}>
@@ -49,28 +72,30 @@ export default function RecentProducts({ containerFull = false }) {
             nextEl: ".snbn45",
           }}
         >
-          {products14.map((product, index) => (
-            <SwiperSlide className="swiper-slide" key={index}>
+          {(loading ? products14.slice(0, 4) : recentProducts).map((product, index) => (
+            <SwiperSlide className="swiper-slide" key={product._id || product.id || index}>
               <div className="card_product--V01">
                 <div className="card_product-wrapper">
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={`/products/${product._id || product.id}`}
                     className="product-img"
                   >
                     <Image
-                      src={product.imgSrc}
-                      alt="Image Product"
+                      src={product.images?.[0]?.asset?.url || product.imgSrc}
+                      alt={product.title}
                       className="lazyload img-product"
                       width={714}
                       height={900}
                     />
-                    <Image
-                      src={product.hoverImgSrc}
-                      alt="Image Product"
-                      className="lazyload img-hover"
-                      width={714}
-                      height={900}
-                    />
+                    {(product.images?.[1]?.asset?.url || product.hoverImgSrc) && (
+                      <Image
+                        src={product.images?.[1]?.asset?.url || product.hoverImgSrc}
+                        alt={product.title}
+                        className="lazyload img-hover"
+                        width={714}
+                        height={900}
+                      />
+                    )}
                   </Link>
                   <ul className="list-product-btn">
                     <li>
@@ -80,24 +105,18 @@ export default function RecentProducts({ containerFull = false }) {
                 </div>
                 <div className="card_product-info">
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={`/products/${product._id || product.id}`}
                     className="name-product h5 fw-normal link text-line-clamp-2"
                   >
                     {product.title}
                   </Link>
                   <div className="price-wrap">
                     <span className="price-new h5">
-                      $
-                      {product.price.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                      })}
+                      ${product.price.toFixed(2)}
                     </span>
                     {product.oldPrice && (
                       <span className="price-old fw-normal">
-                        $
-                        {product.oldPrice.toLocaleString(undefined, {
-                          minimumFractionDigits: 2,
-                        })}
+                        ${product.oldPrice.toFixed(2)}
                       </span>
                     )}
                   </div>

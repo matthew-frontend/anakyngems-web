@@ -33,14 +33,14 @@ export default function Header3({
               <Image
                 alt=""
                 className="logo-black"
-                src="/images/logo/logo.png"
+                src="https://vemusnextjs.vercel.app/images/logo/logo.png"
                 width={122}
                 height={32}
               />
               <Image
                 alt=""
                 className="logo-white"
-                src="/images/logo/logo.png"
+                src="https://vemusnextjs.vercel.app/images/logo/logo.png"
                 width={122}
                 height={31}
               />

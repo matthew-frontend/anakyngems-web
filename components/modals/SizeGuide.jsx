@@ -24,7 +24,7 @@ export default function SizeGuide() {
           </ul>
           <div className="img-chart">
             <Image
-              src="/images/section/resize-chart.png"
+              src="https://vemusnextjs.vercel.app/images/section/resize-chart.png"
               alt=""
               className="lazyload"
               width={942}

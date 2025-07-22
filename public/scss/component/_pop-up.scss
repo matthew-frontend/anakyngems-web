@@ -36,7 +36,7 @@
 
 .offcanvas-backdrop {
   z-index: 2999;
-  cursor: url(/images/cursor-close.svg), auto;
+  cursor: url(https://vemusnextjs.vercel.app/images/cursor-close.svg), auto;
 }
 
 .overflow-x-auto,
@@ -47,7 +47,7 @@
 }
 
 .modal {
-  cursor: url(/images/cursor-close.svg), auto;
+  cursor: url(https://vemusnextjs.vercel.app/images/cursor-close.svg), auto;
 
   .icon-close-popup {
     @include transition3;
@@ -1522,7 +1522,7 @@
 
   .close {
     flex: 1;
-    cursor: url(/images/cursor-close.svg), auto;
+    cursor: url(https://vemusnextjs.vercel.app/images/cursor-close.svg), auto;
   }
 
   @include res(xl, min) {

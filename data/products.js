@@ -1,9 +1,10 @@
 export const products1 = [
   {
     id: 1,
-    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-6.jpg",
+    imgSrc:
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-6.jpg",
     hoverImgSrc:
-      "https://vemusnextjs.vercel.app/images/products/product-20.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-20.jpg",
     title: "Oval Yellow Diamond Double Halo Engagement Ring",
     price: 2370,
     oldPrice: null,
@@ -11,9 +12,10 @@ export const products1 = [
   },
   {
     id: 2,
-    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-38.jpg",
+    imgSrc:
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-38.jpg",
     hoverImgSrc:
-      "https://vemusnextjs.vercel.app/images/products/product-47.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-47.jpg",
     title: "Rouje Lucia Dome Hoop Earrings",
     price: 1240,
     oldPrice: 3899,
@@ -21,9 +23,10 @@ export const products1 = [
   },
   {
     id: 3,
-    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    imgSrc:
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-41.jpg",
     hoverImgSrc:
-      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 1990,
     oldPrice: 3899,
@@ -31,9 +34,10 @@ export const products1 = [
   },
   {
     id: 4,
-    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    imgSrc:
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-39.jpg",
     hoverImgSrc:
-      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2990,
     oldPrice: 3899,
@@ -44,13 +48,13 @@ export const products1 = [
 export const products2 = [
   {
     id: 5,
-    imgSrc: "/images/products/product-48.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-48.jpg",
     title: "Harris Reed In Good Hands Pearl Bracelet",
     price: 2499,
   },
   {
     id: 6,
-    imgSrc: "/images/products/product-69.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-69.jpg",
     title: "Oval Yellow Diamond Double Halo",
     price: 3211,
   },
@@ -58,8 +62,9 @@ export const products2 = [
 export const products3 = [
   {
     id: 7,
-    imgSrc: "/images/products/product-5.jpg",
-    hoverImgSrc: "/images/products/product-49.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-5.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-49.jpg",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 2499,
     oldPrice: null,
@@ -68,8 +73,9 @@ export const products3 = [
   },
   {
     id: 8,
-    imgSrc: "/images/products/product-50.jpg",
-    hoverImgSrc: "/images/products/product-50.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
     title: "Teardrop Earrings",
     price: 2999,
     oldPrice: 3999,
@@ -78,8 +84,9 @@ export const products3 = [
   },
   {
     id: 9,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-52.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-51.jpg",
     title: "Dança Ring",
     price: 1199,
     oldPrice: 2899,
@@ -88,8 +95,9 @@ export const products3 = [
   },
   {
     id: 10,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "White Sapphire Ring in 10K White Gold",
     price: 4199,
     oldPrice: null,
@@ -101,8 +109,9 @@ export const products3 = [
 export const products4 = [
   {
     id: 11,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Oval Yellow Diamond Double Halo Engagement Ring",
     price: 3370,
     oldPrice: null,
@@ -115,8 +124,9 @@ export const products4 = [
   },
   {
     id: 12,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -130,8 +140,9 @@ export const products4 = [
   },
   {
     id: 13,
-    imgSrc: "/images/products/product-43.jpg",
-    hoverImgSrc: "/images/products/product-44.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-43.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-44.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -144,8 +155,9 @@ export const products4 = [
   },
   {
     id: 14,
-    imgSrc: "/images/products/product-45.jpg",
-    hoverImgSrc: "/images/products/product-46.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-45.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-46.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499,
     oldPrice: null,
@@ -157,8 +169,9 @@ export const products4 = [
   },
   {
     id: 15,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: 3899,
@@ -174,8 +187,9 @@ export const products4 = [
 export const products5 = [
   {
     id: 16,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-52.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-51.jpg",
     title: "Dança Ring",
     price: 3370,
     oldPrice: 3899,
@@ -185,8 +199,9 @@ export const products5 = [
   },
   {
     id: 17,
-    imgSrc: "/images/products/product-28.jpg",
-    hoverImgSrc: "/images/products/product-29.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 3370,
     oldPrice: null,
@@ -196,8 +211,9 @@ export const products5 = [
   },
   {
     id: 18,
-    imgSrc: "/images/products/product-50.jpg",
-    hoverImgSrc: "/images/products/product-50.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
     title: "Teardrop Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -207,8 +223,9 @@ export const products5 = [
   },
   {
     id: 19,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "White Sapphire Ring in 10K White Gold",
     price: 3370,
     oldPrice: null,
@@ -218,8 +235,9 @@ export const products5 = [
   },
   {
     id: 20,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-52.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-51.jpg",
     title: "Dança Ring",
     price: 3370,
     oldPrice: 3899,
@@ -231,8 +249,9 @@ export const products5 = [
 export const products6 = [
   {
     id: 21,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: null,
@@ -245,8 +264,9 @@ export const products6 = [
   },
   {
     id: 22,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -259,8 +279,9 @@ export const products6 = [
   },
   {
     id: 23,
-    imgSrc: "/images/products/product-43.jpg",
-    hoverImgSrc: "/images/products/product-44.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-43.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-44.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -272,8 +293,9 @@ export const products6 = [
   },
   {
     id: 24,
-    imgSrc: "/images/products/product-45.jpg",
-    hoverImgSrc: "/images/products/product-46.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-45.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-46.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499,
     oldPrice: null,
@@ -284,8 +306,9 @@ export const products6 = [
   },
   {
     id: 25,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: 3899,
@@ -300,7 +323,7 @@ export const products6 = [
 export const productsVideo = [
   {
     id: 26,
-    imgSrc: "/images/video/img-video-1.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-1.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2099.0,
     oldPrice: 2899.0,
@@ -309,7 +332,7 @@ export const productsVideo = [
   },
   {
     id: 27,
-    imgSrc: "/images/video/img-video-2.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-2.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499.0,
     oldPrice: 2899.0,
@@ -318,7 +341,7 @@ export const productsVideo = [
   },
   {
     id: 28,
-    imgSrc: "/images/video/img-video-3.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-3.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2199.0,
     oldPrice: 3799.0,
@@ -330,8 +353,9 @@ export const productsVideo = [
 export const products7 = [
   {
     id: 29,
-    imgSrc: "/images/products/product-28.jpg",
-    hoverImgSrc: "/images/products/product-29.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 3370,
     oldPrice: null,
@@ -341,8 +365,9 @@ export const products7 = [
   },
   {
     id: 30,
-    imgSrc: "/images/products/product-50.jpg",
-    hoverImgSrc: "/images/products/product-50.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
     title: "Teardrop Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -352,8 +377,9 @@ export const products7 = [
   },
   {
     id: 31,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "White Sapphire Ring in 10K White Gold",
     price: 3370,
     oldPrice: null,
@@ -363,8 +389,9 @@ export const products7 = [
   },
   {
     id: 32,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-52.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-51.jpg",
     title: "Organically Shaped Heart Hoop Earrings",
     price: 3370,
     oldPrice: null,
@@ -376,8 +403,9 @@ export const products7 = [
 export const products8 = [
   {
     id: 33,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: null,
@@ -391,8 +419,9 @@ export const products8 = [
   },
   {
     id: 34,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -406,8 +435,9 @@ export const products8 = [
   },
   {
     id: 35,
-    imgSrc: "/images/products/product-43.jpg",
-    hoverImgSrc: "/images/products/product-44.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-43.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-44.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -420,8 +450,9 @@ export const products8 = [
   },
   {
     id: 36,
-    imgSrc: "/images/products/product-45.jpg",
-    hoverImgSrc: "/images/products/product-46.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-45.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-46.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499,
     oldPrice: null,
@@ -433,8 +464,9 @@ export const products8 = [
   },
   {
     id: 37,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: 3899,
@@ -451,24 +483,24 @@ export const products8 = [
 export const videoProducts = [
   {
     id: 38,
-    videoSrc: "/images/video/video.mp4",
-    imgSrc: "/images/products/product-66.jpg",
+    videoSrc: "https://vemusnextjs.vercel.app/images/video/video.mp4",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-66.jpg",
     title: "Tapered Huggie Earrings",
     price: 1799,
     oldPrice: 2899,
   },
   {
     id: 39,
-    videoSrc: "/images/video/video-2.mp4",
-    imgSrc: "/images/products/product-67.jpg",
+    videoSrc: "https://vemusnextjs.vercel.app/images/video/video-2.mp4",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-67.jpg",
     title: "April Birthstone Chain Necklace",
     price: 2399,
     oldPrice: 3499,
   },
   {
     id: 40,
-    videoSrc: "/images/video/video-3.mp4",
-    imgSrc: "/images/products/product-68.jpg",
+    videoSrc: "https://vemusnextjs.vercel.app/images/video/video-3.mp4",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-68.jpg",
     title: "Nura Round Pearl Ring",
     price: 2499,
     oldPrice: 2899,
@@ -478,8 +510,9 @@ export const videoProducts = [
 export const products9 = [
   {
     id: 41,
-    imgSrc: "/images/products/product-54.jpg",
-    hoverImgSrc: "/images/products/product-55.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-54.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-55.jpg",
     title: "Oval Yellow Diamond Double Halo Engagement Ring",
     price: 2499,
     oldPrice: null,
@@ -493,8 +526,9 @@ export const products9 = [
   },
   {
     id: 42,
-    imgSrc: "/images/products/product-56.jpg",
-    hoverImgSrc: "/images/products/product-57.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-56.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-57.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -508,8 +542,9 @@ export const products9 = [
   },
   {
     id: 43,
-    imgSrc: "/images/products/product-58.jpg",
-    hoverImgSrc: "/images/products/product-59.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-58.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-59.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -522,8 +557,9 @@ export const products9 = [
   },
   {
     id: 44,
-    imgSrc: "/images/products/product-4.jpg",
-    hoverImgSrc: "/images/products/product-13.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-4.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-13.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499,
     oldPrice: null,
@@ -535,8 +571,9 @@ export const products9 = [
   },
   {
     id: 45,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: 3899,
@@ -553,8 +590,9 @@ export const products9 = [
 export const products10 = [
   {
     id: 46,
-    imgSrc: "/images/products/product-52.jpg",
-    hoverImgSrc: "/images/products/product-51.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-52.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-51.jpg",
     title: "Dança Ring",
     price: 2499,
     oldPrice: 2899,
@@ -565,8 +603,9 @@ export const products10 = [
   },
   {
     id: 47,
-    imgSrc: "/images/products/product-28.jpg",
-    hoverImgSrc: "/images/products/product-29.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 3370,
     oldPrice: null,
@@ -576,8 +615,9 @@ export const products10 = [
   },
   {
     id: 48,
-    imgSrc: "/images/products/product-50.jpg",
-    hoverImgSrc: "/images/products/product-21.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-50.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-21.jpg",
     title: "Teardrop Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -588,8 +628,9 @@ export const products10 = [
   },
   {
     id: 49,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "White Sapphire Ring in 10K White Gold",
     price: 3370,
     oldPrice: 3899,
@@ -599,8 +640,9 @@ export const products10 = [
   },
   {
     id: 50,
-    imgSrc: "/images/products/product-41.jpg",
-    hoverImgSrc: "/images/products/product-42.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
     title: "White Sapphire Ring in 10K White Gold",
     price: 2499,
     oldPrice: null,
@@ -611,8 +653,9 @@ export const products10 = [
 export const products11 = [
   {
     id: 51,
-    imgSrc: "/images/products/product-54.jpg",
-    hoverImgSrc: "/images/products/product-55.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-54.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-55.jpg",
     title: "Oval Yellow Diamond Double Halo Engagement Ring",
     price: 2499,
     oldPrice: null,
@@ -625,8 +668,9 @@ export const products11 = [
   },
   {
     id: 52,
-    imgSrc: "/images/products/product-56.jpg",
-    hoverImgSrc: "/images/products/product-57.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-56.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-57.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -639,8 +683,9 @@ export const products11 = [
   },
   {
     id: 53,
-    imgSrc: "/images/products/product-58.jpg",
-    hoverImgSrc: "/images/products/product-59.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-58.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-59.jpg",
     title: "Sixteen Stone Narrow Earrings",
     price: 2499,
     oldPrice: 2899,
@@ -652,8 +697,9 @@ export const products11 = [
   },
   {
     id: 54,
-    imgSrc: "/images/products/product-4.jpg",
-    hoverImgSrc: "/images/products/product-13.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-4.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-13.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 2499,
     oldPrice: null,
@@ -664,8 +710,9 @@ export const products11 = [
   },
   {
     id: 55,
-    imgSrc: "/images/products/product-39.jpg",
-    hoverImgSrc: "/images/products/product-40.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     price: 3370,
     oldPrice: 3899,
@@ -678,8 +725,9 @@ export const products11 = [
   },
   {
     id: 56,
-    imgSrc: "/images/products/product-56.jpg",
-    hoverImgSrc: "/images/products/product-57.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-56.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-57.jpg",
     title: "Small Earrings In Gold with Diamond",
     price: 3370,
     oldPrice: 3899,
@@ -695,32 +743,36 @@ export const products11 = [
 export const products12 = [
   {
     id: 57,
-    imgSrc: "/images/products/product-20.jpg",
-    hoverImgSrc: "/images/products/product-21.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-20.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-21.jpg",
     title: "Oval Yellow Diamond Double Halo Engagement Ring",
     price: 2799.0,
     oldPrice: null,
   },
   {
     id: 58,
-    imgSrc: "/images/products/product-38.jpg",
-    hoverImgSrc: "/images/products/product-47.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-38.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-47.jpg",
     title: "Bold Paperclip Chain Necklace 20'",
     price: 2499.0,
     oldPrice: 2899.0,
   },
   {
     id: 59,
-    imgSrc: "/images/products/product-28.jpg",
-    hoverImgSrc: "/images/products/product-29.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
     title: "Bold Paperclip Chain Necklace 20'",
     price: 1999.0,
     oldPrice: 2899.0,
   },
   {
     id: 60,
-    imgSrc: "/images/products/product-1.jpg",
-    hoverImgSrc: "/images/products/product-12.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-1.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-12.jpg",
     title: "Sparkling Moon & Star Stud Earrings",
     price: 3799.0,
     oldPrice: null,
@@ -730,16 +782,18 @@ export const products12 = [
 export const products13 = [
   {
     id: 61,
-    imgSrc: "/images/products/product-60.jpg",
-    hoverImgSrc: "/images/products/product-61.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-60.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-61.jpg",
     title: "Organically Shaped Heart Hoop Earrings",
     price: 2499,
     oldPrice: 2899,
   },
   {
     id: 62,
-    imgSrc: "/images/products/product-62.jpg",
-    hoverImgSrc: "/images/products/product-63.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-62.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-63.jpg",
     title: "Organically Shaped Infinity Ring",
     price: 2499,
     oldPrice: null,
@@ -749,40 +803,45 @@ export const products13 = [
 export const products14 = [
   {
     id: 63,
-    imgSrc: "/images/products/product-22.jpg",
-    hoverImgSrc: "/images/products/product-23.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-22.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-23.jpg",
     title: "Open Heart Bangle",
     price: 2499,
     oldPrice: 2899,
   },
   {
     id: 64,
-    imgSrc: "/images/products/product-24.jpg",
-    hoverImgSrc: "/images/products/product-25.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-24.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-25.jpg",
     title: "Crystal Birthstone Eternity Circle Charm",
     price: 2499,
     oldPrice: 2899,
   },
   {
     id: 65,
-    imgSrc: "/images/products/product-26.jpg",
-    hoverImgSrc: "/images/products/product-27.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-26.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-27.jpg",
     title: "Ball Bracelet",
     price: 2499,
     oldPrice: 2899,
   },
   {
     id: 66,
-    imgSrc: "/images/products/product-28.jpg",
-    hoverImgSrc: "/images/products/product-29.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
     title: "Engagement Ring in 18k Yellow Gold",
     price: 2499,
     oldPrice: 2899,
   },
   {
     id: 67,
-    imgSrc: "/images/products/product-22.jpg",
-    hoverImgSrc: "/images/products/product-23.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/products/product-22.jpg",
+    hoverImgSrc:
+      "https://vemusnextjs.vercel.app/images/products/product-23.jpg",
     title: "Open Heart Bangle",
     price: 2499,
     oldPrice: 2899,
@@ -792,10 +851,10 @@ export const products15 = [
   {
     id: 68,
     images: [
-      "https://vemusnextjs.vercel.app/images/products/product-1.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-12.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-2.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-3.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-1.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-12.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-2.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-3.jpg",
     ],
     title: "Emerald-cut Halo Engagement Ring with a Diamond Platinum Band",
     description:
@@ -811,10 +870,10 @@ export const products15 = [
   {
     id: 69,
     images: [
-      "https://vemusnextjs.vercel.app/images/products/product-2.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-3.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-4.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-5.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-2.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-3.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-4.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-5.jpg",
     ],
     title: "Link Chain Bracelet",
     description:
@@ -828,10 +887,10 @@ export const products15 = [
   {
     id: 70,
     images: [
-      "https://vemusnextjs.vercel.app/images/products/product-6.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-8.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-9.jpg",
-      "https://vemusnextjs.vercel.app/images/products/product-10.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-6.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-8.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-9.jpg",
+      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-10.jpg",
     ],
     title: "Sparkling Infinity Heart Clasp Snake Chain Bracelet",
     description:
@@ -844,9 +903,9 @@ export const products15 = [
   },
   // {
   //   id: 71,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-4.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-4.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-15.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-15.jpg",
   //   title: "Sparkling Infinity Heart Clasp Snake Chain Bracelet",
   //   price: 773,
   //   oldPrice: 899,
@@ -864,9 +923,9 @@ export const products15 = [
   // },
   // {
   //   id: 72,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-16.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-16.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-17.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-17.jpg",
   //   title: "Infinite Lab-Grown Diamond Bangle",
   //   price: 1847,
   //   oldPrice: 2599,
@@ -884,9 +943,9 @@ export const products15 = [
   // },
   // {
   //   id: 73,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-18.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-18.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-19.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-19.jpg",
   //   title: "Olive Leaf Band Ring",
   //   price: 327,
   //   oldPrice: 899,
@@ -904,9 +963,9 @@ export const products15 = [
   // },
   // {
   //   id: 74,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-20.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-20.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-21.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-21.jpg",
   //   title: "Organically Shaped Heart Bangle",
   //   price: 3888,
   //   oldPrice: 4899,
@@ -924,9 +983,9 @@ export const products15 = [
   // },
   // {
   //   id: 75,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-22.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-22.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-23.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-23.jpg",
   //   title: "Open Heart Bangle",
   //   price: 214,
   //   oldPrice: 399,
@@ -944,9 +1003,9 @@ export const products15 = [
   // },
   // {
   //   id: 76,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-24.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-24.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-25.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-25.jpg",
   //   title: "Crystal Birthstone Eternity Circle Charm",
   //   price: 865,
   //   oldPrice: 999,
@@ -964,9 +1023,9 @@ export const products15 = [
   // },
   // {
   //   id: 77,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-26.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-26.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-27.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-27.jpg",
   //   title: "Ball Bracelet",
   //   price: 1766,
   //   oldPrice: 2199,
@@ -984,9 +1043,9 @@ export const products15 = [
   // },
   // {
   //   id: 78,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-28.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-28.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-29.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-29.jpg",
   //   title: "Engagement Ring in 18k Yellow Gold",
   //   price: 1583,
   //   oldPrice: 1899,
@@ -1004,9 +1063,9 @@ export const products15 = [
   // },
   // {
   //   id: 79,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-30.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-30.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-31.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-31.jpg",
   //   title: "Wire Bangle",
   //   price: 142,
   //   oldPrice: 599,
@@ -1024,9 +1083,9 @@ export const products15 = [
   // },
   // {
   //   id: 80,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-32.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-32.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-33.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-33.jpg",
   //   title: "Curb Link Bracelet",
   //   price: 3210,
   //   oldPrice: 3599,
@@ -1044,9 +1103,9 @@ export const products15 = [
   // },
   // {
   //   id: 81,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-39.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-40.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-40.jpg",
   //   title: "Oval Yellow Diamond Double Halo Engagement Ring",
   //   price: 3370,
   //   oldPrice: null,
@@ -1064,9 +1123,9 @@ export const products15 = [
   // },
   // {
   //   id: 82,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-41.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-41.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-42.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-42.jpg",
   //   title: "Small Earrings In Gold with Diamond",
   //   price: 3370,
   //   oldPrice: 3899,
@@ -1084,9 +1143,9 @@ export const products15 = [
   // },
   // {
   //   id: 83,
-  //   imgSrc: "https://vemusnextjs.vercel.app/images/products/product-43.jpg",
+  //   imgSrc: "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-43.jpg",
   //   hoverImgSrc:
-  //     "https://vemusnextjs.vercel.app/images/products/product-44.jpg",
+  //     "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-44.jpg",
   //   title: "Sixteen Stone Narrow Earrings",
   //   price: 2499,
   //   oldPrice: 2899,

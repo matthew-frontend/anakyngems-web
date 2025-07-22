@@ -1,12 +1,10 @@
 export const demoPages = [
   {
     href: "/home-3",
-    imgSrc: "/images/demo/home-3.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/demo/home-3.jpg",
     name: "HOMEPAGE 3",
   },
 ];
-
-
 
 export const aboutPages = [
   {
@@ -31,4 +29,3 @@ export const blogMenuLinks = [
   { href: "/behind-brand", label: "Behind the Brand" },
   { href: "/behind-brand/1", label: "Single Post" },
 ];
-

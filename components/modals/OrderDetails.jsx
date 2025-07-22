@@ -40,7 +40,7 @@ export default function OrderDetails() {
                       <a href="#" className="image">
                         <img
                           alt="Product"
-                          src="/images/products/product-1.jpg"
+                          src="https://vemusnextjs.vercel.app/images/products/product-1.jpg"
                           width={714}
                           height={900}
                         />
@@ -61,7 +61,7 @@ export default function OrderDetails() {
                       <a href="#" className="image">
                         <img
                           alt="Product"
-                          src="/images/products/product-2.jpg"
+                          src="https://vemusnextjs.vercel.app/images/products/product-2.jpg"
                           width={714}
                           height={900}
                         />
@@ -82,7 +82,7 @@ export default function OrderDetails() {
                       <a href="#" className="image">
                         <img
                           alt="Product"
-                          src="/images/products/product-3.jpg"
+                          src="https://vemusnextjs.vercel.app/images/products/product-3.jpg"
                           width={714}
                           height={900}
                         />

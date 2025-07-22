@@ -50,7 +50,7 @@ export default function BlogSingle() {
               </div>
               <div className="entry_image">
                 <Image
-                  src="/images/blog/blog-single.jpg"
+                  src="https://vemusnextjs.vercel.app/images/blog/blog-single.jpg"
                   alt=""
                   className="lazyload"
                   width={2176}
@@ -139,7 +139,7 @@ export default function BlogSingle() {
               <div className="entry_image type-group tf-grid-layout sm-col-2">
                 <div className="image">
                   <Image
-                    src="/images/blog/blog-single-2.jpg"
+                    src="https://vemusnextjs.vercel.app/images/blog/blog-single-2.jpg"
                     alt=""
                     className="lazyload"
                     width={1068}
@@ -148,7 +148,7 @@ export default function BlogSingle() {
                 </div>
                 <div className="image">
                   <Image
-                    src="/images/blog/blog-single-3.jpg"
+                    src="https://vemusnextjs.vercel.app/images/blog/blog-single-3.jpg"
                     alt=""
                     className="lazyload"
                     width={1068}
@@ -254,7 +254,7 @@ export default function BlogSingle() {
                 <div className="entry_author">
                   <div className="avatar">
                     <Image
-                      src="/images/avatar/avt-2.jpg"
+                      src="https://vemusnextjs.vercel.app/images/avatar/avt-2.jpg"
                       alt=""
                       className="lazyload"
                       width={400}

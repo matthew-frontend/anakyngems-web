@@ -1,6 +1,6 @@
 export const blogItems = [
   {
-    img: "/images/blog/blog-8.jpg",
+    img: "https://vemusnextjs.vercel.app/images/blog/blog-8.jpg",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
@@ -8,7 +8,7 @@ export const blogItems = [
     delay: "",
   },
   {
-    img: "/images/blog/blog-9.jpg",
+    img: "https://vemusnextjs.vercel.app/images/blog/blog-9.jpg",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title:
@@ -16,7 +16,7 @@ export const blogItems = [
     delay: "0.1s",
   },
   {
-    img: "/images/blog/blog-10.jpg",
+    img: "https://vemusnextjs.vercel.app/images/blog/blog-10.jpg",
     alt: "Blog",
     tags: ["JewelryTrends", "12 Feb 2025"],
     title: "Jewelry Care 101: Tips to Keep Your Pieces Sparkling Like New",
@@ -26,9 +26,9 @@ export const blogItems = [
 
 export const blogPosts = [
   {
-    imgSrc: "/images/blog/blog-1.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/blog/blog-1.jpg",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    authorImg: "/images/avatar/avt-1.jpg",
+    authorImg: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
     authorName: "Vincent",
     date: "19 September 2024",
     title: "Jewelry Styling Tips for Every Occasion",
@@ -36,9 +36,9 @@ export const blogPosts = [
       "Whether you're dressing up for a special event or looking for everyday elegance, the right jewelry can elevate any outfit. Learn expert styling...",
   },
   {
-    imgSrc: "/images/blog/blog-2.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/blog/blog-2.jpg",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    authorImg: "/images/avatar/avt-1.jpg",
+    authorImg: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
     authorName: "Vincent",
     date: "19 September 2024",
     title: "The Art of Timeless Jewelry",
@@ -46,9 +46,9 @@ export const blogPosts = [
       "Jewelry is more than just an accessory—it’s a reflection of craftsmanship, passion, and heritage. In this blog, we explore the meticulous...",
   },
   {
-    imgSrc: "/images/blog/blog-3.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/blog/blog-3.jpg",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    authorImg: "/images/avatar/avt-1.jpg",
+    authorImg: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
     authorName: "Vincent",
     date: "19 September 2024",
     title: "Behind the Sparkle: Our Iconic Creations",
@@ -56,9 +56,9 @@ export const blogPosts = [
       "Every piece of jewelry has a story to tell. Dive into the inspiration, craftsmanship, and details behind some of our most iconic and best-loved designs. Discover what makes them special and why they remain favorites among our customers...",
   },
   {
-    imgSrc: "/images/blog/blog-4.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/blog/blog-4.jpg",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    authorImg: "/images/avatar/avt-1.jpg",
+    authorImg: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
     authorName: "Vincent",
     date: "19 September 2024",
     title: "Gold vs. Silver: Which One Suits You Best?",
@@ -66,9 +66,9 @@ export const blogPosts = [
       "Choosing between gold and silver jewelry can be tricky. In this guide, we break down the key differences, including how each metal...",
   },
   {
-    imgSrc: "/images/blog/blog-5.jpg",
+    imgSrc: "https://vemusnextjs.vercel.app/images/blog/blog-5.jpg",
     tags: ["JewelryTrends", "12 Feb 2025"],
-    authorImg: "/images/avatar/avt-1.jpg",
+    authorImg: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
     authorName: "Vincent",
     date: "19 September 2024",
     title: "The Symbolism Behind Your Favorite Gemstones",
@@ -86,7 +86,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h3",
     title: "Behind the Sparkle: Our Iconic Creations",
@@ -101,7 +104,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "Gold vs. Silver: Which One Suits You Best?",
@@ -116,7 +122,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "How to Care for Your Jewelry",
@@ -131,7 +140,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "The Art of Timeless Jewelry",
@@ -146,7 +158,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "Layering Like a Pro: Tips for Stacking Jewelry",
@@ -161,7 +176,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "The Symbolism Behind Your Favorite Gemstones",
@@ -176,7 +194,10 @@ export const blogEntries = [
     },
     tags: ["JewelryTrends"],
     alt: "Blog",
-    author: { name: "Vincent", img: "/images/avatar/avt-1.jpg" },
+    author: {
+      name: "Vincent",
+      img: "https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg",
+    },
     date: "19 September 2024",
     headingLevel: "h4",
     title: "Jewelry Styling Tips for Every Occasion",

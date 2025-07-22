@@ -17,19 +17,19 @@ export default function ColorSelect2({ activeColor, setActiveColor }) {
       name: "Gold",
       colorKey: "gold",
       price: "2,499.00",
-      image: "/images/products/detail/prd-detail-1.jpg",
+      image: "https://vemusnextjs.vercel.app/images/products/detail/prd-detail-1.jpg",
     },
     {
       name: "Rose",
       colorKey: "rose",
       price: "2,499.00",
-      image: "/images/products/detail/prd-detail-4.jpg",
+      image: "https://vemusnextjs.vercel.app/images/products/detail/prd-detail-4.jpg",
     },
     {
       name: "Titanium",
       colorKey: "titanium",
       price: "2,499.00",
-      image: "/images/products/detail/prd-detail-7.jpg",
+      image: "https://vemusnextjs.vercel.app/images/products/detail/prd-detail-7.jpg",
     },
   ];
 

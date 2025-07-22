@@ -165,7 +165,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/visa-2.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/visa-2.svg"
                         width={45}
                         height={32}
                       />
@@ -175,7 +175,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/dinner-2.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/dinner-2.svg"
                         width={45}
                         height={32}
                       />
@@ -185,7 +185,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/master-3.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/master-3.svg"
                         width={45}
                         height={32}
                       />
@@ -195,7 +195,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/stripe.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/stripe.svg"
                         width={45}
                         height={32}
                       />
@@ -205,7 +205,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/paypal.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/paypal.svg"
                         width={45}
                         height={32}
                       />
@@ -215,7 +215,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/gg-pay-2.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/gg-pay-2.svg"
                         width={45}
                         height={32}
                       />
@@ -225,7 +225,7 @@ export default function Details5({ product }) {
                     <a href="#">
                       <Image
                         alt=""
-                        src="/images/payment/apple-pay-2.svg"
+                        src="https://vemusnextjs.vercel.app/images/payment/apple-pay-2.svg"
                         width={45}
                         height={32}
                       />

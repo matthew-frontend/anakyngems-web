@@ -12,9 +12,12 @@ import Pagination from "../common/Pagination";
 import Link from "next/link";
 import FilterToggle from "./FilterToggler";
 import { useSearchParams } from "next/navigation";
+import { getProducts, getCategories } from "@/sanity/client";
 export default function Products2() {
   const [activeLayout, setActiveLayout] = useState(3);
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [sanityProducts, setSanityProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
   const {
@@ -30,6 +33,7 @@ export default function Products2() {
 
   const allProps = {
     ...state,
+    sanityProducts,
     setPrice: (value) => dispatch({ type: "SET_PRICE", payload: value }),
 
     setCategories: (newCategory) => {
@@ -59,6 +63,23 @@ export default function Products2() {
     },
   };
 
+  // Fetch Sanity products
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const productsData = await getProducts();
+        setSanityProducts(productsData);
+        dispatch({ type: "SET_FILTERED", payload: productsData });
+        dispatch({ type: "SET_SORTED", payload: productsData });
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
+  }, []);
+
   // Set category from URL parameter on component mount
   useEffect(() => {
     if (categoryParam && !categories.includes(categoryParam)) {
@@ -67,32 +88,41 @@ export default function Products2() {
   }, [categoryParam]);
 
   useEffect(() => {
+    if (sanityProducts.length === 0) return;
+    
     let filteredArrays = [];
 
     if (categories.length) {
-      const filteredByCategories = [...products15].filter((elm) =>
-        categories.includes(elm.category)
+      const filteredByCategories = [...sanityProducts].filter((elm) =>
+        categories.some(category => {
+          if (category === "new-in") {
+            return elm.badgeType === "new" || elm.badge === "NEW IN";
+          } else if (category === "gift-idea") {
+            return elm.badgeType === "gift" || elm.badge?.includes("Gift");
+          }
+          return (elm.category?.title || elm.category) === category;
+        })
       );
       filteredArrays = [...filteredArrays, filteredByCategories];
     }
 
     if (price.includes("u-")) {
-      const filteredByPrice = [...products15].filter(
+      const filteredByPrice = [...sanityProducts].filter(
         (elm) => elm.price >= Number(price.split("-")[1])
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     } else if (price.includes("up-")) {
-      const filteredByPrice = [...products15].filter(
+      const filteredByPrice = [...sanityProducts].filter(
         (elm) => elm.price <= Number(price.split("-")[1])
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     }
 
-    const commonItems = [...products15].filter((item) =>
+    const commonItems = [...sanityProducts].filter((item) =>
       filteredArrays.every((array) => array.includes(item))
     );
     dispatch({ type: "SET_FILTERED", payload: commonItems });
-  }, [price, categories]);
+  }, [price, categories, sanityProducts]);
 
   useEffect(() => {
     if (sortingOption === "Price Ascending") {
@@ -196,27 +226,25 @@ export default function Products2() {
                     )
                     .map((product) => (
                     <div
-                      key={product.id}
-                      className={`loadItem card_product--V01 grid ${
-                        product.outOfStock ? "out-of-stock" : ""
-                      }`}
-                      data-category={product.category}
+                      key={product._id || product.id}
+                      className="loadItem card_product--V01 grid"
+                      data-category={product.category?.title || product.category}
                     >
                       <div className="card_product-wrapper">
                         <Link
-                          href={`/products/${product.id}`}
+                          href={`/products/${product._id || product.id}`}
                           className="product-img"
                         >
                           <img
-                            src={product.images ? product.images[0] : product.imgSrc}
+                            src={product.images?.[0]?.asset?.url || (product.images ? product.images[0] : product.imgSrc)}
                             alt={product.title}
                             className="lazyload img-product"
                             width={714}
                             height={900}
                           />
-                          {(product.images && product.images[1]) || product.hoverImgSrc ? (
+                          {(product.images?.[1]?.asset?.url || (product.images && product.images[1]) || product.hoverImgSrc) ? (
                             <img
-                              src={product.images ? product.images[1] : product.hoverImgSrc}
+                              src={product.images?.[1]?.asset?.url || (product.images ? product.images[1] : product.hoverImgSrc)}
                               alt={product.title}
                               className="lazyload img-hover"
                               width={714}
@@ -225,51 +253,52 @@ export default function Products2() {
                           ) : null}
                         </Link>
 
-                        {!product.outOfStock && (
-                          <ul className="list-product-btn">
-                            <li>
-                              <QuickView product={product} />
-                            </li>
-                          </ul>
-                        )}
+                        <ul className="list-product-btn">
+                          <li>
+                            <QuickView product={product} />
+                          </li>
+                        </ul>
 
-                        {product.badge && (
+                        {(product.calculatedBadge || product.badge) && (
                           <div className="badge-box">
                             <span className={`badge-item ${product.badgeType}`}>
-                              {product.badge}
+                              {product.calculatedBadge || product.badge}
                             </span>
                           </div>
                         )}
 
-                        {product.variantText && (
+                        {(product.calculatedVariantText || product.variantText) && (
                           <div
                             className={`variant-box ${
-                              product.variantType === "marquee"
+                              (product.calculatedVariantType || product.variantType) === "marquee"
                                 ? "bg-primary"
                                 : ""
                             }`}
                           >
-                            {product.variantType === "notify" ? (
+                            {(product.calculatedVariantType || product.variantType) === "notify" ? (
                               <a
                                 href="#unavailable"
                                 data-bs-toggle="modal"
-                                className={`variant-box stock bg-main link ${product.textColor}`}
+                                className="variant-box stock bg-main link text-white"
                               >
                                 <p className="text-center d-none d-md-block">
-                                  {product.variantText}
+                                  {product.calculatedVariantText || product.variantText}
                                 </p>
                                 <p className="text-center d-md-none">
                                   Notify Me
                                 </p>
                               </a>
-                            ) : product.variantType === "text" ? (
+                            ) : (product.calculatedVariantType || product.variantType) === "text" ? (
                               <div className="size-box bg-light-gray text-center">
                                 <p className="text-caption">
-                                  {product.variantText}
+                                  {product.calculatedVariantText || product.variantText}
                                 </p>
                               </div>
-                            ) : product.variantType === "marquee" ? (
-                              <DiscountMarquee parentClass="marquee-sale  infiniteSlide infiniteSlider" />
+                            ) : (product.calculatedVariantType || product.variantType) === "marquee" ? (
+                              <DiscountMarquee 
+                                parentClass="marquee-sale  infiniteSlide infiniteSlider" 
+                                variantText={product.calculatedVariantText || product.variantText}
+                              />
                             ) : null}
                           </div>
                         )}
@@ -277,7 +306,7 @@ export default function Products2() {
 
                       <div className="card_product-info">
                         <Link
-                          href={`/products/${product.id}`}
+                          href={`/products/${product._id || product.id}`}
                           className="name-product h5 fw-normal link text-line-clamp-2"
                         >
                           {product.title}

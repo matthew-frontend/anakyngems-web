@@ -9,6 +9,7 @@ export default defineConfig({
   
   projectId: '1xk2cwmy', // Your project ID from Sanity
   dataset: 'production',
+  apiVersion: '2024-01-01',
   
   basePath: '/admin', // Admin panel will be at /admin
   
@@ -19,11 +20,5 @@ export default defineConfig({
   
   schema: {
     types: schemaTypes,
-  },
-  
-  studio: {
-    components: {
-      // Custom components can be added here
-    }
   }
 })

@@ -7,12 +7,12 @@ export default function Testimonials() {
   const [swiperThumb, setSwiperThumb] = useState(null);
   const thumbImages = [
     {
-      src: "/images/testimonial/tes-3.jpg",
+      src: "https://vemusnextjs.vercel.app/images/testimonial/tes-3.jpg",
       width: 1564,
       height: 642,
     },
     {
-      src: "/images/testimonial/tes-6.jpg",
+      src: "https://vemusnextjs.vercel.app/images/testimonial/tes-6.jpg",
       width: 782,
       height: 321,
     },

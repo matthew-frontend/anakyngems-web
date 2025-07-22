@@ -1,12 +1,45 @@
 "use client";
 import { products14 } from "@/data/products";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import QuickView from "../common/QuickView";
 import { Navigation, Pagination } from "swiper/modules";
-export default function RelatedProducts({ containerFull = false }) {
+import { getProducts } from "@/sanity/client";
+
+export default function RelatedProducts({ containerFull = false, currentProduct = null }) {
+  const [relatedProducts, setRelatedProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchRelatedProducts() {
+      try {
+        const allProducts = await getProducts();
+        
+        // Filter out current product and get related products (same category or random)
+        const filtered = allProducts.filter(p => p._id !== currentProduct?._id);
+        const sameCategory = filtered.filter(p => 
+          p.category?.title === currentProduct?.category?.title ||
+          p.category === currentProduct?.category
+        );
+        
+        // Use same category products if available, otherwise use random products
+        const related = sameCategory.length >= 4 ? 
+          sameCategory.slice(0, 8) : 
+          [...sameCategory, ...filtered.filter(p => !sameCategory.includes(p))].slice(0, 8);
+        
+        setRelatedProducts(related);
+      } catch (error) {
+        console.error('Error fetching related products:', error);
+        setRelatedProducts(products14.slice(0, 8)); // Fallback to static data
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchRelatedProducts();
+  }, [currentProduct]);
   return (
     <section className="flat-spacing-3">
       <div className={`container${containerFull ? "-full" : ""}`}>
@@ -49,28 +82,30 @@ export default function RelatedProducts({ containerFull = false }) {
             nextEl: ".snbn46",
           }}
         >
-          {products14.map((product, index) => (
-            <SwiperSlide className="swiper-slide" key={index}>
+          {(loading ? products14.slice(0, 4) : relatedProducts).map((product, index) => (
+            <SwiperSlide className="swiper-slide" key={product._id || product.id || index}>
               <div className="card_product--V01">
                 <div className="card_product-wrapper">
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={`/products/${product._id || product.id}`}
                     className="product-img"
                   >
                     <Image
-                      src={product.imgSrc}
-                      alt="Image Product"
+                      src={product.images?.[0]?.asset?.url || product.imgSrc}
+                      alt={product.title}
                       className="lazyload img-product"
                       width={714}
                       height={900}
                     />
-                    <Image
-                      src={product.hoverImgSrc}
-                      alt="Image Product"
-                      className="lazyload img-hover"
-                      width={714}
-                      height={900}
-                    />
+                    {(product.images?.[1]?.asset?.url || product.hoverImgSrc) && (
+                      <Image
+                        src={product.images?.[1]?.asset?.url || product.hoverImgSrc}
+                        alt={product.title}
+                        className="lazyload img-hover"
+                        width={714}
+                        height={900}
+                      />
+                    )}
                   </Link>
                   <ul className="list-product-btn">
                     <li>
@@ -80,24 +115,18 @@ export default function RelatedProducts({ containerFull = false }) {
                 </div>
                 <div className="card_product-info">
                   <Link
-                    href={`/product-default/${product.id}`}
+                    href={`/products/${product._id || product.id}`}
                     className="name-product h5 fw-normal link text-line-clamp-2"
                   >
                     {product.title}
                   </Link>
                   <div className="price-wrap">
                     <span className="price-new h5">
-                      $
-                      {product.price.toLocaleString(undefined, {
-                        minimumFractionDigits: 2,
-                      })}
+                      ${product.price.toFixed(2)}
                     </span>
                     {product.oldPrice && (
                       <span className="price-old fw-normal">
-                        $
-                        {product.oldPrice.toLocaleString(undefined, {
-                          minimumFractionDigits: 2,
-                        })}
+                        ${product.oldPrice.toFixed(2)}
                       </span>
                     )}
                   </div>

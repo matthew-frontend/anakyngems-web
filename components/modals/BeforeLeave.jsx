@@ -41,7 +41,7 @@ export default function BeforeLeave() {
               <div className="image">
                 <Image
                   alt="Image"
-                  src="/images/banner/banner-you-leave.jpg"
+                  src="https://vemusnextjs.vercel.app/images/banner/banner-you-leave.jpg"
                   width={1120}
                   height={1120}
                 />

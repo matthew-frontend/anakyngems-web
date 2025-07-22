@@ -15,7 +15,7 @@ export default function page() {
       <div className="wg-404 tf-grid-layout sm-col-2 gap-0 vh-100">
         <div className="image">
           <Image
-            src="/images/section/404.jpg"
+            src="https://vemusnextjs.vercel.app/images/section/404.jpg"
             alt={404}
             className="lazyload"
             width={1920}

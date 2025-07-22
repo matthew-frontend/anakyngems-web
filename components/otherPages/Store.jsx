@@ -13,7 +13,7 @@ const storeData = [
       "https://www.google.com/maps?q=15+Geogre+st,Sydney,NSW+2000,Australia",
     emailHref: "mailto:store@vemus.com",
     phoneHref: "tel:6434528540",
-    image: "/images/section/store-1.jpg",
+    image: "https://vemusnextjs.vercel.app/images/section/store-1.jpg",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const storeData = [
     mapLink: "https://www.google.com/maps?q=350+5th+Ave,Manhattan,NY+10118,USA",
     emailHref: "mailto:store@vemus.com",
     phoneHref: "tel:12125551234",
-    image: "/images/section/store-2.jpg",
+    image: "https://vemusnextjs.vercel.app/images/section/store-2.jpg",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const storeData = [
       "https://www.google.com/maps?q=221B+Baker+Street,London+NW1+6XE,UK",
     emailHref: "mailto:store@vemus.com",
     phoneHref: "tel:442079460958",
-    image: "/images/section/store-3.jpg",
+    image: "https://vemusnextjs.vercel.app/images/section/store-3.jpg",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const storeData = [
       "https://www.google.com/maps?q=10+Avenue+des+Champs-Élysées,75008+Paris,France",
     emailHref: "mailto:store@vemus.com",
     phoneHref: "tel:33144550123",
-    image: "/images/section/store-4.jpg",
+    image: "https://vemusnextjs.vercel.app/images/section/store-4.jpg",
   },
 ];
 

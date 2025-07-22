@@ -33,7 +33,7 @@ export function OrganizationSchema() {
     "name": "ANAKYNGEMS อนาคินเจม",
     "alternateName": ["อนาคินเจม", "ANAKYN GEMS", "Anakin Gems", "อนาคิน เจม"],
     "url": "https://anakyngems.com",
-    "logo": "https://anakyngems.com/images/logo/logo.png",
+    "logo": "https://anakyngems.comhttps://vemusnextjs.vercel.app/images/logo/logo.png",
     "description": "ANAKYNGEMS อนาคินเจม ผู้เชี่ยวชาญด้านเครื่องประดับเพชรแล็บโกรน คุณภาพสูง ยั่งยืน จริยธรรม | Lab grown diamond jewelry specialist - High quality, sustainable, and ethically sourced diamonds",
     "contactPoint": {
       "@type": "ContactPoint",

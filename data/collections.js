@@ -44,25 +44,25 @@ export const collections = [
 
 export const collections2 = [
   {
-    image: "/images/collections/cls-23.jpg",
-    title: "ANKLET",
+    image: "https://vemusnextjs.vercel.app/images/collections/cls-23.jpg",
+    title: "BRACELET",
     count: 23,
     delay: "",
   },
   {
-    image: "/images/collections/cls-24.jpg",
-    title: "EARRINGS",
+    image: "https://vemusnextjs.vercel.app/images/collections/cls-24.jpg",
+    title: "EARRING",
     count: 9,
     delay: "0.1s",
   },
   {
-    image: "/images/collections/cls-25.jpg",
-    title: "RINGS",
+    image: "https://vemusnextjs.vercel.app/images/collections/cls-25.jpg",
+    title: "RING",
     count: 27,
     delay: "0.2s",
   },
   {
-    image: "/images/collections/cls-26.jpg",
+    image: "https://vemusnextjs.vercel.app/images/collections/cls-26.jpg",
     title: "NECKLACES",
     count: 10,
     delay: "0.3s",
@@ -99,20 +99,64 @@ export const collectionItems = [
 ];
 
 export const collections3 = [
-  { image: "/images/collections/cls-1.jpg", label: "NEW IN", count: 20 },
-  { image: "/images/collections/cls-2.jpg", label: "bracelets", count: 20 },
-  { image: "/images/collections/cls-3.jpg", label: "over $2000", count: 20 },
-  { image: "/images/collections/cls-4.jpg", label: "personalize", count: 20 },
-  { image: "/images/collections/cls-5.jpg", label: "necklaces", count: 20 },
-  { image: "/images/collections/cls-6.jpg", label: "gift ideas", count: 20 },
-  { image: "/images/collections/cls-7.jpg", label: "rings", count: 20 },
+  {
+    image: "/images/collections/cls-1.jpg",
+    label: "NEW IN",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-2.jpg",
+    label: "bracelets",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-3.jpg",
+    label: "over $2000",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-4.jpg",
+    label: "personalize",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-5.jpg",
+    label: "necklaces",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-6.jpg",
+    label: "gift ideas",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-7.jpg",
+    label: "rings",
+    count: 20,
+  },
   {
     image: "/images/collections/cls-8.jpg",
     label: "winter collection",
     count: 20,
   },
-  { image: "/images/collections/cls-9.jpg", label: "best sellers", count: 20 },
-  { image: "/images/collections/cls-10.jpg", label: "under $500", count: 20 },
-  { image: "/images/collections/cls-11.jpg", label: "under $1000", count: 20 },
-  { image: "/images/collections/cls-12.jpg", label: "earrings", count: 20 },
+  {
+    image: "/images/collections/cls-9.jpg",
+    label: "best sellers",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-10.jpg",
+    label: "under $500",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-11.jpg",
+    label: "under $1000",
+    count: 20,
+  },
+  {
+    image: "/images/collections/cls-12.jpg",
+    label: "earrings",
+    count: 20,
+  },
 ];

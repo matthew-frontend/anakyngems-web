@@ -1,3 +1,7 @@
+import BadgeField from '../components/BadgeField.jsx'
+import VariantTypeField from '../components/VariantTypeField.jsx'
+import VariantTextField from '../components/VariantTextField.jsx'
+
 export default {
   name: 'product',
   title: 'Product',
@@ -64,23 +68,57 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'badge',
-      title: 'Badge',
+      name: 'badgeType',
+      title: 'Badge Type (Optional)',
       type: 'string',
       options: {
         list: [
-          { title: 'New In', value: 'NEW IN' },
-          { title: 'Sale', value: 'SALE' },
-          { title: 'Hot', value: 'HOT' },
-          { title: 'Limited', value: 'LIMITED' }
+          { title: 'None (No badge)', value: null },
+          { title: 'Sale (Auto-calculate % OFF)', value: 'sale' },
+          { title: 'New In', value: 'new' }
         ]
       }
     },
     {
-      name: 'inStock',
-      title: 'In Stock',
-      type: 'boolean',
-      initialValue: true
+      name: 'badge',
+      title: 'Badge Text (Auto-generated)',
+      type: 'string',
+      description: 'This field is auto-generated based on Badge Type selection',
+      components: {
+        input: BadgeField
+      }
+    },
+    {
+      name: 'variantType',
+      title: 'Variant Display Type (Auto-generated)',
+      type: 'string',
+      description: 'Auto-generated based on Badge Type: new="text", sale="marquee"',
+      components: {
+        input: VariantTypeField
+      }
+    },
+    {
+      name: 'variantText',
+      title: 'Variant Text (Auto-generated)',
+      type: 'string',
+      description: 'Auto-generated based on Badge Type and discount calculation',
+      components: {
+        input: VariantTextField
+      }
+    },
+    {
+      name: 'material',
+      title: 'Material',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Sterling Silver', value: 'sterling-silver' },
+          { title: 'Gold', value: 'gold' },
+          { title: 'Rose Gold', value: 'rose-gold' },
+          { title: 'Platinum', value: 'platinum' },
+          { title: 'Diamond', value: 'diamond' }
+        ]
+      }
     },
     {
       name: 'variants',
@@ -106,6 +144,23 @@ export default {
           }
         ]
       }]
+    },
+    {
+      name: 'productTags',
+      title: 'Product Tags (Optional)',
+      type: 'array',
+      of: [{
+        type: 'string'
+      }],
+      options: {
+        list: [
+          { title: 'Recommended', value: 'recommended' },
+          { title: 'For Sale', value: 'for_sale' },
+          { title: 'Best Seller', value: 'best_seller' },
+          { title: 'Highlight Products', value: 'highlight_products' }
+        ]
+      },
+      description: 'Select one or more tags to categorize this product for special sections'
     },
     {
       name: 'details',

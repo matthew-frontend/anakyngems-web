@@ -72,7 +72,7 @@ export default function Footer2() {
                 <Link href={`/`} className="logo-site d-inline-block">
                   <Image
                     alt=""
-                    src="/images/logo/logo-white.svg"
+                    src="https://vemusnextjs.vercel.app/images/logo/logo-white.svg"
                     width={122}
                     height={31}
                   />
@@ -290,7 +290,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/am-ex.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/am-ex.svg"
                     width={40}
                     height={25}
                   />
@@ -300,7 +300,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/apple-pay.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/apple-pay.svg"
                     width={40}
                     height={25}
                   />
@@ -310,7 +310,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/dinner.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/dinner.svg"
                     width={40}
                     height={25}
                   />
@@ -320,7 +320,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/discover.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/discover.svg"
                     width={40}
                     height={25}
                   />
@@ -330,7 +330,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/gg-pay.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/gg-pay.svg"
                     width={38}
                     height={24}
                   />
@@ -340,7 +340,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/master-2.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/master-2.svg"
                     width={40}
                     height={25}
                   />
@@ -350,7 +350,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/master.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/master.svg"
                     width={40}
                     height={25}
                   />
@@ -360,7 +360,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/shop-pay.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/shop-pay.svg"
                     width={40}
                     height={25}
                   />
@@ -370,7 +370,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/unicon-pay.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/unicon-pay.svg"
                     width={40}
                     height={25}
                   />
@@ -380,7 +380,7 @@ export default function Footer2() {
                 <a href="#">
                   <Image
                     alt="Paymend Method"
-                    src="/images/payment/visa.svg"
+                    src="https://vemusnextjs.vercel.app/images/payment/visa.svg"
                     width={40}
                     height={25}
                   />
@@ -396,7 +396,7 @@ export default function Footer2() {
             <Image
               className="lazyload"
               alt="Logo"
-              src="/images/logo/logo-very-large.svg"
+              src="https://vemusnextjs.vercel.app/images/logo/logo-very-large.svg"
               width={1422}
               height={165}
               // style={{ opacity: .7 }}

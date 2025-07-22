@@ -5,17 +5,18 @@ import Header1 from "@/components/headers/Header1";
 import Topbar2 from "@/components/headers/Topbar2";
 import TopbarBottom from "@/components/headers/TopbarBottom";
 import About from "@/components/homes/home-3/About";
-import Banner from "@/components/homes/home-3/Banner";
+import CountdownLuxruy from "@/components/homes/home-3/CountdownLuxruy";
 import Banner2 from "@/components/homes/home-3/Banner2";
-import Blogs from "@/components/homes/home-3/Blogs";
-import Collections from "@/components/homes/home-3/Collections";
+import BestSeller from "@/components/homes/home-3/BestSeller";
+import BehindBrand from "@/components/homes/home-3/BehindBrand";
+import FeaturedCollections from "@/components/homes/home-3/FeaturedCollections";
 import Hero from "@/components/homes/home-3/Hero";
-import Products1 from "@/components/homes/home-3/Products1";
-import Products2 from "@/components/homes/home-3/Products2";
+import HighlightProducts from "@/components/homes/home-3/HighlightProducts";
 import Products3 from "@/components/homes/home-3/Products3";
 import Testimonials from "@/components/homes/home-3/Testimonials";
 import ProductsModal from "@/components/modals/ProductsModal";
 import React from "react";
+import CollectionsSlide from "@/components/homes/home-3/CollectionsSlide";
 
 export const metadata = {
   title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -26,7 +27,7 @@ export const metadata = {
     url: "https://anakyngems.com",
     images: [
       {
-        url: "/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
+        url: "https://anakyngems-web.vercel.app/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -44,15 +45,16 @@ export default function Home() {
       <Header1 />
       <Hero />
       <About />
-      <Collections />
-      <Products1 />
+      <CollectionsSlide />
+      {/* <FeaturedCollections /> */}
+      <BestSeller />
       <TextSlider2 />
-      <Banner />
-      <Products2 />
+      <CountdownLuxruy />
+      <HighlightProducts />
       <Banner2 />
       <Products3 />
       <Testimonials />
-      <Blogs />
+      <BehindBrand />
       <Features
         styleWhite={false}
         parentClass="flat-spacing-8 bg-light-peach"

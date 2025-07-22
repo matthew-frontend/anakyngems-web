@@ -40,7 +40,7 @@ export default function BlogSidebar() {
             <div className="wg-recent hover-img">
               <a href="#" className="image img-style">
                 <Image
-                  src="/images/blog/blog-1.jpg"
+                  src="https://vemusnextjs.vercel.app/images/blog/blog-1.jpg"
                   alt=""
                   className="layzload"
                   width={972}
@@ -66,7 +66,7 @@ export default function BlogSidebar() {
             <div className="wg-recent hover-img">
               <a href="#" className="image img-style">
                 <Image
-                  src="/images/blog/blog-2.jpg"
+                  src="https://vemusnextjs.vercel.app/images/blog/blog-2.jpg"
                   alt=""
                   className="layzload"
                   width={972}
@@ -92,7 +92,7 @@ export default function BlogSidebar() {
             <div className="wg-recent hover-img">
               <a href="#" className="image img-style">
                 <Image
-                  src="/images/blog/blog-3.jpg"
+                  src="https://vemusnextjs.vercel.app/images/blog/blog-3.jpg"
                   alt=""
                   className="layzload"
                   width={2004}

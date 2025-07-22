@@ -6,7 +6,18 @@ import Drift from "drift-zoom";
 const createDetailImages = (product) => {
   if (!product) return [];
   
-  const productImages = product.images || [product.imgSrc, product.hoverImgSrc].filter(Boolean);
+  // Handle both Sanity images and static images
+  let productImages = [];
+  
+  if (product.images && Array.isArray(product.images)) {
+    // Sanity images structure
+    productImages = product.images.map(img => 
+      img?.asset?.url || img || null
+    ).filter(Boolean);
+  } else if (product.imgSrc) {
+    // Static images structure (fallback)
+    productImages = [product.imgSrc, product.hoverImgSrc].filter(Boolean);
+  }
   
   return productImages.map((img, index) => ({
     scroll: index === 0 ? "gold" : index === 1 ? "rose" : "titanium",

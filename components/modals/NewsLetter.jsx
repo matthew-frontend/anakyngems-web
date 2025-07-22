@@ -80,7 +80,7 @@ export default function NewsLetter() {
                 alt=""
                 width={876}
                 height={1120}
-                src="/images/banner/banner-newletter.jpg"
+                src="https://vemusnextjs.vercel.app/images/banner/banner-newletter.jpg"
               />
             </div>
             <div className="content text-center">

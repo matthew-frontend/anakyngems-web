@@ -199,7 +199,7 @@ export default function Descriptions1() {
                     <li className="post-review-item">
                       <div className="rv-image">
                         <Image
-                          src="/images/avatar/avt-1.jpg"
+                          src="https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg"
                           alt=""
                           className="lazyload"
                           width={100}
@@ -242,7 +242,7 @@ export default function Descriptions1() {
                     <li className="post-review-item">
                       <div className="rv-image">
                         <Image
-                          src="/images/avatar/avt-2.jpg"
+                          src="https://vemusnextjs.vercel.app/images/avatar/avt-2.jpg"
                           alt=""
                           className="lazyload"
                           width={400}
@@ -285,7 +285,7 @@ export default function Descriptions1() {
                     <li className="post-review-item">
                       <div className="rv-image">
                         <Image
-                          src="/images/avatar/avt-3.jpg"
+                          src="https://vemusnextjs.vercel.app/images/avatar/avt-3.jpg"
                           alt=""
                           className="lazyload"
                           width={100}

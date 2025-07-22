@@ -79,7 +79,7 @@ export default function Details4({ product }) {
                         Pay in 4 interest-free installments with
                         <Image
                           alt=""
-                          src="/images/payment/shop-pay-2.svg"
+                          src="https://vemusnextjs.vercel.app/images/payment/shop-pay-2.svg"
                           width={83}
                           height={20}
                         />

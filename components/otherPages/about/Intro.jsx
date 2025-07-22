@@ -9,7 +9,7 @@ export default function Intro() {
           <div className="col-md-6">
             <div className="brand-intro_image mb-md-0">
               <Image
-                src="/images/section/brand-intro.jpg"
+                src="https://vemusnextjs.vercel.app/images/section/brand-intro.jpg"
                 alt=""
                 className="lazyload intro-photo"
                 width={918}
@@ -17,7 +17,7 @@ export default function Intro() {
               />
               <div className="brand-box">
                 <Image
-                  src="/images/section/item-1.png"
+                  src="https://vemusnextjs.vercel.app/images/section/item-1.png"
                   alt=""
                   className="lazyload"
                   width={1000}
@@ -45,7 +45,7 @@ export default function Intro() {
                 <Image
                   alt="Author"
                   className="img-author"
-                  src="/images/avatar/avt-1.jpg"
+                  src="https://vemusnextjs.vercel.app/images/avatar/avt-1.jpg"
                   width={100}
                   height={100}
                 />
@@ -61,7 +61,7 @@ export default function Intro() {
               <div className="author-signature">
                 <Image
                   alt="Signature"
-                  src="/images/section/signature.svg"
+                  src="https://vemusnextjs.vercel.app/images/section/signature.svg"
                   width={296}
                   height={81}
                 />

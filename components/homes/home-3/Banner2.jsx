@@ -7,7 +7,7 @@ export default function Banner2() {
       <div className="bn-image-blur">
         <div className="blur">
           <Image
-            src="/images/banner/banner-4.jpg"
+            src="https://vemusnextjs.vercel.app/images/banner/banner-4.jpg"
             alt=""
             className="lazyload"
             width={964}

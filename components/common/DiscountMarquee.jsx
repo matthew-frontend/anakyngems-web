@@ -2,7 +2,9 @@ import React from "react";
 
 export default function DiscountMarquee({
   parentClass = "marquee-sale type-2 infiniteSlide infiniteSlider2",
+  variantText = "30% OFF, Selling fast",
 }) {
+  const parts = variantText.includes(', ') ? variantText.split(', ') : [variantText, "Selling fast"];
   return (
     <div className={parentClass + " infiniteSlider2"}>
       {/* clone 1 */}
@@ -10,7 +12,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -21,7 +23,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -32,7 +34,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -43,7 +45,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -54,7 +56,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -65,7 +67,7 @@ export default function DiscountMarquee({
         className="text-caption text-white"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white"
@@ -75,7 +77,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -85,7 +87,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -95,7 +97,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -105,7 +107,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -115,7 +117,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -125,7 +127,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -135,7 +137,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -145,7 +147,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -155,7 +157,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -165,7 +167,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -175,7 +177,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -185,7 +187,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -195,7 +197,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -205,7 +207,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -215,7 +217,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -225,7 +227,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -235,7 +237,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        30% OFF
+{parts[0]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"
@@ -245,7 +247,7 @@ export default function DiscountMarquee({
         className="text-caption text-white infiniteslide_clone"
         style={{ flex: "0 0 auto", display: "block" }}
       >
-        Selling fast
+{parts[1]}
       </p>
       <i
         className="icon-thunder text-white infiniteslide_clone"

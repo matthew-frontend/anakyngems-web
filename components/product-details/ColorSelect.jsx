@@ -7,19 +7,19 @@ const colors = [
     name: "Gold",
     colorKey: "gold",
     price: "2,499.00",
-    image: "/images/products/material/yellow.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/material/yellow.jpg",
   },
   {
     name: "Rose",
     colorKey: "rose",
     price: "2,499.00",
-    image: "/images/products/material/pink.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/material/pink.jpg",
   },
   {
     name: "Titanium",
     colorKey: "titanium",
     price: "2,499.00",
-    image: "/images/products/material/gray.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/material/gray.jpg",
   },
 ];
 
