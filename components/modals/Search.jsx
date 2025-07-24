@@ -1,9 +1,24 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { products1 } from "@/data/products";
+import { getProducts } from "@/sanity/client";
 export default function Search() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const productsData = await getProducts();
+        setProducts(productsData.slice(0, 2));
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setProducts([]);
+      }
+    }
+    fetchProducts();
+  }, []);
+
   return (
     <div className="offcanvas offcanvas-top offcanvas-search" id="search">
       <div className="offcanvas-content">
@@ -70,23 +85,23 @@ export default function Search() {
               <div className="feature-wrap">
                 <p className="title">SUGGESTION FOR YOU</p>
                 <ul className="product-list">
-                  {products1.slice(0, 2).map((product, i) => (
+                  {products.map((product, i) => (
                     <li key={i}>
                       <div className="tf-product-mini-view">
                         <Link
-                          href={`/product-default/${product.id}`}
+                          href={`/products/${product._id || product.id}`}
                           className="prd-image"
                         >
                           <Image
                             alt=""
                             width={714}
                             height={900}
-                            src={product.imgSrc}
+                            src={product.images?.[0]?.asset?.url || product.imgSrc}
                           />
                         </Link>
                         <div className="prd-content">
                           <Link
-                            href={`/product-default/${product.id}`}
+                            href={`/products/${product._id || product.id}`}
                             className="prd-name link text-uppercase"
                           >
                             {product.title}

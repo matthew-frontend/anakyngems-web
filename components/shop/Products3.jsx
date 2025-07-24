@@ -1,15 +1,23 @@
 "use client";
 import { products15 } from "@/data/products";
 import React from "react";
-import DiscountMarquee from "../common/DiscountMarquee";
-import QuickView from "../common/QuickView";
+// Dynamic import for DiscountMarquee
+const DiscountMarquee = dynamic(() => import("../common/DiscountMarquee"), { ssr: false });
+import dynamic from "next/dynamic";
+
+// Dynamic import for QuickView modal
+const QuickView = dynamic(() => import("../common/QuickView"), { ssr: false });
 import { initialState, reducer } from "@/reducer/filterReducer";
 import { useEffect, useReducer, useState } from "react";
-import FilterSidebar from "./FilterSidebar";
 import LayoutHandler from "./LayoutHandler";
-import Sidebar from "./Sidebar";
+
+// Dynamic imports for sidebar components
+const FilterSidebar = dynamic(() => import("./FilterSidebar"), { ssr: false });
+const Sidebar = dynamic(() => import("./Sidebar"), { ssr: false });
 import Link from "next/link";
-import Pagination from "../common/Pagination";
+import Image from "next/image";
+// Dynamic import for Pagination
+const Pagination = dynamic(() => import("../common/Pagination"), { ssr: false });
 import FilterToggle from "./FilterToggler";
 export default function Products3() {
   const [activeLayout, setActiveLayout] = useState(3);
@@ -255,14 +263,14 @@ export default function Products3() {
                           }/${product.id}`}
                           className="product-img"
                         >
-                          <img
+                          <Image
                             src={product.imgSrc}
                             alt={product.title}
                             className="lazyload img-product"
                             width={714}
                             height={900}
                           />
-                          <img
+                          <Image
                             src={product.hoverImgSrc}
                             alt={product.title}
                             className="lazyload img-hover"
@@ -272,11 +280,9 @@ export default function Products3() {
                         </Link>
 
                         {!product.outOfStock && (
-                          <ul className="list-product-btn">
-                              <li>
-                              <QuickView product={product} />
-                            </li>
-                          </ul>
+                          <div className="list-product-btn">
+                            <QuickView product={product} />
+                          </div>
                         )}
 
                         {product.badge && (
@@ -351,8 +357,8 @@ export default function Products3() {
                       href={`/products`}
                       className="box_image-image img-style"
                     >
-                      <img
-                        src="images/collections/discover-1.jpg"
+                      <Image
+                        src="/images/collections/discover-1.jpg"
                         alt=""
                         className="lazyload"
                         width={714}
@@ -397,14 +403,14 @@ export default function Products3() {
                           }/${product.id}`}
                           className="product-img"
                         >
-                          <img
+                          <Image
                             src={product.imgSrc}
                             alt={product.title}
                             className="lazyload img-product"
                             width={714}
                             height={900}
                           />
-                          <img
+                          <Image
                             src={product.hoverImgSrc}
                             alt={product.title}
                             className="lazyload img-hover"
@@ -414,11 +420,9 @@ export default function Products3() {
                         </Link>
 
                         {!product.outOfStock && (
-                          <ul className="list-product-btn">
-                              <li>
-                              <QuickView product={product} />
-                            </li>
-                          </ul>
+                          <div className="list-product-btn">
+                            <QuickView product={product} />
+                          </div>
                         )}
 
                         {product.badge && (
@@ -493,8 +497,8 @@ export default function Products3() {
                       href={`/products`}
                       className="box_image-image img-style"
                     >
-                      <img
-                        src="images/collections/discover-2.jpg"
+                      <Image
+                        src="/images/collections/discover-2.jpg"
                         alt=""
                         className="lazyload"
                         width={1488}

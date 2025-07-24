@@ -34,7 +34,7 @@ export default function FeaturedCollections() {
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -80,7 +80,7 @@ export default function FeaturedCollections() {
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -126,7 +126,7 @@ export default function FeaturedCollections() {
                 <div className="hover-image">
                   <Image
                     alt="Hover Image"
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -142,7 +142,7 @@ export default function FeaturedCollections() {
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -176,7 +176,7 @@ export default function FeaturedCollections() {
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -210,7 +210,7 @@ export default function FeaturedCollections() {
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}
@@ -244,7 +244,7 @@ export default function FeaturedCollections() {
               >
                 <div className="image img-style z-5 position-relative">
                   <Image
-                    src="https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
+                    src="https://vemusnextjs.vercel.app/images/collections/tab-1.jpg"
                     alt="Banner"
                     className="lazyload"
                     width={1000}

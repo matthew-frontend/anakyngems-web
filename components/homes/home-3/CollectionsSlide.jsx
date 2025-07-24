@@ -5,58 +5,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
-import { getCategories, getProducts } from "@/sanity/client";
 
-export default function CollectionsSlide() {
-  const [categoryCounts, setCategoryCounts] = useState({});
-  const [loading, setLoading] = useState(true);
+export default function CollectionsSlide({ categories = [], categoryCounts = {}, error = null }) {
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const [categoriesData, allProducts] = await Promise.all([
-          getCategories(),
-          getProducts()
-        ]);
-        
-        // Calculate category counts - map both Sanity categories and collections2 titles
-        const counts = {};
-        
-        // First, count products from Sanity categories
-        categoriesData.forEach(cat => {
-          const categoryName = cat.title.toLowerCase();
-          counts[categoryName] = allProducts.filter(product => 
-            (product.category?.title || product.category || '').toLowerCase() === categoryName
-          ).length;
-        });
-        
-        // Also map collections2 titles to Sanity category counts
-        collections2.forEach(collection => {
-          const collectionTitle = collection.title.toLowerCase();
-          // Map collection title to actual category count
-          if (counts[collectionTitle] !== undefined) {
-            counts[collection.title] = counts[collectionTitle]; // Keep original case for collections2
-          } else {
-            // Try to match plural/singular forms
-            const singularForm = collectionTitle.endsWith('s') ? collectionTitle.slice(0, -1) : collectionTitle;
-            if (counts[singularForm] !== undefined) {
-              counts[collection.title] = counts[singularForm];
-            }
-          }
-        });
-        
-        setCategoryCounts(counts);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-        // Fallback to static data
-        setCategoryCounts({});
-      } finally {
-        setLoading(false);
+  // Map collections2 titles to category counts from props
+  const mappedCounts = {};
+  collections2.forEach(collection => {
+    const collectionTitle = collection.title.toLowerCase();
+    if (categoryCounts[collectionTitle] !== undefined) {
+      mappedCounts[collection.title] = categoryCounts[collectionTitle];
+    } else {
+      // Try to match plural/singular forms
+      const singularForm = collectionTitle.endsWith('s') ? collectionTitle.slice(0, -1) : collectionTitle;
+      if (categoryCounts[singularForm] !== undefined) {
+        mappedCounts[collection.title] = categoryCounts[singularForm];
+      } else {
+        mappedCounts[collection.title] = collection.count || 0; // Fallback to static count
       }
     }
-    
-    fetchData();
-  }, []);
+  });
   return (
     <div className="flat-spacing-12">
       <div className="container-full-2">
@@ -83,7 +51,7 @@ export default function CollectionsSlide() {
           }}
         >
           {collections2.map((item, index) => {
-            const productCount = loading ? item.count : (categoryCounts[item.title] || item.count || 0);
+            const productCount = error ? item.count : (mappedCounts[item.title] || item.count || 0);
             const categoryName = item.title?.toLowerCase();
             
             return (
@@ -100,6 +68,7 @@ export default function CollectionsSlide() {
                       className="lazyload"
                       width={915}
                       height={1250}
+                      priority={index === 0}
                     />
                   </div>
                   <h3 className="name link">

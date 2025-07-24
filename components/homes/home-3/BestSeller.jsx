@@ -3,60 +3,33 @@ import { products9 } from "@/data/products";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import QuickView from "@/components/common/QuickView";
 import DiscountMarquee from "@/components/common/DiscountMarquee";
 import { Navigation, Pagination } from "swiper/modules";
-import CountdownTimer from "@/components/common/Countdown";
-import Link from "next/link";
-import { getBestSellers, getProducts, getCategories } from "@/sanity/client";
+import dynamic from "next/dynamic";
 
-export default function BestSeller() {
-  const [sanityProducts, setSanityProducts] = useState([]);
-  const [sanityCategories, setSanityCategories] = useState([]);
-  const [categoryCounts, setCategoryCounts] = useState({});
+// Dynamic imports for better performance
+const QuickView = dynamic(() => import("@/components/common/QuickView"), { ssr: false });
+const CountdownTimer = dynamic(() => import("@/components/common/Countdown"), { ssr: false });
+import Link from "next/link";
+import ErrorBoundary from "@/components/common/ErrorBoundary";
+
+export default function BestSeller({ bestSellers = [], categories = [], categoryCounts = {}, error = null }) {
   const [activeTab, setActiveTab] = useState(""); // Will be set from first category
   const [filtered, setFiltered] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  
+  // Use props or fallback to static data
+  const sanityProducts = bestSellers.length > 0 ? bestSellers : (error ? products9 : []);
+  const sanityCategories = categories.length > 0 ? categories : [];
 
+  // Set first category as active when categories are available
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const [bestSellers, allProducts, categories] = await Promise.all([
-          getBestSellers(20), // Get more products for filtering
-          getProducts(),
-          getCategories()
-        ]);
-        
-        setSanityProducts(bestSellers.length > 0 ? bestSellers : allProducts.slice(0, 12));
-        setSanityCategories(categories);
-        
-        // Set first category as active if not set
-        if (categories.length > 0 && !activeTab) {
-          setActiveTab(categories[0].title.toLowerCase());
-        }
-        
-        // Calculate category counts
-        const counts = {};
-        categories.forEach(cat => {
-          const categoryName = cat.title.toLowerCase();
-          counts[categoryName] = allProducts.filter(product => 
-            (product.category?.title || product.category || '').toLowerCase() === categoryName
-          ).length;
-        });
-        setCategoryCounts(counts);
-        
-      } catch (error) {
-        console.error('Error fetching data:', error);
-        // Fallback to static data
-        setSanityProducts(products9);
-        setActiveTab("rings");
-      } finally {
-        setLoading(false);
-      }
+    if (sanityCategories.length > 0 && !activeTab) {
+      setActiveTab(sanityCategories[0].title.toLowerCase());
+    } else if (error && !activeTab) {
+      setActiveTab("rings"); // Fallback for static data
     }
-    
-    fetchData();
-  }, []);
+  }, [sanityCategories, activeTab, error]);
 
   useEffect(() => {
     if (sanityProducts.length > 0 && activeTab) {
@@ -76,7 +49,7 @@ export default function BestSeller() {
             <span className="fst-italic">Best</span> Sellers
           </h2>
           <ul className="tab-prd" role="tablist">
-            {(loading ? ["ring", "bracelet", "necklace", "earring"] : sanityCategories.map(cat => cat.title.toLowerCase())).map((category) => (
+            {(error ? ["ring", "bracelet", "necklace", "earring"] : sanityCategories.map(cat => cat.title.toLowerCase())).map((category) => (
               <li key={category}>
                 <h5>
                   <a
@@ -127,7 +100,7 @@ export default function BestSeller() {
                   nextEl: ".snbn26",
                 }}
               >
-                {(loading ? products9.slice(0, 4) : filtered).map((product) => (
+                {(error ? products9.slice(0, 4) : filtered).map((product, index) => (
                   <SwiperSlide className="swiper-slide" key={product._id || product.id}>
                     <div className="card_product--V01 type-space-35">
                       <div className="card_product-wrapper">
@@ -141,6 +114,7 @@ export default function BestSeller() {
                             className="lazyload img-product"
                             width={714}
                             height={900}
+                            priority={index < 2}
                           />
                           {(product.images?.[1]?.asset?.url || product.hoverImgSrc) && (
                             <Image
@@ -153,11 +127,9 @@ export default function BestSeller() {
                           )}
                         </Link>
 
-                        <ul className="list-product-btn">
-                          <li>
-                            <QuickView product={product} />
-                          </li>
-                        </ul>
+                        <div className="list-product-btn">
+                          <QuickView product={product} />
+                        </div>
 
                         {(product.calculatedBadge || product.badge) && (
                           <div className="badge-box">
@@ -168,20 +140,14 @@ export default function BestSeller() {
                         )}
 
                         {(product.calculatedVariantType || product.variantType) === "text" && (
-                          <div className="variant-box">
-                            <p className="size-box text-center text-caption">
-                              {product.calculatedVariantText || product.variantText}
-                            </p>
+                          <div className="variant-box size-box text-center text-caption">
+                            {product.calculatedVariantText || product.variantText}
                           </div>
                         )}
 
                         {(product.calculatedVariantType || product.variantType) === "countdown" && (
                           <div className="variant-box count-down">
-                            <div className="countdown-V02">
-                              <div className="js-countdown">
-                                <CountdownTimer style={5} />
-                              </div>
-                            </div>
+                            <CountdownTimer style={5} />
                           </div>
                         )}
 
@@ -209,13 +175,11 @@ export default function BestSeller() {
                       </div>
 
                       <div className="card_product-info">
-                        <ul className="rate-wrap">
+                        <div className="rate-wrap">
                           {Array.from({ length: 5 }).map((_, i) => (
-                            <li key={i}>
-                              <i className="icon-star text-primary" />
-                            </li>
+                            <i key={i} className="icon-star text-primary" />
                           ))}
-                        </ul>
+                        </div>
                         <Link
                           href={`/products/${product._id || product.id}`}
                           className="name-product h5 fw-normal link text-line-clamp-2"

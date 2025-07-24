@@ -4,14 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
 const menuItems = [
-  "New Collection",
-  "All Jewelry",
-  "Charms",
-  "Bracelets",
-  "Rings",
-  "Earrings",
-  "Gifts",
-  "Collections",
+  { name: "New Collection", category: "new-in" },
+  { name: "All Jewelry", category: null },
+  { name: "Bracelets", category: "bracelet" },
+  { name: "Rings", category: "ring" },
+  { name: "Earrings", category: "earring" },
+  { name: "Collections", category: "gift-idea" },
 ];
 export default function Footer1() {
   const [success, setSuccess] = useState(true);
@@ -85,11 +83,11 @@ export default function Footer1() {
             {menuItems.map((item, index) => (
               <li key={index}>
                 <Link
-                  href="/products"
+                  href={item.category ? `/products?category=${item.category}` : "/products"}
                   className="tf-btn btn-line has-icon link"
                 >
                   <span className="text h6 text-uppercase fw-normal">
-                    {item}
+                    {item.name}
                   </span>
                   <i className="icon icon-arrow-top-right" />
                 </Link>

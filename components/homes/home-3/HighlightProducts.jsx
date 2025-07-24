@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
-import ModalVideo from "@/components/common/ModalVideo";
+// import ModalVideo from "@/components/common/ModalVideo";
 import { useContextElement } from "@/context/Context";
 export default function HighlightProducts() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const { setQuickViewItem } = useContextElement();
   return (
     <>
@@ -60,7 +60,7 @@ export default function HighlightProducts() {
                           height={1028}
                         />
                       </Link>
-                      <a
+                      {/* <a
                         href="#"
                         className="popup-youtube icon_play"
                         onClick={(e) => {
@@ -69,7 +69,7 @@ export default function HighlightProducts() {
                         }}
                       >
                         <i className="icon-retangle" />
-                      </a>
+                      </a> */}
                     </div>
                     <div className="content">
                       <Link
@@ -116,11 +116,11 @@ export default function HighlightProducts() {
           </div>
         </div>
       </section>{" "}
-      <ModalVideo
+      {/* <ModalVideo
         isOpen={isOpen}
         videoId={"MLpWrANjFbI"}
         setIsOpen={setIsOpen}
-      />
+      /> */}
     </>
   );
 }

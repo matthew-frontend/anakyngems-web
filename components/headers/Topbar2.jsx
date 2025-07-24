@@ -11,7 +11,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -23,9 +23,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              Exclusive Price For You –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span
@@ -51,7 +51,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -63,9 +63,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              EXCLUSIVE PRICE FOR YOU –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span
@@ -90,7 +90,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -102,9 +102,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              EXCLUSIVE PRICE FOR YOU –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span
@@ -129,7 +129,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -141,9 +141,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              EXCLUSIVE PRICE FOR YOU –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span
@@ -168,7 +168,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -180,9 +180,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              EXCLUSIVE PRICE FOR YOU –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -195,7 +195,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span
@@ -207,7 +207,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Free Shipping on All Orders Over $200
+              Welcome to ANAKYNGEMS
             </p>
           </div>
           <span
@@ -219,9 +219,9 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              VIP Members Get Extra Discounts –
+              EXCLUSIVE PRICE FOR YOU –
               <a href="#" className="link text-white text-decoration-underline">
-                Join Today!
+                SHOP NOW!
               </a>
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function Topbar2() {
             style={{ flex: "0 0 auto", display: "block" }}
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
-              Hassle-Free Returns on All Orders
+              Exclusive Price For You
             </p>
           </div>
           <span

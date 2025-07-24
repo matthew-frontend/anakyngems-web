@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -61,7 +62,12 @@ export default function TextBanner() {
             href={`/contact-us`}
             className="tf-btn style-4 type-size-2 border-primary"
           >
-            <img src="https://vemusnextjs.vercel.app/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-05.jpg" alt="" />
+            <Image 
+              src="https://vemusnextjs.vercel.app/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-05.jpg" 
+              alt="Anakyn Gems Logo" 
+              width={151}
+              height={80}
+            />
             {/* <svg
               width={151}
               height={80}

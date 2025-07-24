@@ -1,4 +1,3 @@
-import { products15 } from "@/data/products";
 import React from "react";
 
 export default function FilterSidebar({ allProps }) {
@@ -113,7 +112,7 @@ export default function FilterSidebar({ allProps }) {
                         [{" "}
                         <span className="count">
                           {
-                            products15.filter((el) => el.category == category)
+                            allProps.sanityProducts.filter((el) => (el.category?.title || el.category) == category)
                               .length
                           }
                         </span>{" "}
@@ -163,11 +162,11 @@ export default function FilterSidebar({ allProps }) {
                         [{" "}
                         <span className="count">
                           {option.id.includes("up")
-                            ? [...products15].filter(
+                            ? [...allProps.sanityProducts].filter(
                                 (elm) =>
                                   elm.price >= Number(option.id.split("-")[1])
                               ).length
-                            : [...products15].filter(
+                            : [...allProps.sanityProducts].filter(
                                 (elm) =>
                                   elm.price <= Number(option.id.split("-")[1])
                               ).length}

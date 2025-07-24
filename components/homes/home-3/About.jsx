@@ -14,6 +14,7 @@ export default function About() {
                 className="lazyload"
                 width={1000}
                 height={1000}
+                priority
               />
             </div>
             <span className="line-circle" />

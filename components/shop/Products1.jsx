@@ -1,6 +1,7 @@
 "use client";
 import { products15 } from "@/data/products";
 import React from "react";
+import Image from "next/image";
 import DiscountMarquee from "../common/DiscountMarquee";
 import QuickView from "../common/QuickView";
 import { initialState, reducer } from "@/reducer/filterReducer";
@@ -334,14 +335,14 @@ export default function Products1({ defaultLayout = 4 }) {
                       }/${product.id}`}
                       className="product-img"
                     >
-                      <img
+                      <Image
                         src={product.imgSrc}
                         alt={product.title}
                         className="lazyload img-product"
                         width={714}
                         height={900}
                       />
-                      <img
+                      <Image
                         src={product.hoverImgSrc}
                         alt={product.title}
                         className="lazyload img-hover"
@@ -351,11 +352,9 @@ export default function Products1({ defaultLayout = 4 }) {
                     </Link>
 
                     {!product.outOfStock && (
-                      <ul className="list-product-btn">
-                        <li>
-                          <QuickView product={product} />
-                        </li>
-                      </ul>
+                      <div className="list-product-btn">
+                        <QuickView product={product} />
+                      </div>
                     )}
 
                     {product.badge && (
@@ -426,9 +425,9 @@ export default function Products1({ defaultLayout = 4 }) {
                   href={`/products`}
                   className="box_image-image img-style"
                 >
-                  <img
-                    src="images/collections/discover-1.jpg"
-                    alt=""
+                  <Image
+                    src="/images/collections/discover-1.jpg"
+                    alt="Diamond For All Collection"
                     className="lazyload"
                     width={714}
                     height={1080}
@@ -472,14 +471,14 @@ export default function Products1({ defaultLayout = 4 }) {
                       }/${product.id}`}
                       className="product-img"
                     >
-                      <img
+                      <Image
                         src={product.imgSrc}
                         alt={product.title}
                         className="lazyload img-product"
                         width={714}
                         height={900}
                       />
-                      <img
+                      <Image
                         src={product.hoverImgSrc}
                         alt={product.title}
                         className="lazyload img-hover"
@@ -489,11 +488,9 @@ export default function Products1({ defaultLayout = 4 }) {
                     </Link>
 
                     {!product.outOfStock && (
-                      <ul className="list-product-btn">
-                        <li>
-                          <QuickView product={product} />
-                        </li>
-                      </ul>
+                      <div className="list-product-btn">
+                        <QuickView product={product} />
+                      </div>
                     )}
 
                     {product.badge && (
@@ -564,9 +561,9 @@ export default function Products1({ defaultLayout = 4 }) {
                   href={`/products`}
                   className="box_image-image img-style"
                 >
-                  <img
-                    src="images/collections/discover-2.jpg"
-                    alt=""
+                  <Image
+                    src="/images/collections/discover-2.jpg"
+                    alt="Be Unmissable Collection"
                     className="lazyload"
                     width={1488}
                     height={1080}

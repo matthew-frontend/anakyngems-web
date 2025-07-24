@@ -3,10 +3,13 @@ import { products6 } from "@/data/products";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import QuickView from "@/components/common/QuickView";
 import DiscountMarquee from "@/components/common/DiscountMarquee";
 import { Navigation, Pagination } from "swiper/modules";
-import CountdownTimer from "@/components/common/Countdown";
+import dynamic from "next/dynamic";
+
+// Dynamic imports for better performance  
+const QuickView = dynamic(() => import("@/components/common/QuickView"), { ssr: false });
+const CountdownTimer = dynamic(() => import("@/components/common/Countdown"), { ssr: false });
 import Link from "next/link";
 export default function Products1() {
   return (
@@ -86,11 +89,9 @@ export default function Products1() {
                   </Link>
 
                   {!product.outOfStock && (
-                    <ul className="list-product-btn">
-                      <li>
-                        <QuickView product={product} />
-                      </li>
-                    </ul>
+                    <div className="list-product-btn">
+                      <QuickView product={product} />
+                    </div>
                   )}
 
                   {product.badge && (

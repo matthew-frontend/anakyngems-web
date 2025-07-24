@@ -13,7 +13,7 @@ export default function page() {
   return (
     <>
       <Topbar1 />
-      <Header1 parentClass="tf-header" />
+      <Header1 parentClass="tf-header line-bt-2" />
       <section className="flat-spacing-2 pb-0">
         <div className="container">
           <div className="page-title">

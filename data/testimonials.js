@@ -34,8 +34,7 @@ export const testimonials = [
     rating: 5,
     title: "LOVE IT!",
     text: "“The quality of the clothes exceeded my expectations. Every piece feels premium, and the designs are so trendy. I'm obsessed with my new wardrobe additions!”",
-    avatar:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/avatar/avt-4.jpg",
+    avatar: "https://vemusnextjs.vercel.app/images/avatar/avt-4.jpg",
     name: "Emily T.",
     verified: true,
     purchasedItem: "Round Huggie Hoop Earrings",
@@ -48,8 +47,7 @@ export const testimonialData = [
     name: "Vincent P.",
     title: "LOVE IT!",
     text: "Lightweight yet impactful, they’re crafted to elevate your look from day to night — effortlessly blending simplicity and sophistication",
-    image:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-38.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/product-38.jpg",
     productName: "Organically Shaped Heart Hoop...",
     price: "$2,499.00",
   },
@@ -58,8 +56,7 @@ export const testimonialData = [
     name: "Mas Shin",
     title: "RECOMMEND!",
     text: "The quality of the jewelry exceeded my expectations. Each piece feels premium and beautifully crafted, and the designs are incredibly stylish. I’m absolutely obsessed with my new collection!",
-    image:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-39.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/product-39.jpg",
     productName: "Hammered Teardrop Studs...",
     price: "$2,799.00",
   },
@@ -68,8 +65,7 @@ export const testimonialData = [
     name: "Rose Vo",
     title: "RECOMMEND!",
     text: "I was blown away by the craftsmanship of these jewelry pieces. Every item feels luxurious and the modern designs are simply stunning",
-    image:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-37.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/product-37.jpg",
     productName: "Sculpted Pearl Drop Earrings",
     price: "$3,299.00",
   },
@@ -78,8 +74,7 @@ export const testimonialData = [
     name: "David Ngo",
     title: "LOVE IT!",
     text: "These minimalist hoops add the perfect touch of elegance to any outfit. Designed for everyday wear with a sleek, modern finish",
-    image:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-36.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/product-36.jpg",
     productName: "Brushed Metal Cuff Bracelet",
     price: "$1,999.00",
   },
@@ -88,8 +83,7 @@ export const testimonialData = [
     name: "Vincent P.",
     title: "LOVE IT!",
     text: "The quality of the clothes exceeded my expectations. Every piece feels premium, and the designs are so trendy.",
-    image:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/products/product-38.jpg",
+    image: "https://vemusnextjs.vercel.app/images/products/product-38.jpg",
     productName: "Organically Shaped Heart Hoop...",
     price: "$2,499.00",
   },
@@ -104,8 +98,7 @@ export const testimonials2 = [
   {
     text: `These minimalist hoops add the perfect touch of elegance to any outfit. Designed for everyday wear with a sleek, modern finish — your new go-to accessory for effortless sophistication`,
     author: "Mas S.",
-    avatar:
-      "https://vemusnextjs.vercel.apphttps://vemusnextjs.vercel.app/images/avatar/avt-4.jpg",
+    avatar: "https://vemusnextjs.vercel.app/images/avatar/avt-4.jpg",
   },
   // Add more testimonial objects here as needed
 ];

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function ProductsPageClient() {
+export default function ProductsPageClient({ productCount = 0 }) {
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
   
@@ -50,7 +50,7 @@ export default function ProductsPageClient() {
             </ul>
             <h1 className="heading fw-normal text-uppercase">
               {getCategoryDisplayName(categoryParam)}
-              <span className="number-count"> 26 </span>
+              <span className="number-count"> {productCount} </span>
             </h1>
           </div>
         </div>

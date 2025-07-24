@@ -39,6 +39,7 @@ export default function Hero() {
                   className="lazyload"
                   width={slide.imageWidth}
                   height={slide.imageHeight}
+                  priority={index === 0}
                 />
               </div>
               <div className="sld-content">

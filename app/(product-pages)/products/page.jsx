@@ -4,7 +4,7 @@ import Header1 from "@/components/headers/Header1";
 import Products2 from "@/components/shop/Products2";
 import Link from "next/link";
 import React, { Suspense } from "react";
-import ProductsPageClient from "@/components/shop/ProductsPageClient";
+import ProductsPageWrapper from "@/components/shop/ProductsPageWrapper";
 export const metadata = {
   title: "Products - ANAKYNGEMS",
   description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
@@ -14,7 +14,7 @@ export default function page() {
     <>
       <Header1 parentClass="tf-header line-bt-2" />
       <Suspense fallback={<div>Loading...</div>}>
-        <ProductsPageClient />
+        <ProductsPageWrapper />
       </Suspense>
       {/* <Categories /> */}
       <Suspense fallback={<div>Loading...</div>}>

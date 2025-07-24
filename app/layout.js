@@ -74,8 +74,6 @@ export default function RootLayout({ children }) {
 
             <ScrollTop />
             <MobileMenu />
-
-            {/* <QuickAdd /> */}
             <QuickView />
             <Search />
           </Context>

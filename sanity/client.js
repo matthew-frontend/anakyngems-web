@@ -2,8 +2,8 @@ import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 
 export const client = createClient({
-  projectId: '1xk2cwmy', // Your project ID
-  dataset: 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1xk2cwmy',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   useCdn: true, // Use CDN for faster load times
   apiVersion: '2024-01-01', // API version
 })
@@ -463,4 +463,66 @@ export async function getProductsByTag(tag, limit = 8) {
       productTags
     }
   `, { tag })
+}
+
+// Blog/Behind the Brand functions
+export async function getBlogPosts(limit = 12) {
+  return await client.fetch(`
+    *[_type == "blog"] | order(_createdAt desc) [0...${limit}] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      mainImage{
+        asset->{
+          _id,
+          url
+        }
+      },
+      tags,
+      publishedAt,
+      _createdAt
+    }
+  `)
+}
+
+export async function getBlogPost(slug) {
+  return await client.fetch(`
+    *[_type == "blog" && slug.current == $slug][0] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      content,
+      mainImage{
+        asset->{
+          _id,
+          url
+        }
+      },
+      tags,
+      publishedAt,
+      _createdAt
+    }
+  `, { slug })
+}
+
+export async function getBehindBrandPosts(limit = 12) {
+  return await client.fetch(`
+    *[_type == "blog" && "behind-brand" in tags] | order(_createdAt desc) [0...${limit}] {
+      _id,
+      title,
+      slug,
+      excerpt,
+      mainImage{
+        asset->{
+          _id,
+          url
+        }
+      },
+      tags,
+      publishedAt,
+      _createdAt
+    }
+  `)
 }

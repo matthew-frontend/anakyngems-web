@@ -1,5 +1,6 @@
 import { products15 } from "@/data/products";
 import React from "react";
+import Image from "next/image";
 
 export default function DropdownFilter({ allProps }) {
   return (
@@ -189,10 +190,10 @@ export default function DropdownFilter({ allProps }) {
                   readOnly
                 />
                 <label className="label">
-                  <img
+                  <Image
                     alt="Colour"
                     className="img-check"
-                    src={`images/products/material/dia-${color}.jpg`}
+                    src={`/images/products/material/dia-${color}.jpg`}
                     width={150}
                     height={150}
                   />

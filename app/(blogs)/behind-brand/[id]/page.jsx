@@ -14,7 +14,7 @@ export default function page({ params }) {
   return (
     <>
       <Topbar1 />
-      <Header1 parentClass="tf-header" />
+      <Header1 parentClass="tf-header line-bt-2" />
       <section className="flat-spacing-2 pb-0">
         <div className="container">
           <div className="page-title">
@@ -40,14 +40,6 @@ export default function page({ params }) {
                 behind the sparkle: <br className="d-none d-xxl-block" />
                 our iconic creations
               </h1>
-            </div>
-            <div className="box-text">
-              <p className="text-main-4">
-                Discover the stories behind our exquisite pieces—timeless
-                craftsmanship, meaningful designs,
-                <br className="d-none d-xxl-block" />
-                and the moments that make them unforgettable.
-              </p>
             </div>
           </div>
         </div>

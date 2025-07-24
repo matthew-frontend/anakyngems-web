@@ -1,9 +1,7 @@
 import Features from "@/components/common/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
-import Topbar1 from "@/components/headers/Topbar1";
 
-import RecentProducts from "@/components/product-details/RecentProducts";
 import RelatedProducts from "@/components/product-details/RelatedProducts";
 import React from "react";
 import Link from "next/link";
@@ -106,7 +104,6 @@ export default async function ProductDetailPage({ params }) {
 
       <TextSlider />
       <RelatedProducts currentProduct={product} />
-      <RecentProducts />
       <Features
         styleWhite={false}
         parentClass="flat-spacing-8 bg-light-peach"

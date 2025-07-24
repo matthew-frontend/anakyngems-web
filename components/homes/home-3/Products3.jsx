@@ -105,11 +105,9 @@ export default function Products3() {
                           />
                         </Link>
 
-                        <ul className="list-product-btn">
-                          <li>
-                            <QuickView product={product} />
-                          </li>
-                        </ul>
+                        <div className="list-product-btn">
+                          <QuickView product={product} />
+                        </div>
 
                         {product.badge && (
                           <div className="badge-box">

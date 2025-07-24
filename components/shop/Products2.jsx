@@ -1,6 +1,6 @@
 "use client";
-import { products15 } from "@/data/products";
 import React from "react";
+import Image from "next/image";
 import DiscountMarquee from "../common/DiscountMarquee";
 import QuickView from "../common/QuickView";
 import { initialState, reducer } from "@/reducer/filterReducer";
@@ -235,7 +235,7 @@ export default function Products2() {
                           href={`/products/${product._id || product.id}`}
                           className="product-img"
                         >
-                          <img
+                          <Image
                             src={product.images?.[0]?.asset?.url || (product.images ? product.images[0] : product.imgSrc)}
                             alt={product.title}
                             className="lazyload img-product"
@@ -243,7 +243,7 @@ export default function Products2() {
                             height={900}
                           />
                           {(product.images?.[1]?.asset?.url || (product.images && product.images[1]) || product.hoverImgSrc) ? (
-                            <img
+                            <Image
                               src={product.images?.[1]?.asset?.url || (product.images ? product.images[1] : product.hoverImgSrc)}
                               alt={product.title}
                               className="lazyload img-hover"

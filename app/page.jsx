@@ -17,25 +17,19 @@ import Testimonials from "@/components/homes/home-3/Testimonials";
 import ProductsModal from "@/components/modals/ProductsModal";
 import React from "react";
 import CollectionsSlide from "@/components/homes/home-3/CollectionsSlide";
+import { getHomepageData, getHomepageMetadata } from "@/lib/homepage-data";
 
-export const metadata = {
-  title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-  openGraph: {
-    title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
-    description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-    url: "https://anakyngems.com",
-    images: [
-      {
-        url: "https://anakyngems-web.vercel.app/images/logo/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
-        width: 1200,
-        height: 630,
-        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
-      },
-    ],
-  },
-};
-export default function Home() {
+// Enable Static Generation with ISR (revalidate every hour)
+export const revalidate = 3600; // 1 hour
+
+// Generate metadata
+export async function generateMetadata() {
+  return getHomepageMetadata();
+}
+
+export default async function Home() {
+  // Fetch all data at page level using centralized function
+  const pageData = await getHomepageData();
   return (
     <>
       <div className="tf-topbar p-0 style-2">
@@ -45,9 +39,18 @@ export default function Home() {
       <Header1 />
       <Hero />
       <About />
-      <CollectionsSlide />
+      <CollectionsSlide 
+        categories={pageData.categories}
+        categoryCounts={pageData.collectionsCounts}
+        error={pageData.error}
+      />
       {/* <FeaturedCollections /> */}
-      <BestSeller />
+      <BestSeller 
+        bestSellers={pageData.bestSellers}
+        categories={pageData.categories}
+        categoryCounts={pageData.categoryCounts}
+        error={pageData.error}
+      />
       <TextSlider2 />
       <CountdownLuxruy />
       <HighlightProducts />
