@@ -1,0 +1,161 @@
+/* Consolidated CSS - Essential styles only */
+
+/* Swiper variables */
+:root {
+  --swiper-theme-color: #007aff;
+  --swiper-navigation-size: 44px;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: .2;
+}
+
+/* Critical animations only */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.wow.fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.wow.fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Essential Swiper styles */
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  box-sizing: content-box;
+}
+
+/* Swiper navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+
+/* Swiper pagination */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+  cursor: pointer;
+}
+
+/* Custom infinite sliders */
+.infiniteSlider {
+  align-items: center;
+  animation: 50.7075s linear 0s infinite normal none running infiniteslide;
+}
+
+.infiniteSlider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infiniteslide {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-5070.752px, 0, 0); }
+}
+
+.infiniteSlider2 {
+  animation: 9.08625s linear 0s infinite normal none running infiniteslide2;
+}
+
+.infiniteSlider2:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infiniteslide2 {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-454.3125px, 0, 0); }
+}
+
+/* Utility classes */
+.cursor-pointer,
+.nav-next-swiper,
+.nav-prev-swiper {
+  cursor: pointer;
+}
+
+/* Subscribe message */
+.tfSubscribeMsg {
+  display: none;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.tfSubscribeMsg.active {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 180px;
+  display: block;
+}
+
+/* Responsive utilities */
+@media only screen and (max-width: 767px) {
+  .footer-col-block .tf-collapse-content {
+    overflow-y: hidden;
+    display: block;
+    height: 0;
+    transition: 0.5s;
+  }
+}

@@ -1,0 +1,23 @@
+/* Local fonts only - Google Fonts handled by layout.js */
+
+@font-face {
+    font-family: "Hero";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("HeroLight-Regular.otf");
+}
+@font-face {
+    font-family: "Hero";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("HeroLight-Bold.otf");
+}
+@font-face {
+    font-family: "Hero";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("HeroLight-Light.otf");
+}

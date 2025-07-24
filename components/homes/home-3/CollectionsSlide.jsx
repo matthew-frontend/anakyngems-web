@@ -69,6 +69,8 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
                       width={915}
                       height={1250}
                       priority={index === 0}
+                      fetchPriority={index === 0 ? "high" : "auto"}
+                      loading={index === 0 ? "eager" : "lazy"}
                     />
                   </div>
                   <h3 className="name link">

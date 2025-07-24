@@ -11,12 +11,10 @@ import dynamic from "next/dynamic";
 const QuickView = dynamic(() => import("@/components/common/QuickView"), { ssr: false });
 const CountdownTimer = dynamic(() => import("@/components/common/Countdown"), { ssr: false });
 import Link from "next/link";
-import ErrorBoundary from "@/components/common/ErrorBoundary";
 
 export default function BestSeller({ bestSellers = [], categories = [], categoryCounts = {}, error = null }) {
   const [activeTab, setActiveTab] = useState(""); // Will be set from first category
   const [filtered, setFiltered] = useState([]);
-  const [loading, setLoading] = useState(false);
   
   // Use props or fallback to static data
   const sanityProducts = bestSellers.length > 0 ? bestSellers : (error ? products9 : []);
@@ -115,6 +113,8 @@ export default function BestSeller({ bestSellers = [], categories = [], category
                             width={714}
                             height={900}
                             priority={index < 2}
+                            fetchPriority={index < 2 ? "high" : "auto"}
+                            loading={index < 2 ? "eager" : "lazy"}
                           />
                           {(product.images?.[1]?.asset?.url || product.hoverImgSrc) && (
                             <Image
@@ -123,6 +123,7 @@ export default function BestSeller({ bestSellers = [], categories = [], category
                               className="lazyload img-hover"
                               width={714}
                               height={900}
+                              loading={index < 2 ? "eager" : "lazy"}
                             />
                           )}
                         </Link>

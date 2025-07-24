@@ -24,6 +24,7 @@ export default function Header1({ parentClass = "tf-header line-bt-2" }) {
                 height={32}
                 src="/images/logo/logo-header.png"
                 priority
+                fetchPriority="high"
               />
             </Link>
           </div>

@@ -4,13 +4,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 export const metadata = {
-  title: "Page Not Found || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title: "Page Not Found - ANAKYNGEMS",
+  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {
   return (
     <>
-      <Topbar1 />
       <Header1 parentClass="tf-header line-bt-2" />
       <div className="wg-404 tf-grid-layout sm-col-2 gap-0 vh-100">
         <div className="image">

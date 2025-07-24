@@ -40,6 +40,7 @@ export default function Hero() {
                   width={slide.imageWidth}
                   height={slide.imageHeight}
                   priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : "auto"}
                 />
               </div>
               <div className="sld-content">

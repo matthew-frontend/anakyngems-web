@@ -114,6 +114,7 @@ export default function BehindBrand() {
                           className="lazyload"
                           width={772}
                           height={776}
+                          loading="lazy"
                         />
                       </Link>
                       <div className="entry_tag">

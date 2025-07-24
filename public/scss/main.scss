@@ -11,6 +11,7 @@
 @import "/css/animate.css";
 
 @include meta.load-css("app.scss");
+
 .infiniteSlider {
   align-items: center;
   animation: 50.7075s linear 0s infinite normal none running infiniteslide;

@@ -15,6 +15,7 @@ export default function About() {
                 width={1000}
                 height={1000}
                 priority
+                fetchPriority="high"
               />
             </div>
             <span className="line-circle" />
@@ -24,6 +25,7 @@ export default function About() {
               src="/icon/dou-star-anakyn.svg"
               width={64}
               height={63}
+              loading="lazy"
             />
           </div>
           <div className="bn-content wow fadeInUp">

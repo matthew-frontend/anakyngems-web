@@ -95,6 +95,7 @@ export default function Products3() {
                             className="lazyload img-product"
                             width={714}
                             height={900}
+                            loading="lazy"
                           />
                           <Image
                             src={product.hoverImgSrc}
@@ -102,6 +103,7 @@ export default function Products3() {
                             className="lazyload img-hover"
                             width={714}
                             height={900}
+                            loading="lazy"
                           />
                         </Link>
 

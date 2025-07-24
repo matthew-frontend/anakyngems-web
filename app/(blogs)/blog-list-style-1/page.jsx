@@ -13,7 +13,6 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Topbar1 />
       <Header1 parentClass="tf-header" />
       <section className="flat-spacing-2 pb-0">
         <div className="container">

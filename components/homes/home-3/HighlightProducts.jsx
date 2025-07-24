@@ -58,6 +58,7 @@ export default function HighlightProducts() {
                           className="lazyload"
                           width={774}
                           height={1028}
+                          loading="lazy"
                         />
                       </Link>
                       {/* <a
