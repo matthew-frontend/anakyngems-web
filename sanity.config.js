@@ -2,6 +2,7 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schemas'
+import darkBlueTheme from './sanity/theme/dark-blue'
 
 export default defineConfig({
   name: 'anakyngems-cms',
@@ -13,10 +14,31 @@ export default defineConfig({
   
   basePath: '/admin', // Admin panel will be at /admin
   
+  theme: darkBlueTheme,
+  
   plugins: [
     structureTool(),
     visionTool()
   ],
+  
+  studio: {
+    components: {
+      layout: (props) => {
+        // Inject custom CSS
+        if (typeof document !== 'undefined') {
+          const existingLink = document.querySelector('#sanity-custom-styles')
+          if (!existingLink) {
+            const link = document.createElement('link')
+            link.id = 'sanity-custom-styles'
+            link.rel = 'stylesheet'
+            link.href = '/sanity-studio.css'
+            document.head.appendChild(link)
+          }
+        }
+        return props.renderDefault(props)
+      }
+    }
+  },
   
   schema: {
     types: schemaTypes,

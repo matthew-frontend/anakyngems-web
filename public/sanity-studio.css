@@ -1,0 +1,140 @@
+/* Custom dark blue portfolio-style theme for Sanity Studio */
+
+/* Force dark mode and override colors */
+:root[data-ui="sanity"][data-scheme="dark"] {
+  /* Main background colors */
+  --card-bg-color: #0f172a !important;
+  --card-bg2-color: #1e293b !important;
+  --card-fg-color: #f1f5f9 !important;
+  
+  /* Navigation and sidebar */
+  --main-navigation-color: #f1f5f9 !important;
+  --main-navigation-color--inverted: #0f172a !important;
+  
+  /* Primary brand color - blue */
+  --brand-primary: #3b82f6 !important;
+  --brand-primary--inverted: #ffffff !important;
+  
+  /* Background colors */
+  --default-base-color: #0f172a !important;
+  --color-base-bg: #0f172a !important;
+  --color-base-fg: #f1f5f9 !important;
+  --color-base-border: #334155 !important;
+  
+  /* Component backgrounds */
+  --component-bg: #1e293b !important;
+  --component-text-color: #f1f5f9 !important;
+  
+  /* Input fields */
+  --input-bg: #1e293b !important;
+  --input-fg: #f1f5f9 !important;
+  --input-border-color: #334155 !important;
+  
+  /* Buttons */
+  --button-primary-bg: #3b82f6 !important;
+  --button-primary-fg: #ffffff !important;
+  --button-secondary-bg: #1e293b !important;
+  --button-secondary-fg: #f1f5f9 !important;
+  
+  /* Focus and selection */
+  --focus-color: #60a5fa !important;
+  --selection-bg: #3b82f6 !important;
+  --selection-fg: #ffffff !important;
+  
+  /* States */
+  --state-success-color: #10b981 !important;
+  --state-warning-color: #f59e0b !important;
+  --state-danger-color: #ef4444 !important;
+  --state-info-color: #3b82f6 !important;
+  
+  /* Borders and shadows */
+  --border-color: #334155 !important;
+  --shadow-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Additional specific overrides for portfolio look */
+[data-ui="sanity"] {
+  /* Studio background */
+  --studio-bg: #0f172a !important;
+  
+  /* Card styles */
+  --card-shadow-outline-color: #334155 !important;
+  --card-shadow-umbra-color: rgba(0, 0, 0, 0.3) !important;
+  --card-shadow-penumbra-color: rgba(0, 0, 0, 0.2) !important;
+  --card-shadow-ambient-color: rgba(0, 0, 0, 0.1) !important;
+  
+  /* Skeleton loading */
+  --skeleton-from: #1e293b !important;
+  --skeleton-to: #334155 !important;
+}
+
+/* Force dark theme elements */
+[data-ui="sanity"] [data-scheme="system"] {
+  color-scheme: dark !important;
+}
+
+/* Override any light theme styles */
+[data-ui="sanity"] * {
+  color-scheme: dark;
+}
+
+/* Specific component overrides */
+[data-ui="sanity"] .sanity-studio {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+/* Navigation styling */
+[data-ui="sanity"] nav {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Document pane styling */
+[data-ui="sanity"] [data-testid="document-pane"] {
+  background-color: #0f172a !important;
+}
+
+/* Form fields */
+[data-ui="sanity"] input,
+[data-ui="sanity"] textarea,
+[data-ui="sanity"] select {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+/* Buttons */
+[data-ui="sanity"] button[data-mode="primary"] {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+[data-ui="sanity"] button[data-mode="secondary"] {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+/* Cards and panels */
+[data-ui="sanity"] [data-ui="Card"] {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+/* Menu items */
+[data-ui="sanity"] [data-ui="MenuItem"] {
+  color: #f1f5f9 !important;
+}
+
+[data-ui="sanity"] [data-ui="MenuItem"]:hover {
+  background-color: #334155 !important;
+}
+
+/* Selected states */
+[data-ui="sanity"] [aria-selected="true"],
+[data-ui="sanity"] [data-selected="true"] {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
