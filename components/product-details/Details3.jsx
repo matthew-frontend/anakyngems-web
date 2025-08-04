@@ -13,42 +13,74 @@ export default function Details3({ product }) {
     }
   }, []);
 
-  const handleShare = (platform) => {
-    const productTitle = encodeURIComponent(product.title);
-    const productUrl = encodeURIComponent(currentUrl);
-    const productDescription = encodeURIComponent(product.description || "");
+  const handleShare = async (platform) => {
+    const productTitle = product.title || 'สินค้าจาก ANAKYNGEMS';
+    const productUrl = currentUrl;
+    const shareText = `${productTitle} - ดูสินค้าที่ ANAKYNGEMS`;
+    
+    // For Facebook sharing, show a message about localhost limitation
+    if (platform === 'facebook' && productUrl.includes('localhost')) {
+      alert('📝 การแชร์ Facebook จะทำงานได้เต็มรูปแบบเมื่อเว็บไซต์อยู่บน domain จริง (production)\n\nสำหรับตอนนี้จะคัดลอกลิงก์ให้แทน');
+      try {
+        await navigator.clipboard.writeText(`${shareText}\n${productUrl}`);
+        alert('🔗 ลิงก์ถูกคัดลอกแล้ว!');
+      } catch (error) {
+        prompt('คัดลอกลิงก์นี้:', `${shareText}\n${productUrl}`);
+      }
+      return;
+    }
+    
+    // Check if Web Share API is supported (for mobile devices)
+    if (platform === 'native' && navigator.share) {
+      try {
+        await navigator.share({
+          title: productTitle,
+          text: shareText,
+          url: productUrl,
+        });
+        return;
+      } catch (error) {
+        console.log('Share cancelled');
+        return;
+      }
+    }
     
     let shareUrl = "";
     
     switch (platform) {
       case 'facebook':
-        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${productUrl}&quote=${productTitle}`;
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(productUrl)}`;
         break;
       case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?url=${productUrl}&text=${productTitle}`;
+        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(productUrl)}&text=${encodeURIComponent(shareText)}`;
         break;
       case 'instagram':
-        // Instagram doesn't support direct URL sharing, so we'll copy to clipboard
-        navigator.clipboard.writeText(`${product.title} - ${currentUrl}`);
-        alert('Product link copied to clipboard! You can paste it in your Instagram story or bio.');
+        // Copy to clipboard for Instagram
+        try {
+          await navigator.clipboard.writeText(`${shareText}\n${productUrl}`);
+          alert('🔗 ลิงก์ถูกคัดลอกแล้ว! คุณสามารถนำไปแปะใน Instagram Story หรือ Bio ได้');
+        } catch (error) {
+          prompt('คัดลอกลิงก์นี้เพื่อแชร์ใน Instagram:', `${shareText}\n${productUrl}`);
+        }
         return;
-      case 'tiktok':
-        // TikTok doesn't support direct URL sharing, so we'll copy to clipboard
-        navigator.clipboard.writeText(`${product.title} - ${currentUrl}`);
-        alert('Product link copied to clipboard! You can paste it in your TikTok video description.');
-        return;
-      case 'whatsapp':
-        shareUrl = `https://wa.me/?text=${productTitle}%20${productUrl}`;
-        break;
       case 'line':
-        shareUrl = `https://social-plugins.line.me/lineit/share?url=${productUrl}&text=${productTitle}`;
+        shareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(productUrl)}&text=${encodeURIComponent(shareText)}`;
         break;
+      case 'copy':
+        // Copy link to clipboard
+        try {
+          await navigator.clipboard.writeText(productUrl);
+          alert('🔗 ลิงก์ถูกคัดลอกแล้ว!');
+        } catch (error) {
+          prompt('คัดลอกลิงก์นี้:', productUrl);
+        }
+        return;
       default:
         return;
     }
     
     if (shareUrl) {
-      window.open(shareUrl, '_blank', 'width=600,height=400');
+      window.open(shareUrl, '_blank', 'width=600,height=400,scrollbars=yes,resizable=yes');
     }
   };
   return (
@@ -74,11 +106,11 @@ export default function Details3({ product }) {
                     <div className="product-info-price">
                       <div className="price-wrap">
                         <span className="price-new price-on-sale h4">
-                          ${product.price.toFixed(2)}
+                          ฿{product.price.toLocaleString('en-US')}
                         </span>
                         {product.oldPrice && (
                           <span className="price-old compare-at-price fw-normal h6">
-                            ${product.oldPrice.toFixed(2)}
+                            ฿{product.oldPrice.toLocaleString('en-US')}
                           </span>
                         )}
                       </div>
@@ -119,23 +151,38 @@ export default function Details3({ product }) {
                         </a>
                       </li>
                       <li>
-                        <a 
+                        <a
                           href="#"
                           onClick={(e) => {
                             e.preventDefault();
-                            handleShare('tiktok');
+                            handleShare('line');
                           }}
-                          className="social-tiktok"
+                          className="social-line"
                         >
                           <span className="icon">
-                            <svg fill="currentColor" width="32" height="16.11" viewBox="0 0 24 24"><title>TikTok</title><path d="M15.9453 8.68918V15.6727C15.9453 19.1598 13.1048 22.0004 9.6177 22.0004C8.27369 22.0004 7.01685 21.5717 5.99251 20.8525C4.35796 19.7047 3.29004 17.8085 3.29004 15.6727C3.29004 12.1783 6.12333 9.34505 9.6104 9.34505C9.90101 9.34505 10.1843 9.36685 10.4676 9.40318V12.9121H10.4386C10.3151 12.8758 10.1843 12.8394 10.0536 12.8177H9.9954C9.86466 12.8032 9.74114 12.7813 9.60309 12.7813C8.00491 12.7813 6.70448 14.0817 6.70448 15.6799C6.70448 17.2782 8.00491 18.5786 9.60309 18.5786C11.2014 18.5786 12.5018 17.2782 12.5018 15.6799V2.00037H15.938C15.938 2.29822 15.9671 2.58881 16.0179 2.87213C16.2649 4.1798 17.035 5.30584 18.1175 6.01053C18.873 6.50452 19.7593 6.78785 20.7182 6.78785V10.2241C18.9416 10.2241 17.288 9.65222 15.9453 8.68918Z"></path></svg>
+                            <svg fill="currentColor" width="20" height="20" viewBox="0 0 24 24"><title>LINE</title><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+                          </span>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleShare('copy');
+                          }}
+                          className="social-copy"
+                          title="คัดลอกลิงก์"
+                        >
+                          <span className="icon">
+                            <svg fill="currentColor" width="20" height="20" viewBox="0 0 24 24"><title>Copy Link</title><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
                           </span>
                         </a>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <DescriptionSideAccordion />
+                <DescriptionSideAccordion product={product} />
               </div>
             </div>
           </div>

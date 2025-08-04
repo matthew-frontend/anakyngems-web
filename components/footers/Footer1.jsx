@@ -6,10 +6,9 @@ import axios from "axios";
 const menuItems = [
   { name: "New Collection", category: "new-in" },
   { name: "All Jewelry", category: null },
-  { name: "Bracelets", category: "bracelet" },
   { name: "Rings", category: "ring" },
   { name: "Earrings", category: "earring" },
-  { name: "Collections", category: "gift-idea" },
+  { name: "For Sale", category: "for-sale" },
 ];
 export default function Footer1() {
   const [success, setSuccess] = useState(true);
@@ -163,7 +162,10 @@ export default function Footer1() {
                     />
                   </Link>
                   <p className="text-main-5 lt-sp-nor">
-                    <span className="">Explore</span> our curated
+                    Anakyn Gems is a modern jewelry brand that redefines how we wear diamonds.
+                    We believe diamonds shouldn’t be reserved only for special occasions—
+                    they should be part of your everyday confidence.
+                    {/* <span className="">Explore</span> our curated
                     collections designed to{" "}
                     <span className="">
                       elevate every <br className="d-none d-xl-block" />
@@ -176,10 +178,10 @@ export default function Footer1() {
                     Step <br className="d-none d-xl-block" />
                     in and find the{" "}
                     <span className="">perfect match</span> for your{" "}
-                    <span className="">unique</span> style.
+                    <span className="">unique</span> style. */}
                   </p>
                 </div>
-                <ul className="tf-social-icon">
+                {/* <ul className="tf-social-icon">
                   <li>
                     <a
                       href="https://www.facebook.com/anakyngems"
@@ -209,7 +211,7 @@ export default function Footer1() {
                       </span>
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
             <div className="col-s2">
@@ -278,28 +280,33 @@ export default function Footer1() {
                 </div>
                 <div className="footer-col-block p-xl-0">
                   <p className="footer-heading footer-heading-mobile font-2">
-                    HELP
+                    PRODUCTS
                   </p>
                   <div className="tf-collapse-content">
                     <ul className="footer-menu-list">
                       <li>
-                        <Link href={`/shipping`} className="text-main-4 link">
-                          Shipping
+                        <Link href={`/products`} className="text-main-4 link">
+                          All Products
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/return`} className="text-main-4 link">
-                          Returns
+                        <Link href={`/products?category=ring`} className="text-main-4 link">
+                          Ring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/privacy`} className="text-main-4 link">
-                          Privacy Policy
+                        <Link href={`/products?category=earring`} className="text-main-4 link">
+                          Earring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/faq`} className="text-main-4 link">
-                          FAQ’s
+                        <Link href={`/products?category=new-in`} className="text-main-4 link">
+                          New In
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/products?category=for-sale`} className="text-main-4 link">
+                          For Sale
                         </Link>
                       </li>
                     </ul>
@@ -313,12 +320,22 @@ export default function Footer1() {
                     <ul className="footer-menu-list">
                       <li>
                         <Link href={`/about-us`} className="text-main-4 link">
+                          About Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/our-story`} className="text-main-4 link">
                           Our Story
                         </Link>
                       </li>
                       <li>
                         <Link href={`/contact-us`} className="text-main-4 link">
                           Contact Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/behind-brand`} className="text-main-4 link">
+                          Behind the Brand
                         </Link>
                       </li>
                     </ul>

@@ -9,13 +9,13 @@ export default function Intro() {
           <div className="col-md-6">
             <div className="brand-intro_image mb-md-0">
               <Image
-                src="https://vemusnextjs.vercel.app/images/section/brand-intro.jpg"
+                src="/images/home/about.webp"
                 alt=""
                 className="lazyload intro-photo"
                 width={918}
                 height={1228}
               />
-              <div className="brand-box">
+              {/* <div className="brand-box">
                 <Image
                   src="https://vemusnextjs.vercel.app/images/section/item-1.png"
                   alt=""
@@ -23,7 +23,7 @@ export default function Intro() {
                   width={1000}
                   height={1000}
                 />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-md-6">
@@ -52,19 +52,11 @@ export default function Intro() {
                 <div className="info">
                   <h5 className="name">
                     <a href="#" className="link">
-                      Kosol
+                      Kosol Taerattanachai 
                     </a>
                   </h5>
-                  <span className="duty text-main-4">Founder of Vemus</span>
+                  <span className="duty text-main-4">Founder of ANAKYNGEMS</span>
                 </div>
-              </div>
-              <div className="author-signature">
-                <Image
-                  alt="Signature"
-                  src="https://vemusnextjs.vercel.app/images/section/signature.svg"
-                  width={296}
-                  height={81}
-                />
               </div>
             </div>
           </div>

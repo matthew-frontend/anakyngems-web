@@ -69,18 +69,8 @@ export default function MobileNav() {
               </Link>
             </li>
             <li>
-              <Link href="/products?category=bracelet" className="sub-nav-link">
-                Bracelet
-              </Link>
-            </li>
-            <li>
               <Link href="/products?category=earring" className="sub-nav-link">
                 Earring
-              </Link>
-            </li>
-            <li>
-              <Link href="/products?category=necklace" className="sub-nav-link">
-                Necklace
               </Link>
             </li>
             <li>
@@ -89,8 +79,8 @@ export default function MobileNav() {
               </Link>
             </li>
             <li>
-              <Link href="/products?category=gift-idea" className="sub-nav-link">
-                Gift Idea
+              <Link href="/products?category=for-sale" className="sub-nav-link">
+                For Sale
               </Link>
             </li>
           </ul>

@@ -1,234 +1,344 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 
 export default function TextSlider2() {
   return (
     <div className="line-bt">
       <div className="infiniteslide_wrap" style={{ overflow: "hidden" }}>
         <div className="tf_marquee-V01 infiniteSlide infiniteSlider">
-          {/* item 1 */}
-          <p style={{ flex: "0 0 auto", display: "block" }}>EXCLUSIVE PRICE</p>
-          <i
-            className="icon-rhombus fs_xl-49"
+          <p
+            className="text-main-9"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+            EXCLUSIVE PRICE
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
           />
           <p
             className="text-clip"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
           />
-          {/* item 2 */}
-          <p style={{ flex: "0 0 auto", display: "block" }}>EXCLUSIVE PRICE</p>
-          <i
-            className="icon-rhombus fs_xl-49"
+          {/* clone 2 */}
+          <p
+            className="text-main-9"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+            EXCLUSIVE PRICE
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
           />
           <p
             className="text-clip"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          {/* item 3 */}
-          <p style={{ flex: "0 0 auto", display: "block" }}>EXCLUSIVE PRICE</p>
-          <i
-            className="icon-rhombus fs_xl-49"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
           />
           <p
-            className="text-clip"
+            className="text-main-9 infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
-          >
-            ANAKYNGEMS
-          </p>
-          <i
-            className="icon-rhombus fs_xl-49"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          {/* item 4 */}
-          <p style={{ flex: "0 0 auto", display: "block" }}>EXCLUSIVE PRICE</p>
-          <i
-            className="icon-rhombus fs_xl-49"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
-            className="text-clip"
-            style={{ flex: "0 0 auto", display: "block" }}
-          >
-            ANAKYNGEMS
-          </p>
-          <i
-            className="icon-rhombus fs_xl-49"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
-            style={{ flex: "0 0 auto", display: "block" }}
-            className="infiniteslide_clone"
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            ANAKYNGEMS
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
-            style={{ flex: "0 0 auto", display: "block" }}
-          />
-          <p
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
           >
             EXCLUSIVE PRICE
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
           <p
             className="text-clip infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            SHOP NOW, PAY LATER
+           ANAKYNGEMS
           </p>
-          <i
-            className="icon-rhombus fs_xl-49 infiniteslide_clone"
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
             style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+            EXCLUSIVE PRICE
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
+            style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
+          />
+          <p
+            className="text-clip infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+           ANAKYNGEMS
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
+            style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
+          />
+          <p
+            className="text-main-9 infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+            EXCLUSIVE PRICE
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-2.svg"
+            width={72}
+            height={72}
+            style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
+          />
+          <p
+            className="text-clip infiniteslide_clone"
+            style={{ flex: "0 0 auto", display: "block" }}
+          >
+           ANAKYNGEMS
+          </p>
+          <Image
+            alt="Icon"
+            src="/icon/diamond-3.svg"
+            width={72}
+            height={72}
+            style={{ flex: "0 0 auto", display: "block" }}
+            className="infiniteslide_clone"
           />
         </div>
       </div>

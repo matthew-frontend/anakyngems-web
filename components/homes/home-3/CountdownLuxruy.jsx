@@ -118,14 +118,13 @@ export default function CountdownLuxruy() {
           <div className="bn_image play-area-2">
             <div className="img">
               <Image
-                src="https://vemusnextjs.vercel.app/images/banner/banner-2.jpg"
+                src="/images/home/luxury.webp"
                 alt=""
                 className="lazyload"
                 width={1084}
                 height={1084}
               />
             </div>
-            <span className="item-square dodger-2 d-none d-lg-block" />
           </div>
           <div className="bn_content wow fadeInUp">
             <div className="heading">
@@ -134,9 +133,9 @@ export default function CountdownLuxruy() {
                 Countdown to <span className="fst-italic">Luxury</span>
               </h2>
               <p className="sub-title">
-                Discover exquisite jewelry pieces at unbeatable prices. With our
-                limited-time offer, every second counts—shop now before the
-                timer runs out!
+                We use high-quality, certified lab-grown diamonds,
+                combined with timeless, minimalist design
+                to create elegant pieces that are accessible without compromise.
               </p>
             </div>
             <div className="btn-group">

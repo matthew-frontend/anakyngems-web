@@ -1,187 +1,233 @@
-import BadgeField from '../components/BadgeField.jsx'
-import VariantTypeField from '../components/VariantTypeField.jsx'
-import VariantTextField from '../components/VariantTextField.jsx'
+import BadgeField from "../components/BadgeField.jsx";
+import VariantTypeField from "../components/VariantTypeField.jsx";
+import VariantTextField from "../components/VariantTextField.jsx";
 
 export default {
-  name: 'product',
-  title: 'Product',
-  type: 'document',
+  name: "product",
+  title: "Product",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Product Title',
-      type: 'string',
-      validation: Rule => Rule.required()
+      name: "title",
+      title: "ชื่อสินค้า",
+      type: "string",
+      // validation: Rule => Rule.required()
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug (ลิ้งค์ที่แสดง)",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      // validation: Rule => Rule.required()
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      rows: 4
+      name: "description",
+      title: "รายละเอียดสินค้า",
+      type: "text",
+      rows: 4,
     },
     {
-      name: 'price',
-      title: 'Price',
-      type: 'number',
-      validation: Rule => Rule.required().positive()
+      name: "price",
+      title: "ราคา",
+      type: "number",
+      // validation: Rule => Rule.required().positive()
     },
     {
-      name: 'oldPrice',
-      title: 'Original Price (Optional)',
-      type: 'number',
-      validation: Rule => Rule.positive()
+      name: "oldPrice",
+      title: "ราคาเดิมของผลิตภัณฑ์",
+      type: "number",
+      description:
+        "ถ้าใส่ราคาเดิม จะต้องเลือกประเภทป้ายของสินค้าเป็น Sale (Auto-calculate % OFF) ระบบจะคำนวน % ที่ลดราคา",
+      validation: (Rule) => Rule.positive(),
     },
     {
-      name: 'images',
-      title: 'Product Images',
-      type: 'array',
-      of: [{
-        type: 'image',
-        options: {
-          hotspot: true,
+      name: "images",
+      title: "รูปภาพสินค้า (เพิ่มได้มากกว่า 1 รูป)",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              title: "Alt Text",
+              type: "string",
+            },
+          ],
         },
-        fields: [
-          {
-            name: 'alt',
-            title: 'Alt Text',
-            type: 'string'
-          }
-        ]
-      }],
-      validation: Rule => Rule.min(1).error('At least one image is required')
+      ],
+      // validation: Rule => Rule.min(1).error('At least one image is required')
     },
     {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: [{ type: 'category' }],
-      validation: Rule => Rule.required()
+      name: "category",
+      title: "หมวดหมู่ผลิตภัณฑ์",
+      type: "reference",
+      to: [{ type: "category" }],
+      // validation: Rule => Rule.required()
     },
     {
-      name: 'badgeType',
-      title: 'Badge Type (Optional)',
-      type: 'string',
+      name: "badgeType",
+      title: "ประเภทป้ายของผลิตภัณฑ์ (ตัวเลือก)",
+      type: "string",
       options: {
         list: [
-          { title: 'None (No badge)', value: null },
-          { title: 'Sale (Auto-calculate % OFF)', value: 'sale' },
-          { title: 'New In', value: 'new' }
-        ]
-      }
-    },
-    {
-      name: 'badge',
-      title: 'Badge Text (Auto-generated)',
-      type: 'string',
-      description: 'This field is auto-generated based on Badge Type selection',
-      components: {
-        input: BadgeField
-      }
-    },
-    {
-      name: 'variantType',
-      title: 'Variant Display Type (Auto-generated)',
-      type: 'string',
-      description: 'Auto-generated based on Badge Type: new="text", sale="marquee"',
-      components: {
-        input: VariantTypeField
-      }
-    },
-    {
-      name: 'variantText',
-      title: 'Variant Text (Auto-generated)',
-      type: 'string',
-      description: 'Auto-generated based on Badge Type and discount calculation',
-      components: {
-        input: VariantTextField
-      }
-    },
-    {
-      name: 'material',
-      title: 'Material',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Sterling Silver', value: 'sterling-silver' },
-          { title: 'Gold', value: 'gold' },
-          { title: 'Rose Gold', value: 'rose-gold' },
-          { title: 'Platinum', value: 'platinum' },
-          { title: 'Diamond', value: 'diamond' }
-        ]
-      }
-    },
-    {
-      name: 'variants',
-      title: 'Product Variants',
-      type: 'array',
-      of: [{
-        type: 'object',
-        fields: [
-          {
-            name: 'color',
-            title: 'Color',
-            type: 'string'
-          },
-          {
-            name: 'size',
-            title: 'Size',
-            type: 'string'
-          },
-          {
-            name: 'material',
-            title: 'Material',
-            type: 'string'
-          }
-        ]
-      }]
-    },
-    {
-      name: 'productTags',
-      title: 'Product Tags (Optional)',
-      type: 'array',
-      of: [{
-        type: 'string'
-      }],
-      options: {
-        list: [
-          { title: 'Recommended', value: 'recommended' },
-          { title: 'For Sale', value: 'for_sale' },
-          { title: 'Best Seller', value: 'best_seller' },
-          { title: 'Highlight Products', value: 'highlight_products' }
-        ]
+          { title: "ไม่มีป้าย (No badge)", value: null },
+          { title: "Sale (Auto-calculate % OFF)", value: "sale" },
+          { title: "New In", value: "new" },
+        ],
       },
-      description: 'Select one or more tags to categorize this product for special sections'
     },
     {
-      name: 'details',
-      title: 'Product Details',
-      type: 'array',
-      of: [{ type: 'block' }]
-    }
+      name: "badge",
+      title: "Badge Text (Auto-generated)",
+      type: "string",
+      description: "This field is auto-generated based on Badge Type selection",
+      hidden: true,
+      components: {
+        input: BadgeField,
+      },
+    },
+    {
+      name: "variantType",
+      title: "Variant Display Type (Auto-generated)",
+      type: "string",
+      description:
+        'Auto-generated based on Badge Type: new="text", sale="marquee"',
+      hidden: true,
+      components: {
+        input: VariantTypeField,
+      },
+    },
+    {
+      name: "variantText",
+      title: "Variant Text (Auto-generated)",
+      type: "string",
+      description:
+        "Auto-generated based on Badge Type and discount calculation",
+      hidden: true,
+      components: {
+        input: VariantTextField,
+      },
+    },
+    // {
+    //   name: "material",
+    //   title: "Material",
+    //   type: "string",
+    //   options: {
+    //     list: [
+    //       { title: "Sterling Silver", value: "sterling-silver" },
+    //       { title: "Gold", value: "gold" },
+    //       { title: "Rose Gold", value: "rose-gold" },
+    //       { title: "Platinum", value: "platinum" },
+    //       { title: "Diamond", value: "diamond" },
+    //     ],
+    //   },
+    // },
+    {
+      name: "productTags",
+      title:
+        "ประเภทสินค้า สำหรับให้โชว์แต่ละ section ของหน้าแรก (ไม่เลือกก็ได้)",
+      type: "array",
+      of: [
+        {
+          type: "string",
+        },
+      ],
+      options: {
+        list: [
+          { title: "Recommended", value: "recommended" },
+          { title: "For Sale", value: "for_sale" },
+          { title: "Best Seller", value: "best_seller" },
+          {
+            title: "Highlight Products (สูงสุด 3 ชิ้น)",
+            value: "highlight_products",
+          },
+        ],
+      },
+      description:
+        "เลือกแท็กหนึ่งรายการหรือมากกว่าเพื่อจัดหมวดหมู่ผลิตภัณฑ์นี้",
+    },
+    {
+      name: "details",
+      title: "Product Details",
+      type: "text",
+      rows: 4,
+      description: "รายละเอียดสินค้าใน Collapse",
+    },
+    {
+      name: "variants",
+      title: "Product Variants",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "color",
+              title: "สี",
+              type: "string",
+            },
+            {
+              name: "weight",
+              title: "น้ำหนัก",
+              type: "string",
+            },
+            {
+              name: "material",
+              title: "วัสดุ",
+              type: "string",
+            },
+          ],
+        },
+      ],
+    },
   ],
   preview: {
     select: {
-      title: 'title',
-      media: 'images.0',
-      price: 'price'
+      title: "title",
+      media: "images.0",
+      price: "price",
     },
     prepare(selection) {
-      const { title, media, price } = selection
+      const { title, media, price } = selection;
       return {
         title,
         subtitle: `$${price}`,
-        media
-      }
-    }
-  }
-}
+        media,
+      };
+    },
+  },
+
+  // กำหนดการจัดกลุ่มและเรียงลำดับ
+  orderings: [
+    {
+      title: "Category, then Title",
+      name: "categoryTitle",
+      by: [
+        { field: "category.title", direction: "asc" },
+        { field: "title", direction: "asc" },
+      ],
+    },
+    {
+      title: "Price (High to Low)",
+      name: "priceDesc",
+      by: [{ field: "price", direction: "desc" }],
+    },
+    {
+      title: "Price (Low to High)",
+      name: "priceAsc",
+      by: [{ field: "price", direction: "asc" }],
+    },
+    {
+      title: "Recently Created",
+      name: "createdDesc",
+      by: [{ field: "_createdAt", direction: "desc" }],
+    },
+  ],
+};

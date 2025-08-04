@@ -1,28 +1,40 @@
-import React, { useEffect } from 'react'
-import { useFormValue, set, unset } from 'sanity'
+import React, { useEffect, useCallback } from 'react'
+import { useFormValue, set, unset, useDocumentOperation } from 'sanity'
 
 export default function VariantTypeField(props) {
-  const { onChange, value } = props
+  const { onChange, value, readOnly } = props
   const badgeType = useFormValue(['badgeType'])
+  
+  // Get document operations to check if we can modify
+  const { publish } = useDocumentOperation('Product', 'draft')
+  const isPublishable = publish && !publish.disabled
 
-  useEffect(() => {
-    let variantType = ''
+  const updateVariantType = useCallback(() => {
+    // Don't update if read-only, no onChange, or if document is not in draft state
+    if (readOnly || !onChange || !isPublishable) return
     
-    // Debug logging
-    console.log('VariantTypeField - Values:', { badgeType })
+    let variantType = ''
     
     if (badgeType === 'new') {
       variantType = 'text'
     } else if (badgeType === 'sale') {
       variantType = 'marquee'
     }
-    
-    console.log('VariantTypeField - Calculated:', { variantType })
 
     if (variantType !== value) {
-      onChange(variantType ? set(variantType) : unset())
+      try {
+        onChange(variantType ? set(variantType) : unset())
+      } catch (error) {
+        console.log('VariantTypeField - Cannot update:', error.message)
+      }
     }
-  }, [badgeType, value, onChange])
+  }, [badgeType, value, onChange, readOnly, isPublishable])
+
+  useEffect(() => {
+    // Add small delay to prevent immediate updates after publish
+    const timer = setTimeout(updateVariantType, 100)
+    return () => clearTimeout(timer)
+  }, [updateVariantType])
 
   return (
     <div style={{ 

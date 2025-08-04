@@ -8,7 +8,7 @@ export default function Toolbar() {
           <span className="toolbar-icon">
             <i className="icon icon-menu-home" />
           </span>
-          <span className="toolbar-label">Shop</span>
+          <span className="toolbar-label">Shopsdfsdf</span>
         </Link>
       </div>
       <div className="toolbar-item">

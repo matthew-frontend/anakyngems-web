@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Nav from "./Nav";
-export default function Header1({ parentClass = "tf-header line-bt-2" }) {
+export default function Header1({ parentClass = "tf-header line-bt-2 header-absolute-2" }) {
   return (
     <header className={parentClass}>
       <div className="container">

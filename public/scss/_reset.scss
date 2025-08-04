@@ -141,9 +141,9 @@ body {
     border-radius: 5px;
   }
 
-  @include res(xl) {
-    padding-bottom: 68px;
-  }
+  // @include res(xl) {
+  //   padding-bottom: 68px;
+  // }
 }
 
 img {

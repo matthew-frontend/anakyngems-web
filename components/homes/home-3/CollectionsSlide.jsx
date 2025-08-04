@@ -5,32 +5,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import Image from "next/image";
 import { Pagination } from "swiper/modules";
+import { urlFor } from "@/sanity/client";
 
-export default function CollectionsSlide({ categories = [], categoryCounts = {}, error = null }) {
+export default function CollectionsSlide({ categories = [], categoryCounts = {}, collectionsCounts = {}, error = null }) {
   const [loading, setLoading] = useState(false);
 
-  // Map collections2 titles to category counts from props
-  const mappedCounts = {};
-  collections2.forEach(collection => {
-    const collectionTitle = collection.title.toLowerCase();
-    if (categoryCounts[collectionTitle] !== undefined) {
-      mappedCounts[collection.title] = categoryCounts[collectionTitle];
-    } else {
-      // Try to match plural/singular forms
-      const singularForm = collectionTitle.endsWith('s') ? collectionTitle.slice(0, -1) : collectionTitle;
-      if (categoryCounts[singularForm] !== undefined) {
-        mappedCounts[collection.title] = categoryCounts[singularForm];
-      } else {
-        mappedCounts[collection.title] = collection.count || 0; // Fallback to static count
-      }
-    }
-  });
+  // Use Sanity categories if available, otherwise fallback to static data
+  const collectionsData = categories.length > 0 ? 
+    categories.map(cat => ({
+      title: cat.title,
+      image: cat.collectionImage?.asset?.url || `/images/collections/cl-${cat.title.toLowerCase()}.jpg`,
+      alt: cat.collectionImage?.alt || cat.title,
+      delay: cat.delay,
+      count: collectionsCounts[cat.title] || 0
+    })) : 
+    collections2.map(collection => ({
+      ...collection,
+      count: collectionsCounts[collection.title] || collection.count || 0
+    }));
   return (
-    <div className="flat-spacing-12">
-      <div className="container-full-2">
+    <div className="flat-spacing-12 pt-0">
+      <div className="container">
         <Swiper
           dir="ltr"
-          className="swiper tf-swiper"
+          className="swiper tf-swiper swiper-cat"
           breakpoints={{
             0: { slidesPerView: 1 },
             575: {
@@ -40,7 +38,7 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
               slidesPerView: 3,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           spaceBetween={10}
@@ -50,12 +48,14 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
             el: ".spd29",
           }}
         >
-          {collections2.map((item, index) => {
-            const productCount = error ? item.count : (mappedCounts[item.title] || item.count || 0);
+          {collectionsData.map((item, index) => {
             const categoryName = item.title?.toLowerCase();
+            const imageUrl = item.image?.startsWith('http') || item.image?.startsWith('/') 
+              ? item.image 
+              : urlFor(item.image).width(915).height(1250).url();
             
             return (
-              <SwiperSlide className="swiper-slide" key={index}>
+              <SwiperSlide className="swiper-slide" key={index} style={{ justifyContent: 'center' }}>
                 <Link
                   href={`/products?category=${categoryName}`}
                   className="wg-cls hover-img wow fadeInUp"
@@ -63,8 +63,8 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
                 >
                   <div className="image img-style">
                     <Image
-                      src={item.image}
-                      alt={item.title}
+                      src={imageUrl}
+                      alt={item.alt || item.title}
                       className="lazyload"
                       width={915}
                       height={1250}
@@ -73,10 +73,10 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
                       loading={index === 0 ? "eager" : "lazy"}
                     />
                   </div>
-                  <h3 className="name link">
+                  <h3 className="name link text-uppercase">
                     {item.title}{" "}
                     <span className="count text-caption">
-                      {String(productCount).padStart(2, "0")}
+                      {String(item.count).padStart(2, "0")}
                     </span>
                   </h3>
                 </Link>

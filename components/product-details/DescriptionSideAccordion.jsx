@@ -1,8 +1,13 @@
 import React from "react";
 
-export default function DescriptionSideAccordion() {
+export default function DescriptionSideAccordion({ product }) {
+  // Get the first variant for additional information
+  const variant = product?.variants?.[0] || {};
+  // console.log('Product data:', product);
+
   return (
     <div className="tf-product-accordion">
+      {/* Description Section */}
       <div className="widget-accordion-2 style-3">
         <div
           className="accordion-title collapsed"
@@ -18,14 +23,29 @@ export default function DescriptionSideAccordion() {
         <div id="description" className="collapse widget-desc">
           <div className="accordion-body">
             <h6 className="text-main-4 fw-normal">
-              Link what you love. This sterling silver link chain holds endless
-              styling potential. Featuring two openable links, groups of four
-              static links between each one and a carabiner closure. Customise
-              your link chain – then remix it with meaningful charms.
+              {(() => {
+                if (!product?.details) return "ไม่มีข้อมูลเพิ่มเติม";
+                
+                // Handle PortableText/rich text format
+                if (Array.isArray(product.details)) {
+                  return product.details
+                    .map(block => 
+                      block.children
+                        ?.map(child => child.text)
+                        .join('')
+                    )
+                    .join(' ');
+                }
+                
+                // Handle simple text format
+                return product.details;
+              })()}
             </h6>
           </div>
         </div>
       </div>
+
+      {/* Additional Information Section */}
       <div className="widget-accordion-2 style-3">
         <div
           className="accordion-title collapsed"
@@ -42,18 +62,29 @@ export default function DescriptionSideAccordion() {
           <div className="accordion-body">
             <table className="table-material">
               <tbody>
-                <tr>
-                  <td className="h6">Material</td>
-                  <td className="h6">Gold, Rose Gold, Silver</td>
-                </tr>
-                <tr>
-                  <td className="h6">Color</td>
-                  <td className="h6">White</td>
-                </tr>
-                <tr>
-                  <td className="h6">Stone</td>
-                  <td className="h6">Diamond</td>
-                </tr>
+                {variant.color && (
+                  <tr>
+                    <td className="h6 thai-text">สี</td>
+                    <td className="h6 thai-text">{variant.color}</td>
+                  </tr>
+                )}
+                {variant.weight && (
+                  <tr>
+                    <td className="h6 thai-text">น้ำหนัก</td>
+                    <td className="h6 thai-text">{variant.weight}</td>
+                  </tr>
+                )}
+                {variant.material && (
+                  <tr>
+                    <td className="h6 thai-text">วัสดุ</td>
+                    <td className="h6">{variant.material}</td>
+                  </tr>
+                )}
+                {(!variant.color && !variant.weight && !variant.material) && (
+                  <tr>
+                    <td className="h6 text-main-4 fw-normal bg-transparent border-0 p-0" colSpan="2">ไม่มีข้อมูลเพิ่มเติม</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>

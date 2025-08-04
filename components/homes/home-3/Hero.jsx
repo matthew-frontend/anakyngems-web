@@ -46,19 +46,27 @@ export default function Hero() {
               <div className="sld-content">
                 <div className="container">
                   <div className="content-sld text-center wow fadeInUp">
-                    <p className="title-sld-2 font-2 fade-item fade-item-1">
-                      <span className="fst-italic">{slide.titleItalic}</span>{" "}
-                      {slide.titleRest}
-                    </p>
-                    <div className="fade-item fade-item-2">
-                      <Link
-                        href={`/products`}
-                        className="tf-btn btn-fill-white-2"
-                      >
-                        {slide.buttonText}
-                        <i className="icon-arrow-right fs-24" />
-                      </Link>
-                    </div>
+                    {slide.titleItalic && slide.titleRest ? (
+                      <h1 className="title-sld-2 font-2 fade-item fade-item-1">
+                        <span className="fst-italic">{slide.titleItalic}</span>{" "}
+                        {slide.titleRest}
+                      </h1>
+                    ) : index === 0 ? (
+                      <h1 className="title-sld-2 font-2 fade-item fade-item-1 visually-hidden">
+                        ANAKYNGEMS - Lab Grown Diamond Jewellery
+                      </h1>
+                    ) : null}
+                    {slide.buttonText && (
+                      <div className="fade-item fade-item-2">
+                        <Link
+                          href={`/products`}
+                          className="tf-btn btn-fill-white-2"
+                        >
+                          {slide.buttonText}
+                          <i className="icon-arrow-right fs-24" />
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

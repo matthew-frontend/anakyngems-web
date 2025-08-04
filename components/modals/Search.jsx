@@ -108,11 +108,11 @@ export default function Search() {
                           </Link>
                           <div className="price-wrap">
                             <span className="price-new price-on-sale">
-                              ${product.price.toFixed(2)}
+                              ฿{product.price.toLocaleString('en-US')}
                             </span>
                             {product.oldPrice && (
                               <span className="price-old compare-at-price text-caption">
-                                ${product.oldPrice.toFixed(2)}
+                                ฿{product.oldPrice.toLocaleString('en-US')}
                               </span>
                             )}
                           </div>

@@ -1,5 +1,3 @@
-import { products15 } from "@/data/products";
-
 export const initialState = {
   price: "All",
 
@@ -10,9 +8,9 @@ export const initialState = {
   size: "All",
 
   categories: [],
-  filtered: products15,
+  filtered: [],
   sortingOption: "Sort by (Default)",
-  sorted: products15,
+  sorted: [],
   currentPage: 1,
   itemPerPage: 9,
 };

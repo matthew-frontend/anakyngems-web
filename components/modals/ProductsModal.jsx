@@ -12,6 +12,7 @@ export default function ProductsModal() {
   const modalElement = useRef();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [modalInstance, setModalInstance] = useState(null);
 
   useEffect(() => {
     const fetchRecommendedProducts = async () => {
@@ -38,6 +39,8 @@ export default function ProductsModal() {
         }
       );
 
+      setModalInstance(myModal);
+
       await new Promise((resolve) => setTimeout(resolve, 2000));
       myModal.show();
 
@@ -48,6 +51,22 @@ export default function ProductsModal() {
 
     showModal();
   }, []);
+
+  const handleProductClick = () => {
+    if (modalInstance) {
+      modalInstance.hide();
+      // Remove backdrop manually if it persists
+      setTimeout(() => {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+          backdrop.remove();
+        }
+        document.body.classList.remove('modal-open');
+        document.body.style.removeProperty('overflow');
+        document.body.style.removeProperty('padding-right');
+      }, 100);
+    }
+  };
 
   return (
     <div
@@ -116,6 +135,7 @@ export default function ProductsModal() {
                           <Link
                             href={`/products/${product.slug.current}`}
                             className="product-img"
+                            onClick={handleProductClick}
                           >
                             <Image
                               src={mainImage}
@@ -152,6 +172,7 @@ export default function ProductsModal() {
                           <Link
                             href={`/products/${product.slug.current}`}
                             className="name-product link text-line-clamp-2"
+                            onClick={handleProductClick}
                           >
                             {product.title}
                           </Link>

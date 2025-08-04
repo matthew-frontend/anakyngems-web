@@ -5,11 +5,14 @@ import Header1 from "@/components/headers/Header1";
 import RelatedProducts from "@/components/product-details/RelatedProducts";
 import React from "react";
 import Link from "next/link";
-import { getProducts, getProduct } from "@/sanity/client";
+import { getProducts, getProduct, urlFor } from "@/sanity/client";
 import TextSlider from "@/components/common/TextSlider3";
 import { ProductSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 import Details3 from "@/components/product-details/Details3";
+
+// Enable ISR with 30 second revalidation for debugging
+export const revalidate = 30;
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
@@ -32,14 +35,20 @@ export async function generateMetadata({ params }) {
   }
   
   return {
-    title: `${product.title || product.name} - Lab Grown Diamond Jewelry | ANAKYNGEMS`,
+    title: `${product.title || product.name} - ANAKYNGEMS`,
     description: product.description || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
     keywords: `${product.title}, lab grown diamond, ${product.category}, jewelry, ANAKYNGEMS, sustainable diamonds, ethical jewelry`,
     openGraph: {
       title: `${product.title || product.name} | ANAKYNGEMS`,
-      description: product.description,
-      images: product.images || [product.imgSrc],
-      type: 'website'
+      description: product.description || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS.",
+      images: product.images?.[0] ? [{
+        url: urlFor(product.images[0]).width(1200).height(630).url(),
+        width: 1200,
+        height: 630,
+        alt: product.title
+      }] : [],
+      type: 'website',
+      url: `https://anakyngems.com/products/${product.slug?.current || product._id}`
     }
   };
 }

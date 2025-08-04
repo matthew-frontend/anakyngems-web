@@ -10,7 +10,8 @@ export const aboutPages = [
   {
     heading: "ABOUT US",
     links: [
-      { href: "/about-us", label: "Our Story" },
+      { href: "/about-us", label: "About Us" },
+      { href: "/our-story", label: "Our Story" },
       { href: "/contact-us", label: "Contact Us" },
       { href: "/behind-brand", label: "Behind the Brand" },
     ],
@@ -21,7 +22,6 @@ export const otherPages = [
   { href: "/our-store", label: "Store Location" },
   { href: "/faq", label: "FAQ" },
   { href: "/404", label: "404" },
-  { href: "/coming-soon", label: "Coming Soon!" },
 ];
 
 export const blogMenuLinks = [

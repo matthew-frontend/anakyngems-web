@@ -2,7 +2,6 @@ import Features from "@/components/common/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Products2 from "@/components/shop/Products2";
-import Link from "next/link";
 import React, { Suspense } from "react";
 import ProductsPageWrapper from "@/components/shop/ProductsPageWrapper";
 export const metadata = {

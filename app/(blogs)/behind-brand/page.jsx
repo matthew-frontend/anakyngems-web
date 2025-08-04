@@ -1,13 +1,12 @@
 import Blogs2 from "@/components/blogs/Blogs2";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
-import Topbar1 from "@/components/headers/Topbar1";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
   title:
     "Behind the Brand - ANAKYNGEMS",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {
   return (

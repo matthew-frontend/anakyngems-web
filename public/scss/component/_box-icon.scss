@@ -158,6 +158,34 @@
         }
     }
 
+    .social-line {
+        &::after {
+            background: #20c85a;
+        }
+
+        &:hover {
+            color: var(--white);
+
+            &::after {
+                @include visible;
+            }
+        }
+    }
+
+     .social-copy {
+        &::after {
+            background: #818181;
+        }
+
+        &:hover {
+            color: var(--white);
+
+            &::after {
+                @include visible;
+            }
+        }
+    }
+
     .social-snapchat {
         &::after {
             background: var(--snapchat-cl);

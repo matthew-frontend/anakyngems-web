@@ -49,10 +49,10 @@ export default function ProductCard({ product }) {
             {product.title}
           </Link>
           <span className="price">
-            ${product.price?.toFixed(2)}
+            ฿{product.price?.toLocaleString('en-US')}
             {product.oldPrice && (
               <span className="compare-at-price">
-                ${product.oldPrice.toFixed(2)}
+                ฿{product.oldPrice.toLocaleString('en-US')}
               </span>
             )}
           </span>

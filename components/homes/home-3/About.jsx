@@ -34,14 +34,11 @@ export default function About() {
               Lab Grown <span className="fst-italic">Diamond</span> Jewellery
             </h2>
             <p className="sub-title text-main-4">
-              At Vemus, we believe every piece tells a story. Founded on passion
-              and precision, our curated collections blend traditional
-              craftsmanship with modern design. We create jewelry that not only
-              complements your style but also celebrates the moments that
-              matter. Discover our journey of beauty, innovation, and unwavering
-              quality.
+             Anakyn Gems is a modern jewelry brand that redefines how we wear diamonds.
+             We believe diamonds shouldn’t be reserved only for special occasions—
+             they should be part of your everyday confidence.
             </p>
-            <Link href={`/about-us`} className="tf-btn type-large">
+            <Link href={`/our-story`} className="tf-btn type-large">
               our story
               <i className="icon-arrow-right-2 fs-24" />
             </Link>

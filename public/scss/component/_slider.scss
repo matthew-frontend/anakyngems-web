@@ -1,5 +1,11 @@
 @use "../abstracts/index" as *;
 
+.swiper-cat{
+  @media (min-width: 1025px) {
+    padding: 0 10%;
+  }
+}
+
 .sw-dot-default {
   margin-top: 20px;
 

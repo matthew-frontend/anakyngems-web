@@ -3,7 +3,6 @@ import LayoutWrapper from "@/components/common/LayoutWrapper";
 import "../public/scss/main.scss";
 import "photoswipe/dist/photoswipe.css";
 import ScrollTop from "@/components/common/ScrollTop";
-import Toolbar from "@/components/common/Toolbar";
 import Context from "@/context/Context";
 import MobileMenu from "@/components/modals/MobileMenu";
 import QuickView from "@/components/modals/QuickView";
@@ -70,7 +69,6 @@ export default function RootLayout({ children }) {
         <LayoutWrapper>
           <Context>
             <div id="wrapper">{children}</div>
-            <Toolbar />
 
             <ScrollTop />
             <MobileMenu />

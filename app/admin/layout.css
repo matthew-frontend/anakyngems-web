@@ -10,9 +10,9 @@
 }
 
 /* Main container force dark theme */
-* {
+/* * {
   color-scheme: dark !important;
-}
+} */
 
 /* Input field styles - Material-UI dark style */
 input[type="text"],
@@ -46,7 +46,7 @@ select:focus {
 /* Placeholder text - High visibility for dark theme */
 input::placeholder,
 textarea::placeholder {
-  color: #b0b0b0 !important;
+  color: #fff !important;
   opacity: 1 !important;
 }
 
@@ -59,7 +59,8 @@ option {
 /* Form labels - Material-UI style */
 label {
   color: #e0e0e0 !important;
-  font-weight: 400 !important;
+  font-weight: 500 !important;
+  font-size: 1rem;
 }
 
 /* Additional global styles for Sanity Studio */
@@ -67,15 +68,15 @@ html, body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
-.admin-layout {
+/* .admin-layout {
   font-family: 'Inter', sans-serif !important;
   background-color: #121212 !important;
   color: #ffffff !important;
   min-height: 100vh !important;
-}
+} */
 
 /* Essential Sanity Studio fixes - Dark Theme */
-input, textarea, select {
+/* input, textarea, select {
   background-color: #2d2d2d !important;
   color: #ffffff !important;
   border: 1px solid #404040 !important;
@@ -85,95 +86,121 @@ input, textarea, select {
 [data-ui="RootLayout"] {
   background-color: #1e1e1e !important;
   color: #ffffff !important;
-}
+} */
 
 /* Force dark background for the entire studio */
-[data-ui="RootLayout"], 
+/* [data-ui="RootLayout"], 
 [data-ui="AppLayout"], 
 main {
   background-color: #121212 !important;
   color: #ffffff !important;
-}
+} */
 
 /* Navigation sidebar - Material-UI dark */
-[data-ui="NavbarLayout"] {
-  background-color: #1e1e1e !important;
+/* [data-ui="Navbar"] {
+  background-color: #125ed9 !important;
   border-right: 1px solid #404040 !important;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
+[data-ui="Navbar"] [data-ui="Grid"]{
+  height: 100%;
+}
+#sanity [data-ui="Card"] [data-ui="Box"]{
+  padding: 0;
+}
+#sanity [data-ui="Card"] [data-ui="Box"] > ul li a[data-ui="PreviewCard"]{
+  color: #fff;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+#sanity [data-ui="Card"] [data-ui="Box"] > ul li a[data-ui="PreviewCard"] > [data-ui="Flex"]{
+  width: 100%;
+}
+#sanity [data-ui="Card"] [data-ui="Box"] > ul li [data-as='a']:not([data-disabled])[data-selected]{
+  background-color: #125ed9;
+  border-radius: 0;
+}
+#sanity [data-ui="Card"] [data-ui="Box"] > ul li a[data-ui="PreviewCard"] > [data-ui="Flex"] svg{
+  color: #fff;
+} */
 
 /* Main content area */
-[data-ui="PaneLayout"] {
+/* [data-ui="PaneLayout"] {
   background-color: #1e1e1e !important;
-}
+} */
 
 /* Document list */
-[data-ui="DocumentList"] {
+/* [data-ui="DocumentList"] {
   background-color: #1e1e1e !important;
-}
+} */
 
 /* Document list items */
-[data-ui="DocumentListItem"] {
+/* [data-ui="DocumentListItem"] {
   background-color: #1e1e1e !important;
   color: #ffffff !important;
   border-bottom: 1px solid #404040 !important;
-}
+} */
 
-[data-ui="DocumentListItem"]:hover {
+/* [data-ui="DocumentListItem"]:hover {
   background-color: #2d2d2d !important;
-}
+} */
 
 /* Search input in document list */
-[data-testid="document-list-search-input"] {
+/* [data-testid="document-list-search-input"] {
   background-color: #2d2d2d !important;
   color: #ffffff !important;
   border: 1px solid #404040 !important;
-}
+} */
 
 /* Status indicators - Material-UI style */
-[data-ui="Badge"] {
+/* [data-ui="Badge"] {
   background-color: #90caf9 !important;
   color: #1e1e1e !important;
-}
+} */
 
 /* Toolbar */
-[data-ui="DocumentToolbar"] {
+/* [data-ui="DocumentToolbar"] {
   background-color: #1e1e1e !important;
   border-bottom: 1px solid #404040 !important;
-}
+} */
 
 /* Better focus indicators - Material-UI style */
-*:focus {
+/* *:focus {
   outline: 2px solid #90caf9 !important;
   outline-offset: 2px !important;
-}
+} */
 
 /* Additional Material-UI dark theme elements */
-[data-ui="Button"] {
+/* [data-ui="Button"] {
   background-color: #90caf9 !important;
   color: #1e1e1e !important;
   border: none !important;
-}
-
+} */
+/* 
 [data-ui="Button"]:hover {
   background-color: #64b5f6 !important;
-}
+} */
 
 /* Menu items */
-[data-ui="MenuItem"] {
+/* [data-ui="MenuItem"] {
   background-color: #1e1e1e !important;
   color: #ffffff !important;
-}
+} */
 
-[data-ui="MenuItem"]:hover {
+/* [data-ui="MenuItem"]:hover {
   background-color: #2d2d2d !important;
-}
+} */
 
 /* Toast notifications */
-[data-ui="Toast"] {
+/* [data-ui="Toast"] {
   background-color: #2d2d2d !important;
   color: #ffffff !important;
   border: 1px solid #404040 !important;
 }
 .imkIPc{
   background-color: #1e1e1e;
-}
+} */

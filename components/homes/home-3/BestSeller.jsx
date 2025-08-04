@@ -1,5 +1,4 @@
 "use client";
-import { products9 } from "@/data/products";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
@@ -16,24 +15,21 @@ export default function BestSeller({ bestSellers = [], categories = [], category
   const [activeTab, setActiveTab] = useState(""); // Will be set from first category
   const [filtered, setFiltered] = useState([]);
   
-  // Use props or fallback to static data
-  const sanityProducts = bestSellers.length > 0 ? bestSellers : (error ? products9 : []);
-  const sanityCategories = categories.length > 0 ? categories : [];
+  // Use props from Sanity
+  const sanityProducts = bestSellers;
+  const sanityCategories = categories;
 
   // Set first category as active when categories are available
   useEffect(() => {
     if (sanityCategories.length > 0 && !activeTab) {
       setActiveTab(sanityCategories[0].title.toLowerCase());
-    } else if (error && !activeTab) {
-      setActiveTab("rings"); // Fallback for static data
     }
-  }, [sanityCategories, activeTab, error]);
+  }, [sanityCategories, activeTab]);
 
   useEffect(() => {
     if (sanityProducts.length > 0 && activeTab) {
       const filteredProducts = sanityProducts.filter(product => 
-        (product.category?.title || product.category || '').toLowerCase() === activeTab.toLowerCase() ||
-        product.filterCategories?.includes(activeTab) // Fallback for static data
+        (product.category?.title || product.category || '').toLowerCase() === activeTab.toLowerCase()
       );
       setFiltered(filteredProducts);
     }
@@ -47,7 +43,7 @@ export default function BestSeller({ bestSellers = [], categories = [], category
             <span className="fst-italic">Best</span> Sellers
           </h2>
           <ul className="tab-prd" role="tablist">
-            {(error ? ["ring", "bracelet", "necklace", "earring"] : sanityCategories.map(cat => cat.title.toLowerCase())).map((category) => (
+            {sanityCategories.map(cat => cat.title.toLowerCase()).map((category) => (
               <li key={category}>
                 <h5>
                   <a
@@ -98,7 +94,7 @@ export default function BestSeller({ bestSellers = [], categories = [], category
                   nextEl: ".snbn26",
                 }}
               >
-                {(error ? products9.slice(0, 4) : filtered).map((product, index) => (
+                {filtered.map((product, index) => (
                   <SwiperSlide className="swiper-slide" key={product._id || product.id}>
                     <div className="card_product--V01 type-space-35">
                       <div className="card_product-wrapper">
@@ -189,11 +185,11 @@ export default function BestSeller({ bestSellers = [], categories = [], category
                         </Link>
                         <div className="price-wrap">
                           <span className="price-new h5 text-white">
-                            ${product.price.toFixed(2)}
+                            ฿{product.price.toLocaleString('en-US')}
                           </span>
                           {product.oldPrice && (
                             <span className="price-old fw-normal">
-                              ${product.oldPrice.toFixed(2)}
+                              ฿{product.oldPrice.toLocaleString('en-US')}
                             </span>
                           )}
                         </div>

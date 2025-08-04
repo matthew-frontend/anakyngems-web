@@ -130,7 +130,7 @@ export default function BlogSingle() {
       <div className="container">
         <div className="s-blog-detail align-items-start">
           <div className="blog-single">
-            <div className="single-wrap flat-spacing-3 pt-0">
+            <div className="single-wrap flat-spacing-3 pt-0 pb-0">
               <div className="box-title">
                 <ul className="entry_meta">
                   <li>
@@ -169,6 +169,34 @@ export default function BlogSingle() {
                     value={blogPost.content} 
                     components={components}
                   />
+                </div>
+              )}
+
+              {blogPost.galleryImages && blogPost.galleryImages.length > 0 && (
+                <div className="entry_image type-group tf-grid-layout sm-col-2">
+                  {blogPost.galleryImages.map((galleryImage, index) => (
+                    <div key={index} className="image">
+                      <Image
+                        src={urlFor(galleryImage).width(1068).height(716).url()}
+                        alt={galleryImage.alt || `Gallery image ${index + 1}`}
+                        className="lazyload"
+                        width={1068}
+                        height={716}
+                      />
+                    </div>
+                  ))}
+                  
+                  {/* Fill remaining slots with placeholder if less than 2 images */}
+                  {blogPost.galleryImages.length === 1 && (
+                    <div className="image">
+                      <div 
+                        className="lazyload bg-light d-flex align-items-center justify-content-center text-muted"
+                        style={{width: '100%', height: '716px', minHeight: '400px'}}
+                      >
+                        <p>No additional image</p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 

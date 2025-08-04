@@ -4,7 +4,7 @@ import imageUrlBuilder from '@sanity/image-url'
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1xk2cwmy',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: true, // Use CDN for faster load times
+  useCdn: false, // Temporarily disabled for debugging - shows fresh data
   apiVersion: '2024-01-01', // API version
 })
 
@@ -53,9 +53,9 @@ export async function getProducts() {
           string(round((oldPrice - price) / oldPrice * 100)) + "% OFF, Selling fast",
         variantText
       ),
-      material,
       productTags,
-      variants
+      variants,
+      details
     }
   `)
 }
@@ -97,7 +97,6 @@ export async function getProduct(slug) {
           string(round((oldPrice - price) / oldPrice * 100)) + "% OFF, Selling fast",
         variantText
       ),
-      material,
       productTags,
       variants,
       details
@@ -107,12 +106,19 @@ export async function getProduct(slug) {
 
 export async function getCategories() {
   return await client.fetch(`
-    *[_type == "category"] {
+    *[_type == "category"] | order(order asc) {
       _id,
       title,
       slug,
-      description,
-      image
+      collectionImage{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
+      delay,
+      order
     }
   `)
 }
@@ -241,7 +247,6 @@ export async function getSaleProducts(limit = 8) {
           string(round((oldPrice - price) / oldPrice * 100)) + "% OFF, Selling fast",
         variantText
       ),
-      material,
       productTags,
       "discount": round((oldPrice - price) / oldPrice * 100)
     }
@@ -371,7 +376,6 @@ export async function getNewArrivals(limit = 8) {
           string(round((oldPrice - price) / oldPrice * 100)) + "% OFF, Selling fast",
         variantText
       ),
-      material,
       productTags,
       _createdAt
     }
@@ -500,6 +504,13 @@ export async function getBlogPost(slug) {
           url
         }
       },
+      galleryImages[]{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      },
       tags,
       publishedAt,
       _createdAt
@@ -509,7 +520,7 @@ export async function getBlogPost(slug) {
 
 export async function getBehindBrandPosts(limit = 12) {
   return await client.fetch(`
-    *[_type == "blog" && "behind-brand" in tags] | order(_createdAt desc) [0...${limit}] {
+    *[_type == "blog"] | order(_createdAt desc) [0...${limit}] {
       _id,
       title,
       slug,

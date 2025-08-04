@@ -1,12 +1,7 @@
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
-import Topbar1 from "@/components/headers/Topbar1";
+import BlogAbout from "@/components/otherPages/about/BlogAbout";
 import Link from "next/link";
-import Collections from "@/components/otherPages/about/Collections";
-import Established from "@/components/otherPages/about/Established";
-import Features from "@/components/otherPages/about/Features";
-import Intro from "@/components/otherPages/about/Intro";
-import Testimonials from "@/components/otherPages/about/Testimonials";
 import React from "react";
 
 export const metadata = {
@@ -31,31 +26,22 @@ export default function page() {
                 <li>About Us</li>
               </ul>
               <h1 className="heading fw-normal text-uppercase">
-                welcome to anakyngems
+                About Us
               </h1>
             </div>
             <div className="box-text">
               <p className="text-main-4">
-                At anakyngems, we believe jewelry is more than an accessory—it’s a
-                reflection of your story. With a
+                Anakyn Gems is a modern jewelry brand that redefines how we wear diamonds.
                 <br className="d-none d-xxl-block" />
-                passion for craftsmanship and a commitment to quality, we create
-                timeless pieces that celebrate
+                We believe diamonds shouldn’t be reserved only for special occasions—
                 <br className="d-none d-xxl-block" />
-                life’s moments, big and small. From delicate everyday essentials
-                to statement designs, each
-                <br className="d-none d-xxl-block" />
-                creation is crafted to inspire and shine for generations.
+                they should be part of your everyday confidence.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <Intro />
-      <Established />
-      <Features />
-      <Collections />
-      <Testimonials />
+      <BlogAbout />
       <Footer1 />
     </>
   );

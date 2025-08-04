@@ -1,89 +1,111 @@
 export default {
-  name: 'blog',
-  title: 'Blog Posts',
-  type: 'document',
-  icon: () => '📝',
+  name: "blog",
+  title: "Blog Posts",
+  type: "document",
+  icon: () => "📝",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      validation: Rule => Rule.required()
+      name: "title",
+      title: "ชื่อ Content",
+      type: "string",
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "ชื่อ Path",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 96,
       },
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: "mainImage",
+      title: "รูปภาพหลัก Content",
+      type: "image",
       options: {
         hotspot: true,
       },
       fields: [
         {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
     },
     {
-      name: 'tags',
-      title: 'Tags',
-      type: 'array',
-      of: [{type: 'string'}],
+      name: "tags",
+      title: "Tags Content",
+      type: "array",
+      of: [{ type: "string" }],
       options: {
-        layout: 'tags'
-      }
+        layout: "tags",
+      },
     },
     {
-      name: 'excerpt',
-      title: 'Excerpt',
-      type: 'text',
+      name: "excerpt",
+      title: "Intro Description",
+      type: "text",
       rows: 4,
-      validation: Rule => Rule.required()
+      description: "รายละเอียดของ Contentจะอยู่บนส่วนบนสุด (ไม่ใส่ก็ได้)",
+      // validation: (Rule) => Rule.required(),
     },
     {
-      name: 'content',
-      title: 'Content',
-      type: 'array',
+      name: "galleryImages",
+      title: "รูปภาพ Gallery",
+      type: "array",
       of: [
         {
-          type: 'block'
-        },
-        {
-          type: 'image',
-          options: {hotspot: true},
+          type: "image",
+          options: { hotspot: true },
           fields: [
             {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative Text',
-            }
-          ]
-        }
-      ]
+              name: "alt",
+              type: "string",
+              title: "Alternative Text",
+            },
+          ],
+        },
+      ],
+      validation: (Rule) => Rule.max(2),
+      description: "สามารถเพิ่มได้สูงสุด 2 รูป",
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString()
+      name: "content",
+      title: "รายละเอียดของ Content",
+      type: "array",
+      of: [
+        {
+          type: "block",
+        },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative Text",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+      description: "ไม่ต้องเลือกก็ได้ ระบบจะ auto เป็นวันที่ปัจจุบัน",
+      initialValue: () => new Date().toISOString(),
     },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      media: 'mainImage',
+      title: "title",
+      media: "mainImage",
     },
   },
-}
+};

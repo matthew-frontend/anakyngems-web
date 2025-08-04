@@ -122,11 +122,11 @@ export default function RelatedProducts({ containerFull = false, currentProduct 
                   </Link>
                   <div className="price-wrap">
                     <span className="price-new h5">
-                      ${product.price.toFixed(2)}
+                      ฿{product.price.toLocaleString('en-US')}
                     </span>
                     {product.oldPrice && (
                       <span className="price-old fw-normal">
-                        ${product.oldPrice.toFixed(2)}
+                        ฿{product.oldPrice.toLocaleString('en-US')}
                       </span>
                     )}
                   </div>

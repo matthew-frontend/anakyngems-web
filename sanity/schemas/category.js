@@ -20,15 +20,10 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      rows: 3
-    },
-    {
-      name: 'image',
-      title: 'Category Image',
+      name: 'collectionImage',
+      title: 'Collection Display Image',
       type: 'image',
+      description: 'Image for collection slide display (915x1250)',
       options: {
         hotspot: true,
       },
@@ -39,6 +34,20 @@ export default {
           type: 'string'
         }
       ]
+    },
+    {
+      name: 'delay',
+      title: 'Animation Delay',
+      type: 'string',
+      description: 'Animation delay for wow effect (e.g., 0.1s, 0.2s)',
+      placeholder: '0.1s'
+    },
+    {
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Order in collection slide (1, 2, 3, etc.)',
+      validation: Rule => Rule.min(1)
     }
   ],
   preview: {

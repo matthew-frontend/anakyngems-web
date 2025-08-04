@@ -7,7 +7,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
         <div className="tf_marquee-V01 style_2 infiniteSlide infiniteSlider">
           {/* item 1 */}
           <p style={{ flex: "0 0 auto", display: "block" }}>
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-rhombus"
@@ -17,7 +17,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond"
@@ -25,7 +25,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
           />
           {/* item 2 */}
           <p style={{ flex: "0 0 auto", display: "block" }}>
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond"
@@ -35,7 +35,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond"
@@ -43,7 +43,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
           />
           {/* item 3 */}
           <p style={{ flex: "0 0 auto", display: "block" }}>
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond"
@@ -53,7 +53,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond"
@@ -61,7 +61,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
           />
           {/* item 4 */}
           <p style={{ flex: "0 0 auto", display: "block" }}>
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond"
@@ -71,7 +71,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond"
@@ -81,7 +81,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-rhombus infiniteslide_clone"
@@ -91,7 +91,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -101,7 +101,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -111,7 +111,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -121,7 +121,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -131,7 +131,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -141,7 +141,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -151,7 +151,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -161,7 +161,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-rhombus infiniteslide_clone"
@@ -171,7 +171,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -181,7 +181,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -191,7 +191,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -201,7 +201,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -211,7 +211,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -221,7 +221,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             style={{ flex: "0 0 auto", display: "block" }}
             className="infiniteslide_clone"
           >
-            Black Friday Sale
+            EXCLUSIVE PRICE
           </p>
           <i
             className="icon-diamond infiniteslide_clone"
@@ -231,7 +231,7 @@ export default function TextSlider({ parentClass = "bg-dark-black" }) {
             className="text-clip style-white infiniteslide_clone"
             style={{ flex: "0 0 auto", display: "block" }}
           >
-            New Season Essential
+            ANAKYNGEMS
           </p>
           <i
             className="icon-diamond infiniteslide_clone"

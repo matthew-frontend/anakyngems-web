@@ -17,6 +17,7 @@ export default function Products2() {
   const [activeLayout, setActiveLayout] = useState(3);
   const [state, dispatch] = useReducer(reducer, initialState);
   const [sanityProducts, setSanityProducts] = useState([]);
+  const [sanityCategories, setSanityCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
   const categoryParam = searchParams.get('category');
@@ -34,6 +35,7 @@ export default function Products2() {
   const allProps = {
     ...state,
     sanityProducts,
+    sanityCategories,
     setPrice: (value) => dispatch({ type: "SET_PRICE", payload: value }),
 
     setCategories: (newCategory) => {
@@ -63,12 +65,16 @@ export default function Products2() {
     },
   };
 
-  // Fetch Sanity products
+  // Fetch Sanity products and categories
   useEffect(() => {
     async function fetchData() {
       try {
-        const productsData = await getProducts();
+        const [productsData, categoriesData] = await Promise.all([
+          getProducts(),
+          getCategories()
+        ]);
         setSanityProducts(productsData);
+        setSanityCategories(categoriesData);
         dispatch({ type: "SET_FILTERED", payload: productsData });
         dispatch({ type: "SET_SORTED", payload: productsData });
       } catch (error) {
@@ -99,8 +105,10 @@ export default function Products2() {
             return elm.badgeType === "new" || elm.badge === "NEW IN";
           } else if (category === "gift-idea") {
             return elm.badgeType === "gift" || elm.badge?.includes("Gift");
+          } else if (category === "for-sale") {
+            return elm.oldPrice && elm.oldPrice > elm.price;
           }
-          return (elm.category?.title || elm.category) === category;
+          return (elm.category?.title?.toLowerCase() || elm.category?.toLowerCase()) === category;
         })
       );
       filteredArrays = [...filteredArrays, filteredByCategories];
@@ -108,12 +116,12 @@ export default function Products2() {
 
     if (price.includes("u-")) {
       const filteredByPrice = [...sanityProducts].filter(
-        (elm) => elm.price >= Number(price.split("-")[1])
+        (elm) => elm.price <= Number(price.split("-")[1])
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     } else if (price.includes("up-")) {
       const filteredByPrice = [...sanityProducts].filter(
-        (elm) => elm.price <= Number(price.split("-")[1])
+        (elm) => elm.price >= Number(price.split("-")[1])
       );
       filteredArrays = [...filteredArrays, filteredByPrice];
     }
@@ -232,7 +240,7 @@ export default function Products2() {
                     >
                       <div className="card_product-wrapper">
                         <Link
-                          href={`/products/${product._id || product.id}`}
+                          href={`/products/${product.slug?.current || product._id || product.id}`}
                           className="product-img"
                         >
                           <Image
@@ -306,18 +314,18 @@ export default function Products2() {
 
                       <div className="card_product-info">
                         <Link
-                          href={`/products/${product._id || product.id}`}
+                          href={`/products/${product.slug?.current || product._id || product.id}`}
                           className="name-product h5 fw-normal link text-line-clamp-2"
                         >
                           {product.title}
                         </Link>
                         <div className="price-wrap">
                           <span className="price-new h5">
-                            ${product.price.toFixed(2)}
+                            ฿{product.price.toLocaleString('en-US')}
                           </span>
                           {product.oldPrice && (
                             <span className="price-old fw-normal">
-                              ${product.oldPrice.toFixed(2)}
+                              ฿{product.oldPrice.toLocaleString('en-US')}
                             </span>
                           )}
                         </div>

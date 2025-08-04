@@ -1,32 +1,46 @@
-import React, { useEffect } from 'react'
-import { useFormValue, set, unset } from 'sanity'
+import React, { useEffect, useCallback } from 'react'
+import { useFormValue, set, unset, useDocumentOperation } from 'sanity'
 
 export default function BadgeField(props) {
-  const { onChange, value } = props
+  const { onChange, value, readOnly } = props
   const badgeType = useFormValue(['badgeType'])
   const price = useFormValue(['price'])
   const oldPrice = useFormValue(['oldPrice'])
+  
+  // Get document operations to check if we can modify
+  const { publish } = useDocumentOperation('Product', 'draft')
+  const isPublishable = publish && !publish.disabled
 
-  useEffect(() => {
-    let badgeText = ''
+  const updateBadge = useCallback(() => {
+    // Don't update if read-only, no onChange, or if document is not in draft state
+    if (readOnly || !onChange || !isPublishable) return
     
-    // Debug logging
-    console.log('BadgeField - Values:', { badgeType, price, oldPrice })
+    let badgeText = ''
     
     if (badgeType === 'new') {
       badgeText = 'NEW IN'
     } else if (badgeType === 'sale' && price && oldPrice && oldPrice > price) {
       const discount = Math.round(((oldPrice - price) / oldPrice) * 100)
       badgeText = `${discount}% OFF`
-      console.log('BadgeField - Calculated:', { discount, badgeText })
     } else if (!badgeType || badgeType === null) {
       badgeText = ''
     }
 
+    // Only update if the value actually changed
     if (badgeText !== value) {
-      onChange(badgeText ? set(badgeText) : unset())
+      try {
+        onChange(badgeText ? set(badgeText) : unset())
+      } catch (error) {
+        console.log('BadgeField - Cannot update:', error.message)
+      }
     }
-  }, [badgeType, price, oldPrice, value, onChange])
+  }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])
+
+  useEffect(() => {
+    // Add small delay to prevent immediate updates after publish
+    const timer = setTimeout(updateBadge, 100)
+    return () => clearTimeout(timer)
+  }, [updateBadge])
 
   return (
     <div style={{ 

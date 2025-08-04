@@ -78,7 +78,7 @@ export default function QuickView() {
             <div className="tf-product-info-inner tf-product-info-list">
               <div className="tf-product-info-heading">
                 <Link
-                  href={`/products/${quickViewItem._id || quickViewItem.id}`}
+                  href={`/products/${quickViewItem.slug?.current || quickViewItem._id || quickViewItem.id}`}
                   className="product-info-name h4 fw-normal text-uppercase link"
                 >
                   {quickViewItem.title}
@@ -86,19 +86,21 @@ export default function QuickView() {
                 <div className="product-info-price">
                   <div className="price-wrap">
                     <span className="price-new price-on-sale h4">
-                      ${quickViewItem.price?.toFixed(2) || '0.00'}
+                      ฿{quickViewItem.price?.toLocaleString('en-US') || '0'}
                     </span>
                     {quickViewItem.oldPrice && (
                       <span className="price-old compare-at-price fw-normal h6">
-                        ${quickViewItem.oldPrice.toFixed(2)}
+                        ฿{quickViewItem.oldPrice.toLocaleString('en-US')}
                       </span>
                     )}
-                    <p className="badges-on-sale">
-                      <i className="icon-tag" />
-                      <span className="number-sale" data-person-sale={30}>
-                        30% OFF
-                      </span>
-                    </p>
+                    {quickViewItem.oldPrice && quickViewItem.oldPrice > quickViewItem.price && (
+                      <p className="badges-on-sale">
+                        <i className="icon-tag" />
+                        <span className="number-sale" data-person-sale={Math.round((quickViewItem.oldPrice - quickViewItem.price) / quickViewItem.oldPrice * 100)}>
+                          {Math.round((quickViewItem.oldPrice - quickViewItem.price) / quickViewItem.oldPrice * 100)}% OFF
+                        </span>
+                      </p>
+                    )}
                   </div>
                 </div>
                 <p className="product-infor-sub text-main-4">
@@ -106,7 +108,7 @@ export default function QuickView() {
                 </p>
               </div>
               <Link
-                href={`/products/${quickViewItem._id || quickViewItem.id}`}
+                href={`/products/${quickViewItem.slug?.current || quickViewItem._id || quickViewItem.id}`}
                 className="tf-btn-line"
               >
                 <span className="text-body">View full details</span>

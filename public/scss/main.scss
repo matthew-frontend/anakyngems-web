@@ -88,3 +88,22 @@ picture.jarallax-img img {
 .nav-prev-swiper {
   cursor: pointer;
 }
+
+/* Thai text using Kanit font */
+*:lang(th),
+[lang="th"],
+.thai-text {
+  font-family: "Kanit", sans-serif !important;
+}
+
+/* CSS selector for Thai Unicode range */
+@supports (font-family: "Kanit") {
+  * {
+    font-family: "Jost", sans-serif;
+  }
+  
+  /* Apply Kanit to Thai characters */
+  *:has-text(\u0E01-\u0E5F) {
+    font-family: "Kanit", "Jost", sans-serif !important;
+  }
+}

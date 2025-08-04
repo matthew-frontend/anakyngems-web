@@ -1,30 +1,43 @@
-import React, { useEffect } from 'react'
-import { useFormValue, set, unset } from 'sanity'
+import React, { useEffect, useCallback } from 'react'
+import { useFormValue, set, unset, useDocumentOperation } from 'sanity'
 
 export default function VariantTextField(props) {
-  const { onChange, value } = props
+  const { onChange, value, readOnly } = props
   const badgeType = useFormValue(['badgeType'])
   const price = useFormValue(['price'])
   const oldPrice = useFormValue(['oldPrice'])
+  
+  // Get document operations to check if we can modify
+  const { publish } = useDocumentOperation('Product', 'draft')
+  const isPublishable = publish && !publish.disabled
 
-  useEffect(() => {
-    let variantText = ''
+  const updateVariantText = useCallback(() => {
+    // Don't update if read-only, no onChange, or if document is not in draft state
+    if (readOnly || !onChange || !isPublishable) return
     
-    // Debug logging
-    console.log('VariantTextField - Values:', { badgeType, price, oldPrice })
+    let variantText = ''
     
     if (badgeType === 'new') {
       variantText = 'New arrival'
     } else if (badgeType === 'sale' && price && oldPrice && oldPrice > price) {
       const discount = Math.round(((oldPrice - price) / oldPrice) * 100)
       variantText = `${discount}% OFF, Selling fast`
-      console.log('VariantTextField - Calculated:', { discount, variantText })
     }
 
     if (variantText !== value) {
-      onChange(variantText ? set(variantText) : unset())
+      try {
+        onChange(variantText ? set(variantText) : unset())
+      } catch (error) {
+        console.log('VariantTextField - Cannot update:', error.message)
+      }
     }
-  }, [badgeType, price, oldPrice, value, onChange])
+  }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])
+
+  useEffect(() => {
+    // Add small delay to prevent immediate updates after publish
+    const timer = setTimeout(updateVariantText, 100)
+    return () => clearTimeout(timer)
+  }, [updateVariantText])
 
   return (
     <div style={{ 

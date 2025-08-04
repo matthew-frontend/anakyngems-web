@@ -36,14 +36,14 @@ export default function Sidebar({ allProps }) {
                   data-filter="priceRadio"
                   onClick={() => allProps.setPrice("All")}
                 >
-                  {allProps.price === "u-500"
-                    ? "Under $500"
-                    : allProps.price === "u-1000"
-                    ? "Under $1000"
-                    : allProps.price === "u-2000"
-                    ? "Under $2000"
-                    : allProps.price === "up-2000"
-                    ? "Over $2000"
+                  {allProps.price === "u-7000"
+                    ? "Under ฿7,000"
+                    : allProps.price === "u-8000"
+                    ? "Under ฿8,000"
+                    : allProps.price === "u-9000"
+                    ? "Under ฿9,000"
+                    : allProps.price === "up-10000"
+                    ? "Over ฿10,000"
                     : null}{" "}
                   <span className="icon icon-close" />
                 </span>
@@ -65,48 +65,64 @@ export default function Sidebar({ allProps }) {
           </div>
           <div id="categories" className="collapse show">
             <ul className="collapse-body filter-group-check current-scrollbar">
-              {[
-                "bracelet",
-                "earring",
-                "ring",
-                "necklace",
-                "new-in",
-                "gift-idea",
-              ].map((category) => (
+              {/* Real categories from Sanity */}
+              {allProps.sanityCategories && allProps.sanityCategories.map((category) => (
                 <li
                   className="list-item"
-                  key={category}
-                  onClick={() => allProps.setCategories(category)}
+                  key={category._id}
+                  onClick={() => allProps.setCategories(category.title.toLowerCase())}
                 >
                   <input
                     type="checkbox"
                     className="tf-check style-2"
-                    checked={allProps.categories.includes(category)}
+                    checked={allProps.categories.includes(category.title.toLowerCase())}
                     readOnly
                   />
                   <label className="label">
-                    <span>
-                      {category
-                        .split("-")
-                        .map(
-                          (word) => word.charAt(0).toUpperCase() + word.slice(1)
-                        )
-                        .join(" ")}
+                    <span>{category.title.charAt(0).toUpperCase() + category.title.slice(1)}</span>
+                    <span className="count-wrap">
+                      [{" "}
+                      <span className="count">
+                        {allProps.sanityProducts ? 
+                          allProps.sanityProducts.filter((el) => 
+                            (el.category?.title || el.category) === category.title
+                          ).length : 0
+                        }
+                      </span>{" "}
+                      ]
                     </span>
+                  </label>
+                </li>
+              ))}
+              
+              {/* Special categories */}
+              {[
+                { key: "for-sale", label: "For Sale" }
+              ].map((category) => (
+                <li
+                  className="list-item"
+                  key={category.key}
+                  onClick={() => allProps.setCategories(category.key)}
+                >
+                  <input
+                    type="checkbox"
+                    className="tf-check style-2"
+                    checked={allProps.categories.includes(category.key)}
+                    readOnly
+                  />
+                  <label className="label">
+                    <span>{category.label}</span>
                     <span className="count-wrap">
                       [{" "}
                       <span className="count">
                         {
                           allProps.sanityProducts ? 
                           allProps.sanityProducts.filter((el) => {
-                            if (category === "new-in") {
-                              return el.badgeType === "new" || el.badge === "NEW IN";
-                            } else if (category === "gift-idea") {
-                              return el.badgeType === "gift" || el.badge?.includes("Gift");
+                            if (category.key === "for-sale") {
+                              return el.oldPrice && el.oldPrice > el.price;
                             }
-                            return (el.category?.title || el.category) === category;
-                          }).length :
-                          allProps.sanityProducts.filter((el) => (el.category?.title || el.category) == category).length
+                            return false;
+                          }).length : 0
                         }
                       </span>{" "}
                       ]
@@ -132,10 +148,10 @@ export default function Sidebar({ allProps }) {
           <div id="price" className="collapse show">
             <ul className="collapse-body filter-group-check current-scrollbar">
               {[
-                { id: "u-500", label: "Under $500" },
-                { id: "u-1000", label: "Under $1000" },
-                { id: "u-2000", label: "Under $2000" },
-                { id: "up-2000", label: "Over $2000" },
+                { id: "u-7000", label: "Under ฿7,000" },
+                { id: "u-8000", label: "Under ฿8,000" },
+                { id: "u-9000", label: "Under ฿9,000" },
+                { id: "up-10000", label: "Over ฿10,000" },
               ].map((option) => (
                 <li
                   className="list-item"
