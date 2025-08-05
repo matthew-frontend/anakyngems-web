@@ -11,12 +11,12 @@ export async function generateMetadata({ params }) {
     
     return {
       title: blogPost ? `${blogPost.title} | ANAKYNGEMS` : "Blog | ANAKYNGEMS",
-      description: blogPost?.excerpt || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+      description: blogPost?.excerpt || "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
     };
   } catch (error) {
     return {
       title: "Blog | ANAKYNGEMS",
-      description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+      description: "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
     };
   }
 }

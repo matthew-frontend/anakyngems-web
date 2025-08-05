@@ -15,18 +15,18 @@ export const metadata = {
     template: "%s | ANAKYNGEMS อนาคินเจม",
   },
   description:
-    "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง ยั่งยืน จริยธรรม แหวนหมั้น แหวนแต่งงาน สร้อยคอ กำไล ต่างหู ส่งฟรีทั่วโลก | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
+    "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง จริยธรรม แหวนหมั้น แหวนแต่งงาน แหวนเพชร สร้อยคอ กำไล ต่างหู ต่างหูเพชร ส่งฟรี | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
   keywords:
-    "อนาคินเจม, ANAKYNGEMS, เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนแต่งงาน, สร้อยคอเพชร, กำไลเพชร, ต่างหูเพชร, เพชรยั่งยืน, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, certified diamonds",
+    "อนาคินเจม, ANAKYNGEMS, เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนแต่งงาน, แหวนเพชร, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, certified diamonds",
   openGraph: {
     title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
     description:
-      "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง ยั่งยืน จริยธรรม | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
+      "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
     url: "https://anakyngems.com",
     siteName: "ANAKYNGEMS",
     images: [
       {
-        url: "https://anakyngems-web.vercel.app/images/og-image.jpg",
+        url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
@@ -39,8 +39,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
     description:
-      "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-    images: ["https://anakyngems-web.vercel.app/images/og-image.jpg"],
+      "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
+    images: ["https://www.anakyngems.com/images/og-image.jpg"],
   },
   robots: {
     index: true,

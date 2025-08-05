@@ -186,7 +186,7 @@ export default function Grid1({
             className="tf-image-zoom lazyload"
             data-zoom={item.src}
             data-src={item.src}
-            alt="img-product"
+            alt={product?.title ? `${product.title} - Product Image ${index + 1}` : `Product Image ${index + 1}`}
             src={item.src}
             width={item.width}
             height={item.height}

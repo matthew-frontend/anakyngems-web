@@ -5,8 +5,34 @@ import Contact from "@/components/otherPages/Contact";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "Contact Us - ANAKYNGEMS",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  title: "ติดต่อเรา - ANAKYNGEMS | Contact ANAKYNGEMS Lab Grown Diamond Jewellery",
+  description: "ติดต่อ ANAKYNGEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน หรือสินค้าอื่นๆ ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา | Contact ANAKYNGEMS for premium lab grown diamond jewellery consultation and expert advice on engagement rings, wedding rings, and fine jewelry.",
+  keywords: "ติดต่อ ANAKYNGEMS, คำปรึกษาเครื่องประดับ, แหวนหมั้น, แหวนแต่งงาน, เพชรแล็บโกรน, contact ANAKYNGEMS, jewelry consultation, engagement rings, wedding rings, lab grown diamonds",
+  openGraph: {
+    title: "ติดต่อเรา - ANAKYNGEMS",
+    description: "ติดต่อ ANAKYNGEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
+    url: "https://www.anakyngems.com/contact-us",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact ANAKYNGEMS - Lab Grown Diamond Jewellery Expert Consultation",
+      },
+    ],
+    locale: "th_TH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ติดต่อเรา - ANAKYNGEMS",
+    description: "ติดต่อ ANAKYNGEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
+    images: ["https://www.anakyngems.com/images/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.anakyngems.com/contact-us",
+  },
 };
 export default function page() {
   return (

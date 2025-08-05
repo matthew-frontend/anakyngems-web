@@ -4,10 +4,32 @@ import Header1 from "@/components/headers/Header1";
 import Products2 from "@/components/shop/Products2";
 import React, { Suspense } from "react";
 import ProductsPageWrapper from "@/components/shop/ProductsPageWrapper";
-import TopbarBottom from "@/components/headers/TopbarBottom";
 export const metadata = {
-  title: "Products - ANAKYNGEMS",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  title: "Products - ANAKYNGEMS | Lab Grown Diamond Jewellery",
+  description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหู ต่างหูเพชร | Discover premium lab grown diamond jewelry - rings, earrings.",
+  keywords: "เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนเพชร, แหวนแต่งงาน, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, ethical diamonds",
+  openGraph: {
+    title: "เครื่องประดับเพชรแล็บโกรน - ANAKYNGEMS",
+    description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS",
+    url: "https://www.anakyngems.com/products",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery Collection",
+      },
+    ],
+    locale: "th_TH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "เครื่องประดับเพชรแล็บโกรน - ANAKYNGEMS",
+    description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูง แหวนเพชร ต่างหูเพชร",
+    images: ["https://www.anakyngems.com/images/og-image.jpg"],
+  },
 };
 export default function page() {
   return (

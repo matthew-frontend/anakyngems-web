@@ -1,6 +1,7 @@
 import Features from "@/components/common/Features";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
+import Breadcrumb from "@/components/common/Breadcrumb";
 
 import RelatedProducts from "@/components/product-details/RelatedProducts";
 import React from "react";
@@ -34,22 +35,52 @@ export async function generateMetadata({ params }) {
     product = allProducts[0]; // Fallback to first product
   }
   
+  const categoryThai = {
+    'ring': 'แหวน',
+    'earring': 'ต่างหู', 
+    'necklace': 'สร้อยคอ',
+    'bracelet': 'กำไล',
+    'new in': 'สินค้าใหม่'
+  };
+  
+  const categoryName = product.category?.title || product.category || 'jewelry';
+  const categoryThaiName = categoryThai[categoryName.toLowerCase()] || categoryName;
+  
+  const price = product.price ? `฿${product.price.toLocaleString('en-US')}` : '';
+  const oldPrice = product.oldPrice ? `(เดิม ฿${product.oldPrice.toLocaleString('en-US')})` : '';
+  
   return {
-    title: `${product.title || product.name} - ANAKYNGEMS`,
-    description: product.description || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
-    keywords: `${product.title}, lab grown diamond, ${product.category}, jewelry, ANAKYNGEMS, sustainable diamonds, ethical jewelry`,
+    title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS`,
+    description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS ${price} ${oldPrice} ${product.description ? product.description.substring(0, 100) + '...' : 'แหวนเพชร ต่างหูเพชร จัดงานแต่งงาน'}`.trim(),
+    keywords: `${product.title}, ${categoryThaiName}, เพชรแล็บโกรน, เครื่องประดับ, ANAKYNGEMS, lab grown diamond, ${categoryName}, jewelry, sustainable diamonds, ethical jewelry`,
     openGraph: {
-      title: `${product.title || product.name} | ANAKYNGEMS`,
-      description: product.description || "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS.",
+      title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS`,
+      description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice}`.trim(),
       images: product.images?.[0] ? [{
         url: urlFor(product.images[0]).width(1200).height(630).url(),
         width: 1200,
         height: 630,
-        alt: product.title
-      }] : [],
+        alt: `${product.title} - ${categoryThaiName}เพชรแล็บโกรน`
+      }] : [{
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery"
+      }],
       type: 'website',
-      url: `https://anakyngems.com/products/${product.slug?.current || product._id}`
-    }
+      url: `https://www.anakyngems.com/products/${product.slug?.current || product._id}`,
+      siteName: "ANAKYNGEMS",
+      locale: "th_TH",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.title || product.name} - ${categoryThaiName}`,
+      description: `${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice} จาก ANAKYNGEMS`,
+      images: product.images?.[0] ? [urlFor(product.images[0]).width(1200).height(630).url()] : ["https://www.anakyngems.com/images/og-image.jpg"],
+    },
+    alternates: {
+      canonical: `https://www.anakyngems.com/products/${product.slug?.current || product._id}`,
+    },
   };
 }
 
@@ -84,31 +115,7 @@ export default async function ProductDetailPage({ params }) {
       <ProductSchema product={product} />
       <BreadcrumbSchema items={breadcrumbItems} />
       <Header1 parentClass="tf-header line-bt-2 bg-white" />
-      <div className="flat-spacing-16 pb-0">
-        <div className="container">
-          <div className="page-title border-0">
-            <div className="breadcrumbs">
-               <ul className="bread-wrap">
-                <li>
-                  <Link href={`/`} className="text-main-4 link-secondary">
-                    Home
-                  </Link>
-                </li>
-                <li className="br-line w-12 bg-main" />
-                <li>
-                  <Link href={`/products`} className="text-main-4 link-secondary">
-                    Products
-                  </Link>
-                </li>
-                <li className="br-line w-12 bg-main" />
-                <li>
-                  <p>{product.title || product.name}</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Breadcrumb productTitle={product.title || product.name} showTitle={false} />
       <Details3 product={product} />
 
       <TextSlider />

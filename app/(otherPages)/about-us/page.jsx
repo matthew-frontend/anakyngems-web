@@ -5,8 +5,34 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title: "About Us - ANAKYNGEMS",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  title: "About Us - ANAKYNGEMS Lab Grown Diamond Jewellery",
+  description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง พร้อมมอบเครื่องประดับที่สะท้อนตัวตนของคุณ",
+  keywords: "เกี่ยวกับ ANAKYNGEMS, เพชรแล็บโกรน, แหวนเพชร, ต่างหูเพชร, แต่งงาน, about ANAKYNGEMS, lab grown diamonds, sustainable jewelry, ethical diamonds, diamond jewellery brand",
+  openGraph: {
+    title: "เกี่ยวกับเรา - ANAKYNGEMS",
+    description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง",
+    url: "https://www.anakyngems.com/about-us",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About ANAKYNGEMS - Lab Grown Diamond Jewellery Brand",
+      },
+    ],
+    locale: "th_TH",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "เกี่ยวกับเรา - ANAKYNGEMS",
+    description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง",
+    images: ["https://www.anakyngems.com/images/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://www.anakyngems.com/about-us",
+  },
 };
 export default function page() {
   return (

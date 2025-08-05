@@ -12,6 +12,8 @@ export default function Header1({ parentClass = "tf-header line-bt-2 header-abso
               href="#mobileMenu"
               data-bs-toggle="offcanvas"
               className="btn-mobile-menu"
+              aria-label="Open mobile menu"
+              role="button"
             >
               <span />
             </a>
@@ -19,7 +21,7 @@ export default function Header1({ parentClass = "tf-header line-bt-2 header-abso
           <div className="col-xl-2 col-md-4 col-6">
             <Link href={`/`} className="logo-site py-2">
               <Image
-                alt=""
+                alt="ANAKYNGEMS - Lab Grown Diamond Jewellery Logo"
                 width={122}
                 height={32}
                 src="/images/logo/logo-header.png"

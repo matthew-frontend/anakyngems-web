@@ -253,7 +253,7 @@ export default function Products2() {
                           {(product.images?.[1]?.asset?.url || (product.images && product.images[1]) || product.hoverImgSrc) ? (
                             <Image
                               src={product.images?.[1]?.asset?.url || (product.images ? product.images[1] : product.hoverImgSrc)}
-                              alt={product.title}
+                              alt={`${product.title} - Product Image 2`}
                               className="lazyload img-hover"
                               width={714}
                               height={900}
@@ -263,7 +263,10 @@ export default function Products2() {
 
                         <ul className="list-product-btn">
                           <li>
-                            <QuickView product={product} />
+                            <QuickView 
+                              product={product} 
+                              aria-label={`Quick view ${product.title}`}
+                            />
                           </li>
                         </ul>
 

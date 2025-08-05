@@ -8,7 +8,7 @@ import React from "react";
 
 export const metadata = {
   title: "Our Story - ANAKYNGEMS",
-  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
+  description: "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
 };
 export default function page() {
   return (
