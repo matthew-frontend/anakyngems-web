@@ -10,11 +10,11 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <Header1 parentClass="tf-header line-bt-2" />
+      <Header1 parentClass="tf-header line-bt-2 bg-white" />
       <div className="wg-404 tf-grid-layout sm-col-2 gap-0 vh-100">
         <div className="image">
           <Image
-            src="https://vemusnextjs.vercel.app/images/section/404.jpg"
+            src="/images/home/hero-1.webp"
             alt={404}
             className="lazyload"
             width={1920}

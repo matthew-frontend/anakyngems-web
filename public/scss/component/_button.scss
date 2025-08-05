@@ -128,7 +128,7 @@
         border: 1px solid #FFFFFF;
         position: relative;
         backdrop-filter: blur(4px);
-
+        text-shadow: 3px 0px 3px rgb(0 0 0);
         &:hover {
             background-color: var(--white);
             border-color: var(--white);

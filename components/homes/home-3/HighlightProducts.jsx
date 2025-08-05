@@ -28,7 +28,7 @@ export default function HighlightProducts() {
   }, []);
   return (
     <>
-      <section className="flat-spacing-3 pt-0">
+      <section className="flat-spacing-3">
         <div className="container">
           <div className="sect-border">
             <div className="sect-head wow fadeInUp">

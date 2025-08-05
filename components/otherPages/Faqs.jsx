@@ -5,16 +5,11 @@ export default function Faqs() {
     <section className="flat-spacing">
       <div className="container">
         <div className="s-faq flex-md-nowrap">
-          <div className="sb-contact sticky-top">
-            <h3 className="title fw-normal">Can’t find your answer?</h3>
-            <p className="sub-title text-main-6">
-              If you have an issue or question that requires immediate
-              assistance, you can click the button below to chat live with a
-              Customer Service representative.
-              <br />
-              <br className="d-none d-xl-block" />
-              Please allow 06 - 12 business days from the time your package
-              arrives back to us for a refund to be issued.
+          <div className="sb-contact sticky-top bg-anakyn-20">
+            <h3 className="title fw-normal thai-text">ไม่พบคำตอบใช่ไหม?</h3>
+            <p className="sub-title text-main-6 thai-text">
+              หากคุณมีปัญหาหรือคำถามที่ต้องการความช่วยเหลือทันที คุณสามารถคลิกปุ่มด้านล่างเพื่อติดต่อเจ้าหน้าที่ฝ่ายบริการลูกค้า
+              <br/>
             </p>
             <div className="group-btn flex-sm-nowrap">
               <Link
@@ -23,43 +18,34 @@ export default function Faqs() {
               >
                 CONTACT US
               </Link>
-              <Link
-                href={`/contact-us`}
-                className="tf-btn btn-fill-white animate-btn animate-dark text-capitalize fw-medium line"
-              >
-                <i className="icon-chat fs-20" />
-                Chat with Us
-              </Link>
             </div>
           </div>
           <ul className="faq-list tf-grid-layout">
             <li className="faq-item">
-              <h3 className="name-faq">Orders &amp; Shipping</h3>
+              <h3 className="name-faq">คำถามที่พบบ่อย (FAQs)</h3>
               <div className="faq-wrap" id="order-and-shipping">
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#how-order"
+                    data-bs-target="#collapse-faqs-th-1"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="how-order"
+                    aria-controls="collapse-faqs-th-1"
                   >
-                    <span className="fw-medium">
-                      1. How can I place an order?
+                    <span className="fw-medium thai-text">
+                      1. เพชรแล็ปคืออะไร ต่างจากเพชรธรรมชาติยังไง?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="how-order"
+                    id="collapse-faqs-th-1"
                     className="collapse"
-                    data-bs-parent="#order-and-shipping"
+                    data-bs-parent="#collapse-faqs-th-1"
                   >
                     <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                      <p className="thai-text">
+                        เพชรแล็ป (Lab-Grown Diamond) คือเพชรแท้ที่สร้างขึ้นในห้องแล็ปด้วยเทคโนโลยีทันสมัย มีองค์ประกอบทางเคมี โครงสร้าง และความแวววาวเหมือนเพชรธรรมชาติ 100% แต่เป็นมิตรกับสิ่งแวดล้อมและราคาคุ้มค่ากว่า
                       </p>
                     </div>
                   </div>
@@ -67,27 +53,25 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#offer-ship"
+                    data-bs-target="#collapse-faqs-th-2"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="offer-ship"
+                    aria-controls="collapse-faqs-th-2"
                   >
-                    <span className="fw-medium">
-                      2. Do you offer international shipping?
+                    <span className="fw-medium thai-text">
+                      2. เพชรแล็ปเป็นเพชรจริงหรือเปล่า?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="offer-ship"
+                    id="collapse-faqs-th-2"
                     className="collapse"
-                    data-bs-parent="#order-and-shipping"
+                    data-bs-parent="#collapse-faqs-th-2"
                   >
                     <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                      <p className="thai-text">
+                        ใช่ครับ เพชรแล็ปคือ “เพชรแท้” (Real Diamond) ที่สามารถผ่านการตรวจสอบด้วยเครื่องมือจากสถาบันชั้นนำ และสามารถออกใบเซอร์รับรองได้เหมือนเพชรธรรมชาติ
                       </p>
                     </div>
                   </div>
@@ -95,27 +79,25 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#ship-take"
+                    data-bs-target="#collapse-faqs-th-3"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="ship-take"
+                    aria-controls="collapse-faqs-th-3"
                   >
-                    <span className="fw-medium">
-                      3. How long does shipping take?
+                    <span className="fw-medium thai-text">
+                      3. เพชรแล็ปมีใบรับรองไหม?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="ship-take"
+                    id="collapse-faqs-th-3"
                     className="collapse"
-                    data-bs-parent="#order-and-shipping"
+                    data-bs-parent="#collapse-faqs-th-3"
                   >
                     <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                      <p className="thai-text">
+                        เรามีใบรับรอง (Certificate) จากสถาบันอัญมณีชั้นนำ เช่น IGI หรือ GIA Lab-Grown Diamond ซึ่งระบุคุณลักษณะต่าง ๆ ของเพชรอย่างละเอียด
                       </p>
                     </div>
                   </div>
@@ -123,25 +105,47 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#track-order"
+                    data-bs-target="#collapse-faqs-th-4"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="track-order"
+                    aria-controls="collapse-faqs-th-4"
                   >
-                    <span className="fw-medium">4. Can I track my order?</span>
+                    <span className="fw-medium thai-text">4. ทำไมเพชรแล็ปราคาถูกกว่าเพชรธรรมชาติ?</span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="track-order"
+                    id="collapse-faqs-th-4"
                     className="collapse"
-                    data-bs-parent="#order-and-shipping"
+                    data-bs-parent="#collapse-faqs-th-4"
                   >
                     <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                      <p className="thai-text">
+                        เพชรแล็ปใช้เวลาผลิตน้อยกว่า ไม่ต้องขุดเหมือง ทำให้ต้นทุนต่ำกว่าเพชรธรรมชาติ แต่ยังคงความงามและคุณภาพเทียบเท่า
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="widget-accordion-2 style-2">
+                  <div
+                    className="accordion-title collapsed"
+                    data-bs-target="#collapse-faqs-th-5"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapse-faqs-th-5"
+                  >
+                    <span className="fw-medium thai-text">5. สามารถสั่งทำเครื่องประดับเพชรแล็ปตามแบบได้ไหม?</span>
+                    <span className="icon ic-accordion-custom" />
+                  </div>
+                  <div
+                    id="collapse-faqs-th-5"
+                    className="collapse"
+                    data-bs-parent="#collapse-faqs-th-5"
+                  >
+                    <div className="accordion-body">
+                      <p className="thai-text">
+                        ได้แน่นอนครับ ร้านของเรารับออกแบบและสั่งทำแหวนแต่งงาน เครื่องประดับเพชรแล็ปตามงบประมาณและดีไซน์ที่คุณต้องการ
                       </p>
                     </div>
                   </div>
@@ -149,32 +153,30 @@ export default function Faqs() {
               </div>
             </li>
             <li className="faq-item">
-              <h3 className="name-faq">Returns &amp; Exchanges</h3>
+              <h3 className="name-faq">Frequently Asked Questions</h3>
               <div className="faq-wrap" id="return-and-exchanges">
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#return-policy"
+                    data-bs-target="#collapse-faqs-en-1"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="return-policy"
+                    aria-controls="collapse-faqs-en-1"
                   >
                     <span className="fw-medium">
-                      4. What is your return policy?
+                      1. What is a lab-grown diamond? How is it different from a natural diamond?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="return-policy"
+                    id="collapse-faqs-en-1"
                     className="collapse"
-                    data-bs-parent="#return-and-exchanges"
+                    data-bs-parent="#collapse-faqs-en-1"
                   >
                     <div className="accordion-body">
                       <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                        Lab-grown diamonds are real diamonds created in a controlled laboratory environment using advanced technology. They have the same physical, chemical, and optical properties as natural diamonds—but are more sustainable and cost-effective.
                       </p>
                     </div>
                   </div>
@@ -182,60 +184,25 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#return-exchange"
+                    data-bs-target="#collapse-faqs-en-2"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="return-exchange"
+                    aria-controls="collapse-faqs-en-2"
                   >
                     <span className="fw-medium">
-                      5. How do I initiate a return or exchange?
+                      2. Is a lab-grown diamond a real diamond?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="return-exchange"
+                    id="collapse-faqs-en-2"
                     className="collapse"
-                    data-bs-parent="#return-and-exchanges"
+                    data-bs-parent="#collapse-faqs-en-2"
                   >
                     <div className="accordion-body">
                       <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li className="faq-item">
-              <h3 className="name-faq">Jewelry Care</h3>
-              <div className="faq-wrap" id="jewelry-care">
-                <div className="widget-accordion-2 style-2">
-                  <div
-                    className="accordion-title collapsed"
-                    data-bs-target="#take-care"
-                    role="button"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                    aria-controls="take-care"
-                  >
-                    <span className="fw-medium">
-                      7. How do I take care of my jewelry?
-                    </span>
-                    <span className="icon ic-accordion-custom" />
-                  </div>
-                  <div
-                    id="take-care"
-                    className="collapse"
-                    data-bs-parent="#jewelry-care"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                        Yes, absolutely. Lab-grown diamonds are genuine diamonds with the same hardness, brilliance, and structure as mined diamonds. They are certified and tested by the same gemological institutes.
                       </p>
                     </div>
                   </div>
@@ -243,60 +210,25 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#hypoa"
+                    data-bs-target="#collapse-faqs-en-3"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="hypoa"
+                    aria-controls="collapse-faqs-en-3"
                   >
                     <span className="fw-medium">
-                      8. Is your jewelry hypoallergenic?
+                      3. Do lab-grown diamonds come with certification?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="hypoa"
+                    id="collapse-faqs-en-3"
                     className="collapse"
-                    data-bs-parent="#jewelry-care"
+                    data-bs-parent="#collapse-faqs-en-3"
                   >
                     <div className="accordion-body">
                       <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li className="faq-item">
-              <h3 className="name-faq">Customization &amp; Sizing</h3>
-              <div className="faq-wrap" id="custom-size">
-                <div className="widget-accordion-2 style-2">
-                  <div
-                    className="accordion-title collapsed"
-                    data-bs-target="#custom"
-                    role="button"
-                    data-bs-toggle="collapse"
-                    aria-expanded="false"
-                    aria-controls="custom"
-                  >
-                    <span className="fw-medium">
-                      9. Do you offer custom jewelry?
-                    </span>
-                    <span className="icon ic-accordion-custom" />
-                  </div>
-                  <div
-                    id="custom"
-                    className="collapse"
-                    data-bs-parent="#custom-size"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                        Yes, absolutely. Lab-grown diamonds are genuine diamonds with the same hardness, brilliance, and structure as mined diamonds. They are certified and tested by the same gemological institutes.
                       </p>
                     </div>
                   </div>
@@ -304,27 +236,51 @@ export default function Faqs() {
                 <div className="widget-accordion-2 style-2">
                   <div
                     className="accordion-title collapsed"
-                    data-bs-target="#size"
+                    data-bs-target="#collapse-faqs-en-4"
                     role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="false"
-                    aria-controls="size"
+                    aria-controls="collapse-faqs-en-4"
                   >
                     <span className="fw-medium">
-                      10. How do I find my ring size?
+                      4. Why are lab-grown diamonds more affordable than natural diamonds?
                     </span>
                     <span className="icon ic-accordion-custom" />
                   </div>
                   <div
-                    id="size"
+                    id="collapse-faqs-en-4"
                     className="collapse"
-                    data-bs-parent="#custom-size"
+                    data-bs-parent="#collapse-faqs-en-4"
                   >
                     <div className="accordion-body">
                       <p>
-                        If you have an issue or question that requires immediate
-                        assistance, you can click the button below to chat live
-                        with a Customer Service representative.
+                        Lab-grown diamonds don’t require mining, which significantly lowers production costs. That makes them a more affordable choice—without compromising on beauty or quality.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="widget-accordion-2 style-2">
+                  <div
+                    className="accordion-title collapsed"
+                    data-bs-target="#collapse-faqs-en-5"
+                    role="button"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="collapse-faqs-en-5"
+                  >
+                    <span className="fw-medium">
+                      5. Can I custom-design jewelry with lab-grown diamonds?
+                    </span>
+                    <span className="icon ic-accordion-custom" />
+                  </div>
+                  <div
+                    id="collapse-faqs-en-5"
+                    className="collapse"
+                    data-bs-parent="#collapse-faqs-en-5"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        Absolutely. We offer bespoke design services for engagement rings, wedding bands, and all types of diamond jewelry—tailored to your style and budget.
                       </p>
                     </div>
                   </div>

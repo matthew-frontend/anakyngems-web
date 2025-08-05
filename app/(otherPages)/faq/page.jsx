@@ -1,18 +1,18 @@
-import Footer3 from "@/components/footers/Footer3";
+import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Topbar1 from "@/components/headers/Topbar1";
 import Faqs from "@/components/otherPages/Faqs";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "Faq || Vemus - Jewelry Ecommerce React Nextjs Template",
-  description: "Vemus - Jewelry Ecommerce React Nextjs Template",
+  title:
+    "FAQs - ANAKYNGEMS",
+  description: "Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds for all occasions.",
 };
 export default function page() {
   return (
     <>
-      <Topbar1 />
-      <Header1 parentClass="tf-header" />
+      <Header1 parentClass="tf-header line-bt-2 bg-white" />
       <section className="flat-spacing-2 pb-0">
         <div className="container">
           <div className="page-title">
@@ -33,18 +33,14 @@ export default function page() {
             </div>
             <div className="box-text">
               <p className="text-main-4">
-                Got questions? We’ve got answers! Browse our FAQs to find
-                information on orders, shipping,
-                <br className="d-none d-xxl-block" />
-                returns, jewelry care, and more. If you need further assistance,
-                feel free to contact our team.
+             
               </p>
             </div>
           </div>
         </div>
       </section>
       <Faqs />
-      <Footer3 />
+      <Footer1 />
     </>
   );
 }

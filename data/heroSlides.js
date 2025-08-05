@@ -1,6 +1,6 @@
 export const secondSliderData = [
   {
-    image: "/images/slider/AW[RGB]_LOGO_ANAKYN GEMS-04.jpg",
+    image: "/images/home/hero-1.webp",
     imageWidth: 1924,
     imageHeight: 1872,
     // titleItalic: "Timless",
@@ -8,7 +8,7 @@ export const secondSliderData = [
     buttonText: false,
   },
   {
-    image: "https://vemusnextjs.vercel.app/images/slider/slider-5.jpg",
+    image: "/images/home/hero-2.webp",
     imageWidth: 1920,
     imageHeight: 1872,
     titleItalic: "Modern",

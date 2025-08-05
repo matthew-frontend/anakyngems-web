@@ -14,6 +14,7 @@ export const aboutPages = [
       { href: "/our-story", label: "Our Story" },
       { href: "/contact-us", label: "Contact Us" },
       { href: "/behind-brand", label: "Behind the Brand" },
+      { href: "/faq", label: "FAQ" },
     ],
   },
 ];

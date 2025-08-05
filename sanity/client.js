@@ -490,6 +490,10 @@ export async function getBlogPosts(limit = 12) {
   `)
 }
 
+export async function getBlogCount() {
+  return await client.fetch(`count(*[_type == "blog"])`)
+}
+
 export async function getBlogPost(slug) {
   return await client.fetch(`
     *[_type == "blog" && slug.current == $slug][0] {

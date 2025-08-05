@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }) {
     <>
       <ProductSchema product={product} />
       <BreadcrumbSchema items={breadcrumbItems} />
-      <Header1 parentClass="tf-header line-bt-2" />
+      <Header1 parentClass="tf-header line-bt-2 bg-white" />
       <div className="flat-spacing-16 pb-0">
         <div className="container">
           <div className="page-title border-0">

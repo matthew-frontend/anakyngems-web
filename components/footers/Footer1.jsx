@@ -235,6 +235,7 @@ export default function Footer1() {
                         <a href="tel:0885605601" className="text-main-4 link">
                           088 560 5601
                         </a>
+                        <a href="tel:0815455005" className="link text-main-4 d-block" style={{ width: 'max-content' }}>081 545 5005</a>
                       </li>
                       <li>
                         <a
@@ -336,6 +337,11 @@ export default function Footer1() {
                       <li>
                         <Link href={`/behind-brand`} className="text-main-4 link">
                           Behind the Brand
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/faq`} className="text-main-4 link">
+                          FAQ
                         </Link>
                       </li>
                     </ul>

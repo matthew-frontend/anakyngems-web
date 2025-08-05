@@ -112,7 +112,7 @@ export default function CountdownLuxruy() {
     };
   }, []);
   return (
-    <div className="flat-spacing">
+    <div className="flat-spacing pb-0">
       <div className="container">
         <div className="banner_countdown-v2">
           <div className="bn_image play-area-2">

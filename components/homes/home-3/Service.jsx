@@ -34,10 +34,10 @@ export default function Service() {
                 love story. */}
               </p>
               <Link
-                href={`/contact-us`}
+                href={`/faq`}
                 className="tf-btn btn-def-2 type-large px-0"
               >
-                Contact us
+                Read more
                 <i className="icon icon-arrow-right-3" />
               </Link>
             </div>
@@ -64,10 +64,10 @@ export default function Service() {
               Mix, match, and layer to create a style that's entirely your own. */}
             </p>
             <Link
-              href={`/contact-us`}
+              href={`/faq`}
               className="tf-btn btn-def-2 type-large px-0"
             >
-              Contact us
+              Read more
               <i className="icon icon-arrow-right-3" />
             </Link>
           </div>
