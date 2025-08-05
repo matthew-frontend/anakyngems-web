@@ -1,18 +1,21 @@
-import { createClient } from '@sanity/client'
-import imageUrlBuilder from '@sanity/image-url'
+import { createClient } from "@sanity/client";
+import imageUrlBuilder from "@sanity/image-url";
+
+const isServer = typeof window === "undefined";
 
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '1xk2cwmy',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: false, // Temporarily disabled for debugging - shows fresh data
-  apiVersion: '2024-01-01', // API version
-})
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "1xk2cwmy",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  useCdn: !isServer, // useCdn = false on server to get fresh data
+  apiVersion: "2024-01-01",
+  token: isServer ? process.env.SANITY_API_READ_TOKEN : undefined,
+});
 
 // Image URL builder
-const builder = imageUrlBuilder(client)
+const builder = imageUrlBuilder(client);
 
 export function urlFor(source) {
-  return builder.image(source)
+  return builder.image(source);
 }
 
 // Helper functions for fetching data
@@ -57,11 +60,12 @@ export async function getProducts() {
       variants,
       details
     }
-  `)
+  `);
 }
 
 export async function getProduct(slug) {
-  return await client.fetch(`
+  return await client.fetch(
+    `
     *[_type == "product" && slug.current == $slug][0] {
       _id,
       title,
@@ -101,7 +105,9 @@ export async function getProduct(slug) {
       variants,
       details
     }
-  `, { slug })
+  `,
+    { slug }
+  );
 }
 
 export async function getCategories() {
@@ -120,7 +126,7 @@ export async function getCategories() {
       delay,
       order
     }
-  `)
+  `);
 }
 
 // Homepage specific API functions
@@ -164,7 +170,7 @@ export async function getFeaturedProducts(limit = 8) {
       material,
       productTags
     }
-  `)
+  `);
 }
 
 export async function getRecommendedProducts(limit = 8) {
@@ -207,7 +213,7 @@ export async function getRecommendedProducts(limit = 8) {
       material,
       productTags
     }
-  `)
+  `);
 }
 
 export async function getSaleProducts(limit = 8) {
@@ -250,11 +256,12 @@ export async function getSaleProducts(limit = 8) {
       productTags,
       "discount": round((oldPrice - price) / oldPrice * 100)
     }
-  `)
+  `);
 }
 
 export async function getProductsByCategory(categorySlug, limit = 12) {
-  return await client.fetch(`
+  return await client.fetch(
+    `
     *[_type == "product" && category->slug.current == $categorySlug] [0...${limit}] {
       _id,
       title,
@@ -293,7 +300,9 @@ export async function getProductsByCategory(categorySlug, limit = 12) {
       material,
       productTags
     }
-  `, { categorySlug })
+  `,
+    { categorySlug }
+  );
 }
 
 export async function getBestSellers(limit = 6) {
@@ -336,7 +345,7 @@ export async function getBestSellers(limit = 6) {
       material,
       productTags
     }
-  `)
+  `);
 }
 
 export async function getNewArrivals(limit = 8) {
@@ -379,7 +388,7 @@ export async function getNewArrivals(limit = 8) {
       productTags,
       _createdAt
     }
-  `)
+  `);
 }
 
 export async function getHighlightProducts(limit = 3) {
@@ -422,12 +431,13 @@ export async function getHighlightProducts(limit = 3) {
       material,
       productTags
     }
-  `)
+  `);
 }
 
 // Generic function to get products by tag
 export async function getProductsByTag(tag, limit = 8) {
-  return await client.fetch(`
+  return await client.fetch(
+    `
     *[_type == "product" && $tag in productTags] | order(_createdAt desc) [0...${limit}] {
       _id,
       title,
@@ -466,7 +476,9 @@ export async function getProductsByTag(tag, limit = 8) {
       material,
       productTags
     }
-  `, { tag })
+  `,
+    { tag }
+  );
 }
 
 // Blog/Behind the Brand functions
@@ -487,15 +499,16 @@ export async function getBlogPosts(limit = 12) {
       publishedAt,
       _createdAt
     }
-  `)
+  `);
 }
 
 export async function getBlogCount() {
-  return await client.fetch(`count(*[_type == "blog"])`)
+  return await client.fetch(`count(*[_type == "blog"])`);
 }
 
 export async function getBlogPost(slug) {
-  return await client.fetch(`
+  return await client.fetch(
+    `
     *[_type == "blog" && slug.current == $slug][0] {
       _id,
       title,
@@ -519,7 +532,9 @@ export async function getBlogPost(slug) {
       publishedAt,
       _createdAt
     }
-  `, { slug })
+  `,
+    { slug }
+  );
 }
 
 export async function getBehindBrandPosts(limit = 12) {
@@ -539,5 +554,5 @@ export async function getBehindBrandPosts(limit = 12) {
       publishedAt,
       _createdAt
     }
-  `)
+  `);
 }
