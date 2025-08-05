@@ -556,3 +556,8 @@ export async function getBehindBrandPosts(limit = 12) {
     }
   `);
 }
+
+// Alias for sitemap compatibility
+export async function getBlogs() {
+  return await getBehindBrandPosts();
+}
