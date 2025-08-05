@@ -37,10 +37,10 @@ export default function BadgeField(props) {
   }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])
 
   useEffect(() => {
-    // Add small delay to prevent immediate updates after publish
-    const timer = setTimeout(updateBadge, 100)
+    // Add debouncing to prevent too frequent updates
+    const timer = setTimeout(updateBadge, 500)
     return () => clearTimeout(timer)
-  }, [updateBadge])
+  }, [badgeType, price, oldPrice])
 
   return (
     <div style={{ 

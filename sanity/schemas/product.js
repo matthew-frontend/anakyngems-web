@@ -40,8 +40,15 @@ export default {
       title: "ราคาเดิมของผลิตภัณฑ์",
       type: "number",
       description:
-        "ถ้าใส่ราคาเดิม จะต้องเลือกประเภทป้ายของสินค้าเป็น Sale (Auto-calculate % OFF) ระบบจะคำนวน % ที่ลดราคา",
-      validation: (Rule) => Rule.positive(),
+        "ถ้าใส่ราคาเดิม จะอัตโนมัติเลือกประเภทป้ายเป็น Sale และเพิ่มแท็ก For Sale",
+      validation: (Rule) => 
+        Rule.positive().custom((oldPrice, context) => {
+          const price = context.document?.price;
+          if (oldPrice && price && oldPrice <= price) {
+            return 'ราคาเดิมต้องมากกว่าราคาปัจจุบัน (Old price must be greater than current price)';
+          }
+          return true;
+        })
     },
     {
       name: "images",
@@ -75,6 +82,7 @@ export default {
       name: "badgeType",
       title: "ประเภทป้ายของผลิตภัณฑ์ (ตัวเลือก)",
       type: "string",
+      description: "ถ้าใส่ราคาเดิม (oldPrice) ควรเลือก 'Sale (Auto-calculate % OFF)'",
       options: {
         list: [
           { title: "ไม่มีป้าย (No badge)", value: null },
@@ -151,7 +159,7 @@ export default {
         ],
       },
       description:
-        "เลือกแท็กหนึ่งรายการหรือมากกว่าเพื่อจัดหมวดหมู่ผลิตภัณฑ์นี้",
+        "เลือกแท็กหนึ่งรายการหรือมากกว่าเพื่อจัดหมวดหมู่ผลิตภัณฑ์นี้ (ถ้าใส่ราคาเดิม ควรเลือก 'For Sale')",
     },
     {
       name: "details",

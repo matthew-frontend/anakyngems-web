@@ -34,10 +34,10 @@ export default function VariantTextField(props) {
   }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])
 
   useEffect(() => {
-    // Add small delay to prevent immediate updates after publish
-    const timer = setTimeout(updateVariantText, 100)
+    // Add debouncing to prevent too frequent updates
+    const timer = setTimeout(updateVariantText, 500)
     return () => clearTimeout(timer)
-  }, [updateVariantText])
+  }, [badgeType, price, oldPrice])
 
   return (
     <div style={{ 

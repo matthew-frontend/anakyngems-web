@@ -12,47 +12,21 @@ export default defineConfig({
   dataset: "production",
   apiVersion: "2024-01-01",
 
-  basePath: "/admin", // Admin panel will be at /admin
+  basePath: "/admin", // Will be accessed via kosol.anakyngems.com/admin
 
   theme: darkBlueTheme,
 
   plugins: [
     structureTool({
-      structure: (S, context) => {
-        // Function to get categories dynamically
-        const getCategoryItems = async () => {
-          try {
-            const categories = await context.getClient({ apiVersion: '2024-01-01' }).fetch(
-              '*[_type == "category"] | order(title asc)'
-            );
-            
-            return categories.map(category => 
-              S.listItem()
-                .id(category._id)
-                .title(category.title)
-                .child(
-                  S.documentTypeList('product')
-                    .title(`${category.title} Products`)
-                    .filter('category._ref == $categoryId')
-                    .params({ categoryId: category._id })
-                )
-            );
-          } catch (error) {
-            console.error('Error fetching categories:', error);
-            return [];
-          }
-        };
-
+      structure: (S) => {
         return S.list()
           .title('Content')
           .items([
-            // Products organized by category
+            // Products - simplified structure
             S.listItem()
               .title('Products')
-              .child(async () => {
-                const categoryItems = await getCategoryItems();
-                
-                return S.list()
+              .child(
+                S.list()
                   .title('Products by Category')
                   .items([
                     // All products
@@ -69,8 +43,38 @@ export default defineConfig({
                     
                     S.divider(),
                     
-                    // Dynamic categories
-                    ...categoryItems,
+                    // Static category filters (faster)
+                    S.listItem()
+                      .title('earring')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('Earring Products')
+                          .filter('category->title == "earring"')
+                      ),
+                    
+                    S.listItem()
+                      .title('necklace')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('Necklace Products')
+                          .filter('category->title == "necklace"')
+                      ),
+                    
+                    S.listItem()
+                      .title('ring')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('Ring Products')
+                          .filter('category->title == "ring"')
+                      ),
+                    
+                    S.listItem()
+                      .title('new in')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('New In Products')
+                          .filter('category->title == "new in"')
+                      ),
                     
                     S.divider(),
                     
@@ -106,8 +110,8 @@ export default defineConfig({
                           .title('Highlight Products')
                           .filter('"highlight_products" in productTags')
                       ),
-                  ]);
-              }),
+                  ])
+              ),
             
             // Categories
             S.documentTypeListItem('category').title('Categories'),

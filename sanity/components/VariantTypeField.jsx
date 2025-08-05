@@ -31,10 +31,10 @@ export default function VariantTypeField(props) {
   }, [badgeType, value, onChange, readOnly, isPublishable])
 
   useEffect(() => {
-    // Add small delay to prevent immediate updates after publish
-    const timer = setTimeout(updateVariantType, 100)
+    // Add debouncing to prevent too frequent updates  
+    const timer = setTimeout(updateVariantType, 300)
     return () => clearTimeout(timer)
-  }, [updateVariantType])
+  }, [badgeType])
 
   return (
     <div style={{ 

@@ -4,7 +4,9 @@ export default function DiscountMarquee({
   parentClass = "marquee-sale type-2 infiniteSlide infiniteSlider2",
   variantText = "30% OFF, Selling fast",
 }) {
-  const parts = variantText.includes(', ') ? variantText.split(', ') : [variantText, "Selling fast"];
+  // Handle null/undefined variantText
+  const safeVariantText = variantText || "30% OFF, Selling fast";
+  const parts = safeVariantText.includes(', ') ? safeVariantText.split(', ') : [safeVariantText, "Selling fast"];
   return (
     <div className={parentClass + " infiniteSlider2"}>
       {/* clone 1 */}

@@ -88,7 +88,7 @@ export default function Nav({ megaMarginRight = true }) {
               <div className="box_image--V01 h-100 hover-img">
                 <div className="image h-100 img-style">
                   <Image
-                    src="https://vemusnextjs.vercel.app/images/collections/cls-header.jpg"
+                    src="/images/home/cls-header.webp"
                     alt=""
                     className="lazyload"
                     width={1188}
