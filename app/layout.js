@@ -15,9 +15,9 @@ export const metadata = {
     template: "%s | ANAKYNGEMS อนาคินเจม",
   },
   description:
-    "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง จริยธรรม แหวนหมั้น แหวนแต่งงาน แหวนเพชร สร้อยคอ กำไล ต่างหู ต่างหูเพชร ส่งฟรี | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
+    "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง แหวนหมั้น แหวนแต่งงาน แหวนเพชร ต่างหู ต่างหูเพชร | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
   keywords:
-    "อนาคินเจม, ANAKYNGEMS, เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนแต่งงาน, แหวนเพชร, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, certified diamonds",
+    "อนาคินเจม, ANAKYNGEMS, เครื่องประดับเพชร, เพชรแล็บโกรน, เพชร, แหวนหมั้น, แหวนแต่งงาน, แหวนเพชร, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, certified diamonds",
   openGraph: {
     title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
     description:
@@ -29,7 +29,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+        alt: "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
       },
     ],
     locale: "en_US",
@@ -37,23 +37,49 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANAKYNGEMS - Lab Grown Diamond Jewellery",
+    title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
     description:
-      "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
-    images: ["https://www.anakyngems.com/images/og-image.jpg"],
+      "Lab Grown Diamond Jewellery เครื่องประดับเพชรแล็บโกรน คุณภาพสูง",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+      },
+    ],
   },
   robots: {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-96x96.png", // fallback for some older browsers
+    apple: "/apple-touch-icon.png", // สำหรับ iOS
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.svg", // หากรองรับ SVG
+      },
+      {
+        rel: "icon",
+        url: "/web-app-manifest-192x192.png",
+      },
+      {
+        rel: "icon",
+        url: "/web-app-manifest-512x512.png",
+      },
+    ],
+  },
+  viewport:
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -69,7 +95,6 @@ export default function RootLayout({ children }) {
         <LayoutWrapper>
           <Context>
             <div id="wrapper">{children}</div>
-
             <ScrollTop />
             <MobileMenu />
             <QuickView />
