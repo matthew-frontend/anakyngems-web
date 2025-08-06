@@ -7,8 +7,43 @@ import Intro from "@/components/otherPages/our-story/Intro";
 import React from "react";
 
 export const metadata = {
-  title: "Our Story - ANAKYNGEMS",
-  description: "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
+  title: "เรื่องราวของเรา - ANAKYNGEMS อนาคินเจม | Lab Grown Diamond Jewellery",
+  description: "รู้จัก ANAKYNGEMS อนาคินเจม แบรนด์เครื่องประดับเพชรแล็บโกรนที่ก่อตั้งขึ้นด้วยความเชื่อในความงามที่ยั่งยืน ความหรูหราที่เรียบง่าย และจริยธรรมในทุกขั้นตอน | Discover our story and what makes ANAKYNGEMS a trusted name in ethical luxury.",
+  keywords:
+    "เรื่องราวของแบรนด์, ANAKYNGEMS, อนาคินเจม, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
+  openGraph: {
+    title: "Our Story - ANAKYNGEMS อนาคินเจม | เครื่องประดับเพชรแล็บโกรน",
+    description: "ANAKYNGEMS เริ่มต้นจากความตั้งใจที่จะสร้างเครื่องประดับที่สวยงาม ยั่งยืน และมีจริยธรรมในทุกขั้นตอน | Explore how our vision became reality.",
+    url: "https://www.anakyngems.com/our-story",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+      },
+    ],
+    locale: "th_TH",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Story - ANAKYNGEMS",
+    description:
+      "เรียนรู้เกี่ยวกับแนวคิดเบื้องหลัง ANAKYNGEMS เครื่องประดับเพชรแล็บโกรนคุณภาพสูง ที่ออกแบบด้วยหัวใจและจริยธรรม",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Our Story - ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "https://www.anakyngems.com/our-story",
+  },
 };
 export default function page() {
   return (

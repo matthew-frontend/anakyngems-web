@@ -1,8 +1,9 @@
 import { getProducts, getCategories, getBlogs } from "@/sanity/client";
 
 function safeDate(dateString) {
+  if (!dateString) return new Date();
   try {
-    const date = new Date(dateString || "");
+    const date = new Date(dateString);
     return isNaN(date.getTime()) ? new Date() : date;
   } catch {
     return new Date();
@@ -14,9 +15,9 @@ export default async function sitemap() {
 
   try {
     const [products, categories, blogs] = await Promise.all([
-      getProducts(),
-      getCategories(),
-      getBlogs(),
+      getProducts().catch(() => []),
+      getCategories().catch(() => []),
+      getBlogs().catch(() => []),
     ]);
 
     const staticPages = [

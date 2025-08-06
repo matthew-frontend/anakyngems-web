@@ -6,9 +6,11 @@ const isServer = typeof window === "undefined";
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "1xk2cwmy",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  useCdn: !isServer, // useCdn = false on server to get fresh data
+  useCdn: true,
   apiVersion: "2024-01-01",
-  token: isServer ? process.env.SANITY_API_READ_TOKEN : undefined,
+  token: process.env.SANITY_API_READ_TOKEN,
+  perspective: 'published',
+  ignoreBrowserTokenWarning: true,
 });
 
 // Image URL builder

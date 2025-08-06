@@ -11,17 +11,18 @@ import Search from "@/components/modals/Search";
 export const metadata = {
   title: {
     default:
-      "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+      "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรนคุณภาพสูง | Lab Grown Diamond Jewellery",
     template: "%s | ANAKYNGEMS อนาคินเจม",
   },
   description:
-    "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง แหวนหมั้น แหวนแต่งงาน แหวนเพชร ต่างหู ต่างหูเพชร | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
+    "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS อนาคินเจม แหวนหมั้น แหวนแต่งงาน แหวนเพชร ต่างหูเพชร ดีไซน์หรูหรา ทันสมัย ยั่งยืน และเป็นมิตรต่อสิ่งแวดล้อม | Discover high-quality lab grown diamond jewelry from ANAKYNGEMS – elegant, sustainable, and ethically crafted for every occasion.",
   keywords:
-    "อนาคินเจม, ANAKYNGEMS, เครื่องประดับเพชร, เพชรแล็บโกรน, เพชร, แหวนหมั้น, แหวนแต่งงาน, แหวนเพชร, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, certified diamonds",
+    "ANAKYNGEMS, อนาคินเจม, เพชรแล็บ, เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนแต่งงาน, แหวนเพชร, ต่างหูเพชร, กำไลเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, sustainable jewelry, ethical diamonds, lab created diamonds, eco-friendly jewelry, conflict-free diamonds, luxury jewelry",
   openGraph: {
-    title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
+    title:
+      "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรนคุณภาพสูง | Lab Grown Diamond Jewellery",
     description:
-      "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง | Discover beautiful lab grown diamond jewelry at ANAKYNGEMS. High quality, sustainable, and ethically sourced diamonds.",
+      "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรนคุณภาพสูง ดีไซน์สวยหรู สวมใส่ได้ทุกวัน เหมาะสำหรับทุกโอกาส | Discover elegant, sustainable diamond jewelry from ANAKYNGEMS.",
     url: "https://anakyngems.com",
     siteName: "ANAKYNGEMS",
     images: [
@@ -37,9 +38,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
+    title:
+      "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรนคุณภาพสูง | Lab Grown Diamond Jewellery",
     description:
-      "Lab Grown Diamond Jewellery เครื่องประดับเพชรแล็บโกรน คุณภาพสูง",
+      "เครื่องประดับเพชรแล็บโกรนจาก ANAKYNGEMS อนาคินเจม หรูหรา ยั่งยืน ใส่ได้ทุกวัน เหมาะกับทุกโอกาส | Lab Grown Diamond Jewelry for every moment.",
     images: [
       {
         url: "https://www.anakyngems.com/images/og-image.jpg",
