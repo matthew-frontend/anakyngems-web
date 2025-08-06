@@ -3,7 +3,6 @@ import React from "react";
 export default function DescriptionSideAccordion({ product }) {
   // Get the first variant for additional information
   const variant = product?.variants?.[0] || {};
-  // console.log('Product data:', product);
 
   return (
     <div className="tf-product-accordion">

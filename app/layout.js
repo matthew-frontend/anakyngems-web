@@ -74,8 +74,8 @@ export const metadata = {
       },
     ],
   },
-  viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+  // viewport:
+  //   "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
 export default function RootLayout({ children }) {
@@ -91,6 +91,24 @@ export default function RootLayout({ children }) {
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          key="ldjson-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "ANAKYNGEMS",
+              url: "https://www.anakyngems.com",
+              logo: "https://www.anakyngems.com/images/og-image.jpg",
+              sameAs: [
+                "https://www.facebook.com/anakyngems",
+                "https://www.instagram.com/anakyngems",
+              ],
+            }),
+          }}
         />
       </head>
       <body>

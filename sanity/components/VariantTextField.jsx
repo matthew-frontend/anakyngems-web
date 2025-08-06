@@ -28,7 +28,7 @@ export default function VariantTextField(props) {
       try {
         onChange(variantText ? set(variantText) : unset())
       } catch (error) {
-        console.log('VariantTextField - Cannot update:', error.message)
+        // Cannot update field
       }
     }
   }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])

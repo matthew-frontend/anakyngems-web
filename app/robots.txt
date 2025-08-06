@@ -12,8 +12,8 @@ Disallow: /temp/
 Disallow: /404/
 Disallow: /500/
 
-# Block admin subdomain from main robots
-Disallow: https://kosol.anakyngems.com/
+# Block admin subdomain from main robots  
+# Note: kosol.anakyngems.com should have its own robots.txt
 
 # Allow important directories
 Allow: /products/

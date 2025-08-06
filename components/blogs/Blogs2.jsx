@@ -113,7 +113,11 @@ export default function Blogs2() {
                       key={entry._id}
                     >
                       <div className="entry_image">
-                        <Link href={`/behind-brand/${entry.slug.current}`} className="image img-style">
+                        <Link 
+                          href={`/behind-brand/${entry.slug.current}`} 
+                          className="image img-style"
+                          aria-label={`Read article: ${entry.title}`}
+                        >
                           <Image
                             src={imageUrl}
                             alt={entry.title}
@@ -128,6 +132,7 @@ export default function Blogs2() {
                               key={i}
                               href={`/behind-brand/${entry.slug.current}`}
                               className="name-tag text-caption link"
+                              aria-label={`Read article about ${tag}: ${entry.title}`}
                             >
                               {tag}
                             </Link>
@@ -147,6 +152,7 @@ export default function Blogs2() {
                             <Link
                               href={`/behind-brand/${entry.slug.current}`}
                               className="link fw-medium text-black text-uppercase"
+                              aria-label={`Read full article: ${entry.title}`}
                             >
                               {entry.title}
                             </Link>
@@ -163,9 +169,10 @@ export default function Blogs2() {
                           <Link
                             href={`/behind-brand/${entry.slug.current}`}
                             className="tf-btn-line text-uppercase lh-28 fw-normal"
+                            aria-label={`Read more about: ${entry.title}`}
                           >
                             READ MORE
-                            <i className="icon-arrow-top-right fs-10" />
+                            <i className="icon-arrow-top-right fs-10" aria-hidden="true" />
                           </Link>
                         </div>
                       </div>
@@ -174,7 +181,7 @@ export default function Blogs2() {
                 })}
                 <div className="wd-full">
                   <div className="wg-pagination">
-                    <a href="#" className="tf-btn-line style-line-2">
+                    <a href="#" className="tf-btn-line style-line-2" aria-label="Go to previous page">
                       <span className="text-body">PREV</span>
                     </a>
                     <ul className="pagition-list">
@@ -182,17 +189,17 @@ export default function Blogs2() {
                         <p className="pagination-item active">1</p>
                       </li>
                       <li>
-                        <a href="#" className="pagination-item link">
+                        <a href="#" className="pagination-item link" aria-label="Go to page 2">
                           2
                         </a>
                       </li>
                       <li>
-                        <a href="#" className="pagination-item link">
+                        <a href="#" className="pagination-item link" aria-label="Go to page 3">
                           3
                         </a>
                       </li>
                     </ul>
-                    <a href="#" className="tf-btn-line style-line-2">
+                    <a href="#" className="tf-btn-line style-line-2" aria-label="Go to next page">
                       <span className="text-body">NEXT</span>
                     </a>
                   </div>

@@ -6,12 +6,50 @@ import Link from "next/link";
 import { getBlogCount } from "@/sanity/client";
 
 export const metadata = {
-  title:
-    "Behind the Brand - ANAKYNGEMS",
-  description: "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
+  title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+  description:
+    "ติดตามอ่านบทความจาก ANAKYNGEMS อนาคินเจม ที่นำเสนอไลฟ์สไตล์ แรงบันดาลใจ ความรู้เกี่ยวกับเพชรแล็บ และเบื้องหลังของแบรนด์เครื่องประดับแล็บโกรนคุณภาพสูง",
+  keywords:
+    "ANAKYNGEMS, อนาคินเจม, บทความ, blogs, เพชรแล็บ, เพชรแล็บโกรน, เครื่องประดับ, แบรนด์เพชร, เครื่องประดับยั่งยืน, ความรู้เพชร, lab grown diamonds, diamond jewelry blog, sustainable jewelry, brand story",
+  openGraph: {
+    title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+    description:
+      "อ่านบทความเจาะลึกเกี่ยวกับเพชรแล็บ ไลฟ์สไตล์ และเรื่องราวเบื้องหลังแบรนด์ ANAKYNGEMS",
+    url: "https://www.anakyngems.com/behind-brand",
+    siteName: "ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS Blog - Behind the Brand",
+      },
+    ],
+    locale: "th_TH",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+    description:
+      "อ่านบทความเจาะลึกเกี่ยวกับเพชรแล็บ ไลฟ์สไตล์ และเรื่องราวเบื้องหลังแบรนด์ ANAKYNGEMS",
+    images: [
+      {
+        url: "https://www.anakyngems.com/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "ANAKYNGEMS Blog - Behind the Brand",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 export default async function page() {
-  const blogCount = await getBlogCount();
+  const blogCount = await getBlogCount().catch(() => 0);
   return (
     <>
       <Header1 parentClass="tf-header line-bt-2 bg-white" />

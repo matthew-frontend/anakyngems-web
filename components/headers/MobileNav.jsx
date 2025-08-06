@@ -16,34 +16,11 @@ export default function MobileNav() {
     <>
       {" "}
       <li className="nav-mb-item">
-        <a
-          href="#dropdown-menu-home"
-          className="collapsed mb-menu-link"
-          data-bs-toggle="collapse"
-          aria-expanded="true"
-          aria-controls="dropdown-menu-home"
+        <Link href="/"
+          className="mb-menu-link"
         >
-          <span>Home</span>
-          <span className="btn-open-sub" />
-        </a>
-        <div id="dropdown-menu-home" className="collapse">
-          <ul className="sub-nav-menu">
-            {demoPages.map((page, index) => (
-              <li key={index}>
-                <Link href={page.href} className="sub-nav-link">
-                  {page.name}
-                  {page.label && (
-                    <span
-                      className={`demo-label ${page.labelType || ""}`.trim()}
-                    >
-                      {page.label}
-                    </span>
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+          Home
+        </Link>
       </li>
       <li className="nav-mb-item">
         <a

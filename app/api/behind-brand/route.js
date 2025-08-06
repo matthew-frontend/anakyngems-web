@@ -8,7 +8,7 @@ export async function GET(request) {
     const slug = searchParams.get('slug');
 
     if (slug) {
-      const post = await getBlogPost(slug);
+      const post = await getBlogPost(slug).catch(() => null);
       if (!post) {
         return NextResponse.json(
           { success: false, error: 'Blog post not found' },
@@ -21,7 +21,7 @@ export async function GET(request) {
       });
     }
 
-    const posts = await getBehindBrandPosts(parseInt(limit));
+    const posts = await getBehindBrandPosts(parseInt(limit)).catch(() => []);
     
     return NextResponse.json({
       success: true,

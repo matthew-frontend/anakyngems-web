@@ -155,10 +155,11 @@ export default function Footer1() {
                 <div className="box-title">
                   <Link href={`/`} className="logo-site d-inline-block">
                     <Image
-                      alt=""
+                      alt="ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery Logo"
                       src="/images/logo/logo-footer.png"
                       width={122}
                       height={31}
+                      style={{ height: 'auto' }}
                     />
                   </Link>
                   <p className="text-main-5 lt-sp-nor">

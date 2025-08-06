@@ -31,7 +31,7 @@ export default function BadgeField(props) {
       try {
         onChange(badgeText ? set(badgeText) : unset())
       } catch (error) {
-        console.log('BadgeField - Cannot update:', error.message)
+        // Cannot update field
       }
     }
   }, [badgeType, price, oldPrice, value, onChange, readOnly, isPublishable])

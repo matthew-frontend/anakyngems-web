@@ -40,7 +40,6 @@ export default function Details3({ product }) {
         });
         return;
       } catch (error) {
-        console.log('Share cancelled');
         return;
       }
     }

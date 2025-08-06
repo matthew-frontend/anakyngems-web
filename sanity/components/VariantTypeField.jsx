@@ -25,7 +25,7 @@ export default function VariantTypeField(props) {
       try {
         onChange(variantType ? set(variantType) : unset())
       } catch (error) {
-        console.log('VariantTypeField - Cannot update:', error.message)
+        // Cannot update field
       }
     }
   }, [badgeType, value, onChange, readOnly, isPublishable])

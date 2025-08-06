@@ -11,7 +11,7 @@ export default function MobileMenu() {
       <div className="mb-canvas-content">
         <div className="mb-body">
           <div className="mb-content-top">
-            <form className="form-search" onSubmit={(e) => e.preventDefault()}>
+            {/* <form className="form-search mb-0" onSubmit={(e) => e.preventDefault()}>
               <fieldset>
                 <input
                   type="text"
@@ -27,8 +27,8 @@ export default function MobileMenu() {
               <button type="submit" className="link">
                 <i className="icon icon-search" />
               </button>
-            </form>
-            <ul className="nav-ul-mb" id="wrapper-menu-navigation">
+            </form> */}
+            <ul className="nav-ul-mb mt-2" id="wrapper-menu-navigation">
               <MobileNav />
             </ul>
           </div>
