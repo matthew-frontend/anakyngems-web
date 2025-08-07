@@ -86,7 +86,7 @@ export default function BlogSingle() {
       });
 
   const imageUrl = blogPost.mainImage?.asset?.url 
-    ? urlFor(blogPost.mainImage).width(2176).height(790).url()
+    ? urlFor(blogPost.mainImage).width(1200).url() // ลบ height() ออกให้เป็น responsive
     : 'https://vemusnextjs.vercel.app/images/blog/blog-single.jpg';
 
   const components = {
@@ -156,10 +156,14 @@ export default function BlogSingle() {
               <div className="entry_image">
                 <Image
                   src={imageUrl}
-                  alt={blogPost.title}
+                  alt={blogPost.mainImage?.alt || blogPost.title}
                   className="lazyload"
-                  width={2176}
-                  height={790}
+                  width={1200}
+                  height={0} // ให้ Next.js คำนวณความสูงตามอัตราส่วนจริงของรูป
+                  style={{
+                    width: '100%',
+                    height: 'auto', // รักษาอัตราส่วนเดิมของรูป
+                  }}
                 />
               </div>
 
@@ -172,33 +176,7 @@ export default function BlogSingle() {
                 </div>
               )}
 
-              {blogPost.galleryImages && blogPost.galleryImages.length > 0 && (
-                <div className="entry_image type-group tf-grid-layout sm-col-2">
-                  {blogPost.galleryImages.map((galleryImage, index) => (
-                    <div key={index} className="image">
-                      <Image
-                        src={urlFor(galleryImage).width(1068).height(716).url()}
-                        alt={galleryImage.alt || `Gallery image ${index + 1}`}
-                        className="lazyload"
-                        width={1068}
-                        height={716}
-                      />
-                    </div>
-                  ))}
-                  
-                  {/* Fill remaining slots with placeholder if less than 2 images */}
-                  {blogPost.galleryImages.length === 1 && (
-                    <div className="image">
-                      <div 
-                        className="lazyload bg-light d-flex align-items-center justify-content-center text-muted"
-                        style={{width: '100%', height: '716px', minHeight: '400px'}}
-                      >
-                        <p>No additional image</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
+           
 
               <div className="bottom">
                 <div className="entry_media">
@@ -251,7 +229,40 @@ export default function BlogSingle() {
               </div>
             </div>
           </div>
-          <div className="blog-sidebar sidebar-content-wrap d-none d-lg-block sticky-top"></div>
+          <div className="blog-sidebar sidebar-content-wrap d-none d-lg-block sticky-top">
+             {blogPost.galleryImages && blogPost.galleryImages.length > 0 && (
+                <div className="entry_image type-group">
+                  {blogPost.galleryImages.map((galleryImage, index) => (
+                    <div key={index} className="image">
+                      <Image
+                        src={urlFor(galleryImage).url()}
+                        alt={galleryImage.alt || `Gallery image ${index + 1}`}
+                        className="lazyload"
+                        width={1068}
+                        height={0}
+                         style={{
+                          width: '100%',
+                          height: 'auto', // รักษาอัตราส่วนเดิมของรูป
+                          marginBottom: 15
+                         }}
+                      />
+                    </div>
+                  ))}
+                  
+                  {/* Fill remaining slots with placeholder if less than 2 images */}
+                  {/* {blogPost.galleryImages.length === 1 && (
+                    <div className="image">
+                      <div 
+                        className="lazyload bg-light d-flex align-items-center justify-content-center text-muted"
+                        style={{width: '100%', height: '716px', minHeight: '400px'}}
+                      >
+                        <p>No additional image</p>
+                      </div>
+                    </div>
+                  )} */}
+                </div>
+              )}
+          </div>
         </div>
       </div>
     </section>

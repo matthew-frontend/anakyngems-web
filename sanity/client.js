@@ -495,7 +495,8 @@ export async function getBlogPosts(limit = 12) {
         asset->{
           _id,
           url
-        }
+        },
+        alt
       },
       tags,
       publishedAt,
@@ -521,7 +522,8 @@ export async function getBlogPost(slug) {
         asset->{
           _id,
           url
-        }
+        },
+        alt
       },
       galleryImages[]{
         asset->{
@@ -550,7 +552,8 @@ export async function getBehindBrandPosts(limit = 12) {
         asset->{
           _id,
           url
-        }
+        },
+        alt
       },
       tags,
       publishedAt,

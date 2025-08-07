@@ -8,7 +8,7 @@
 
   .entry_image {
     position: relative;
-
+    aspect-ratio: calc(486 / 389);
     .image {
       display: flex;
     }
@@ -85,9 +85,9 @@
       left: 16px;
     }
 
-    .image {
-      aspect-ratio: calc(486 / 389);
-    }
+    // .image {
+    //   aspect-ratio: calc(486 / 389);
+    // }
 
     .meta-list {
       gap: 10px;
@@ -241,7 +241,7 @@
   }
 
   @include res(lg, min) {
-    max-width: 366px;
+    max-width: 400px;
     margin-left: auto;
     width: 100%;
   }
@@ -319,7 +319,7 @@
 
   .entry_image {
     img {
-      max-height: 356px;
+      // max-height: 356px;
       object-fit: cover;
     }
   }

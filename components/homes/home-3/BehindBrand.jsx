@@ -88,7 +88,7 @@ export default function BehindBrand() {
           >
             {blogEntries.map((entry) => {
               const imageUrl = entry.mainImage?.asset?.url 
-                ? urlFor(entry.mainImage).width(772).height(776).url()
+                ? urlFor(entry.mainImage).width(800).url()
                 : 'https://vemusnextjs.vercel.app/images/blog/blog-8.jpg';
               
               const publishedDate = entry.publishedAt 
@@ -110,15 +110,20 @@ export default function BehindBrand() {
                       <Link href={`/behind-brand/${entry.slug.current}`} className="image img-style4">
                         <Image
                           src={imageUrl}
-                          alt={entry.title}
+                          alt={entry.mainImage?.alt || entry.title}
                           className="lazyload"
                           width={772}
-                          height={776}
+                          height={400}
                           loading="lazy"
+                          style={{
+                            width: '100%',
+                            height: '400px',
+                            objectFit: 'cover'
+                          }}
                         />
                       </Link>
                       <div className="entry_tag">
-                        {entry.tags?.map((tag, tagIndex) => (
+                        {entry.tags?.slice(0, 2).map((tag, tagIndex) => (
                           <Link
                             key={tagIndex}
                             href={`/behind-brand/${entry.slug.current}`}
