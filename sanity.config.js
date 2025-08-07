@@ -53,14 +53,6 @@ export default defineConfig({
                       ),
                     
                     S.listItem()
-                      .title('necklace')
-                      .child(
-                        S.documentTypeList('product')
-                          .title('Necklace Products')
-                          .filter('category->title == "necklace"')
-                      ),
-                    
-                    S.listItem()
                       .title('ring')
                       .child(
                         S.documentTypeList('product')
@@ -69,11 +61,11 @@ export default defineConfig({
                       ),
                     
                     S.listItem()
-                      .title('new in')
+                      .title('couple')
                       .child(
                         S.documentTypeList('product')
-                          .title('New In Products')
-                          .filter('category->title == "new in"')
+                          .title('Couple Products')
+                          .filter('category->title == "couple"')
                       ),
                     
                     S.divider(),
