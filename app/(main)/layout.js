@@ -7,6 +7,8 @@ import Context from "@/context/Context";
 import MobileMenu from "@/components/modals/MobileMenu";
 import QuickView from "@/components/modals/QuickView";
 import Search from "@/components/modals/Search";
+import SeoJsonLd from "./SeoJsonLd";
+import GTM from "./GTM";
 
 export const metadata = {
   title: {
@@ -80,14 +82,18 @@ export const metadata = {
 
 export default function MainLayout({ children }) {
   return (
-    <LayoutWrapper>
-      <Context>
-        <div id="wrapper">{children}</div>
-        <ScrollTop />
-        <MobileMenu />
-        <QuickView />
-        <Search />
-      </Context>
-    </LayoutWrapper>
+    <>
+      <GTM />
+      <SeoJsonLd />
+      <LayoutWrapper>
+        <Context>
+          <div id="wrapper">{children}</div>
+          <ScrollTop />
+          <MobileMenu />
+          <QuickView />
+          <Search />
+        </Context>
+      </LayoutWrapper>
+    </>
   );
 }
