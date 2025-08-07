@@ -67,10 +67,10 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=new-in"
+                      href="/products?category=couple"
                       className="menu-link-text link"
                     >
-                      New In
+                      Couple
                     </Link>
                   </li>
                   <li>

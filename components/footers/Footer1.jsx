@@ -302,8 +302,8 @@ export default function Footer1() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=new-in`} className="text-main-4 link">
-                          New In
+                        <Link href={`/products?category=couple`} className="text-main-4 link">
+                          Couple
                         </Link>
                       </li>
                       <li>

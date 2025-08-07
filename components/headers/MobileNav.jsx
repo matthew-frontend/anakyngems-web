@@ -51,8 +51,8 @@ export default function MobileNav() {
               </Link>
             </li>
             <li>
-              <Link href="/products?category=new-in" className="sub-nav-link">
-                New In
+              <Link href="/products?category=couple" className="sub-nav-link">
+                Couple
               </Link>
             </li>
             <li>
