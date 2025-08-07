@@ -1,42 +1,38 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const { pathname } = request.nextUrl
-  const hostname = request.headers.get('host') || ''
-  
-  // Check if this is the admin subdomain
-  if (hostname.startsWith('kosol.')) {
-    // Allow access to admin routes only from kosol subdomain
-    if (pathname.startsWith('/admin')) {
-      return NextResponse.next()
+  const { pathname } = request.nextUrl;
+  const hostname = request.headers.get("host") || "";
+
+  // กรณีเข้า subdomain admin
+  if (hostname.startsWith("kosol.")) {
+    const response = NextResponse.next();
+
+    // ✅ เพิ่ม header สำหรับ layout เช็กว่าเป็น admin route
+    if (pathname.startsWith("/admin")) {
+      response.headers.set("x-admin-route", "true");
+      return response;
     }
-    
-    // Redirect root of kosol subdomain to admin
-    if (pathname === '/') {
-      return NextResponse.redirect(new URL('/admin', request.url))
+
+    // redirect root ของ kosol ไป /admin
+    if (pathname === "/") {
+      return NextResponse.redirect(new URL("/admin", request.url));
     }
-    
-    // Block other routes on kosol subdomain
-    return NextResponse.redirect(new URL('https://www.anakyngems.com', request.url))
+
+    // redirect อื่นๆ กลับ main site
+    return NextResponse.redirect(
+      new URL("https://www.anakyngems.com", request.url)
+    );
   }
-  
-  // Block admin access from main domain
-  if (pathname.startsWith('/admin') && !hostname.startsWith('kosol.')) {
-    return NextResponse.redirect(new URL('/', request.url))
+
+  // Block admin access จาก main domain (ไม่ใช่ subdomain kosol) - เพื่อความปลอดภัย
+  if (pathname.startsWith("/admin") && !hostname.startsWith("kosol.")) {
+    return NextResponse.redirect(new URL("/", request.url));
   }
-  
-  return NextResponse.next()
+
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};

@@ -16,8 +16,7 @@ import CollectionsSlide from "@/components/homes/home-3/CollectionsSlide";
 import { getHomepageData, getHomepageMetadata } from "@/lib/homepage-data";
 import Service from "@/components/homes/home-3/Service";
 
-// Enable Static Generation with ISR (revalidate every hour)
-export const revalidate = 3600; // 1 hour
+export const revalidate = 3600; 
 
 // Generate metadata
 export async function generateMetadata() {
@@ -25,7 +24,6 @@ export async function generateMetadata() {
 }
 
 export default async function Home() {
-  // Fetch all data at page level using centralized function
   const pageData = await getHomepageData();
   return (
     <>

@@ -1,4 +1,4 @@
-import "./layout.css";
+import "./admin.css";
 
 export const metadata = {
   title: "ANAKYNGEMS Admin - Content Management System",
