@@ -6,15 +6,15 @@ import Link from "next/link";
 import { getBlogCount } from "@/sanity/client";
 
 export const metadata = {
-  title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+  title: "บทความจาก ANAKYN GEMS",
   description:
-    "ติดตามอ่านบทความจาก ANAKYNGEMS อนาคินเจม ที่นำเสนอไลฟ์สไตล์ แรงบันดาลใจ ความรู้เกี่ยวกับเพชรแล็บ และเบื้องหลังของแบรนด์เครื่องประดับแล็บโกรนคุณภาพสูง",
+    "ติดตามอ่านบทความจาก ANAKYN GEMS อนาคินเจม ที่นำเสนอไลฟ์สไตล์ แรงบันดาลใจ ความรู้เกี่ยวกับเพชรแล็บ และเบื้องหลังของแบรนด์เครื่องประดับแล็บโกรนคุณภาพสูง",
   keywords:
-    "ANAKYNGEMS, อนาคินเจม, บทความ, blogs, เพชรแล็บ, เพชรแล็บโกรน, เครื่องประดับ, แบรนด์เพชร, เครื่องประดับยั่งยืน, ความรู้เพชร, lab grown diamonds, diamond jewelry blog, sustainable jewelry, brand story",
+    "ANAKYN GEMS, อนาคินเจม, บทความ, blogs, เพชรแล็บ, เพชรแล็บโกรน, เครื่องประดับ, แบรนด์เพชร, เครื่องประดับยั่งยืน, ความรู้เพชร, lab grown diamonds, diamond jewelry blog, sustainable jewelry, brand story",
   openGraph: {
-    title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+    title: "บทความจาก ANAKYN GEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
     description:
-      "อ่านบทความเจาะลึกเกี่ยวกับเพชรแล็บ ไลฟ์สไตล์ และเรื่องราวเบื้องหลังแบรนด์ ANAKYNGEMS",
+      "อ่านบทความเจาะลึกเกี่ยวกับเพชรแล็บ ไลฟ์สไตล์ และเรื่องราวเบื้องหลังแบรนด์ ANAKYN GEMS",
     url: "https://www.anakyngems.com/behind-brand",
     siteName: "ANAKYNGEMS",
     images: [
@@ -30,7 +30,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "บทความจาก ANAKYNGEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
+    title: "บทความจาก ANAKYN GEMS | Behind the Brand",
     description:
       "อ่านบทความเจาะลึกเกี่ยวกับเพชรแล็บ ไลฟ์สไตล์ และเรื่องราวเบื้องหลังแบรนด์ ANAKYNGEMS",
     images: [
@@ -38,7 +38,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS Blog - Behind the Brand",
+        alt: "ANAKYN GEMS Blog - Behind the Brand",
       },
     ],
   },

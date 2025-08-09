@@ -5,12 +5,12 @@ import Contact from "@/components/otherPages/Contact";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "ติดต่อเรา - ANAKYNGEMS อนาคินเจม | Lab Grown Diamond Jewellery",
-  description: "ติดต่อ ANAKYNGEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน หรือสินค้าอื่นๆ ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา | Contact ANAKYNGEMS for premium lab grown diamond jewellery consultation and expert advice on engagement rings, wedding rings, and fine jewelry.",
-  keywords: "ติดต่อ ANAKYNGEMS, คำปรึกษาเครื่องประดับ, แหวนหมั้น, แหวนแต่งงาน, เพชรแล็บโกรน, contact ANAKYNGEMS, jewelry consultation, engagement rings, wedding rings, lab grown diamonds",
+  title: "ติดต่อเรา",
+  description: "ติดต่อ ANAKYN GEMS อนาคินเจม สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน หรือสินค้าอื่นๆ ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
+  keywords: "ติดต่อ ANAKYN GEMS, คำปรึกษาเครื่องประดับ, แหวนหมั้น, แหวนแต่งงาน, เพชรแล็บโกรน, contact ANAKYNGEMS, jewelry consultation, engagement rings, wedding rings, lab grown diamonds",
   openGraph: {
-    title: "ติดต่อเรา - ANAKYNGEMS",
-    description: "ติดต่อ ANAKYNGEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
+    title: "ติดต่อเรา - ANAKYN GEMS",
+    description: "ติดต่อ ANAKYN GEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
     url: "https://www.anakyngems.com/contact-us",
     siteName: "ANAKYNGEMS",
     images: [

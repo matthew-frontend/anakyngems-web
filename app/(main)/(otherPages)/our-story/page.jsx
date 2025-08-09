@@ -7,13 +7,13 @@ import Intro from "@/components/otherPages/our-story/Intro";
 import React from "react";
 
 export const metadata = {
-  title: "เรื่องราวของเรา - ANAKYNGEMS อนาคินเจม | Lab Grown Diamond Jewellery",
-  description: "รู้จัก ANAKYNGEMS อนาคินเจม แบรนด์เครื่องประดับเพชรแล็บโกรนที่ก่อตั้งขึ้นด้วยความเชื่อในความงามที่ยั่งยืน ความหรูหราที่เรียบง่าย และจริยธรรมในทุกขั้นตอน | Discover our story and what makes ANAKYNGEMS a trusted name in ethical luxury.",
+  title: "เรื่องราวของเรา",
+  description: "รู้จัก ANAKYN GEMS อนาคินเจม แบรนด์เครื่องประดับเพชรแล็บโกรนที่ก่อตั้งขึ้นด้วยความเชื่อในความงามที่ยั่งยืน ความหรูหราที่เรียบง่าย และจริยธรรมในทุกขั้นตอน",
   keywords:
-    "เรื่องราวของแบรนด์, ANAKYNGEMS, อนาคินเจม, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
+    "เรื่องราวของแบรนด์, ANAKYN GEMS, อนาคินเจม, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
   openGraph: {
-    title: "Our Story - ANAKYNGEMS อนาคินเจม | เครื่องประดับเพชรแล็บโกรน",
-    description: "ANAKYNGEMS เริ่มต้นจากความตั้งใจที่จะสร้างเครื่องประดับที่สวยงาม ยั่งยืน และมีจริยธรรมในทุกขั้นตอน | Explore how our vision became reality.",
+    title: "Our Story - ANAKYN GEMS อนาคินเจม | เครื่องประดับเพชรแล็บโกรน",
+    description: "ANAKYN GEMS เริ่มต้นจากความตั้งใจที่จะสร้างเครื่องประดับที่สวยงาม ยั่งยืน และมีจริยธรรมในทุกขั้นตอน | Explore how our vision became reality.",
     url: "https://www.anakyngems.com/our-story",
     siteName: "ANAKYNGEMS",
     images: [
@@ -21,7 +21,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+        alt: "ANAKYN GEMS อนาคินเจม - Lab Grown Diamond Jewellery",
       },
     ],
     locale: "th_TH",
@@ -29,15 +29,15 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Story - ANAKYNGEMS",
+    title: "Our Story - ANAKYN GEMS",
     description:
-      "เรียนรู้เกี่ยวกับแนวคิดเบื้องหลัง ANAKYNGEMS เครื่องประดับเพชรแล็บโกรนคุณภาพสูง ที่ออกแบบด้วยหัวใจและจริยธรรม",
+      "เรียนรู้เกี่ยวกับแนวคิดเบื้องหลัง ANAKYN GEMS เครื่องประดับเพชรแล็บโกรนคุณภาพสูง ที่ออกแบบด้วยหัวใจและจริยธรรม",
     images: [
       {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Our Story - ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+        alt: "Our Story - ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery",
       },
     ],
   },

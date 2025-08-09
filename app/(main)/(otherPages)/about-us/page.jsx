@@ -5,11 +5,11 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata = {
-  title: "เกี่ยวกับเรา - ANAKYNGEMS อนาคินเจม | Lab Grown Diamond Jewellery",
-  description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง พร้อมมอบเครื่องประดับที่สะท้อนตัวตนของคุณ",
+  title: "เกี่ยวกับเรา",
+  description: "ทำความรู้จักกับ ANAKYN GEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง พร้อมมอบเครื่องประดับที่สะท้อนตัวตนของคุณ",
   keywords: "เกี่ยวกับ ANAKYNGEMS, อนาคินเจม, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
   openGraph: {
-    title: "เกี่ยวกับเรา - ANAKYNGEMS",
+    title: "เกี่ยวกับเรา - ANAKYN GEMS",
     description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง",
     url: "https://www.anakyngems.com/about-us",
     siteName: "ANAKYNGEMS",
@@ -18,7 +18,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
+        alt: "ANAKYN GEMS อนาคินเจม - Lab Grown Diamond Jewellery | เครื่องประดับเพชรแล็บโกรน",
       },
     ],
     locale: "th_TH",

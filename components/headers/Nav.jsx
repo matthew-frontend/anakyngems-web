@@ -51,15 +51,23 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=ring"
+                      href="/products?category=MEN'S RING"
                       className="menu-link-text link"
                     >
-                      Ring
+                      Men's Ring
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/products?category=earring"
+                      href="/products?category=WOMEN RING"
+                      className="menu-link-text link"
+                    >
+                      Women Ring
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/products?category=EARRING"
                       className="menu-link-text link"
                     >
                       Earring
@@ -67,10 +75,10 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=couple"
+                      href="/products?category=NECKLACE"
                       className="menu-link-text link"
                     >
-                      Couple
+                      Necklace
                     </Link>
                   </li>
                   <li>

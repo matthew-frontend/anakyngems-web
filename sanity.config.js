@@ -45,27 +45,35 @@ export default defineConfig({
                     
                     // Static category filters (faster)
                     S.listItem()
-                      .title('earring')
+                      .title('MEN\'S RING')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('Men\'s Ring Products')
+                          .filter('category->title == "MEN\'S RING"')
+                      ),
+                    
+                    S.listItem()
+                      .title('WOMEN RING')
+                      .child(
+                        S.documentTypeList('product')
+                          .title('Women Ring Products')
+                          .filter('category->title == "WOMEN RING"')
+                      ),
+                    
+                    S.listItem()
+                      .title('EARRING')
                       .child(
                         S.documentTypeList('product')
                           .title('Earring Products')
-                          .filter('category->title == "earring"')
+                          .filter('category->title == "EARRING"')
                       ),
                     
                     S.listItem()
-                      .title('ring')
+                      .title('NECKLACE')
                       .child(
                         S.documentTypeList('product')
-                          .title('Ring Products')
-                          .filter('category->title == "ring"')
-                      ),
-                    
-                    S.listItem()
-                      .title('couple')
-                      .child(
-                        S.documentTypeList('product')
-                          .title('Couple Products')
-                          .filter('category->title == "couple"')
+                          .title('Necklace Products')
+                          .filter('category->title == "NECKLACE"')
                       ),
                     
                     S.divider(),

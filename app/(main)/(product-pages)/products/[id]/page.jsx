@@ -50,17 +50,18 @@ export async function generateMetadata({ params }) {
   const oldPrice = product.oldPrice ? `(เดิม ฿${product.oldPrice.toLocaleString('en-US')})` : '';
   
   return {
-    title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS`,
+    title: `${product.title || product.name} - ${categoryThaiName}`,
     description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS ${price} ${oldPrice} ${product.description ? product.description.substring(0, 100) + '...' : 'แหวนเพชร ต่างหูเพชร จัดงานแต่งงาน'}`.trim(),
     keywords: `${product.title}, ${categoryThaiName}, เพชรแล็บโกรน, เครื่องประดับ, ANAKYNGEMS, lab grown diamond, ${categoryName}, jewelry, sustainable diamonds, ethical jewelry`,
     openGraph: {
       title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS`,
       description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice}`.trim(),
       images: product.images?.[0] ? [{
-        url: urlFor(product.images[0]).width(1200).height(630).url(),
+        url: urlFor(product.images[0]).width(1200).height(630).fit('crop').format('jpg').quality(85).url(),
         width: 1200,
         height: 630,
-        alt: `${product.title} - ${categoryThaiName}เพชรแล็บโกรน`
+        alt: `${product.title} - ${categoryThaiName}เพชรแล็บโกรน`,
+        type: 'image/jpeg'
       }] : [{
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: `${product.title || product.name} - ${categoryThaiName}`,
       description: `${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice} จาก ANAKYNGEMS`,
-      images: product.images?.[0] ? [urlFor(product.images[0]).width(1200).height(630).url()] : ["https://www.anakyngems.com/images/og-image.jpg"],
+      images: product.images?.[0] ? [urlFor(product.images[0]).width(1200).height(630).fit('crop').format('jpg').quality(85).url()] : ["https://www.anakyngems.com/images/og-image.jpg"],
     },
     alternates: {
       canonical: `https://www.anakyngems.com/products/${product.slug?.current || product._id}`,

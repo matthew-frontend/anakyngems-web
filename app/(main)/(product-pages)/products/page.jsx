@@ -5,12 +5,12 @@ import Products2 from "@/components/shop/Products2";
 import React, { Suspense } from "react";
 import ProductsPageWrapper from "@/components/shop/ProductsPageWrapper";
 export const metadata = {
-  title: "Products - ANAKYNGEMS | Lab Grown Diamond Jewellery",
-  description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหู ต่างหูเพชร | Discover premium lab grown diamond jewelry - rings, earrings.",
+  title: "สินค้าของเรา เครื่องประดับเพชร",
+  description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS อนาคินเจม แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหู ต่างหูเพชร",
   keywords: "เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนเพชร, แหวนแต่งงาน, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, ethical diamonds",
   openGraph: {
-    title: "เครื่องประดับเพชรแล็บโกรน - ANAKYNGEMS",
-    description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS",
+    title: "Shop เครื่องประดับเพชร - ANAKYN GEMS",
+    description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS",
     url: "https://www.anakyngems.com/products",
     siteName: "ANAKYNGEMS",
     images: [
@@ -18,7 +18,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS - Lab Grown Diamond Jewellery Collection",
+        alt: "ANAKYN GEMS - Lab Grown Diamond Jewellery Collection",
       },
     ],
     locale: "th_TH",
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "เครื่องประดับเพชรแล็บโกรน - ANAKYNGEMS",
+    title: "Shop เครื่องประดับเพชร - ANAKYN GEMS",
     description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูง แหวนเพชร ต่างหูเพชร",
     images: ["https://www.anakyngems.com/images/og-image.jpg"],
   },

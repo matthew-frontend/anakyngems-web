@@ -181,7 +181,7 @@ export default function BlogSingle() {
               <div className="bottom">
                 <div className="entry_media">
                   {blogPost.tags && blogPost.tags.length > 0 && (
-                    <ul className="entry_tag">
+                    <ul className="entry_tag" style={{flexWrap: 'wrap'}}>
                       {blogPost.tags.map((tag, index) => (
                         <li key={index}>
                           <a href="#" className="text-caption">

@@ -5,11 +5,11 @@ import Faqs from "@/components/otherPages/Faqs";
 import React from "react";
 import Link from "next/link";
 export const metadata = {
-  title: "คำถามที่พบบ่อย - ANAKYNGEMS FAQ | Lab Grown Diamond Questions",
-  description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนและเครื่องประดับจาก ANAKYNGEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา การจัดส่ง และอื่นๆ | Frequently asked questions about lab grown diamonds, jewelry care, shipping, and more from ANAKYNGEMS experts.",
-  keywords: "FAQ ANAKYNGEMS, เพชรแล็บโกรน คำถาม, คำถามที่พบบ่อย, การดูแลเครื่องประดับ, เพชรแล็บโกรน vs เพชรธรรมชาติ, lab grown diamond FAQ, jewelry care, diamond questions",
+  title: "คำถามที่พบบ่อย - FAQ",
+  description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนจาก ANAKYN GEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา การจัดส่ง และอื่นๆ",
+  keywords: "FAQ ANAKYN GEMS, เพชรแล็บโกรน คำถาม, คำถามที่พบบ่อย, การดูแลเครื่องประดับ, เพชรแล็บโกรน vs เพชรธรรมชาติ, lab grown diamond FAQ, jewelry care, diamond questions",
   openGraph: {
-    title: "คำถามที่พบบ่อย - ANAKYNGEMS FAQ",
+    title: "คำถามที่พบบ่อย - ANAKYN GEMS FAQ",
     description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนและเครื่องประดับจาก ANAKYNGEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา",
     url: "https://www.anakyngems.com/faq",
     siteName: "ANAKYNGEMS",
@@ -18,7 +18,7 @@ export const metadata = {
         url: "https://www.anakyngems.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ANAKYNGEMS FAQ - Lab Grown Diamond Questions & Answers",
+        alt: "ANAKYN GEMS FAQ - Lab Grown Diamond Questions & Answers",
       },
     ],
     locale: "th_TH",
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "คำถามที่พบบ่อย - ANAKYNGEMS FAQ",
-    description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนและเครื่องประดับจาก ANAKYNGEMS",
+    description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนและเครื่องประดับจาก ANAKYN GEMS",
     images: ["https://www.anakyngems.com/images/og-image.jpg"],
   },
   alternates: {

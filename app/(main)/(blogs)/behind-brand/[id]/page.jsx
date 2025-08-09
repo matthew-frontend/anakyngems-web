@@ -3,20 +3,60 @@ import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import React from "react";
 import Link from "next/link";
-import { getBlogPost } from "@/sanity/client";
+import { getBlogPost, urlFor } from "@/sanity/client";
 
 export async function generateMetadata({ params }) {
   try {
-    const blogPost = await getBlogPost(params.id);
+    const { id } = await params;
+    const blogPost = await getBlogPost(id);
+    
+    if (!blogPost) {
+      return {
+        title: "Blog | ANAKYN GEMS",
+        description: "Because true luxury isn't about excess—it's about self-expression, simplicity, and the confidence to shine every day.",
+      };
+    }
     
     return {
-      title: blogPost ? `${blogPost.title} | ANAKYNGEMS` : "Blog | ANAKYNGEMS",
-      description: blogPost?.excerpt || "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
+      title: `${blogPost.title}`,
+      description: blogPost.excerpt || "Because true luxury isn't about excess—it's about self-expression, simplicity, and the confidence to shine every day.",
+      keywords: `${blogPost.title}, Behind the Brand, ANAKYNGEMS, อนาคินเจม, lab grown diamond, jewelry blog, diamond jewelry, sustainable jewelry`,
+      openGraph: {
+        title: `${blogPost.title} | ANAKYNGEMS`,
+        description: blogPost.excerpt || "Behind the Brand story from ANAKYNGEMS - Lab grown diamond jewelry",
+        images: blogPost.mainImage ? [{
+          url: urlFor(blogPost.mainImage).width(1200).height(630).fit('crop').format('jpg').quality(85).url(),
+          width: 1200,
+          height: 630,
+          alt: blogPost.mainImage.alt || `${blogPost.title} - ANAKYNGEMS Behind the Brand`,
+          type: 'image/jpeg'
+        }] : [{
+          url: "https://www.anakyngems.com/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "ANAKYNGEMS - Behind the Brand Blog"
+        }],
+        type: 'article',
+        url: `https://www.anakyngems.com/behind-brand/${blogPost.slug?.current || id}`,
+        siteName: "ANAKYNGEMS",
+        locale: "th_TH",
+        publishedTime: blogPost.publishedAt,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: `${blogPost.title} | ANAKYNGEMS`,
+        description: blogPost.excerpt || "Behind the Brand story from ANAKYNGEMS",
+        images: blogPost.mainImage ? [urlFor(blogPost.mainImage).width(1200).height(630).fit('crop').format('jpg').quality(85).url()] : ["https://www.anakyngems.com/images/og-image.jpg"],
+      },
+      alternates: {
+        canonical: `https://www.anakyngems.com/behind-brand/${blogPost.slug?.current || id}`,
+      },
     };
   } catch (error) {
+    console.error('Error generating blog metadata:', error);
     return {
-      title: "Blog | ANAKYNGEMS",
-      description: "Because true luxury isn’t about excess—it’s about self-expression, simplicity, and the confidence to shine every day.",
+      title: "Blog | ANAKYN GEMS",
+      description: "Because true luxury isn't about excess—it's about self-expression, simplicity, and the confidence to shine every day.",
     };
   }
 }
@@ -25,7 +65,8 @@ export default async function page({ params }) {
   let blogPost = null;
   
   try {
-    blogPost = await getBlogPost(params.id);
+    const { id } = await params;
+    blogPost = await getBlogPost(id);
   } catch (error) {
     console.error('Error fetching blog post:', error);
   }

@@ -38,7 +38,7 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
               slidesPerView: 3,
             },
             1200: {
-              slidesPerView: 3,
+              slidesPerView: 4,
             },
           }}
           spaceBetween={10}
@@ -55,7 +55,7 @@ export default function CollectionsSlide({ categories = [], categoryCounts = {},
               : urlFor(item.image).width(915).height(1250).url();
             
             return (
-              <SwiperSlide className="swiper-slide" key={index} style={{ justifyContent: 'center' }}>
+              <SwiperSlide className="swiper-slide" key={index}>
                 <Link
                   href={`/products?category=${categoryName}`}
                   className="wg-cls hover-img wow fadeInUp"

@@ -6,8 +6,10 @@ import axios from "axios";
 const menuItems = [
   { name: "New Collection", category: "new-in" },
   { name: "All Jewelry", category: null },
-  { name: "Rings", category: "ring" },
-  { name: "Earrings", category: "earring" },
+  { name: "Men's Ring", category: "MEN'S RING" },
+  { name: "Women Ring", category: "WOMEN RING" },
+  { name: "Earrings", category: "EARRING" },
+  { name: "Necklace", category: "NECKLACE" },
   { name: "For Sale", category: "for-sale" },
 ];
 export default function Footer1() {
@@ -292,18 +294,23 @@ export default function Footer1() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=ring`} className="text-main-4 link">
-                          Ring
+                        <Link href={`/products?category=MEN'S RING`} className="text-main-4 link">
+                          Men's Ring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=earring`} className="text-main-4 link">
+                        <Link href={`/products?category=WOMEN RING`} className="text-main-4 link">
+                          Women Ring
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/products?category=EARRING`} className="text-main-4 link">
                           Earring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=couple`} className="text-main-4 link">
-                          Couple
+                        <Link href={`/products?category=NECKLACE`} className="text-main-4 link">
+                          Necklace
                         </Link>
                       </li>
                       <li>
