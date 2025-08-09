@@ -16,7 +16,7 @@ import CollectionsSlide from "@/components/homes/home-3/CollectionsSlide";
 import { getHomepageData, getHomepageMetadata } from "@/lib/homepage-data";
 import Service from "@/components/homes/home-3/Service";
 
-export const revalidate = 300; // 5 นาที แทน 1 ชั่วโมง 
+export const revalidate = 30; // 30 วินาที 
 
 // Generate metadata
 export async function generateMetadata() {

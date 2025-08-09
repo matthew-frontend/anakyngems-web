@@ -13,7 +13,7 @@ import { ProductSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 import Details3 from "@/components/product-details/Details3";
 
 // Enable ISR with 30 second revalidation for debugging
-export const revalidate = 30;
+export const revalidate = 10; // 10 วินาที
 
 export async function generateMetadata({ params }) {
   const { id } = await params;

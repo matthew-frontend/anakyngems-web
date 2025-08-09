@@ -5,6 +5,8 @@ import React from "react";
 import Link from "next/link";
 import { getBlogPost, urlFor } from "@/sanity/client";
 
+export const revalidate = 30; // 30 วินาที
+
 export async function generateMetadata({ params }) {
   try {
     const { id } = await params;

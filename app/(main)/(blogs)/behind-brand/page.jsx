@@ -5,6 +5,8 @@ import React from "react";
 import Link from "next/link";
 import { getBlogCount } from "@/sanity/client";
 
+export const revalidate = 60; // 1 นาที - blog list ไม่ต้องเร็วมาก
+
 export const metadata = {
   title: "บทความจาก ANAKYN GEMS",
   description:

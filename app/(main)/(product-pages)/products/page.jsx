@@ -4,6 +4,9 @@ import Header1 from "@/components/headers/Header1";
 import Products2 from "@/components/shop/Products2";
 import React, { Suspense } from "react";
 import ProductsPageWrapper from "@/components/shop/ProductsPageWrapper";
+
+export const revalidate = 30; // 30 วินาที
+
 export const metadata = {
   title: "สินค้าของเรา เครื่องประดับเพชร",
   description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS อนาคินเจม แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหู ต่างหูเพชร",
