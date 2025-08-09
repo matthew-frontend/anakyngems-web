@@ -67,7 +67,7 @@ export default async function sitemap() {
     }));
 
     const categoryPages = categories.map((category) => ({
-      url: `${baseUrl}/products?category=${category.slug?.current || category.title.toLowerCase()}`,
+      url: `${baseUrl}/products?category=${encodeURIComponent(category.title)}`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
