@@ -162,13 +162,6 @@ export default {
         "เลือกแท็กหนึ่งรายการหรือมากกว่าเพื่อจัดหมวดหมู่ผลิตภัณฑ์นี้ (ถ้าใส่ราคาเดิม ควรเลือก 'For Sale')",
     },
     {
-      name: "details",
-      title: "Product Details",
-      type: "text",
-      rows: 4,
-      description: "รายละเอียดสินค้าใน Collapse",
-    },
-    {
       name: "variants",
       title: "Product Variants",
       type: "array",

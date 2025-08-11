@@ -6,48 +6,10 @@ export default function DescriptionSideAccordion({ product }) {
 
   return (
     <div className="tf-product-accordion">
-      {/* Description Section */}
-      <div className="widget-accordion-2 style-3">
-        <div
-          className="accordion-title collapsed"
-          data-bs-target="#description"
-          data-bs-toggle="collapse"
-          aria-expanded="false"
-          aria-controls="description"
-          role="button"
-        >
-          <span>Description</span>
-          <span className="icon ic-accordion-custom" />
-        </div>
-        <div id="description" className="collapse widget-desc">
-          <div className="accordion-body">
-            <h6 className="text-main-4 fw-normal">
-              {(() => {
-                if (!product?.details) return "ไม่มีข้อมูลเพิ่มเติม";
-                
-                // Handle PortableText/rich text format
-                if (Array.isArray(product.details)) {
-                  return product.details
-                    .map(block => 
-                      block.children
-                        ?.map(child => child.text)
-                        .join('')
-                    )
-                    .join(' ');
-                }
-                
-                // Handle simple text format
-                return product.details;
-              })()}
-            </h6>
-          </div>
-        </div>
-      </div>
-
       {/* Additional Information Section */}
       <div className="widget-accordion-2 style-3">
         <div
-          className="accordion-title collapsed"
+          className="accordion-title"
           data-bs-target="#material"
           data-bs-toggle="collapse"
           aria-expanded="true"
@@ -57,7 +19,7 @@ export default function DescriptionSideAccordion({ product }) {
           <span>additional information</span>
           <span className="icon ic-accordion-custom" />
         </div>
-        <div id="material" className="collapse widget-material">
+        <div id="material" className="collapse show widget-material">
           <div className="accordion-body">
             <table className="table-material">
               <tbody>
