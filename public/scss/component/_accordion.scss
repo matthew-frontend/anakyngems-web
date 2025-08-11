@@ -513,6 +513,6 @@
 .widget-material {
   .accordion-body {
     white-space: nowrap;
-    overflow: auto;
+    overflow: unset;
   }
 }

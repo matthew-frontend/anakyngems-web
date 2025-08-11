@@ -989,10 +989,10 @@
 
     .check-color {
       border-radius: 50%;
-      width: 32px;
-      height: 32px;
+      width: 33px;
+      height: 33px;
       overflow: hidden;
-      border: 1px solid var(--line);
+      border: 0.7px solid var(--line);
     }
 
     &.active {

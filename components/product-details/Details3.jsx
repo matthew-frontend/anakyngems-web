@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Slider1 from "./sliders/Slider1";
 import Grid1 from "./gallery/Gallery1";
 import DescriptionSideAccordion from "./DescriptionSideAccordion";
 
@@ -88,11 +89,13 @@ export default function Details3({ product }) {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <Grid1
-                product={product}
-                activeColor={activeColor}
-                setActiveColor={setActiveColor}
-              />
+              <div className="tf-product-media-wrap sticky-top">
+                <div className="thumbs-slider">
+                  <Slider1
+                    firstItem={product}
+                  />
+                </div>
+              </div>
             </div>
             <div className="col-md-6">
               <div className="tf-product-info-wrap sticky-top">
