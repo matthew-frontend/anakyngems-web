@@ -54,9 +54,9 @@ export default function BestSeller({ bestSellers = [], categories = [], category
                     role="button"
                   >
                     {category.charAt(0).toUpperCase() + category.slice(1)}
-                    {categoryCounts[category.toLowerCase()] !== undefined && (
+                    {/* {categoryCounts[category.toLowerCase()] !== undefined && (
                       <span className="count-badge"> ({categoryCounts[category.toLowerCase()]})</span>
-                    )}
+                    )} */}
                   </a>
                 </h5>
               </li>

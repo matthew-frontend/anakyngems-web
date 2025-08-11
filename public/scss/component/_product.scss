@@ -415,6 +415,7 @@
   top: 10px;
   left: 10px;
   z-index: 21;
+  background-color: var(--anakyn-60);
 
   > * {
     display: block;
@@ -430,7 +431,7 @@
   }
 
   .new {
-    background-color: #9d5100;
+    background-color: var(--anakyn-60);
   }
 
   .sale {

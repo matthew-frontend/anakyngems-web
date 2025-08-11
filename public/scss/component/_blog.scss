@@ -1,5 +1,11 @@
 @use "../abstracts/index" as *;
 
+.first-image {
+  img {
+    max-height: 700px;
+  }
+}
+
 .article-blog {
   display: flex;
   flex-direction: column;

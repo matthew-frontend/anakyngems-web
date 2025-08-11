@@ -88,9 +88,9 @@ export default function Blogs2() {
             <div className="col-lg-12">
               <div className="tf-grid-layout sm-col-2 lg-col-3">
                 {blogEntries.map((entry, index) => {
-                  const HeadingTag = index === 0 ? 'h3' : 'h4';
+                  const HeadingTag = 'h4';
                   const imageUrl = entry.mainImage?.asset?.url 
-                    ? urlFor(entry.mainImage).width(index === 0 ? 2004 : 972).height(790).url()
+                    ? urlFor(entry.mainImage).width(972).height(790).url()
                     : 'https://vemusnextjs.vercel.app/images/blog/blog-8.jpg';
                   
                   const publishedDate = entry.publishedAt 
@@ -107,9 +107,7 @@ export default function Blogs2() {
 
                   return (
                     <div
-                      className={`article-blog hover-img ${
-                        index === 0 ? "style-row wd-full" : ""
-                      }`}
+                      className="article-blog hover-img"
                       key={entry._id}
                     >
                       <div className="entry_image">
@@ -122,12 +120,12 @@ export default function Blogs2() {
                             src={imageUrl}
                             alt={entry.title}
                             className="lazyload"
-                            width={index === 0 ? 2004 : 972}
+                            width={972}
                             height={790}
                           />
                         </Link>
                         <div className="entry_tag">
-                          {entry.tags?.map((tag, i) => (
+                          {entry.tags?.slice(0, 2).map((tag, i) => (
                             <Link
                               key={i}
                               href={`/behind-brand/${entry.slug.current}`}
@@ -157,11 +155,7 @@ export default function Blogs2() {
                               {entry.title}
                             </Link>
                           </HeadingTag>
-                          <p
-                            className={`text-main-6 ${
-                              HeadingTag === "h4" ? "text-line-clamp-2" : ""
-                            }`}
-                          >
+                          <p className="text-main-6 text-line-clamp-2">
                             {entry.excerpt}
                           </p>
                         </div>

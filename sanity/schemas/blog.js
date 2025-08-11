@@ -91,6 +91,44 @@ export default {
             },
           ],
         },
+        {
+          name: "imageGroup",
+          title: "Image Group (2 images side by side)",
+          type: "object",
+          fields: [
+            {
+              name: "images",
+              title: "Images (max 2)",
+              type: "array",
+              of: [
+                {
+                  type: "image",
+                  options: { hotspot: true },
+                  fields: [
+                    {
+                      name: "alt",
+                      type: "string",
+                      title: "Alternative Text",
+                    },
+                  ],
+                },
+              ],
+              validation: (Rule) => Rule.max(2).min(2).error('Please add exactly 2 images'),
+            },
+          ],
+          preview: {
+            select: {
+              image1: "images.0",
+              image2: "images.1",
+            },
+            prepare({ image1, image2 }) {
+              return {
+                title: "Image Group (2 images)",
+                media: image1,
+              };
+            },
+          },
+        },
       ],
     },
     {

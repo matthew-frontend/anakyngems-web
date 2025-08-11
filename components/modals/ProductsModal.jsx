@@ -178,14 +178,14 @@ export default function ProductsModal() {
                           </Link>
                           <div className="price-wrap">
                             <span className="price-new">
-                              $
+                              ฿
                               {product.price?.toLocaleString(undefined, {
                                 minimumFractionDigits: 2,
                               })}
                             </span>
                             {product.oldPrice && (
                               <span className="price-old text-caption">
-                                $
+                                ฿
                                 {product.oldPrice.toLocaleString(undefined, {
                                   minimumFractionDigits: 2,
                                 })}

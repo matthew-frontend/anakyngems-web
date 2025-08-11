@@ -101,7 +101,33 @@ export default function BlogSingle() {
               className="lazyload"
               width={1068}
               height={716}
+              loading="lazy"
+              decoding="async"
+              data-nimg="1"
+              style={{ color: 'transparent' }}
             />
+          </div>
+        );
+      },
+      imageGroup: ({value}) => {
+        if (!value.images || value.images.length === 0) return null;
+        
+        return (
+          <div className="entry_image type-group tf-grid-layout sm-col-2">
+            {value.images.slice(0, 2).map((image, index) => (
+              <div key={index} className="image">
+                <Image
+                  src={urlFor(image).width(1068).height(716).url()}
+                  alt={image.alt || `Image ${index + 1}`}
+                  className="lazyload"
+                  width={1068}
+                  height={716}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ color: 'transparent' }}
+                />
+              </div>
+            ))}
           </div>
         );
       }
@@ -153,7 +179,7 @@ export default function BlogSingle() {
                 </p>
               </div>
               
-              <div className="entry_image">
+              <div className="entry_image first-image">
                 <Image
                   src={imageUrl}
                   alt={blogPost.mainImage?.alt || blogPost.title}

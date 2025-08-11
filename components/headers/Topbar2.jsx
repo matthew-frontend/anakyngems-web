@@ -24,7 +24,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               Exclusive Price For You –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
@@ -64,7 +64,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               EXCLUSIVE PRICE FOR YOU –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
@@ -103,7 +103,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               EXCLUSIVE PRICE FOR YOU –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
@@ -142,7 +142,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               EXCLUSIVE PRICE FOR YOU –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
@@ -181,7 +181,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               EXCLUSIVE PRICE FOR YOU –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
@@ -220,7 +220,7 @@ export default function Topbar2() {
           >
             <p className="text-white text-caption-3 text-uppercase fw-medium">
               EXCLUSIVE PRICE FOR YOU –
-              <a href="#" className="link text-white text-decoration-underline">
+              <a href={`/products`} className="link text-white text-decoration-underline">
                 SHOP NOW!
               </a>
             </p>
