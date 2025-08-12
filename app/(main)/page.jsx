@@ -4,7 +4,6 @@ import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import Topbar2 from "@/components/headers/Topbar2";
 import TopbarBottom from "@/components/headers/TopbarBottom";
-import About from "@/components/homes/home-3/About";
 import CountdownLuxruy from "@/components/homes/home-3/CountdownLuxruy";
 import BestSeller from "@/components/homes/home-3/BestSeller";
 import BehindBrand from "@/components/homes/home-3/BehindBrand";
@@ -15,6 +14,8 @@ import React from "react";
 import CollectionsSlide from "@/components/homes/home-3/CollectionsSlide";
 import { getHomepageData, getHomepageMetadata } from "@/lib/homepage-data";
 import Service from "@/components/homes/home-3/Service";
+import Banner from "@/components/homes/home-3/Banner";
+import ShopVideo from "@/components/homes/home-3/ShopVideo";
 
 export const revalidate = 30; // 30 วินาที 
 
@@ -33,7 +34,8 @@ export default async function Home() {
       </div>
       <Header1 />
       <Hero />
-      <About />
+      <Banner />
+      {/* <About /> */}
       <CollectionsSlide 
         categories={pageData.categories}
         categoryCounts={pageData.categoryCounts}
@@ -48,6 +50,7 @@ export default async function Home() {
       />
       <TextSlider2 />
       <HighlightProducts />
+      <ShopVideo />
       <Service />
       <CountdownLuxruy />
       <BehindBrand />

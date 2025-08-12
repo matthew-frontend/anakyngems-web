@@ -73,33 +73,30 @@ export const products6 = [
   },
 ];
 
-export const productsVideo = [
+export const videoProducts = [
   {
-    id: 26,
-    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-1.jpg",
-    title: "Sparkling Moon & Star Stud Earrings",
-    price: 2099.0,
-    oldPrice: 2899.0,
-    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
-    stockLeft: 2,
+    id: 0,
+    videoSrc: "/images/video/ANAKYNGEMS_1.mp4",
   },
   {
-    id: 27,
-    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-2.jpg",
-    title: "Sparkling Moon & Star Stud Earrings",
-    price: 2499.0,
-    oldPrice: 2899.0,
-    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
-    stockLeft: 3,
+    id: 1,
+    videoSrc: "/images/video/ANAKYNGEMS_2.mp4",
   },
   {
-    id: 28,
-    imgSrc: "https://vemusnextjs.vercel.app/images/video/img-video-3.jpg",
-    title: "Sparkling Moon & Star Stud Earrings",
-    price: 2199.0,
-    oldPrice: 3799.0,
-    videoUrl: "https://www.youtube.com/watch?v=MLpWrANjFbI",
-    stockLeft: 5,
+    id: 2,
+    videoSrc: "/images/video/ANAKYNGEMS_3.mp4",
+  },
+  {
+    id: 3,
+    videoSrc: "/images/video/ANAKYNGEMS_4.mp4",
+  },
+  {
+    id: 4,
+    videoSrc: "/images/video/ANAKYNGEMS_5.mp4",
+  },
+  {
+    id: 5,
+    videoSrc: "/images/video/ANAKYNGEMS_6.mp4",
   },
 ];
 
@@ -469,7 +466,7 @@ export const products15 = [
 
 export const allProducts = [
   ...products6,
-  ...productsVideo,
+  ...videoProducts,
   ...products14,
   ...products15,
 ];
