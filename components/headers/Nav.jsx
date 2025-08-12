@@ -51,7 +51,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=MEN'S RING"
+                      href="/products?category=men's ring"
                       className="menu-link-text link"
                     >
                       Men's Ring
@@ -59,7 +59,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=WOMEN RING"
+                      href="/products?category=women ring"
                       className="menu-link-text link"
                     >
                       Women Ring
@@ -67,7 +67,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=EARRING"
+                      href="/products?category=earring"
                       className="menu-link-text link"
                     >
                       Earring
@@ -75,7 +75,7 @@ export default function Nav({ megaMarginRight = true }) {
                   </li>
                   <li>
                     <Link
-                      href="/products?category=NECKLACE"
+                      href="/products?category=necklace"
                       className="menu-link-text link"
                     >
                       Necklace

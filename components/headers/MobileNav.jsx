@@ -41,22 +41,22 @@ export default function MobileNav() {
               </Link>
             </li>
             <li>
-              <Link href="/products?category=MEN'S RING" className="sub-nav-link">
+              <Link href="/products?category=men's ring" className="sub-nav-link">
                 Men's Ring
               </Link>
             </li>
             <li>
-              <Link href="/products?category=WOMEN RING" className="sub-nav-link">
+              <Link href="/products?category=women ring" className="sub-nav-link">
                 Women Ring
               </Link>
             </li>
             <li>
-              <Link href="/products?category=EARRING" className="sub-nav-link">
+              <Link href="/products?category=earring" className="sub-nav-link">
                 Earring
               </Link>
             </li>
             <li>
-              <Link href="/products?category=NECKLACE" className="sub-nav-link">
+              <Link href="/products?category=necklace" className="sub-nav-link">
                 Necklace
               </Link>
             </li>

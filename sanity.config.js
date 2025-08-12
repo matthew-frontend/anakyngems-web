@@ -49,7 +49,7 @@ export default defineConfig({
                       .child(
                         S.documentTypeList('product')
                           .title('Men\'s Ring Products')
-                          .filter('category->title == "MEN\'S RING"')
+                          .filter('category->title == "men\'s ring"')
                       ),
                     
                     S.listItem()
@@ -57,7 +57,7 @@ export default defineConfig({
                       .child(
                         S.documentTypeList('product')
                           .title('Women Ring Products')
-                          .filter('category->title == "WOMEN RING"')
+                          .filter('category->title == "women ring"')
                       ),
                     
                     S.listItem()
@@ -65,7 +65,7 @@ export default defineConfig({
                       .child(
                         S.documentTypeList('product')
                           .title('Earring Products')
-                          .filter('category->title == "EARRING"')
+                          .filter('category->title match "EARRING*" || category->title match "*earring*"')
                       ),
                     
                     S.listItem()
@@ -73,7 +73,7 @@ export default defineConfig({
                       .child(
                         S.documentTypeList('product')
                           .title('Necklace Products')
-                          .filter('category->title == "NECKLACE"')
+                          .filter('category->title match "NECKLACE*" || category->title match "*necklace*"')
                       ),
                     
                     S.divider(),

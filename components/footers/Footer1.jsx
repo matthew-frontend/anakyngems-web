@@ -4,12 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import axios from "axios";
 const menuItems = [
-  { name: "New Collection", category: "new-in" },
   { name: "All Jewelry", category: null },
-  { name: "Men's Ring", category: "MEN'S RING" },
-  { name: "Women Ring", category: "WOMEN RING" },
-  { name: "Earrings", category: "EARRING" },
-  { name: "Necklace", category: "NECKLACE" },
+  { name: "Men's Ring", category: "men's ring" },
+  { name: "Women Ring", category: "women ring" },
+  { name: "Earrings", category: "earring" },
+  { name: "Necklace", category: "necklace" },
   { name: "For Sale", category: "for-sale" },
 ];
 export default function Footer1() {
@@ -294,22 +293,22 @@ export default function Footer1() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=MEN'S RING`} className="text-main-4 link">
+                        <Link href={`/products?category=men's ring`} className="text-main-4 link">
                           Men's Ring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=WOMEN RING`} className="text-main-4 link">
+                        <Link href={`/products?category=women ring`} className="text-main-4 link">
                           Women Ring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=EARRING`} className="text-main-4 link">
+                        <Link href={`/products?category=earring`} className="text-main-4 link">
                           Earring
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/products?category=NECKLACE`} className="text-main-4 link">
+                        <Link href={`/products?category=necklace`} className="text-main-4 link">
                           Necklace
                         </Link>
                       </li>
