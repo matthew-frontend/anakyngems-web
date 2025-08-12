@@ -7,7 +7,7 @@ import React from "react";
 export const metadata = {
   title: "เกี่ยวกับเรา",
   description: "ทำความรู้จักกับ ANAKYN GEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง พร้อมมอบเครื่องประดับที่สะท้อนตัวตนของคุณ",
-  keywords: "เกี่ยวกับ ANAKYNGEMS, อนาคินเจม, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
+  keywords: "เกี่ยวกับ ANAKYN GEMS, อนาคินเจม, รับจัดงานแต่งงาน, lab grown diamond story, ethical diamond brand, sustainable luxury, diamond jewellery brand, เครื่องประดับเพชร, เพชรแล็บโกรน",
   openGraph: {
     title: "เกี่ยวกับเรา - ANAKYN GEMS",
     description: "ทำความรู้จักกับ ANAKYNGEMS ผู้นำด้านเครื่องประดับเพชรแล็บโกรนคุณภาพสูง เราเชื่อในความยั่งยืน และความงามที่แท้จริง",

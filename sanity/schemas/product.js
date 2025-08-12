@@ -30,6 +30,14 @@ export default {
       rows: 4,
     },
     {
+      name: "metaDescription",
+      title: "Meta Description (SEO)",
+      type: "text",
+      description: "คำอธิบายสำหรับ SEO ที่จะแสดงในผลการค้นหา (แนะนำ 150-160 ตัวอักษร)",
+      rows: 3,
+      validation: Rule => Rule.max(160).warning('Meta description should be under 160 characters for optimal SEO')
+    },
+    {
       name: "price",
       title: "ราคา",
       type: "number",

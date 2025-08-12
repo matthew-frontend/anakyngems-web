@@ -6,8 +6,8 @@ import React from "react";
 import Link from "next/link";
 export const metadata = {
   title: "คำถามที่พบบ่อย - FAQ",
-  description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนจาก ANAKYN GEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา การจัดส่ง และอื่นๆ",
-  keywords: "FAQ ANAKYN GEMS, เพชรแล็บโกรน คำถาม, คำถามที่พบบ่อย, การดูแลเครื่องประดับ, เพชรแล็บโกรน vs เพชรธรรมชาติ, lab grown diamond FAQ, jewelry care, diamond questions",
+  description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนจาก ANAKYN GEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา รับจัดงานแต่งงาน และอื่นๆ",
+  keywords: "FAQ ANAKYN GEMS, เพชรแล็บโกรน คำถาม, คำถามที่พบบ่อย, การดูแลเครื่องประดับ, เพชรแล็บโกรน vs เพชรธรรมชาติ, รับจัดงานแต่งงาน, lab grown diamond FAQ, jewelry care, diamond questions",
   openGraph: {
     title: "คำถามที่พบบ่อย - ANAKYN GEMS FAQ",
     description: "คำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับเพชรแล็บโกรนและเครื่องประดับจาก ANAKYNGEMS ความแตกต่างของเพชรแล็บโกรน การดูแลรักษา",

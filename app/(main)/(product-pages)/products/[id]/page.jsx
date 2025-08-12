@@ -36,11 +36,10 @@ export async function generateMetadata({ params }) {
   }
   
   const categoryThai = {
-    'ring': 'แหวน',
+    "men's ring": 'แหวนผู้ชาย',
+    'women ring': 'แหวนผู้หญิง',
     'earring': 'ต่างหู', 
-    'necklace': 'สร้อยคอ',
-    'bracelet': 'กำไล',
-    'new in': 'สินค้าใหม่'
+    'necklace': 'สร้อยคอ'
   };
   
   const categoryName = product.category?.title || product.category || 'jewelry';
@@ -51,11 +50,11 @@ export async function generateMetadata({ params }) {
   
   return {
     title: `${product.title || product.name} - ${categoryThaiName}`,
-    description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS ${price} ${oldPrice} ${product.description ? product.description.substring(0, 100) + '...' : 'แหวนเพชร ต่างหูเพชร จัดงานแต่งงาน'}`.trim(),
-    keywords: `${product.title}, ${categoryThaiName}, เพชรแล็บโกรน, เครื่องประดับ, ANAKYNGEMS, lab grown diamond, ${categoryName}, jewelry, sustainable diamonds, ethical jewelry`,
+    description: product.metaDescription || `${product.title || product.name} - ${categoryThaiName} เพชรแล็บโกรนคุณภาพสูงจาก ANAKYNGEMS ราคา ${price} ${oldPrice} ${product.description ? product.description.substring(0, 100) + '...' : 'แหวนเพชร ต่างหูเพชร จัดงานแต่งงาน'}`.trim(),
+    keywords: `${product.title}, ${categoryThaiName}, เพชรแล็บโกรน, แหวนเพชร, ANAKYNGEMS, อนาคินเจม, lab grown diamond, ${categoryName}, jewelry, sustainable diamonds, ethical jewelry`,
     openGraph: {
-      title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS`,
-      description: `${product.title || product.name} - ${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice}`.trim(),
+      title: `${product.title || product.name} - ${categoryThaiName} | ANAKYNGEMS อนาคินเจม`,
+      description: product.metaDescription || `${product.title || product.name} - ${categoryThaiName} เพชรแล็บโกรนคุณภาพสูง ${price}`.trim(),
       images: product.images?.[0] ? [{
         url: urlFor(product.images[0]).width(1200).height(630).fit('crop').format('jpg').quality(85).url(),
         width: 1200,
@@ -76,7 +75,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: `${product.title || product.name} - ${categoryThaiName}`,
-      description: `${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice} จาก ANAKYNGEMS`,
+      description: product.metaDescription || `${categoryThaiName}เพชรแล็บโกรนคุณภาพสูง ${price} ${oldPrice} จาก ANAKYNGEMS`,
       images: product.images?.[0] ? [urlFor(product.images[0]).width(1200).height(630).fit('crop').format('jpg').quality(85).url()] : ["https://www.anakyngems.com/images/og-image.jpg"],
     },
     alternates: {

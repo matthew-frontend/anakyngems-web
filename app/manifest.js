@@ -1,8 +1,8 @@
 export default function manifest() {
   return {
-    name: "ANAKYNGEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
-    short_name: "ANAKYNGEMS อนาคินเจม",
-    description: "ANAKYNGEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง",
+    name: "ANAKYN GEMS อนาคินเจม - เครื่องประดับเพชรแล็บโกรน",
+    short_name: "ANAKYN GEMS อนาคินเจม",
+    description: "ANAKYN GEMS อนาคินเจม เครื่องประดับเพชรแล็บโกรน คุณภาพสูง",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
@@ -31,6 +31,7 @@ export default function manifest() {
       "ต่างหู",
       "ต่างหูเพชร",
       "รับออกแบบเพชร",
+      "รับจัดงานแต่งงาน",
     ],
   };
 }

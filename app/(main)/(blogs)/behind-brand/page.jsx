@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "ติดตามอ่านบทความจาก ANAKYN GEMS อนาคินเจม ที่นำเสนอไลฟ์สไตล์ แรงบันดาลใจ ความรู้เกี่ยวกับเพชรแล็บ และเบื้องหลังของแบรนด์เครื่องประดับแล็บโกรนคุณภาพสูง",
   keywords:
-    "ANAKYN GEMS, อนาคินเจม, บทความ, blogs, เพชรแล็บ, เพชรแล็บโกรน, เครื่องประดับ, แบรนด์เพชร, เครื่องประดับยั่งยืน, ความรู้เพชร, lab grown diamonds, diamond jewelry blog, sustainable jewelry, brand story",
+    "ANAKYN GEMS, อนาคินเจม, บทความ, blogs, เพชรแล็บ, เพชรแล็บโกรน, เครื่องประดับ, รับจัดงานแต่งงาน, เครื่องประดับยั่งยืน, ความรู้เพชร, lab grown diamonds, diamond jewelry blog, sustainable jewelry, brand story",
   openGraph: {
     title: "บทความจาก ANAKYN GEMS | Behind the Brand - Lab Grown Diamond Jewelry Blog",
     description:

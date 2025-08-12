@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata = {
   title: "ติดต่อเรา",
   description: "ติดต่อ ANAKYN GEMS อนาคินเจม สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน หรือสินค้าอื่นๆ ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",
-  keywords: "ติดต่อ ANAKYN GEMS, คำปรึกษาเครื่องประดับ, แหวนหมั้น, แหวนแต่งงาน, เพชรแล็บโกรน, contact ANAKYNGEMS, jewelry consultation, engagement rings, wedding rings, lab grown diamonds",
+  keywords: "ติดต่อ ANAKYN GEMS, คำปรึกษาเครื่องประดับ, แหวนหมั้น, แหวนแต่งงาน, เพชรแล็บโกรน, รับจัดงานแต่งงาน, contact ANAKYN GEMS, jewelry consultation, engagement rings, wedding rings, lab grown diamonds",
   openGraph: {
     title: "ติดต่อเรา - ANAKYN GEMS",
     description: "ติดต่อ ANAKYN GEMS สำหรับเครื่องประดับเพชรแล็บโกรนคุณภาพสูง ปรึกษาแหวนหมั้น แหวนแต่งงาน ทีมงานผู้เชี่ยวชาญพร้อมให้คำปรึกษา",

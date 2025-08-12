@@ -22,10 +22,10 @@ export async function generateMetadata({ params }) {
     return {
       title: `${blogPost.title}`,
       description: blogPost.excerpt || "Because true luxury isn't about excess—it's about self-expression, simplicity, and the confidence to shine every day.",
-      keywords: `${blogPost.title}, Behind the Brand, ANAKYNGEMS, อนาคินเจม, lab grown diamond, jewelry blog, diamond jewelry, sustainable jewelry`,
+      keywords: `${blogPost.title}, Behind the Brand, ANAKYN GEMS, อนาคินเจม, รับจัดงานแต่งงาน, lab grown diamond, jewelry blog, diamond jewelry`,
       openGraph: {
         title: `${blogPost.title} | ANAKYNGEMS`,
-        description: blogPost.excerpt || "Behind the Brand story from ANAKYNGEMS - Lab grown diamond jewelry",
+        description: blogPost.excerpt || "Behind the Brand story from ANAKYN GEMS - Lab grown diamond jewelry",
         images: blogPost.mainImage ? [{
           url: urlFor(blogPost.mainImage).width(1200).height(630).fit('crop').format('jpg').quality(85).url(),
           width: 1200,

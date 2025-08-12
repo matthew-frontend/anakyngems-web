@@ -9,8 +9,8 @@ export const revalidate = 30; // 30 วินาที
 
 export const metadata = {
   title: "สินค้าของเรา เครื่องประดับเพชร",
-  description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS อนาคินเจม แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหู ต่างหูเพชร",
-  keywords: "เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนเพชร, แหวนแต่งงาน, กำไลเพชร, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, ethical diamonds",
+  description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS อนาคินเจม แหวนหมั้น แหวนเพชร แหวนแต่งงาน ต่างหูเพชร รับจัดงานแต่งงาน",
+  keywords: "เครื่องประดับเพชร, เพชรแล็บโกรน, แหวนหมั้น, แหวนเพชร, แหวนแต่งงาน, ต่างหูเพชร, lab grown diamonds, diamond jewelry, engagement rings, wedding rings, ethical diamonds",
   openGraph: {
     title: "Shop เครื่องประดับเพชร - ANAKYN GEMS",
     description: "ค้นพบเครื่องประดับเพชรแล็บโกรนคุณภาพสูงจาก ANAKYN GEMS",
