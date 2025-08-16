@@ -33,9 +33,13 @@ export default {
       name: "metaDescription",
       title: "Meta Description (SEO)",
       type: "text",
-      description: "คำอธิบายสำหรับ SEO ที่จะแสดงในผลการค้นหา (แนะนำ 150-160 ตัวอักษร)",
+      description:
+        "คำอธิบายสำหรับ SEO ที่จะแสดงในผลการค้นหา (แนะนำ 150-160 ตัวอักษร)",
       rows: 3,
-      validation: Rule => Rule.max(160).warning('Meta description should be under 160 characters for optimal SEO')
+      validation: (Rule) =>
+        Rule.max(160).warning(
+          "Meta description should be under 160 characters for optimal SEO"
+        ),
     },
     {
       name: "price",
@@ -49,14 +53,14 @@ export default {
       type: "number",
       description:
         "ถ้าใส่ราคาเดิม จะอัตโนมัติเลือกประเภทป้ายเป็น Sale และเพิ่มแท็ก For Sale",
-      validation: (Rule) => 
+      validation: (Rule) =>
         Rule.positive().custom((oldPrice, context) => {
           const price = context.document?.price;
           if (oldPrice && price && oldPrice <= price) {
-            return 'ราคาเดิมต้องมากกว่าราคาปัจจุบัน (Old price must be greater than current price)';
+            return "ราคาเดิมต้องมากกว่าราคาปัจจุบัน (Old price must be greater than current price)";
           }
           return true;
-        })
+        }),
     },
     {
       name: "images",
@@ -90,7 +94,8 @@ export default {
       name: "badgeType",
       title: "ประเภทป้ายของผลิตภัณฑ์ (ตัวเลือก)",
       type: "string",
-      description: "ถ้าใส่ราคาเดิม (oldPrice) ควรเลือก 'Sale (Auto-calculate % OFF)'",
+      description:
+        "ถ้าใส่ราคาเดิม (oldPrice) ควรเลือก 'Sale (Auto-calculate % OFF)'",
       options: {
         list: [
           { title: "ไม่มีป้าย (No badge)", value: null },
@@ -190,6 +195,11 @@ export default {
             {
               name: "material",
               title: "วัสดุ",
+              type: "string",
+            },
+            {
+              name: "clarity",
+              title: "ความสะอาดเพชร",
               type: "string",
             },
           ],

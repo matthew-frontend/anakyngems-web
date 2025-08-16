@@ -51,28 +51,29 @@ export default function DescriptionSideAccordion({ product }) {
           <span className="icon ic-accordion-custom" />
         </div>
         <div id="material" className="collapse show widget-material">
-          <div className="accordion-body">
+          <div className="accordion-body" style={{ overflow: 'auto' }}>
             <table className="table-material">
               <tbody>
                 <tr>
                   <td className="h6">Color</td>
                   <td className="h6">
-                    {variant.color && materialInfo ? (
-                      <div className="variant-picker-item variant-color">
+                    {variant.color ? (
+                      <div className="variant-picker-item variant-color d-flex align-items-center">
                         <div
                           className="hover-tooltip color-btn style-image-square"
                           data-color={variant.color.toLowerCase()}
                         >
                           <span className="check-color">
                             <Image
-                              alt={materialInfo.alt}
-                              src={materialInfo.imageSrc}
+                              alt="Silver"
+                              src="/icon/material-gray.jpg"
                               width={100}
                               height={100}
                             />
                           </span>
-                          <span className="tooltip">{materialInfo.tooltip}</span>
+                          <span className="tooltip">Silver</span>
                         </div>
+                        <h6 className="h6 ms-2" style={{ fontWeight: 'normal' }}>{variant.color}</h6>
                       </div>
                     ) : (
                       <span>-</span>
@@ -86,6 +87,10 @@ export default function DescriptionSideAccordion({ product }) {
                 <tr>
                   <td className="h6">Material</td>
                   <td className="h6">{variant.material || '-'}</td>
+                </tr>
+                 <tr>
+                  <td className="h6">Diamond Clarity</td>
+                  <td className="h6">{variant.clarity || '-'}</td>
                 </tr>
               </tbody>
             </table>
